@@ -1,0 +1,49 @@
+name: codbex
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  enable_coderay: true
+  coderay:
+    coderay_line_numbers: true
+    coderay_css: class
+highlighter: rouge
+baseurl:
+url: http://codbex.com
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - CNAME
+  - README.md
+
+defaults:
+  -
+    scope:
+      path: apps
+      type: blogs
+    values:
+      layout: product
+      category: apps
+  -
+    scope:
+      path: components
+      type: blogs
+    values:
+      layout: component
+      category: components
+  -
+    scope:
+      path: blogs
+      type: blogs
+    values:
+      layout: blog
+      category: blogs
+-
+    scope:
+      path: news
+      type: blogs
+    values:
+      layout: news
+      category: news
+ 

@@ -1,0 +1,41 @@
+# industries information
+
+agriculture:
+  name: Agriculture
+automotive:
+  name: Automotive
+banking:
+  name: Banking
+education:
+  name: Education & Research
+engineering:
+  name: Engineering & Construction
+food:
+  name: Food & Beverage
+healthcare:
+  name: Healthcare
+it:
+  name: Information Technology
+manufactoring:
+  name: Manufacturing
+media:
+  name: Media
+professional:
+  name: Professional Services
+public:
+  name: Public Sector
+realestate:
+  name: Real Estate
+retail:
+  name: Retail
+sports:
+  name: Sports & Entertainment
+telecom:
+  name: Telecommunications
+travel:
+  name: Travel & Transportation
+utilities:
+  name: Utilities
+distribution:
+  name: Wholesale Distribution
+

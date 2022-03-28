@@ -1,0 +1,25 @@
+---
+layout: blog
+---
+
+<div class="container">
+	<h1>Blog Posts</h1>
+	<div class="post">
+		<div>
+			{% for post in site.tags.blog %}
+				{% if post.categories contains 'blogs' %}
+					<div>
+						<p>
+							<div class="col-sm-11">
+								<p><i class="fa fa-{{ post.icon }} fa-fw"></i>	<a href="../{{ post.info }}">{{ post.title }}</a> - {{ post.brief }}</p>
+							</div>
+						</p>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<br><br><br><br><br><br>
+     
