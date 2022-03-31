@@ -364,16 +364,17 @@ p.copyright {
 
 .breadcrumb {
 	border-radius: 0px !important;
-	background: #e67a00;
-	color: #eee !important;
+	background: #fff;
+	color: #555 !important;
+	border-bottom: 1px solid #e7e7e7;
 }
 
 .breadcrumb li {
-	color: white !important;
+	color: black !important;
 }
 
 .breadcrumb a {
-	color: #eee !important;
+	color: #555 !important;
 }
 
 blockquote {
