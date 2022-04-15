@@ -78,6 +78,24 @@ Also we believe that it is a flexibility to have a deployment option to run seve
 when applicable and necessary to minimize the operations cost.
 <br><br>
 
+#### Extensibility
+
+Extensibility is the major feature required by the applicaiton runtimes nowadays. 
+To have a minimalistic core and de-facto all the functionality to be implemented as plugins enhancing this core is quite successful
+architectural approach. In our case there are different type of exetensibility for the different layers of the stack. 
+The driving principle is that the extension point definitions are as simple as possible and the contract with 
+the extension is bilateral.
+<br><br>
+
+#### Dependency Management
+
+Due to the fact that runtime stack containing also the applications themselves 
+has to be built and deployed as a single immutable bundle for production,
+we decided to go for a bit more relaxed dependency management rules. It follows the "global installs" principle with 
+a single version per module - just like it is in standard Java. There are many other ways to manage dependencies 
+e.g. npm, OSGi, etc. with their benefits and drawbacks, but we decided to have it simple and streigth forward.
+<br><br>
+
 #### Open-source
 
 We believe in open source. This is the way companies and individuals can collaborate on great ideas and make them reality.
