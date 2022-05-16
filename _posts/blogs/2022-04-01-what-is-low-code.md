@@ -3,7 +3,7 @@ layout: blog
 category: blogs
 title: What is Low Code Platform
 brief: It is for smart people who do not want to waste time in writing boilerplate and trivial code, It is for clever developers who know very well what's underneath...
-info: /blogs/2022/03/26/what-is-low-code.html
+info: /blogs/2022/04/01/what-is-low-code.html
 tags:
 - blog
 ---
