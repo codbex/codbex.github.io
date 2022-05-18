@@ -15,3 +15,5 @@ title: Legal Documentation
 ### [Privacy Policy](/legal-privacy-policy.html)
 
 ### [Vendor Terms](/legal-vendor-terms.html)
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
