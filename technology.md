@@ -103,3 +103,30 @@ The default case for every single piece of software built by <b>codbex</b> is to
 The exceptions will follow a very strict selection process and will be continuously monitored.
 <br><br>
 
+### Arcitecture
+<br>
+
+#### Application Development Stack
+
+Application development stack compbines two layers - design time and runtime. Both layers comes with a predefined combination of modules - engines, APIs, databases, tools, templates, etc.
+
+![Application Development Stack](img/application-stack.png)
+
+<br><br>
+
+#### Application Modules
+
+Main components delivered built-in with <b>codbex</b> platforms are:
+
+- Databases - various supported database products such as PostgreSQL, MySQL, SAP HANA, H2 and others
+- Documents - CMIS based repository for storing binary files in the cloud
+- Code - custom business logic of the application currently in JavaScript only (ECMA2020)
+- OData - a generic RESTful layer on top of the database
+- HTML5 - user interface which can be written in an arbitrary framework
+- Permissions - security constraints
+- Jobs - scheduled jobs which can be executed regularily
+- Processes - BPMN v2.0 compliant business processes
+
+![Application Modules](img/application-modules.png)
+
+<br><br>
