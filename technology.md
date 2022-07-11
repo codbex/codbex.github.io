@@ -110,7 +110,7 @@ The exceptions will follow a very strict selection process and will be continuou
 
 Application development stack compbines two layers - design time and runtime. Both layers comes with a predefined combination of modules - engines, APIs, databases, tools, templates, etc.
 
-![Application Development Stack](img/application-stack.png)
+<img src="img/application-stack.png" width="800em">
 
 <br><br>
 
@@ -127,6 +127,6 @@ Main components delivered built-in with <b>codbex</b> platforms are:
 - Jobs - scheduled jobs which can be executed regularily
 - Processes - BPMN v2.0 compliant business processes
 
-![Application Modules](img/application-modules.png)
+<img src="img/application-modules.png" width="800em">
 
 <br><br>
