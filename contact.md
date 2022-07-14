@@ -14,7 +14,7 @@ Please contact us through the channels below and we will respond to your request
 
 <h4>Address:</h4>
 <p><b>codbex ltd</b></p>
-<p>bul. Tsar Boris III, 253</p>
+<p>253, Tsar Boris III blvd.,</p>
 <p>1618, Sofia, Bulgaria</p>
 <h4>Phone:</h4>
 <p>+359 (0)888892300</p>
