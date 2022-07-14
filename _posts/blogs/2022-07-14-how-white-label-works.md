@@ -59,6 +59,16 @@ There are a few options such a platform can be delivered to customers:
 
 <img src="/img/deployment-customer.png" width="800em">
 
+#### How the support efforts looks like?
+
+There are several layers of engagement available, which determines the support levels:
+
+<img src="/img/product-support.png" width="800em">
+
+For easy estimation of the support cost, we provide a T-shirt size levels:
+
+<img src="/img/product-tshirts.png" width="800em">
+
 #### It sounds interesting?
 
 You can always <a href="/contact.html">contact</a> us with your ideas and requirements.
