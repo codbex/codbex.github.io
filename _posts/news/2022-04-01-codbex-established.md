@@ -16,7 +16,7 @@ Today, on April, 01, 2022 the company __codbex__ has just been born.
 Yet another company that strives to make life for developers easier. To bring another level of productivity tools.
 To provide an innovative approach for the overall development experience.
 To open the door for the highly scalable public cloud providers.
-To offer a partnership on the technology which can be powerful enough for runnning the whole business end to end.
+To offer partnership on technology which can be powerful enough for running the whole business end to end.
 
 All of this and much more deserves its own place on Earth.
 
@@ -39,7 +39,7 @@ How we work and what is our culture? What drives us to do what we do? It is simp
 ### The plan
 
 The long term vision is to become the preferred technology choice for the modern business applications and extensions,
-hence to fulfil our dream - to make the developers life easier.
+hence to fulfill our dream - to make the developers life easier.
 
 
 <br><br><br>
