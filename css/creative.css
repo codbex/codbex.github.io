@@ -137,8 +137,7 @@ body {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  --background-image: url("../img/header.jpg");
-  background-image: radial-gradient(#494641,#212529);
+  background-image: radial-gradient(rgba(73, 70, 65, 0.5), rgba(33, 37, 41, 0.9),rgba(33, 37, 41, 1)),url("../img/milky-way.jpg");
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
