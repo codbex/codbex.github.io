@@ -13,7 +13,7 @@ Please contact us through the channels below and we will respond to your request
 <br>
 
 <h4>Address:</h4>
-<p><b>codbex ltd</b></p>
+<p><b>codbex ltd.</b></p>
 <p>253, Tsar Boris III blvd.,</p>
 <p>1618, Sofia, Bulgaria</p>
 <h4>Phone:</h4>
