@@ -49,15 +49,15 @@ There are a few options such a platform can be delivered to customers:
 
 ##### codbex owned infrastructure
 
-<img src="img/deployment-codbex.png" width="800em">
+<img src="/img/deployment-codbex.png" width="800em">
 
 ##### Partner owned infrastructure
 
-<img src="img/deployment-partner.png" width="800em">
+<img src="/img/deployment-partner.png" width="800em">
 
 ##### Customer owned infrastructure
 
-<img src="img/deployment-customer.png" width="800em">
+<img src="/img/deployment-customer.png" width="800em">
 
 #### It sounds interesting?
 
