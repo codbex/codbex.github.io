@@ -15,7 +15,7 @@ body, html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Arial;
+    font-family: 'Nunito Sans', sans-serif;
 	font-weight: 700;
 	color: #e68a00
 }
@@ -105,7 +105,7 @@ footer li {
 
 .intro-message > h1 {
 	margin-bottom: -5%;
-	font-family: "Montserrat", Arial, sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
 	font-size: 8em;
 	color: white;
 }
@@ -134,16 +134,6 @@ footer li {
     padding-top: 2em !important;
     margin-bottom: -2.5em !important;
     margin-left: -1.7em;
-}
-
-
-@font-face {
-font-family: �Montserrat�;
-src: url(�webfont.eot�); 
-src: url(�webfont.eot?#iefix�) format(�embedded-opentype�),
-    url(�webfont.svg#svgFontName�) format(�svg�),
-    url(�webfont.woff�) format(�woff�),
-    url(�webfont.ttf�)  format(�truetype�);
 }
 
 @media (max-width: 767px) {
@@ -288,7 +278,7 @@ p.copyright {
 .navbar-default .navbar-brand {
     color: #e68a00;
     font-weight: 700;
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 2rem;
 }
 
@@ -298,7 +288,7 @@ p.copyright {
 
 .navbar-default .navbar-nav li a {
     font-weight: 700;
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: black !important;
