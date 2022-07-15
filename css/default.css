@@ -12,11 +12,11 @@
 body, html {
     height: 100%;
     width: 100%;
-    font-family: 'Nunito Sans', sans-serif;	
+    font-family: 'Montserrat', sans-serif;	
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #e68a00
 }
@@ -110,7 +110,7 @@ footer li {
 
 .intro-message > h1 {
 	margin-bottom: -5%;
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 8em;
 	color: white;
 }
@@ -283,7 +283,7 @@ p.copyright {
 .navbar-default .navbar-brand {
     color: #e68a00;
     font-weight: 700;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
 }
 
@@ -293,7 +293,7 @@ p.copyright {
 
 .navbar-default .navbar-nav li a {
     font-weight: 700;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: black !important;
