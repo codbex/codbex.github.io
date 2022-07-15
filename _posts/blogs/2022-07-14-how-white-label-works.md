@@ -12,12 +12,16 @@ tags:
 
 There are many business models, which are applicable to business software, for companies that create products or offer professional services.
 
+<br>
+
 #### Why someone might choose the white label model and what it's all about?
 
 According to [Business Model Navigator](https://businessmodelnavigator.com/): "A white label producer allows other companies 
 to distribute its goods under their brands, so that it appears as if they are made by them. 
 The same product or service is often sold by multiple marketers and under different brands. 
 This way, various customer segments can be satisfied with the same product."
+
+<br>
 
 #### How this applies to the technology platforms produced by codbex?
 
@@ -38,26 +42,38 @@ based on <b>codbex</b> technologies as well as to combine them with the tousands
 Once it is defined what will be included in the given platform, it will be built, tested, and supported by <b>codbex</b>, 
 but will come with the brand chosen by the partner.
 
+<br>
+
 #### Who owns the IP in this case?
 
 The partner is responsible for the definition of the platform, what will be included and how will be integrated to serve
 the scenarios they have in mind. Hence, it is partner's brand and partner's IP.
 
+<br>
+
 #### How it can be deployed?
 
 There are a few options such a platform can be delivered to customers:
+
+<br>
 
 ##### codbex owned infrastructure
 
 <img src="/img/deployment-codbex.png" width="800em">
 
+<br>
+
 ##### Partner owned infrastructure
 
 <img src="/img/deployment-partner.png" width="800em">
 
+<br>
+
 ##### Customer owned infrastructure
 
 <img src="/img/deployment-customer.png" width="800em">
+
+<br>
 
 #### How the support efforts looks like?
 
@@ -68,6 +84,8 @@ There are several layers of engagement available, which determines the support l
 For easy estimation of the support cost, we provide a T-shirt size levels:
 
 <img src="/img/product-tshirts.png" width="800em">
+
+<br>
 
 #### It sounds interesting?
 
