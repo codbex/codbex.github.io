@@ -3,7 +3,6 @@ layout: news
 category: news
 title: Company dedicated to developers productivity
 brief: Today, on April, 01, 20022 the company <b>codbex</b> has just been born...
-info: /news/2022/04/01/codbex-esablished.html
 tags:
 - news
 ---
