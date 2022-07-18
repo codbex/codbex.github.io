@@ -3,7 +3,6 @@ layout: blog
 category: blogs
 title: How 'white-label' works
 brief: There are many business models, which are applicable to business software, for companies that create products or offer professional services...
-info: /blogs/2022/07/14/how-white-label-works.html
 tags:
 - blog
 ---
