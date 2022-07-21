@@ -1,7 +1,7 @@
 ---
 layout: blog
 category: blogs
-title: How 'white-label' works
+title: How the 'white-label' Business Model Works
 brief: There are many business models, which are applicable to business software, for companies that create products or offer professional services...
 tags:
 - blog
@@ -24,7 +24,7 @@ This way, various customer segments can be satisfied with the same product."
 
 #### How this applies to the technology platforms produced by codbex?
 
-The enterprise companies have an urgent need of an unified technology platform for their application park,
+The enterprise companies have urgent needs of an unified technology platform for their application park,
 which they ask the implementation partners to provide or to suggest one. Such an 'unified technology platform' can reduce the
 onboarding time of the new services, can ease the integration process between them, can improve the company's 
 TCD and TCO of their applications drastically.
@@ -33,13 +33,12 @@ but rely entirely on technologies built by others. Building such a platform from
 Realistically, they can be provided either by software giants like Google, Amazon, Microsoft or by companies who are
 specialized in building exactly such kind of technology platforms. With the big software vendors the problem is that 
 the technologies and the platforms are too generic and provide only basic functionalities. It is still comparatively difficult to
-start building applications directly at this level and it is not easy to change it in the way you like it. On the other hand, the specialized
-companies provide an opinionated stack, which lowers the entry barrier for application developers and in the same time
+start building applications directly at this level and it is not easy to change it in the way you like it. On the other hand, the specialized companies provide opinionated stacks, which lowers the entry barrier for application developers and in the same time
 increase their productivity. But still, it is not easy to change it to meet the requirements of the given customer.
 In this context, <b>codbex</b> offers to partners the opportunity to build, for them and their customers, highly specialized platforms
-based on <b>codbex</b> technologies as well as to combine them with the tousands mature yet well known open source components.
+based on <b>codbex</b> technologies including 400+ components as well as to combine them with the tousands mature yet well known open source components.
 Once it is defined what will be included in the given platform, it will be built, tested, and supported by <b>codbex</b>, 
-but will come with the brand chosen by the partner.
+but will come with the brand chosen by the partner or the end customer.
 
 <br>
 
