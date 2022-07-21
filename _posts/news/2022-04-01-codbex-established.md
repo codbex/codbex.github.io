@@ -1,7 +1,7 @@
 ---
 layout: news
 category: news
-title: Company dedicated to developers productivity
+title: Company Dedicated to Developers Productivity
 brief: Today, on April, 01, 20022 the company <b>codbex</b> has just been born...
 tags:
 - news
