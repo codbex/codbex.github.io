@@ -1,13 +1,13 @@
 ---
 layout: blog
 category: blogs
-title: How the 'white-label' Business Model Works
+title: How the 'White-Label' Business Model Works
 brief: There are many business models, which are applicable to business software, for companies that create products or offer professional services...
 tags:
 - blog
 ---
 
-### How the 'white-label' works for technology products?
+### How the 'White-Label' works for technology products?
 
 There are many business models, which are applicable to business software, for companies that create products or offer professional services.
 
