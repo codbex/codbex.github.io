@@ -26,7 +26,7 @@ This is the list of the <b>codbex</b> projects by categories:
 ## Runtimes
 
 - [atlas](https://github.com/codbex/codbex-atlas) - All in One Platform
-- [helios](https://github.com/codbex/codbex-atlas) - JavaScript and Typescript Pro-Code Platform
+- [helios](https://github.com/codbex/codbex-helios) - JavaScript and Typescript Pro-Code Platform
 - [hyperion](https://github.com/codbex/codbex-hyperion) - Business Process Management Platform
 - [mnemosyne](https://github.com/codbex/codbex-mnemosyne) - Databases Management Platform
 - [oceanus](https://github.com/codbex/codbex-oceanus) - Content Management System
