@@ -13,7 +13,7 @@ title: Pricing
 
 <div class="clearfix"></div>
 <h2><i class="fa fa-server fa-fw"></i>
-The technology layer plans</h2>
+Technology Layer Plans</h2>
 
 <br>
 
@@ -149,7 +149,7 @@ The technology layer plans</h2>
 
 <div class="clearfix"></div>
 <h2><i class="fa fa-server fa-fw"></i>
-Complementary services plans</h2>
+Complementary Services Plans</h2>
 
 <br>
 
