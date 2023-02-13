@@ -1,5 +1,53 @@
-{% include head.html %}
-	<div class="container">
-    {{ content }}
-    </div>
-{% include foot.html %}
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{% seo %}
+		{% feed_meta %}
+
+		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+
+		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-QWPZ5B9RH8"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-QWPZ5B9RH8",{page_path:e.pathname})})})</script>
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWPZ5B9RH8"></script>
+		{% endif %}
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="codbex" width="95" height="33" /></a></div>
+				{% include navigation.html %}
+			</div>
+		</header>
+		{{ content }}
+		<footer>
+			<div class="container">
+				<div class="footer-columns">
+					{% for column in site.data.footer %}
+					<ul class="footer-links">
+						{% for link in column.links %}
+							<li><a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon }}-icon"{% endif %}>
+								{% if link.social_icon %}
+									{% include social-icon.html icon=link.social_icon %}
+								{% endif %}
+								{{ link.name }}</a></li>
+						{% endfor %}
+					</ul>
+					{% endfor %}
+				</div>
+				<p class="copyright">&copy; {{ site.time | date: '%Y' }} codbex ltd. • <a href="/docs/legal-vendor-terms/">Terms</a> &amp; <a href="/docs/legal-privacy-policy/">Privacy</a></p>
+			</div>
+		</footer>
+		<script>
+			document.getElementById("open-nav").onclick = function () {
+				document.body.classList.toggle("nav-open");
+				return false;
+			};
+		</script>
+	</body>
+</html>

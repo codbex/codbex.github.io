@@ -1,384 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+title: codbex - high-productivity application platform
+description: Track and optimize your sales team in real time
+---
+<section class="hero">
+	<div class="text-container">
+		<h1><strong>High-Productivity Application Platform</strong></h1> 
+		<p class="subtext"></p>
+		<h2>for Developers, Software Vendors and Enterprises</h2>
+		<p class="subtext">to design, develop and deliver their industry solutions</p>
+		<div class="cta button alt"><a href="{{ site.baseurl }}/intro/">Get Started</a></div>
+		<div>
+			<img src="{{ site.baseurl }}/images/dashboard.png" alt="Screenshot" class="screenshot" />
+		</div>
+	</div>
+</section>
 
-  <head>
-  
-  
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-QWPZ5B9RH8"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-QWPZ5B9RH8",{page_path:e.pathname})})})</script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWPZ5B9RH8"></script>
-  
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<div class="content">
+	<section>
+		<div class="container flex">
+			<div class="text">
+				<h2>How can you utilise the <strong>Model Driven Architecture</strong> in your development processes?</h2>
+				<p>Our solution provides visual designer for model driven development (entity domain model).
+					With this editor, business developer can model the application’s domain model.
+					The developer can select from a list of templates, what kind of application to be generated.
+					Once the application is generated and published, it can be instantly accessed and tested.
+					The model and the application can be updated and pre-generated multiple times.
+					Modeling an application with 5-10 entities takes less than 15 min.
+					Modeling an application with 20-30 entities usually takes less than 45 min</p>
+			</div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/images/ide-mda.png" alt="Screenshot" class="screenshot editable" />
+			</div>
+		</div>
+	</section>
 
-    <title>codbex - high-productivity application platform</title>
+	<section>
+		<div class="container flex">
+			<div class="text">
+				<h2>How can you model <strong>Business Processes</strong> to cover your specific needs?</h2>
+				<p>Our solution provides visual designer for business process modeling.
+					With this editor, business developer can model the application’s business processes.
+					When the model is ready, the developer can configure handlers for the process tasks.
+					Once the process is published, it can be instantly triggered and tested.
+					The business process can be triggered from an event in the entity domain model.
+					Modeling business process with 5-10 steps takes less than 10 min.
+					Implementing the task’s custom script require additional time.</p>
+			</div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/images/ide-bpm.png" alt="Screenshot" class="screenshot editable" />
+			</div>
+		</div>
+	</section>
 
-    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+	<section>
+		<div class="container flex">
+			<div class="text">
+				<h2>How can you make nicely looking yet integrated user interfaces with <strong>User Interface Designer</strong> for the next microservice?</h2>
+				<p>Our solution provides visual designer for user interface modeling.
+					With this editor, business developer can model the application’s custom forms.
+					The developer can configure custom scripts and handlers for processing of the input.
+					Once the form is published, it can be instantly accessed and tested.
+					The custom form can be embedded in the generated user interface.
+					Adding new control to the form is done through Drag & Drop.
+					Modeling form with 5-10 controls takes less than 5 min.</p>
+			</div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/images/ide-form.png" alt="Screenshot" class="screenshot editable" />
+			</div>
+		</div>
+	</section>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<section class="testimonial">
+		<div class="container flex">
+			<div class="testimonial-block">
+				<div class="square-image"><img src="/images/staff/nedelcho.jpg" alt="Nedelcho Delchev"></div>
+				<blockquote>
+					<p>We see "Low Code" as high productivity tools that we give developers,
+						so they can focus on business value and shorten time to market.</p>
+					<p class="author">Nedelcho Delchev - CEO of codbex</p>
+				</blockquote>
+			</div>
+		</div>
+	</section>
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/creative.css" rel="stylesheet">
-    
-  </head>
-
-  <body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">codbex</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#what">What</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#who">Who</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#how">How</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1>
-              <strong style="color: #e68a00">codbex</strong>
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">high-productivity application platform for developers, software vendors and enterprises to collaborate, define, develop, run, operate and sell their solutions</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#what">Find Out More</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="bg-primary" id="what">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">What do we provide?</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">
-              <b>codbex</b> offers an unique high-productivity application platform foundation for our partners network to design and develop vertical industry solutions based on the variety of the open source technologies and open standards, and deliver them to customers on any hyperscaler as well as on-premises
-            </p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="overview.html">Overview</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="who">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">What it is for you?</h2>
-            <hr class="my-4">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-shopping-basket text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Enterprises</h3>
-              <p class="text-muted mb-0">looking for a modern, extendable and secure cloud applications for their specific business needs</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-wrench text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Developers</h3>
-              <p class="text-muted mb-0">need a platform providing powerful tooling, scallable infrastructure and a huge number of reusable components</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-gift text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Vendors</h3>
-              <p class="text-muted mb-0">want to build solutions tailored for specific customer's needs by combining ready to use components</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-dollar text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Resellers</h3>
-              <p class="text-muted mb-0">want to expand their products and services portfolio by promoting and reselling vertical industry solutions</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <br><br>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="technology.html">Technology</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Model Driven Architecture</h2>
-          <div><div class="text-left" style="width: 60%; margin-left: 20%;">
-            <div><i class="fa fa-angle-right"></i> Our solution provides visual designer for model driven development (entity domain
-model)</div>
-            <div><i class="fa fa-angle-right"></i> With this editor, business developer can model the application’s domain model</div>
-            <div><i class="fa fa-angle-right"></i> The developer can select from a list of templates, what kind of application to be generated</div>
-            <div><i class="fa fa-angle-right"></i> Once the application is generated and published, it can be instantly accessed and tested</div>
-            <div><i class="fa fa-angle-right"></i> The model and the application can be updated and pre-generated multiple times</div>
-            <div><i class="fa fa-angle-right"></i> Modeling an application with 5-10 entities takes less than 15 min</div>
-            <div><i class="fa fa-angle-right"></i> Modeling an application with 20-30 entities usually takes less than 45 min</div>
-          </div></div>
-          <br>
-          <div class="container-fluid p-0">
-            <div class="row">
-              <div class="col-lg-9"><img src="img/ide-modeling.png" width="70%"></div>
-              <div class="col-lg-3 text-left">
-                <p class="text-muted">Entity modeling</p>
-                <p class="text-muted">Domain data modeling</p>
-                <p class="text-muted">User Interface configuration</p>
-                <p class="text-muted">External (Feed) entity settings</p>
-                <p class="text-muted">Access Control configuration</p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container text-center">
-        <h2 class="mb-4">Business Process Modeling</h2>
-          <div><div class="text-left" style="width: 60%; margin-left: 20%;">
-            <div><i class="fa fa-angle-right"></i> Our solution provides visual designer for business process modeling
+	<section class="bottom-cta">
+		<h2><strong>Build</strong> your next industry solution faster</h2>
+		<div class="button alt"><a href="mailto:office@codbex.com">Join as a Partner</a></div>
+		<div class="container text-center">
+			<h5 style="margin-top: 5em">
+			<a href="https://quanterall.com" style="margin: 2em">Quanterall</a>
+			<a href="https://arcware.io" style="margin: 2em">Arcware</a>
+			<a href="https://lights.digital" style="margin: 2em">Digital Lights</a>
+			<a href="https://amista.be" style="margin: 2em">Amista</a>
+			<a href="https://pythian.com/" style="margin: 2em">Pythian</a>
+			<a href="https://anthill.one/" style="margin: 2em">Anthill</a>
+			</h5>
+		  </div>
+	</section>
 </div>
-            <div><i class="fa fa-angle-right"></i> With this editor, business developer can model the application’s business processes</div>
-            <div><i class="fa fa-angle-right"></i> When the model is ready, the developer can configure handlers for the process tasks</div>
-            <div><i class="fa fa-angle-right"></i> Once the process is published, it can be instantly triggered and tested</div>
-            <div><i class="fa fa-angle-right"></i> The business process can be triggered from an event in the entity domain model</div>
-            <div><i class="fa fa-angle-right"></i> Modeling business process with 5-10 steps takes less than 10 min</div>
-            <div><i class="fa fa-angle-right"></i> Implementing the task’s custom script require additional time</div>
-          </div></div>
-          <br>
-          <div class="container-fluid p-0">
-            <div class="row">
-              <div class="col-lg-3 text-right">
-                <p class="text-muted">Process steps modeling</p>
-                <p class="text-muted">Process flow modeling</p>
-                <p class="text-muted">Handler configuration</p>
-              </div>
-              <div class="col-lg-9"><img src="img/ide-bpm.png" width="70%"></div>
-            </div>
-          </div>
-      </div>
-    </section>
-
-
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">User Interface Modeling</h2>
-          <div><div class="text-left" style="width: 60%; margin-left: 20%;">
-            <div><i class="fa fa-angle-right"></i> Our solution provides visual designer for user interface modeling</div>
-            <div><i class="fa fa-angle-right"></i> With this editor, business developer can model the application’s custom forms</div>
-            <div><i class="fa fa-angle-right"></i> The developer can configure custom scripts and handlers for processing of the input</div>
-            <div><i class="fa fa-angle-right"></i> Once the form is published, it can be instantly accessed and tested</div>
-            <div><i class="fa fa-angle-right"></i> The custom form can be embedded in the generated user interface
-model</div>
-            <div><i class="fa fa-angle-right"></i> Adding new control to the form is done through Drag & Drop</div>
-            <div><i class="fa fa-angle-right"></i> Modeling form with 5-10 controls takes less than 5 min</div>
-          </div></div>
-          <br>
-          <div class="container-fluid p-0">
-            <div class="row">
-              <div class="col-lg-9"><img src="img/ide-form.png" width="70%"></div>
-              <div class="col-lg-3 text-left">
-                <p class="text-muted">Forms modeling</p>
-                <p class="text-muted">Custom Script configuration</p>
-                <p class="text-muted">Custom Handler configuration</p>
-                <p class="text-muted">Custom Styles (CSS) configuration</p>
-                <p class="text-muted">External data (feed) configuration</p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-
-    <section id="pricing">
-      <div class="container text-center">
-        <h2 class="mb-4">Pricing</h2>
-        <div><i class="fa fa-angle-right"></i> Our business plans start as low as €29.99 per user per month for Professional Edition and €149.99 per user per month for Enterprise Edition. Premium Edition as well as Development and Consulting Services are availble per request. Free and open source version can be used for commercial and non-commercial purposes on your own risk and deployed on your infrastructure.</div>
-        <br>
-        <br>
-        <a class="btn btn-dark btn-xl sr-button" href="pricing.html">Pricing</a>
-      </div>
-    </section>
-
-    <section id="partners" class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Partner Registration!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="mailto:office@codbex.com">Join Now!</a>
-      </div>
-      <hr/>
-      <div class="container text-center">
-        <h5 style="margin-top: 5em">
-		<a href="https://quanterall.com" style="margin: 2em">Quanterall</a>
-		<a href="https://arcware.io" style="margin: 2em">Arcware</a>
-		<a href="https://lights.digital" style="margin: 2em">Digital Lights</a>
-		<a href="https://amista.be" style="margin: 2em">Amista</a>
-		<a href="https://pythian.com/" style="margin: 2em">Pythian</a>
-		<a href="https://anthill.one/" style="margin: 2em">Anthill</a>
-        </h5>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            <hr class="my-4">
-            <p class="mb-5">Ready to start your next project with us? That's great! Post a registration request or ask a question and we will get back to you as soon as possible!</p>
-	    <p class="mb-5"><b>codbex ltd</b><br>253, Tsar Boris III blvd.,<br>1618, Sofia, Bulgaria<br>Phone: +359 (0)888892300<br>e-mail: office@codbex.com</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 text-primary sr-contact"></i>
-            <p>
-              <a href="mailto:office@codbex.com">office@codbex.com</a>
-            </p>
-          </div>
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fa fa-user-plus fa-3x mb-3 text-primary sr-contact"></i>
-            <p><a href="https://github.com/codbex/partners/issues">Post a registration request</a></p>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fa fa-question fa-3x mb-3 text-primary sr-contact"></i>
-            <p>
-              <a href="https://github.com/codbex/issues/issues">Ask a question</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.js"></script>
-
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
-                        <div class="col-lg-4 heading-lead page-scroll">
-                          <hr class="section-heading-spacer">
-                            <div class="clearfix"></div>
-                            <h4>Partners</h4>
-                            <ul>
-                                <li><a href="/overview.html" target="_blank" >Overview</a></li>
-                                <li><a href="https://github.com/codbex/partners/issues" target="_blank" >Become a Partner</a></li>
-                                <li><a href="mailto:office@codbex.com">Contact us</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 heading-lead">
-                        <hr class="section-heading-spacer">
-                              <div class="clearfix"></div>
-                            <h4>Legal</h4>
-                            <ul>
-                              <li><a href="/legal-privacy-policy.html">Privacy Policy</a></li>
-                              <li><a href="/legal-participation-agreement.html">Participation Agreement</a></li>
-                        <li><a href="/legal-vendor-terms.html">Terms of Use</a></li>
-                        <li><a href="/legal-ecommunications-policy.html">e-Communications Policy</a></li>
-                        <li><a href="//www.eclipse.org/legal/epl-2.0/">Eclipse Public License</a></li>
-                      </ul>
-                        </div>
-                        <div class="col-lg-4 heading-lead">
-                      <hr class="section-heading-spacer">
-                            <div class="clearfix"></div>
-                            <h4>Community</h4>
-                        <ul>
-                                  <li><a href="/news.html" target="_blank">Newsletter</a></li>
-                                  <li><a href="/blogs.html" target="_blank">Blogs</a></li>
-                                  <li><a href="https://github.com/codbex/issues/issues" target="_blank">Issues</a></li>
-                                  <li><a href="https://github.com/codbex/wiki/wiki" target="_blank">Wiki</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-8">
-                            <p class="copyright text-muted small">Copyright &copy; 2022 codbex. All Rights Reserved.</p>
-                        </div>
-                        <div class="list-inline banner-social-buttons col-lg-4">
-                              <a href="https://twitter.com/codbex" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-twitter fa-fw"></i></a>
-                              <a href="https://github.com/codbex" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-github fa-fw"></i></a>
-                              <a href="https://www.youtube.com/channel/UCbxnGOhmcDvBIrafDeyCU7Q/videos" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-youtube fa-fw"></i></a>
-                              <a href="https://www.linkedin.com/company/codbex" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-linkedin fa-fw"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- JavaScript -->
-        <script src="/js/jquery-1.10.2.js"></script>
-        <script type="text/javascript" src="/gdpr/jquery.ihavecookies.min.js"></script>
-	    <script type="text/javascript">
-	      $(document).ready(function() {
-	          $('body').ihavecookies({
-	              title: 'Accept Cookies & Privacy Policy?',
-	              message: 'This website uses cookies to ensure you get the best experience on our website',
-	              delay: 2000,
-	              expires: 30,
-	              link: 'legal-privacy-policy.html',
-	              onAccept: function(){
-	                location.reload();
-	              },
-	              uncheckBoxes: true
-	          });
-	      });
-	    </script>
-      
-      <link href="/css/gdpr.css" rel="stylesheet">
-
-  </body>
-
-</html>
