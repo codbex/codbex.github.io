@@ -96,7 +96,7 @@ We will use the collected personal data only as described in this Privacy Policy
 6. The right to object to processing – You have the right to object to CODBEX's processing of your personal data, under certain conditions.
 7. The right to data portability – You have the right to request that CODBEX transfer the data that we have collected to another organisation, or directly to you, under certain conditions.
 
-If you would like to exercise any of these rights, please contact us at: office@codbex.com
+If you would like to exercise any of these rights, please contact us at: <office@codbex.com>
 
 ### CHILDREN’S PRIVACY
 
@@ -112,7 +112,7 @@ We will retain your personal data for as long as necessary to fulfil the purpose
 
 ### INQUIRIES, ACCESS AND UPDATING YOUR PERSONAL DATA
 
-CODBEX needs your help in keeping the personal data you have shared with us accurate and up to date. If you are a registered user, you may make these updates yourself online via: https://www.codbex.com. You may also make these updates or other changes by sending an email to: office@codbex.com.
+CODBEX needs your help in keeping the personal data you have shared with us accurate and up to date. If you are a registered user, you may make these updates yourself online via: [https://www.codbex.com](https://www.codbex.com). You may also make these updates or other changes by sending an email to: <office@codbex.com>.
 
 ### CHANGES TO THIS PRIVACY POLICY
 
@@ -120,4 +120,4 @@ We reserve the right to modify this Privacy Policy at any time. Any changes will
 
 ### CONTACT US
 
-If you have any questions or concerns about this Privacy Policy or our data practices, please do not hesitate to contact us at: office@codbex.com
+If you have any questions or concerns about this Privacy Policy or our data practices, please do not hesitate to contact us at: <office@codbex.com>
