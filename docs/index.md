@@ -7,7 +7,7 @@ description: Find the list of all the relevant legal documents reflecting how we
 
 ## [e-Communication Policy](/docs/legal-ecommunications-policy/)
 
-## [Participation Agreement](/docs/legal-participation-agreement/)
+## [Terms of Service](/docs/legal-terms-of-service/)
 
 ## [Privacy Policy](/docs/legal-privacy-policy/)
 
