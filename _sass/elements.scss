@@ -71,3 +71,39 @@ ol, ul, li, address {
     text-align: center;
 	float: right !important;
 }
+
+table {
+	width: 90%;
+	margin: 1em;
+	padding: 1em;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+th {
+	background-color: #eaeaea;
+}
+
+th, td {
+	font-size: 1em;
+	color: #666;
+	margin-bottom: 10px;
+	font-weight: 600;
+	line-height: 1.2em;
+	padding: 0.2em;
+}
+
+td {
+	font-weight: 300;
+}
+
+.feature {
+	text-align: left;
+}
+
+.enablement {
+	width: 5em;
+	text-align: center;
+}

@@ -1,4 +1,6 @@
 - links:
+  - name: Products
+    link: /products/
   - name: Pricing
     link: /pricing/
   - name: News

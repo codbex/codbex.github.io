@@ -1,3 +1,7 @@
+- name: Products
+  link: /products/
+  new_window: false
+  highlight: false
 - name: Pricing
   link: /pricing/
   new_window: false
