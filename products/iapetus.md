@@ -1,0 +1,22 @@
+---
+title: Iapetus Edition
+---
+
+<div class="product-tag"><a href="https://github.com/codbex/codbex-iapetus" target="_blank">GitHub Project</a></div>
+
+Iapetus Edition includes all necessary features for Integrations Management for ETL and other enterprise integration patterns based on Apache Camel.
+
+It provides capabilities for - Integrations Modeler, Integrations Flows.
+
+### Features included, but not limited to:
+
+
+
+<br>
+
+Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
+
+<hr>
+
+
+<hr>
