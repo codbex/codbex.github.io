@@ -10,7 +10,9 @@ It provides capabilities for end-to-end development process from database modeli
 
 ### Features included, but not limited to:
 
+## Enterprise JavaScript Development
 
+<img src="/images/features/base-js-editor.png" width="800em">
 
 <br>
 
