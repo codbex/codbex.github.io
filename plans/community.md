@@ -1,10 +1,10 @@
 ---
-title: Community Edition
+title: Community Plan
 ---
 
 <div class="price-tag">€0.00 and always will be free</div>
 
-<b>codbex</b> Community Edition is for commercial or non-commercial use without SLAs. It includes all the available features for rapid application development of cloud applications from the open-source project <a href="https://www.dirigible.io">Eclipse Dirigible</a>, as well as the devops tools for opearating the workloads.
+<b>codbex</b> community plan is for commercial or non-commercial use without SLAs. It includes all the available features for rapid application development of cloud applications from the open-source project <a href="https://www.dirigible.io">Eclipse Dirigible</a>, as well as the devops tools for opearating the workloads.
 
 Eclipse Dirigible provides capabilities for end-to-end development process from database modeling and management, through RESTful services authoring using various dynamic languages, to pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring.
 

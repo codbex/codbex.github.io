@@ -1,10 +1,10 @@
 ---
-title: Enterprise Edition
+title: Enterprise Plan
 ---
 
 <div class="price-tag">€249 per user (minimum 100 users)</div>
 
-<b>codbex</b> Enterprise Edition is for large enterprises with premium SLAs. It includes all the available features for rapid application development of cloud applications from the open-source project <a href="https://www.dirigible.io">Eclipse Dirigible</a>, as well as the devops tools for opearating the workloads.
+<b>codbex</b> enterprise plan is for large enterprises with premium SLAs. It includes all the available features for rapid application development of cloud applications from the open-source project <a href="https://www.dirigible.io">Eclipse Dirigible</a>, as well as the devops tools for opearating the workloads.
 
 Eclipse Dirigible provides capabilities for end-to-end development process from database modeling and management, through RESTful services authoring using various dynamic languages, to pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring.
 
@@ -31,14 +31,14 @@ Eclipse Dirigible provides capabilities for end-to-end development process from 
 
 Support can be requested via <a href="https://github.com/eclipse/dirigible/issues">public channels</a> of Dirigible project itself.
 
-### In addition for Professional Edition you get:
+### In addition for Professional Plan you get:
 
 - Source code repository setup on GitHub<br>
 - CI/CD pipelines for automatic udates on GitHub<br>
 - Deployed on Google Cloud Platform<br>
 - Support via e-mail with reponse time of two business days<br>
 
-### In addition for Enterprise Edition you get:
+### In addition for Enterprise Plan you get:
 
 - Source code repository setup on any Git provider<br>
 - Private source code repositories

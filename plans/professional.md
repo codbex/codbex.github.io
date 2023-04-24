@@ -1,10 +1,10 @@
 ---
-title: Professional Edition
+title: Professional Plan
 ---
 
 <div class="price-tag">€49 per user (minimum 10 users)</div>
 
-<b>codbex</b> Professional Edition is for for small and mid-size businesses with basic SLAs. It includes all the available features for rapid application development of cloud applications from the open-source project <a href="https://www.dirigible.io">Eclipse Dirigible</a>, as well as the devops tools for opearating the workloads.
+<b>codbex</b> professional plan is for for small and mid-size businesses with basic SLAs. It includes all the available features for rapid application development of cloud applications from the open-source project <a href="https://www.dirigible.io">Eclipse Dirigible</a>, as well as the devops tools for opearating the workloads.
 
 Eclipse Dirigible provides capabilities for end-to-end development process from database modeling and management, through RESTful services authoring using various dynamic languages, to pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring.
 
@@ -30,7 +30,7 @@ Eclipse Dirigible provides capabilities for end-to-end development process from 
 
 Support can be requested via <a href="https://github.com/eclipse/dirigible/issues">public channels</a> of Dirigible project itself.
 
-### In addition for Professional Edition you get
+### In addition for Professional Plan you get
 
 - Source code repository setup on GitHub<br>
 - CI/CD pipelines for automatic udates on GitHub<br>
