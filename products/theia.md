@@ -8,7 +8,7 @@ Theia Edition includes all necessary features terminal in the browser via HTTP.
 
 ### Features included, but not limited to:
 
-
+### TO BE LISTED
 
 <br>
 

@@ -8,9 +8,9 @@ Hyperion Edition includes all necessary features for Business Processes Manageme
 
 It provides capabilities for BPM - BPMN Modeler, Business Process Definitions, Instances, Variables, Inbox.
 
-### Features included, but not limited to:
+### Business Processes
 
-
+<img src="/images/features/bpm-perspective.png">
 
 <br>
 

@@ -8,9 +8,9 @@ Hades Edition includes all necessary features for Database Management for Postgr
 
 It provides capabilities for database modeling and management - Database Explorer, SQL Console, Data Transfer.
 
-### Features included, but not limited to:
+### Databases
 
-
+<img src="/images/features/database-perspective.png">
 
 <br>
 

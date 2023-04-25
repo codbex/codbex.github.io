@@ -8,9 +8,9 @@ Oceanus Edition includes all necessary features for Document Management for <b>C
 
 It provides capabilities for Document Browser, Document Viewer, Import and Export of files, ZIP compressing and decompressing.
 
-### Features included, but not limited to:
+### Document Management
 
-
+<img src="/images/features/documents-perspective.png">
 
 <br>
 
