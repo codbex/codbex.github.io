@@ -10,6 +10,8 @@ It provides capabilities for end-to-end development process from database modeli
 
 ## Enterprise JavaScript Development
 
+JavaScript Engine included in the edition is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> implementation.
+
 <img src="/images/features/js-editor.png" width="800em">
 
 ## User Interfaces
@@ -20,7 +22,7 @@ It provides capabilities for end-to-end development process from database modeli
 
 <img src="/images/features/debugger-perspective.png" width="800em">
 
-## Git Themes
+## Git
 
 <img src="/images/features/git-perspective.png" width="800em">
 
@@ -32,19 +34,10 @@ It provides capabilities for end-to-end development process from database modeli
 
 <img src="/images/features/jobs-perspective.png" width="800em">
 
-## Operations
-
-<img src="/images/features/operations-perspective.png" width="800em">
-
-## BPM
+## Business Processes
 
 <img src="/images/features/bpm-perspective.png" width="800em">
 
 <br>
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
-
-<hr>
-
-
-<hr>
