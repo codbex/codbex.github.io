@@ -10,13 +10,9 @@ It provides capabilities for Document Browser, Document Viewer, Import and Expor
 
 ### Document Management
 
-<img src="/images/features/documents-perspective.png">
+<img class="screenshot" src="/images/features/documents-perspective.png">
 
 <br>
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 
-<hr>
-
-
-<hr>

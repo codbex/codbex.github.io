@@ -8,15 +8,7 @@ Iapetus Edition includes all necessary features for Integrations Management for 
 
 It provides capabilities for - Integrations Modeler, Integrations Flows.
 
-### Features included, but not limited to:
-
-### TO BE LISTED
-
 <br>
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 
-<hr>
-
-
-<hr>

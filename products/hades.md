@@ -10,13 +10,9 @@ It provides capabilities for database modeling and management - Database Explore
 
 ### Databases
 
-<img src="/images/features/database-perspective.png">
+<img class="screenshot" src="/images/features/database-perspective.png">
 
 <br>
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 
-<hr>
-
-
-<hr>

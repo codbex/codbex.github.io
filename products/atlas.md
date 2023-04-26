@@ -10,51 +10,51 @@ It provides capabilities for end-to-end development process from database modeli
 
 ### Enterprise JavaScript Development
 
-JavaScript Engine included in the edition is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> implementation.
+JavaScript Engine included is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> implementation. It supports also the synchronous programming model in contracts to Node.js which makes it very easy to learn and use. The latest ECMA specification is supported as well as the Common.js one for compatibility reasons. The <a href="https://www.dirigible.io/api/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.
 
-<img src="/images/features/js-editor.png">
+<img class="screenshot" src="/images/features/js-editor.png">
 
 ### User Interfaces
 
-User interface for browsing and searching within the published content.
+User interface for browsing and searching within the published content. Authoring of the user interfaces is powered by the in-system development environment where every change can be immediately visualized in Preview area. The different major frameworks can be combined due to the syndication layout chosen.
 
-<img src="/images/features/ui-widgets.png">
+<img class="screenshot" src="/images/features/ui-widgets.png">
 
 ### Debugger
 
 The Debugger enables you to monitor the execution of your code, stop it, restart it or set breakpoints, and change values in memory.
 
-<img src="/images/features/debugger-perspective.png">
+<img class="screenshot" src="/images/features/debugger-perspective.png">
 
 ### Git
 
-The Git perspective allows you to fully control your code and manage repositories
+The Git perspective allows you to fully control your code and manage repositories. Sharing, cloning, pulling and pushing the changes can be done directly from the browser. You can change and checkout branches, stage and unstage files before commit and push them to the remote repository.
 
-<img src="/images/features/git-perspective.png">
+<img class="screenshot" src="/images/features/git-perspective.png">
 
 ### Databases
 
 The Database perspective features a database explorer and manager, a console to execute SQL statements and to preview results in table format.
 
-<img src="/images/features/database-perspective.png">
+<img class="screenshot" src="/images/features/database-perspective.png">
 
 ### Jobs
 
-Support of scheduled jobs as triggers for backend services invocation.
+Support of scheduled jobs as triggers for backend services invocation. This asynchronous execution of tasks is supported via jobs entities. The regular time of execution can be specified in CRON format and the handler which will be called is written in JavaScript. Jobs can have input parameters, which can be fulfiled on manual execution via a form interface.
 
-<img src="/images/features/jobs-perspective.png">
+<img class="screenshot" class="screenshot" src="/images/features/jobs-perspective.png">
 
 ### Business Processes
 
-Support of business processes defined in BPMN 2.0 and executed by the underlying BPM process engine
+Support of business processes defined in BPMN 2.0 and executed by the underlying BPM process engine Flowable.
 
-<img src="/images/features/bpm-perspective.png">
+<img class="screenshot" src="/images/features/bpm-perspective.png">
 
 ### Document Management
 
 The Documents perspective provides capabilities for Document Browser, Document Viewer, Import and Export of files, ZIP compressing and decompressing.
 
-<img src="/images/features/documents-perspective.png">
+<img class="screenshot" src="/images/features/documents-perspective.png">
 
 <br>
 

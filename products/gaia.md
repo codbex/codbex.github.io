@@ -8,15 +8,7 @@ Gaia Edition includes all the basic platform runtime for products.
 
 It provides all the standard components except the Web IDE.
 
-### Features included, but not limited to:
-
-### TO BE LISTED
-
 <br>
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 
-<hr>
-
-
-<hr>

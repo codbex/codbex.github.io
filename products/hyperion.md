@@ -10,13 +10,9 @@ It provides capabilities for BPM - BPMN Modeler, Business Process Definitions, I
 
 ### Business Processes
 
-<img src="/images/features/bpm-perspective.png">
+<img class="screenshot" src="/images/features/bpm-perspective.png">
 
 <br>
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 
-<hr>
-
-
-<hr>
