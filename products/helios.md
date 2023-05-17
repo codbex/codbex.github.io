@@ -10,7 +10,7 @@ It provides capabilities for JavaScript development server-side RESTful services
 
 ### Enterprise JavaScript Development
 
-JavaScript Engine included in the edition is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> implementation.
+JavaScript Engine included is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> implementation. It supports also the synchronous programming model in contracts to Node.js which makes it very easy to learn and use. The latest ECMA specification is supported as well as the Common.js one for compatibility reasons. The <a href="https://www.dirigible.io/api/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.
 
 <img class="screenshot" src="/images/features/js-editor.png">
 
