@@ -6,10 +6,8 @@ categories:
 author: nedelcho
 ---
 
-### Where we started from
+It took a while until we prepared the vision for the next few years in the area of Low-Code platforms and specifically in the context of productivity tools for business application developers.
 
-It took a while until we prepared the vision for the next few years in the area of Low-Code platforms 
-and specifically in the context of productivity tools for business application developers.
 What we have as a technology basis is the well known and well established 
 <a href="https://www.dirigible.io" target="_blank">Eclipse Dirigible</a> project, 
 contributed to one of the major open source foundations - 
@@ -18,7 +16,7 @@ Being vendor agnostic, Eclipse does not provide commercial products to end custo
 out of the open source projects as well as ongoing support activities, 
 but rather relies on the ecosystem of partner companies that work together to make the technology better.
 
-### Holistic platform
+### Holistic Platform
 
 At codbex, we also like the open source model for product development, 
 which we believe leads to better resource optimization, reusability, 
