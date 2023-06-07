@@ -2,7 +2,7 @@
 title: Theia Edition
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-theia" target="_blank">GitHub Project</a></div>
+<div class="product-tag"><a href="https://github.com/codbex/codbex-theia" target="_blank">Source Code</a></div>
 
 Theia Edition includes all necessary features terminal in the browser via HTTP.
 
