@@ -2,7 +2,7 @@
 title: Helios Edition
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-helios" target="_blank">GitHub Project</a></div>
+<div class="product-tag"><a href="https://github.com/codbex/codbex-helios" target="_blank">Source Code</a></div>
 
 Helios Edition includes all necessary features for developing <a href="https://www.dirigible.io/api/" target="_blank">JavaScript Enterprise API</a>.
 
