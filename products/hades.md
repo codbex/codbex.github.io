@@ -2,7 +2,7 @@
 title: Hades Edition
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-hades" target="_blank">Source Code</a></div>
+<div class="product-tag"><a href="https://github.com/codbex/codbex-hades" target="_blank" class="product-link">Source Code</a></div>
 
 Hades Edition includes all necessary features for Database Management for PostgreSQL, MySQL, SAP HANA, H2 and more...
 
