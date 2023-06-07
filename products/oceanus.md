@@ -2,7 +2,7 @@
 title: Oceanus Edition
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-oceanus" target="_blank">Source Code</a></div>
+<div class="product-tag"><a href="https://github.com/codbex/codbex-oceanus" target="_blank" class="product-link">Source Code</a></div>
 
 Oceanus Edition includes all necessary features for Document Management for <b>CMIS</b> compliant repositories.
 
