@@ -2,7 +2,7 @@
 title: Hyperion Edition
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-hyperion" target="_blank">GitHub Project</a></div>
+<div class="product-tag"><a href="https://github.com/codbex/codbex-hyperion" target="_blank">Source Code</a></div>
 
 Hyperion Edition includes all necessary features for Business Processes Management fully compliant with BPMN v2 based on Flowable engine.
 
