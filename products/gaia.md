@@ -2,7 +2,7 @@
 title: Gaia Edition
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-gaia" target="_blank">GitHub Project</a></div>
+<div class="product-tag"><a href="https://github.com/codbex/codbex-gaia" target="_blank">Source Code</a></div>
 
 Gaia Edition includes all the basic platform runtime for products.
 
