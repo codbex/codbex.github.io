@@ -2,7 +2,7 @@
 title: Iapetus Edition
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-iapetus" target="_blank">Source Code</a></div>
+<div class="product-tag"><a href="https://github.com/codbex/codbex-iapetus" target="_blank" class="product-link">Source Code</a></div>
 
 Iapetus Edition includes all necessary features for Integrations Management for ETL and other enterprise integration patterns based on Apache Camel.
 
