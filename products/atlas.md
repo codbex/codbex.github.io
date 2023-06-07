@@ -2,7 +2,7 @@
 title: Atlas Edition
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-atlas" target="_blank">Source Code</a></div>
+<div class="product-tag"><a href="https://github.com/codbex/codbex-atlas" target="_blank" class="product-link">Source Code</a></div>
 
 Atlas Edition includes all the available features for rapid application development of cloud applications, as well as the devops tools for opearating the workloads.
 
