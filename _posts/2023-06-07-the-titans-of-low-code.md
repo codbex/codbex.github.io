@@ -8,6 +8,11 @@ author: nedelcho
 
 It took us a while to prepare our vision of how the area of Low-Code platforms would look in the next few years and specifically in the context of productivity tools for business application developers.
 
+<img src="/images/2023-06-07-the-titans-of-low-code/francisco-ghisletti-Wf2tCunxqQU-unsplash.jpg" width="800em">
+Photo by <a href="https://unsplash.com/@tank_ghisletti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Francisco Ghisletti</a> on <a href="https://unsplash.com/photos/Wf2tCunxqQU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+---
+
 ### The Foundation
 
 What we have as a technology basis is the well known and well established 
@@ -42,10 +47,5 @@ So, the results of these titanic efforts deserve to be named after the Greek Tit
 * [Gaia](/products/gaia/) - the mother of all the products which will be produced by and run on the technology stack.
 * [Kronos](/products/kronos/) - a special edition for those clients and partners who have severe issues with their legacy applications and feel desperately lost in space.
 * [Atlas](/products/atlas/) - we still offer an all in one platform, including all features and extensions for all roles in scope, such as domain entities, processes and integrations modeling, generation tools and frameworks.
-
-<img src="/images/2023-06-07-the-titans-of-low-code/francisco-ghisletti-Wf2tCunxqQU-unsplash.jpg" width="800em">
-Photo by <a href="https://unsplash.com/@tank_ghisletti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Francisco Ghisletti</a> on <a href="https://unsplash.com/photos/Wf2tCunxqQU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
----
 
 For more details about the <a href="https://www.codbex.com/products/">products</a> and <a href="https://www.codbex.com/pricing/">pricing</a> we are available through any of the channels in <a href="https://www.codbex.com/contacts/">contacts</a>.
