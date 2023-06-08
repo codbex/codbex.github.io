@@ -11,8 +11,6 @@ It took us a while to prepare our vision of how the area of Low-Code platforms w
 <img src="/images/2023-06-07-the-titans-of-low-code/francisco-ghisletti-Wf2tCunxqQU-unsplash.jpg" width="800em">
 Photo by <a href="https://unsplash.com/@tank_ghisletti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Francisco Ghisletti</a> on <a href="https://unsplash.com/photos/Wf2tCunxqQU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
----
-
 ### The Foundation
 
 What we have as a technology basis is the well known and well established 
