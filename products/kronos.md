@@ -14,7 +14,13 @@ The compatibility stack is an extension of the [Eclipse Dirigible](https://githu
 
 This is the official fork of the <a href="https://www.xsk.io" target="_blank">Project "XSK"</a>, which was discontinued by SAP in 2022.
 
+### Landscapes - Before and After Migration
+
 <img class="migration" src="/images/kronos-migration-landscape.png">
+
+### Artefacts Handling
+
+<img class="artefacts" src="/images/features/kronos-artefacts.png">
 
 <br>
 
