@@ -33,15 +33,15 @@ by separating into different editions, each focused on a specific target role.
 
 So, the results of these titanic efforts deserve to be named after the Greek Titans:
 
-* [Helios](/products/helios/) - the light for the developer coming from behind the clouds. You can deploy it directly on the target infrastructure and then start coding your server-side services via the full-fledged Web IDE including a powerful Code Editor, Projects Explorer, Debugger, Import and Export, Live Preview, Console for logs and many more
-* [Hades](/products/hades/) - the dark side of the stack where a lot of bad things can be done, but it can also save lives if used correctly. It provides the database management tools for inspection, but also for altering the data
-* [Oceanus](/products/oceanus/) - the manager of all the binary creatures - documents, images and of course text files. Powerful zip file inflation is supported there, as well as a direct link for any CMIS-based repository
-* [Theia](/products/theia/) - a full-fledged terminal interface running in the browser, but connected to your target environment
-* [Hyperion](/products/hyperion/) - providing all the necessary modules for building, running and operating business processes based on BPMN v2 notation
-* [Iapetus](/products/iapetus/) - integrations management including the industry leading frameworks and connectors
-* [Gaia](/products/gaia/) - the mother of all the products which will be produced by and run on the technology stack
-* [Kronos](/products/kronos/) - a special edition for those clients and partners who have severe issues with their legacy applications and feel desperately lost in space
-* [Atlas](/products/atlas/) - we still offer an all in one platform, including all features and extensions for all roles in scope, such as domain entities, processes and integrations modeling, generation tools and frameworks
+* [Helios](/products/helios/) - the light for the developer coming from behind the clouds. You can deploy it directly on the target infrastructure and then start coding your server-side services via the full-fledged Web IDE including a powerful Code Editor, Projects Explorer, Debugger, Import and Export, Live Preview, Console for logs and many more.
+* [Hades](/products/hades/) - the dark side of the stack where a lot of bad things can be done, but it can also save lives if used correctly. It provides the database management tools for inspection, but also for altering the data.
+* [Oceanus](/products/oceanus/) - the manager of all the binary creatures - documents, images and of course text files. Powerful zip file inflation is supported there, as well as a direct link for any CMIS-based repository.
+* [Theia](/products/theia/) - a full-fledged terminal interface running in the browser, but connected to your target environment.
+* [Hyperion](/products/hyperion/) - providing all the necessary modules for building, running and operating business processes based on BPMN v2 notation.
+* [Iapetus](/products/iapetus/) - integrations management including the industry leading frameworks and connectors.
+* [Gaia](/products/gaia/) - the mother of all the products which will be produced by and run on the technology stack.
+* [Kronos](/products/kronos/) - a special edition for those clients and partners who have severe issues with their legacy applications and feel desperately lost in space.
+* [Atlas](/products/atlas/) - we still offer an all in one platform, including all features and extensions for all roles in scope, such as domain entities, processes and integrations modeling, generation tools and frameworks.
 
 <img src="/images/2023-06-07-the-titans-of-low-code/francisco-ghisletti-Wf2tCunxqQU-unsplash.jpg" width="800em">
 Photo by <a href="https://unsplash.com/@tank_ghisletti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Francisco Ghisletti</a> on <a href="https://unsplash.com/photos/Wf2tCunxqQU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
