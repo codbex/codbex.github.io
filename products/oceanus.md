@@ -6,7 +6,17 @@ title: Oceanus Edition
 
 Oceanus Edition includes all necessary features for Document Management for <b>CMIS</b> compliant repositories.
 
-It provides capabilities for Document Browser, Document Viewer, Import and Export of files, ZIP compressing and decompressing:
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Document Management</h2>
+            <p>It provides capabilities for Document Browser, Document Viewer, Import and Export of files, ZIP compressing and decompressing</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/documents-perspective.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
 
 * CMIS repositories
 * Built-in file system repository
@@ -24,10 +34,6 @@ It provides capabilities for Document Browser, Document Viewer, Import and Expor
 * Adapted to AWS Elastic Container Service
 * User/role-based security model
 * Modular architecture and allows to extend with own plugins
-
-### Document Management
-
-<img class="screenshot" src="/images/features/documents-perspective.png">
 
 <br>
 
