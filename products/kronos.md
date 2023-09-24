@@ -32,11 +32,22 @@ This is the official fork of the <a href="https://www.xsk.io" target="_blank">Pr
         <div class="text">
             <h2>Artefacts Handling</h2>
             <p>Native execution of the XS Classic artefacts acheiving near 100% compatibility and completeness 
-            is the main driving force behind the product. Supporting further development experience brings 
-            limitless benefits for future applications enhancements.</p>
+            is the main driving force behind the product.</p>
         </div>
         <div class="image">
             <img src="{{ site.baseurl }}/images/features/kronos-artefacts.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>XSJS Development Experience</h2>
+            <p>Supporting further development experience brings limitless benefits for future applications enhancements.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/xsjs-engine.png" alt="Screenshot" class="screenshot editable" />
         </div>
     </div>
 </section>
