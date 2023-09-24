@@ -14,13 +14,119 @@ The compatibility stack is an extension of the [Eclipse Dirigible](https://githu
 
 This is the official fork of the <a href="https://www.xsk.io" target="_blank">Project "XSK"</a>, which was discontinued by SAP in 2022.
 
-### Landscapes - Before and After Migration
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Landscapes - Before and After Migration</h2>
+            <p>The main difference is that the engine running the application is now outside HANA instance, 
+            hence it is possible to run it for scale on any Kubernetes or Containers as a Service offering - SAP or non-SAP.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/kronos-migration-landscape.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
 
-<img class="migration" src="/images/kronos-migration-landscape.png">
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Artefacts Handling</h2>
+            <p>Native execution of the XS Classic artefacts acheiving near 100% compatibility and completeness 
+            is the main driving force behind the product. Supporting further development experience brings 
+            limitless benefits for future applications enhancements.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/kronos-artefacts.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
 
-### Artefacts Handling
+### Development Experience
 
-<img class="artefacts" src="/images/features/kronos-artefacts.png">
+| Aspect                         | Scope | Description  |
+| ------------------------------ |:-----:| -------------|
+| Preserve hdb* descriptors      |  ✅   |              |
+| Preserve XSJS code             |  ✅   |              |
+| Preserve XSOData descriptors   |  ✅   |              |
+| Preserve XSC development model |  ✅   |              |
+| Preserve XSC security model    |  ⚠️   | Authentication is managed by the runtime container |
+| Support for XSJS code          |  ✅   |              |
+
+
+### Life-cycle Management
+
+| Aspect                                | Scope | Description  |
+| ------------------------------------- |:-----:| -------------|
+| End-to-end life-cycle management      |  ✅   |              |
+| Single-step migration                 |  ✅   |              |
+| Can be deployed as a monolith         |  ✅   |              |
+| Can be deployed as a microservices    |  ✅   |              |
+| Can be deployed on Kubernetes         |  ✅   |              |
+| Can be deployed on Cloud Foundry      |  ✅   |              |
+
+
+### Artifacts Coverage
+
+| Aspect                | Scope | Description  |
+| --------------------- |:-----:| -------------|
+| .xsjs                 |  ✅   |              |
+| .xsjslib              |  ✅   |              |
+| .calculationview      |  ⚠️   |              |
+| [.hdbprocedure](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.05/en-US/93de88bf2c8242179647e40f958c24e5.html)         |  ✅   |              |
+| [.hdbrole](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.05/en-US/625d7733c30b4666b4a522d7fa68a550.html)              |  ❌   |              |
+| [.hdbsequence](https://help.sap.com/viewer/3823b0f33420468ba5f1cf7f59bd6bd9/2.0.05/en-US/b295c2e0a5d547f8b1717ad7dd52cc90.html)          |  ✅   |              |
+| .xsodata              |  ⚠️   |              |
+| .hdbdd                |  ⚠️   |              |
+| .xsaccess             |  ✅   |              |
+| .xsjob                |  ✅   |              |
+| .xssecurestore        |  ✅   |              |
+| .hdbti (+csv)         |  ✅   |              |
+| .xshttpdest           |  ✅   |              |
+| .hdbschema            |  ✅   |              |
+
+
+
+### XSJS APIs Coverage
+
+| Aspect                                                                                                     | Scope | Description                        |
+| ---------------------------------------------------------------------------------------------------------- |:-----:| -----------------------------------|
+| [$.session](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.Session.html)         |  ⚠️    | Represents an SAP HANA XS session   |
+| [$.request](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.web.WebRequest.html)  |  ✅   | Represents the client HTTP request currently being processed. |
+| [$.response](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.web.WebResponse.html)|  ✅   | Represents the HTTP response currently being populated. |
+| [$.hdb](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.hdb.html)                 |  ✅   | This namespace provides means for seamless HANA database access. It is intended to be a replacement of the older $.db namespace |
+| [$.db](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.db.html)                   |  ✅   | Namespace for HANA database access |
+| [$.util](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.util.html)               |  ✅   | Util namespace                     |
+| [$.trace](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.trace.html)             |  ✅   | Trace namespace                    |
+| [$.import](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.html#import)           |  ✅   | Imports a server-side JavaScript library artifact |
+| [$.net](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.net.html)                 |  ✅   | Network namespace                  |
+| [$.net.http](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.net.http.html)       |  ✅   | HTTP namespace                     |
+| [$.util.codec](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.util.codec.html)   |  ✅   | Codec namespace                    |
+| [$.web](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.web.html)                 |  ✅   | Web namespace                      |
+| [$.security](https://help.sap.com/doc/3de842783af24336b6305a3c0223a369/2.0.03/en-US/$.security.html)       |  ✅   | Security namespace                 |
+
+
+## FAQ
+
+- How long will Kronos be supported?
+
+  > Kronos is an open source project with community support. Everyone can join and make a [PR](CONTRIBUTING.md). In fact SAP discontinued official support to project "XSK", and this fork maintained by the same developers is prove that the approach is viable and useful. The company codbex provide enterprise support for Kronos based runtimes.
+
+- Should future developments be based on Kronos?
+
+  > Yes, you can use Kronos for future development.
+
+- What about the tooling? Do we get state of the art tooling for maintaining and enhancing Kronos?
+
+  > Kronos tooling is based on [Eclipse Dirigible](https://www.dirigible.io/) and in the near future it will be possible to maintain Kronos projects with any modern IDE like VSCode, Eclipse Theia, etc.
+
+- What about the ops aspects - will Kronos be smoothly integrated into a state-of-the-art lifecycle and ops management (be it SAP-based or non-SAP based like GitHub Actions?
+
+  > Yes, the Kronos itself uses [GitHub actions](https://github.com/codbex/codbex-kronos/actions) for CI/CD
+
+- Will there be limitations that will not be mitigated?
+
+  > You can get the up-to-date list of covered [features](https://github.com/codbex/codbex-kronos/wiki/Readiness) as well as the [limitations](https://github.com/codbex/codbex-kronos/wiki/Limitations), [cheat sheet](https://github.com/codbex/codbex-kronos/wiki/Cheat-Sheet) and [readiness](https://github.com/codbex/codbex-kronos/wiki/Readiness).
+
 
 <br>
 
