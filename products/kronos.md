@@ -52,6 +52,21 @@ This is the official fork of the <a href="https://www.xsk.io" target="_blank">Pr
     </div>
 </section>
 
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>ABAP Development Experience</h2>
+            <p>ABAP development is introduced as an experimental feature by leveraging 
+            the <a href="https://github.com/open-abap" target="_blank">Open ABAP</a> and 
+            <a href="https://github.com/abaplint" target="_blank">ABAP Lint</a> frameworks.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/abap-code.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
 ### Development Experience
 
 | Aspect                         | Scope | Description  |
