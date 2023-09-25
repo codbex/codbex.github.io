@@ -67,6 +67,19 @@ This is the official fork of the <a href="https://www.xsk.io" target="_blank">Pr
     </div>
 </section>
 
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Snowflake</h2>
+            <p>Connecting and analyzing the massive amount of data in Snowflake cloud database is supported out of the box.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-snowflake.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
 ### Development Experience
 
 | Aspect                         | Scope | Description  |

@@ -23,6 +23,61 @@ It provides capabilities for database modeling and management, such as Database 
     </div>
 </section>
 
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Import/Export</h2>
+            <p>Off-line data migration up to 1GB, is provided for all the supported databases. 
+            The relational database tables are transfered in CSV format, while the No-SQL collections in JSON format.
+            There is a topology file also provided for each schema, which shows the proper order for import to the target database.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-import.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Transfer</h2>
+            <p>On-line data transfer provides way to pipe source datasource and schema to a target ones, so to stream the data transfer.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-transfer.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Snowflake</h2>
+            <p>Connecting and analyzing the massive amount of data in Snowflake cloud database is supported out of the box.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-snowflake.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>MongoDB</h2>
+            <p>No-SQL database MongoDB support is also built-in, so it can be used for exploring, queries, import and export up to 1GB.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-mongodb.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+
 * Multiple databases support
 * Database structure browser
 * Data export and migration in CSV/JSON
