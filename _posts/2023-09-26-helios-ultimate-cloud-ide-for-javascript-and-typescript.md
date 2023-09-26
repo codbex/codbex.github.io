@@ -47,9 +47,9 @@ Helios prioritizes the security of your code. With robust access controls in pla
 At codbex, we understand that many of our users have ambitions beyond individual projects, and that's why Helios comes equipped with a suite of enterprise-ready APIs. Whether you're building a large-scale application, managing complex databases, or orchestrating messaging systems, Helios has got you covered. Our robust APIs provide seamless integration with a variety of databases, messaging platforms, and everything else you might need to create and scale an enterprise-grade project. With Helios, you can confidently tackle the challenges of building and maintaining mission-critical software solutions while enjoying the convenience of a cloud-based IDE. Experience the power and flexibility of Helios for your enterprise projects today!
 
 ## Powered by Eclipse Dirigible: Fully Open Source
-Codbex Helios is fully open source and built upon the trusted foundation of Eclipse Dirigible. This means you have free access to an adaptable platform that welcomes your contributions and customizations. Join the open-source community and shape the future of Helios to meet your unique development needs.
+Helios is fully open source and built upon the trusted foundation of <a href="https://dirigible.io">Eclipse Dirigible</a>. This means you have free access to an adaptable platform that welcomes your contributions and customizations. Join the open-source community and shape the future of Helios to meet your unique development needs.
 
-### New Ideas Hassle-Free
+## New Ideas Hassle-Free
 Do you have an experimental idea you want to test out? Helios lets you do that without any commitment. You can quickly spin up a new project, experiment with different APIs, and see how they fit into your workflow. If it doesn't work out, no worries—simply discard the project and start anew.
 
 ## Try Helios Today!
