@@ -33,21 +33,24 @@ Debugging is a breeze with Helios. Its integrated debugger and real-time error h
 <img src="{{ site.baseurl }}/images/features/debugger-perspective.png" alt="Screenshot" class="screenshot editable" />
 
 ### Effortless Testing
-Helios, an open-source project based on the Eclipse Dirigible platform, is a developer's dream with its robust testing capabilities. It simplifies the process of creating and executing tests to guarantee the reliability and functionality of your code. Helios supports popular testing frameworks like QUnit and Jasmine.
+Helios supports popular testing frameworks like QUnit and Jasmine. This simplifies the process of creating and executing tests to guarantee the reliability and functionality of your code.
 
 ### Streamlined Collaboration: Git Support
 Additionally, Helios boasts seamless Git integration, enabling efficient version control and collaboration among team members. This empowers developers to maintain code quality and integrity while working collaboratively, enhancing the entire development lifecycle.
 
 <img src="{{ site.baseurl }}/images/features/git-perspective.png" alt="Screenshot" class="screenshot editable" />
 
-### Try New Ideas Hassle-Free
-Do you have an experimental idea you want to test out? Helios lets you do that without any commitment. You can quickly spin up a new project, experiment with different APIs, and see how they fit into your workflow. If it doesn't work out, no worries—simply discard the project and start anew.
-
 ## Secure and Accessible
 Helios prioritizes the security of your code. With robust access controls in place, you can rest assured that your work remains safe and confidential. Additionally, Helios is accessible from any device with an internet connection, ensuring that you can code from anywhere, at any time.
 
 ## Enterprise-Ready Capabilities
 At codbex, we understand that many of our users have ambitions beyond individual projects, and that's why Helios comes equipped with a suite of enterprise-ready APIs. Whether you're building a large-scale application, managing complex databases, or orchestrating messaging systems, Helios has got you covered. Our robust APIs provide seamless integration with a variety of databases, messaging platforms, and everything else you might need to create and scale an enterprise-grade project. With Helios, you can confidently tackle the challenges of building and maintaining mission-critical software solutions while enjoying the convenience of a cloud-based IDE. Experience the power and flexibility of Helios for your enterprise projects today!
+
+## Powered by Eclipse Dirigible: Fully Open Source
+Codbex Helios is fully open source and built upon the trusted foundation of Eclipse Dirigible. This means you have free access to an adaptable platform that welcomes your contributions and customizations. Join the open-source community and shape the future of Helios to meet your unique development needs.
+
+### New Ideas Hassle-Free
+Do you have an experimental idea you want to test out? Helios lets you do that without any commitment. You can quickly spin up a new project, experiment with different APIs, and see how they fit into your workflow. If it doesn't work out, no worries—simply discard the project and start anew.
 
 ## Try Helios Today!
 In conclusion, Helios is set to redefine your development experience with its focus on speed, efficiency, and creativity. Whether you're a professional developer looking to streamline your workflow or a newcomer eager to explore the world of JavaScript and TypeScript, Helios has something to offer.
