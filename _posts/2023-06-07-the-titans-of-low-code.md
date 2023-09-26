@@ -9,7 +9,7 @@ author: nedelcho
 It took us a while to prepare our vision of how the area of Low-Code platforms would look in the next few years and specifically in the context of productivity tools for business application developers.
 
 <img src="/images/2023-06-07-the-titans-of-low-code/francisco-ghisletti-Wf2tCunxqQU-unsplash.jpg" width="800em">
-Photo by <a href="https://unsplash.com/@tank_ghisletti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Francisco Ghisletti</a> on <a href="https://unsplash.com/photos/Wf2tCunxqQU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by <a href="https://unsplash.com/@tank_ghisletti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Francisco Ghisletti</a> on <a href="https://unsplash.com/photos/Wf2tCunxqQU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
 
 ### The Foundation
 

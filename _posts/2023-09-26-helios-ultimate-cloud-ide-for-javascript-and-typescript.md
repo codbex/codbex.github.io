@@ -9,7 +9,7 @@ author: vladimir
 In the ever-evolving world of software development, having the right tools at your disposal can make all the difference. Whether you're a seasoned developer or just getting started, having an integrated development environment (IDE) that simplifies your coding experience is crucial. That's where Helios comes into play.
 
 <img src="{{ site.baseurl }}/images/2023-09-26-helios-ultimate-cloud-ide-for-javascript-and-typescript/helios-heading.jpg" width="800em">
-Image source: <a href="britannica.com">britannica.com</a>
+Image source: <a href="https://britannica.com" target="_blank">britannica.com</a>
 
 ## The Rise of Helios
 Helios is a game-changing cloud IDE designed exclusively for writing JavaScript and TypeScript code. With its innovative approach to web-based development, Helios is set to revolutionize the way you prototype, debug, and experiment with your coding ideas. Let's dive into what makes Helios the IDE of choice for modern developers.
