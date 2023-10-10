@@ -77,6 +77,19 @@ It provides capabilities for database modeling and management, such as Database 
     </div>
 </section>
 
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Anonymization</h2>
+            <p>Data anonymization and masking for production data sets containing personal or sensitive data. Supported types of anonymization is based on the specific input columns such as first and last names, addresses, telephones, emails, dates of birth, any numeric or alphanumeric document numbers.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-anonymization.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
 
 * Multiple databases support
 * Database structure browser
@@ -84,6 +97,8 @@ It provides capabilities for database modeling and management, such as Database 
 * Result sets data viewer
 * SQL editor with smart auto-completion and syntax highlighting
 * NoSQL databases support for MongoDB compliant databases
+* Data anonymization
+* Data masking
 * Administrative databases interface
 * User/role-based security model
 * Modular architecture and allows to extend with own plugins
