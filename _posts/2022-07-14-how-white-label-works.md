@@ -67,4 +67,4 @@ For easy estimation of the support cost, we provide a T-shirt size levels:
 
 ## It sounds interesting?
 
-You can always <a href="/contact.html">contact</a> us with your ideas and requirements.
+You can always <a href="https://www.codbex.com/contact/">contacts</a> us with your ideas and requirements.
