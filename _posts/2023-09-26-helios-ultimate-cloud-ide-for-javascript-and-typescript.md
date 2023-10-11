@@ -58,4 +58,4 @@ In conclusion, Helios is set to redefine your development experience with its fo
 
 Don't miss out on the opportunity to supercharge your coding journey. Try Helios today, and unlock a world of possibilities in web development. Experience the future of cloud-based IDEs with Helios—where innovation knows no bounds!
 
-For more details about the <a href="https://www.codbex.com/products/">products</a> and <a href="https://www.codbex.com/pricing/">pricing</a> we are available through any of the channels in <a href="https://www.codbex.com/contacts/">contacts</a>.
+For more details about the <a href="https://www.codbex.com/products/">products</a> and <a href="https://www.codbex.com/pricing/">pricing</a> we are available through any of the channels in <a href="https://www.codbex.com/contact/">contacts</a>.
