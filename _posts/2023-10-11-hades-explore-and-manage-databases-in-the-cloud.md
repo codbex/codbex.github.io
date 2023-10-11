@@ -95,4 +95,4 @@ If you have other application workloads running on the same cloud environment, y
 
 The Hades Edition by codbex, offers a comprehensive set of tools for efficient database management and data manipulation. With features like Data Sources, Connection Configurations, Database Explorer, SQL View, Results View, Data Transfer, Import and Export of Data, and Anonymization, users can streamline their database operations and enhance data privacy. Whether you are a database administrator or a developer, the Hades Edition provides a powerful solution for your database management needs.
 
-For more details about the <a href="https://www.codbex.com/products/">products</a> and <a href="https://www.codbex.com/pricing/">pricing</a> we are available through any of the channels in <a href="https://www.codbex.com/contacts/">contacts</a>.
+For more details about the <a href="https://www.codbex.com/products/">products</a> and <a href="https://www.codbex.com/pricing/">pricing</a> we are available through any of the channels in <a href="https://www.codbex.com/contact/">contacts</a>.
