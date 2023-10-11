@@ -70,12 +70,150 @@ This is the official fork of the <a href="https://www.xsk.io" target="_blank">Pr
 <section>
     <div class="container flex">
         <div class="text">
+            <h2>Python Development Experience</h2>
+            <p>Python development is available as well backed by the underlying GraalPy engine. The standard APIs can be used in a similar way as they are from JavaScript code.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/python-code.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Enterprise JavaScript Development</h2>
+            <p>JavaScript Engine included is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> 
+            implementation. It supports also the synchronous programming model in contracts to 
+            Node.js which makes it very easy to learn and use. The latest ECMA specification 
+            is supported as well as the Common.js one for compatibility reasons. 
+            The <a href="https://www.dirigible.io/api/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/js-editor.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Debugger</h2>
+            <p>The Debugger enables you to monitor the execution of your code, stop it, 
+            restart it or set breakpoints, and change values in memory.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/debugger-perspective.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Git</h2>
+            <p>The Git perspective allows you to fully control your code and manage repositories.
+            It also provides Diff Tool for reviewing the changes.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/git-perspective.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>User Interfaces</h2>
+            <p>Authoring of the user interfaces is powered by the in-system development environment 
+            where every change can be immediately visualized in Preview area. 
+            The different major frameworks can be combined due to the syndication layout chosen.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/ui-widgets.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Databases</h2>
+            <p>It visualizes the database related views in a specialized perspective focused on the database 
+            administrator tasks. It can be easily deployed on any hosting environment as a Docker container, 
+            so that the database inspection and quick changes can be done in a more secure way than exposing 
+            the database port itself.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-perspective.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Import/Export</h2>
+            <p>Off-line data migration up to 1GB, is provided for all the supported databases. 
+            The relational database tables are transfered in CSV format, while the No-SQL collections in JSON format.
+            There is a topology file also provided for each schema, which shows the proper order for import to the target database.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-import.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Transfer</h2>
+            <p>On-line data transfer provides way to pipe source datasource and schema to a target ones, so to stream the data transfer.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-transfer.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
             <h2>Snowflake</h2>
             <p>Connecting and analyzing the massive amount of data in Snowflake cloud database is supported out of the box.
             </p>
         </div>
         <div class="image">
             <img src="{{ site.baseurl }}/images/features/database-snowflake.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>MongoDB</h2>
+            <p>No-SQL database MongoDB support is also built-in, so it can be used for exploring, queries, import and export up to 1GB.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-mongodb.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Anonymization</h2>
+            <p>Data anonymization and masking for production data sets containing personal or sensitive data. Supported types of anonymization is based on the specific input columns such as first and last names, addresses, telephones, emails, dates of birth, any numeric or alphanumeric document numbers.
+            </p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-anonymization.png" alt="Screenshot" class="screenshot editable" />
         </div>
     </div>
 </section>
