@@ -21,7 +21,7 @@ The Hades Edition introduces the concept of Data Sources, which allows users to 
 
 ## Connection Configurations
 
-One of the key features of the Hades Edition is its support for relational as well as noSQL databases. Hades simplifies the process of configuring a database, allowing users to easily set up connections and manage database settings. Along with the popular databases such as PostgeSQL, MySQL, H2 and MongoDB, it also supports the commercial databases like SAP HANA, Snowflake and Amazon Aurora and DocumentDB.
+One of the key features of the Hades Edition is its support for relational as well as NoSQL databases. Hades simplifies the process of configuring a database, allowing users to easily set up connections and manage database settings. Along with the popular databases such as PostgeSQL, MySQL, H2 and MongoDB, it also supports the commercial databases like SAP HANA, Snowflake and Amazon Aurora and DocumentDB.
 
 ## Database Explorer
 
