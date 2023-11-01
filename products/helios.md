@@ -2,6 +2,10 @@
 title: Helios Edition
 ---
 
+<div style="text-align: center;">
+   <img src="/images/products/Helios-white.svg" style="width: 30%; !important;"/>
+</div>
+
 <div class="product-tag"><a href="https://github.com/codbex/codbex-helios" target="_blank" class="product-link">Source Code</a></div>
 
 Helios Edition includes all necessary features for developing <a href="https://www.dirigible.io/api/" target="_blank">JavaScript Enterprise API</a>.

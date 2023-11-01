@@ -2,6 +2,10 @@
 title: Gaia Edition
 ---
 
+<div style="text-align: center;">
+   <img src="/images/products/Gaia-white.svg" style="width: 30%; !important;"/>
+</div>
+
 <div class="product-tag"><a href="https://github.com/codbex/codbex-gaia" target="_blank" class="product-link">Source Code</a></div>
 
 Gaia Edition includes all the basic platform runtime for products.

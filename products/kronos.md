@@ -2,6 +2,10 @@
 title: Kronos Edition
 ---
 
+<div style="text-align: center;">
+   <img src="/images/products/Kronos-white.svg" style="width: 30%; !important;"/>
+</div>
+
 <div class="product-tag"><a href="https://github.com/codbex/codbex-kronos" target="_blank" class="product-link">Source Code</a></div>
 
 Kronos Edition provides a compatible environment for 
