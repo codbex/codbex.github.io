@@ -2,12 +2,13 @@
 title: Who we are?
 ---
 
-We at <b>codbex</b> provide an innovative approach for building, deploying, selling and operating open source business applications in the cloud.
+<b>codbex</b> is an innovative and dynamic technology company that specializes in providing software solutions to businesses in a variety of industries.
+We at codbex offer a unique platform for designing and developing industry solutions based on open source technologies, tailored to meet the evolving needs of modern business. Our leading offerings include advanced database management systems, reliable business process integration tools, and customized software solutions designed to improve business productivity.
+We at codbex put our customers' satisfaction first - our aspiration is to be a trusted partner for companies that want to use the full potential of their assets and drive sustainable success in an increasingly competitive digital environment.
 
 ## What do we provide?
 
-We at codbex offer an unique high-productivity application platform foundation for our partner's network 
-to design and develop vertical industry solutions based on the variety of
+<b>codbex</b> offers an unique high-productivity application platform foundation for our partner's network to design and develop vertical industry solutions based on the variety of
 open source technologies and open standards, and deliver them to customers on any hyperscaler as well as on-premises.
 
 ## What it is for you?
@@ -19,7 +20,7 @@ open source technologies and open standards, and deliver them to customers on an
 
 ## Our Team
 
-We've built an amazing, fantastic team of developers, marketers, designers, legal and sales people.
+Our team consists of skilled professionals and experts, with an eye for innovation, who use the latest technologies and methodologies to deliver solutions that exceed expectations
 
 <ul class="staff">
 	{% for person in site.staff_members %}
