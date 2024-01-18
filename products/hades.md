@@ -3,7 +3,7 @@ title: Hades Edition
 ---
 
 <div style="text-align: center;">
-   <img src="/images/products/Hades-white.svg" style="width: 30%; !important;"/>
+   <img src="/images/products/Hades.svg" style="width: 30%; !important;"/>
 </div>
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-hades" target="_blank" class="product-link">Source Code</a></div>

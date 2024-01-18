@@ -3,7 +3,7 @@ title: Oceanus Edition
 ---
 
 <div style="text-align: center;">
-   <img src="/images/products/Oceanus-white.svg" style="width: 30%; !important;"/>
+   <img src="/images/products/Oceanus.svg" style="width: 30%; !important;"/>
 </div>
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-oceanus" target="_blank" class="product-link">Source Code</a></div>

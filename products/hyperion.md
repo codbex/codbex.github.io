@@ -3,7 +3,7 @@ title: Hyperion Edition
 ---
 
 <div style="text-align: center;">
-   <img src="/images/products/Hyperion-white.svg" style="width: 30%; !important;"/>
+   <img src="/images/products/Hyperion.svg" style="width: 30%; !important;"/>
 </div>
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-hyperion" target="_blank" class="product-link">Source Code</a></div>

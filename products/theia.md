@@ -3,7 +3,7 @@ title: Theia Edition
 ---
 
 <div style="text-align: center;">
-   <img src="/images/products/Theia-white.svg" style="width: 30%; !important;"/>
+   <img src="/images/products/Theia.svg" style="width: 30%; !important;"/>
 </div>
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-theia" target="_blank" class="product-link">Source Code</a></div>
