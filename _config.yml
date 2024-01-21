@@ -64,12 +64,7 @@ defaults:
     values:
       full_width: true
 
-jekyll-archives:
-  enabled:
-    - categories
-
 plugins:
-  - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed

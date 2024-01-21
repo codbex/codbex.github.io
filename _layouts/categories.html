@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+<h1>{{ page.categories | capitalize }}</h1>
+
+<ul>
+{% for post in site.categories[page.categories] %}
+  <li>
+    {{ post.date | date: "%B %d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>
