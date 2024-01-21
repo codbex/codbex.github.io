@@ -42,8 +42,9 @@ So, the results of these titanic efforts deserve to be named after the Greek Tit
 * [Theia](/products/theia/) - a full-fledged terminal interface running in the browser, but connected to your target environment.
 * [Hyperion](/products/hyperion/) - providing all the necessary modules for building, running and operating business processes based on BPMN v2 notation.
 * [Iapetus](/products/iapetus/) - integrations management including the industry leading frameworks and connectors.
-* [Gaia](/products/gaia/) - the mother of all the products which will be produced by and run on the technology stack.
+* [Rhea](/products/iapetus/) - model driven development apporach with various application templates.
 * [Kronos](/products/kronos/) - a special edition for those clients and partners who have severe issues with their legacy applications and feel desperately lost in space.
 * [Atlas](/products/atlas/) - we still offer an all in one platform, including all features and extensions for all roles in scope, such as domain entities, processes and integrations modeling, generation tools and frameworks.
+* [Gaia](/products/gaia/) - the mother of all the products which will be produced by and run on the technology stack.
 
 For more details about the <a href="https://www.codbex.com/products/">products</a> and <a href="https://www.codbex.com/pricing/">pricing</a> we are available through any of the channels in <a href="https://www.codbex.com/contact/">contacts</a>.
