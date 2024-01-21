@@ -2,7 +2,7 @@
 date: 2022-04-01
 title: What is Low Code Platform
 categories:
-  - marketing
+  - Marketing
 author: nedelcho
 ---
 Low code has become a very popular term recently among development communities. To what extent it overlaps with High-Productivity Platform as a Service (hpaPaaS) and Rapid Application Development (RAD) or is it new and uncharted territory, we would like to give our view on this matter. 
