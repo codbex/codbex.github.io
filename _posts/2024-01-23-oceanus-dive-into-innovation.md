@@ -71,9 +71,9 @@ Take advantage of Amazon S3's scalable storage capacity. As your data grows, Oce
 
 ## Key features and benefits
 
-Oceanus boasts a user-friendly interface, ensuring a seamless experience for both novice and experienced users. With its intuitive design, your team can quickly adapt to the platform, reducing the learning curve and increasing overall efficiency. Say goodbye to scattered communication channels. Oceanus brings all your communication tools under one roof, fostering real-time collaboration among team members. From project updates to instant messaging, Oceanus centralizes communication, promoting transparency and teamwork.
+Oceanus boasts a user-friendly interface, ensuring a seamless experience for both novice and experienced users. With its intuitive design, your team can quickly adapt to the platform, reducing the learning curve and increasing overall efficiency. Say goodbye to scattered document management systems. Oceanus brings all your documents under one roof, fostering collaboration among team members.
 
-By centralizing communication and streamlining workflows, Oceanus enhances overall productivity, allowing your team to focus on what matters most – driving your business forward, it eliminates the need for multiple disparate tools, reducing operational costs associated with software subscriptions and training. A single, integrated platform means less time spent managing different applications and more time devoted to core business activities.
+By centralizing documents reposiotry and streamlining workflows, Oceanus enhances overall productivity, allowing your team to focus on what matters most – driving your business forward, it eliminates the need for multiple disparate tools, reducing operational costs associated with software subscriptions and training. A single, integrated platform means less time spent managing different applications and more time devoted to core business activities.
 
 And if you are not a believer yet you can seamlessly integrate Oceanus into your existing tech stack, whether you use project management tools, CRMs, or communication platforms, Oceanus supports integration, providing a unified experience across your entire business ecosystem.
 
