@@ -53,6 +53,14 @@ Automate file transfers with scheduled tasks. Set up regular transfers, eliminat
 #### Audit Trail
 Track and monitor file transfer activities with an audit trail. Gain insights into who accessed or transferred specific files, providing accountability and compliance with regulatory requirements.
 
+## CMIS
+
+Oceanus provides CMIS - a common language for diverse content repositories, allowing them to share and access content seamlessly. CMIS facilitates interoperability among different content repositories, regardless of the underlying technology or vendor. This means that organizations can integrate various systems and platforms, allowing them to access and manage content stored in different repositories.
+
+CMIS provides a set of services for accessing both the content and metadata stored in a CMS. This includes capabilities to retrieve documents, query for specific information, update content, and manage versioning.
+
+One of the strengths of CMIS is its ability to abstract the underlying details of content repositories. It allows applications to interact with content in a repository-agnostic manner, reducing dependencies on specific CMS implementations.
+
 ## Amazon S3 Connector
 
 #### Seamless Integration with Amazon S3
