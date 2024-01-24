@@ -3,7 +3,7 @@ date: 2024-01-23
 title: Dive into Innovation with Oceanus
 categories:
   - marketing
-author: nedelcho
+author: nedelchojr
 ---
 
 Welcome to the future of business operations with <a href="{{ site.baseurl }}/products/oceanus/">Oceanus</a>, a groundbreaking product by codbex. In today's fast-paced and dynamic business landscape, staying ahead of the curve is crucial. Oceanus offers a comprehensive solution designed to streamline your workflow, enhance collaboration, and elevate your overall business efficiency.
@@ -33,13 +33,13 @@ Oceanus provides robust access control and permission settings, allowing you to 
 #### Seamless Import
 Streamline your workflow by importing files into Oceanus with ease. Whether it's spreadsheets, presentations, or other file formats, the platform supports a variety of file types, reducing manual data entry.
 
-#### Exporting for Analysis:
+#### Exporting for Analysis
 Export data and reports effortlessly for in-depth analysis. Oceanus supports various export formats, facilitating integration with external tools and ensuring compatibility with your preferred data analysis applications.
 
-#### Batch Processing:
+#### Batch Processing
 Save time with Oceanus's batch processing capabilities for both import and export compressed files. Upload or download multiple files simultaneously, optimizing efficiency in handling large (up to 1GB) zip files with or without unpacking option.
 
-## FTP/SFTP Channel:
+## FTP/SFTP Channel
 
 #### Secure File Transfer
 Oceanus enhances data security with built-in support for FTP (File Transfer Protocol) and SFTP (Secure File Transfer Protocol). Safely transfer files between Oceanus and external servers while encrypting the data in transit.
