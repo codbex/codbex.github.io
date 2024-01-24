@@ -25,9 +25,6 @@ One of the key features of the Oceanus Edition is that it simplifies document ma
 #### Version Control
 Keep track of document revisions with Oceanus's version control feature. Avoid confusion by accessing previous versions and tracking changes, promoting collaboration without the risk of data loss.
 
-#### Collaborative Editing
-Enable real-time collaborative editing on documents. Multiple team members can work on the same document simultaneously, fostering teamwork and expediting the content creation process.
-
 #### Access Control and Permissions
 Oceanus provides robust access control and permission settings, allowing you to control who can view, edit, or share specific documents. Ensure data security and compliance with customizable access levels.
 
@@ -40,7 +37,7 @@ Streamline your workflow by importing files into Oceanus with ease. Whether it's
 Export data and reports effortlessly for in-depth analysis. Oceanus supports various export formats, facilitating integration with external tools and ensuring compatibility with your preferred data analysis applications.
 
 #### Batch Processing:
-Save time with Oceanus's batch processing capabilities for both import and export tasks. Upload or download multiple files simultaneously, optimizing efficiency in handling large datasets.
+Save time with Oceanus's batch processing capabilities for both import and export compressed files. Upload or download multiple files simultaneously, optimizing efficiency in handling large (up to 1GB) zip files with or without unpacking option.
 
 ## FTP/SFTP Channel:
 
