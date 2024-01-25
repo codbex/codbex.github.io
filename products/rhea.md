@@ -10,7 +10,43 @@ title: Rhea Edition
 
 Rhea Edition includes model driven architecture supporting components.
 
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Model Driven Architecture</h2>
+            <p>With the visual designer for model driven development (entity domain model)
+					business developer can model the application’s domain model.
+					The developer can select from a list of templates, what kind of application to be generated.
+					Once the application is generated and published, it can be instantly accessed and tested.
+					The model and the application can be updated and pre-generated multiple times.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/ide-mda.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>User Interface Form Designer</h2>
+            <p>With the visual designer for user interface form modeling
+					business developer can model the application’s custom forms.
+					The developer can configure custom scripts and handlers for processing of the input.
+					Once the form is published, it can be instantly accessed and tested.
+					The custom form can be embedded in the generated user interface.
+					Adding new control to the form is done through Drag & Drop.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/ide-form.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
 
+* User/role-based security model
+* Modular architecture and allows to extend with own plugins
+* Adapted to Kubernetes infrastructure
+* Adapted to AWS Elastic Container Service
+* Federated authentication (SAML, OpenId)
 
 <br>
 
