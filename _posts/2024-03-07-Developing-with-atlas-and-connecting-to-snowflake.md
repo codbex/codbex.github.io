@@ -47,7 +47,7 @@ As mentioned in the intro, recently we have added the ability to connect to Snow
 
 2. In a worksheet execute the following commands:
 
-       1. New role, privileges, warehouse and DB:
+    2.1. New role, privileges, warehouse and DB:
     
     ```sql
     // Create an CONTAINER_USER_ROLE with required privileges
@@ -80,7 +80,7 @@ As mentioned in the intro, recently we have added the ability to connect to Snow
     ENCRYPTION = (TYPE='SNOWFLAKE_SSE')
     DIRECTORY = (ENABLE = TRUE);
     ```
-       2. Compute pool and image repository:
+    2.2. Compute pool and image repository:
 
     ```sql
     USE ROLE ACCOUNTADMIN;
