@@ -1,6 +1,6 @@
 ---
 date: 2024-03-07
-title: Building Apps with Atlas and connecting to Snowflake
+title: Building Apps with Atlas on Snowflake
 categories:
   - marketing
 author: nedelchojr
@@ -8,7 +8,7 @@ author: nedelchojr
 
 Introducing <a href="{{ site.baseurl }}/products/atlas/">Atlas Edition</a> - the all-in-one platform – comprehensive solution designed to empower developers in building and operating cloud applications with unparalleled efficiency and agility. Atlas Edition brings together a rich set of features and tools tailored to streamline the end-to-end development process, from model driven application, processes and integration flows.
 
-<img src="{{ site.baseurl }}/images/2024-01-23-oceanus-dive-into-innovation.md/oceanus-greek-titan.png" width="800em">
+<img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/architecture-monument-statue-landmark-atlas-austria.jpg" width="800em">
 
 ## Unveiling Atlas
 
