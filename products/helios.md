@@ -68,6 +68,30 @@ It provides capabilities for JavaScript development server-side RESTful services
     </div>
 </section>
 
+<section>
+    <div class="container flex">
+        <div class="text">
+            <h2>Databases</h2>
+            <p>It visualizes the database related views in a specialized perspective focused on the database 
+            administrator tasks. It can be easily deployed on any hosting environment as a Docker container, 
+            so that the database inspection and quick changes can be done in a more secure way than exposing 
+            the database port itself.</p>
+        </div>
+        <div class="image">
+            <img src="{{ site.baseurl }}/images/features/database-perspective.png" alt="Screenshot" class="screenshot editable" />
+        </div>
+    </div>
+</section>
+
+* Multiple databases support
+* Database structure browser
+* Data export and migration in CSV/JSON
+* Result sets data viewer
+* SQL editor with smart auto-completion and syntax highlighting
+* NoSQL databases support for MongoDB compliant databases
+* Data anonymization
+* Data masking
+* Administrative databases interface
 * User/role-based security model
 * Modular architecture and allows to extend with own plugins
 * Adapted to Kubernetes infrastructure
