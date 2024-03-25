@@ -4,56 +4,71 @@ title: Professional Plan
 
 <div class="price-tag">€49 per user (minimum 10 users)</div>
 
-<b>codbex</b> professional plan is for for small and mid-size businesses with basic SLAs. It includes all the available features for rapid application development of cloud applications from the open-source project <a href="https://www.dirigible.io">Eclipse Dirigible</a>, as well as the devops tools for opearating the workloads.
+The Professional Plan offered by <b>codbex</b> is an all-encompassing solution, building upon the features of the Community Plan while adding further enhancements to streamline the development process. This plan not only provides the collaborative tools and capabilities for end-to-end development but also offers additional benefits such as source code repository setup on GitHub, CI/CD pipelines for automatic updates, deployment on Google Cloud Platform, and dedicated support via email with a response time of two business days.
 
-Eclipse Dirigible provides capabilities for end-to-end development process from database modeling and management, through RESTful services authoring using various dynamic languages, to pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring.
+The Professional Plan is designed to cater to the needs of small and mid-size businesses, providing them with a robust platform for rapid application development of cloud applications. This plan is tailored to offer a comprehensive suite of features coupled with basic Service Level Agreements (SLAs), ensuring a seamless and efficient experience for businesses looking to enhance their digital presence.
 
-### Features included, but not limited to:
-
-<div class="container">
-- <a href="https://www.dirigible.io/help/development/ide/perspectives/database/" target="_blank">Database Management</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/modelers/database-schema/" target="_blank">Schema Modeling</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/editor-csvim/" target="_blank">Data Import</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/" target="_blank">Back-end Services Authoring</a><br>
-- <a href="https://www.dirigible.io/api/" target="_blank">Enterprise JavaScript API Support</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/modelers/form-designer/" target="_blank">User Interfaces</a><br>
-- <a href="https://sap.github.io/fundamental-styles/?path=/docs/introduction--overview" target="_blank">Themes Support</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/modelers/entity-data/" target="_blank">Entity Data Modeling</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/modelers/bpmn/" target="_blank">Business Processes Modeling</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/views/jobs/" target="_blank">Jobs Definitions</a><br>
-- <a href="https://olingo.apache.org/" target="_blank">OData REST Services</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/views/listeners/" target="_blank">Message Listeners Definitions</a><br>
-- <a href="https://www.dirigible.io/help/development/extensions/#extensibility" target="_blank">Extensions Definitions</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/perspectives/operations/" target="_blank">Operations and Monitoring</a><br>
+<div style="text-align: center;">
+   <img src="/images/pricing/professional.jpg" style="width: 60%; !important;"/>
 </div>
 
+### Key Features:
 
-Support can be requested via <a href="https://github.com/eclipse/dirigible/issues">public channels</a> of Dirigible project itself.
+**[Database Modeling and Management](/documentation/tooling/databases/)**: Seamlessly design and manage databases, ensuring efficient data storage and retrieval processes.
 
-### In addition for Professional Plan you get
+**[RESTful Services Authoring](/documentation/platform/sdk/)**: Develop RESTful services effortlessly using various dynamic languages, facilitating interoperability and flexibility in application development.
 
-- Source code repository setup on GitHub<br>
-- CI/CD pipelines for automatic udates on GitHub<br>
-- Deployed on Google Cloud Platform<br>
-- Support via e-mail with reponse time of two business days<br>
+**[Dynamic Languages Support](/documentation/platform/engines/)**: Enjoy support for a variety of dynamic languages, empowering developers to choose the most suitable language for their projects.
+
+**[Pattern-Based User Interface Generation](/documentation/tooling/modeling/)**: Generate user interfaces based on established design patterns, reducing development time and ensuring consistency in the user experience.
+
+**[Role-Based Security](/documentation/platform/engines/security/)**: Implement role-based security measures to control access to resources and ensure data integrity and confidentiality.
+
+**[Processes Modeling and Execution](/documentation/tooling/processes/)**: Model and execute business processes seamlessly within your applications, enabling automation and efficiency in workflow management.
+
+**[External Services Integration](/documentation/tooling/integrations/)**: Seamlessly integrate with external services and APIs, expanding the functionality of applications and enhancing user experiences.
+
+**[Testing and Debugging](/documentation/tooling/debugger/)**: Facilitate robust testing and debugging processes to identify and resolve issues efficiently, ensuring the reliability and stability of applications.
+
+**[Operations and Monitoring](/documentation/tooling/operations/)**: Monitor application performance and operations in real-time, enabling proactive maintenance and optimization to meet evolving demands.
+
+**Source Code Repository Setup on GitHub**: Set up a dedicated source code repository on GitHub, providing a centralized location for version control and collaboration among team members.
+
+**CI/CD Pipelines for Automatic Updates on GitHub**: Implement Continuous Integration/Continuous Deployment (CI/CD) pipelines for automatic updates on GitHub, enabling seamless deployment and delivery of code changes.
+
+**Deployment on Google Cloud Platform**: Deploy applications on the Google Cloud Platform, leveraging its scalable infrastructure and services for reliable and efficient hosting.
+
+**Support via Email with Response Time of Two Business Days**: Receive dedicated support via email with a guaranteed response time of two business days, ensuring prompt assistance and resolution of issues.
+
+**Advanced Development Tools**: The Professional Plan includes access to a range of advanced development tools, empowering businesses to create sophisticated cloud applications efficiently.
+
+**Scalability**: With scalability in mind, this plan ensures that businesses can seamlessly adapt to evolving requirements without compromising performance or stability.
+
+**Comprehensive Support**: While offering basic SLAs, the Professional Plan ensures that businesses receive timely support and assistance, helping them overcome challenges and maximize productivity.
+
+**Enhanced Security**: Security is paramount in the digital landscape. This plan integrates robust security measures to safeguard data and applications against potential threats, providing peace of mind to businesses and their clientele.
+
+**Customization Options**: Every business has unique needs. The Professional Plan enables customization to tailor the platform according to specific requirements, ensuring optimal functionality and efficiency.
+
+**Intuitive User Interface**: User experience is prioritized with an intuitive and user-friendly interface, facilitating smooth navigation and enhancing productivity for businesses and developers alike.
+
+**Integration Capabilities**: Seamlessly integrate with other systems and applications, enabling enhanced functionality and interoperability to streamline workflows and processes.
+
+**Cost-Effective Solution**: Designed with affordability in mind, the Professional Plan offers exceptional value for small and mid-size businesses, allowing them to leverage cutting-edge technology without breaking the bank.
+
+### Who Is It For?
+
+The Professional Plan is ideal for businesses and development teams seeking a comprehensive solution for application development, deployment, and support. Whether you're a growing startup or an established enterprise, this plan provides the necessary tools, resources, and support to accelerate your development initiatives and drive business success.
+
+<br>
 
 <hr>
 
-<table>
-<tr>
-<td>
-<div style="width:5em"><a href="https://www.dirigible.io"><img src="/images/logos/dirigible-logo.png" ></a></div>
-</td>
-<td>
-<div style="width:5em"><a href="https://www.kubernetes.io/"><img src="/images/logos/kubernetes-logo.png"></a></div>
-</td>
-<td>
-<div style="width:5em"><a href="https://kyma-project.io/"><img src="/images/logos/kyma-logo.png"></a></div>
-</td>
-<td>
-<div style="width:5em"><a href="https://cloud.google.com/kubernetes-engine/"><img src="/images/logos/gke-logo.png"></a></div>
-</td>
-</tr>
-</table>
+The Professional Plan offered by <b>codbex</b> is a complete solution for organizations looking to streamline their development processes and enhance their digital capabilities. With its comprehensive feature set, including database management, services authoring, dynamic languages support, user interface generation, security measures, integration capabilities, testing, debugging, operations, monitoring, processes modeling and execution, source code repository setup on GitHub, CI/CD pipelines, deployment on Google Cloud Platform, and dedicated support via email, this plan offers a holistic approach to application development and deployment. Elevate your development efforts and achieve greater efficiency and agility with the Professional Plan from Codbex.
+
+<br>
+
+Support in this case is via <a href="https://www.codbex.com/contact/">any of the communication channels</a>.
 
 <hr>
+

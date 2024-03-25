@@ -4,41 +4,52 @@ title: Community Plan
 
 <div class="price-tag">€0.00 and always will be free</div>
 
-<b>codbex</b> community plan is for commercial or non-commercial use without SLAs. It includes all the available features for rapid application development of cloud applications from the open-source project <a href="https://www.dirigible.io">Eclipse Dirigible</a>, as well as the devops tools for opearating the workloads.
+The Community Plan by <b>codbex</b> is crafted to support collaborative development processes, offering a comprehensive suite of capabilities for end-to-end development. From database modeling and management to RESTful services authoring, dynamic languages support, pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring, this plan is designed to streamline the entire development lifecycle.
 
-Eclipse Dirigible provides capabilities for end-to-end development process from database modeling and management, through RESTful services authoring using various dynamic languages, to pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring.
-
-### Features included, but not limited to:
-
-<div class="container">
-- <a href="https://www.dirigible.io/help/development/ide/perspectives/database/" target="_blank">Database Management</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/modelers/database-schema/" target="_blank">Schema Modeling</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/editor-csvim/" target="_blank">Data Import</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/" target="_blank">Back-end Services Authoring</a><br>
-- <a href="https://www.dirigible.io/api/" target="_blank">Enterprise JavaScript API Support</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/modelers/form-designer/" target="_blank">User Interfaces</a><br>
-- <a href="https://sap.github.io/fundamental-styles/?path=/docs/introduction--overview" target="_blank">Themes Support</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/modelers/entity-data/" target="_blank">Entity Data Modeling</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/modelers/bpmn/" target="_blank">Business Processes Modeling</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/views/jobs/" target="_blank">Jobs Definitions</a><br>
-- <a href="https://olingo.apache.org/" target="_blank">OData REST Services</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/views/listeners/" target="_blank">Message Listeners Definitions</a><br>
-- <a href="https://www.dirigible.io/help/development/extensions/#extensibility" target="_blank">Extensions Definitions</a><br>
-- <a href="https://www.dirigible.io/help/development/ide/perspectives/operations/" target="_blank">Operations and Monitoring</a><br>
+<div style="text-align: center;">
+   <img src="/images/pricing/community.jpg" style="width: 60%; !important;"/>
 </div>
+
+### Key Features:
+
+**[Database Modeling and Management](/documentation/tooling/databases/)**: Seamlessly design and manage databases, ensuring efficient data storage and retrieval processes.
+
+**[RESTful Services Authoring](/documentation/platform/sdk/)**: Develop RESTful services effortlessly using various dynamic languages, facilitating interoperability and flexibility in application development.
+
+**[Dynamic Languages Support](/documentation/platform/engines/)**: Enjoy support for a variety of dynamic languages, empowering developers to choose the most suitable language for their projects.
+
+**[Pattern-Based User Interface Generation](/documentation/tooling/modeling/)**: Generate user interfaces based on established design patterns, reducing development time and ensuring consistency in the user experience.
+
+**[Role-Based Security](/documentation/platform/engines/security/)**: Implement role-based security measures to control access to resources and ensure data integrity and confidentiality.
+
+**[Processes Modeling and Execution](/documentation/tooling/processes/)**: Model and execute business processes seamlessly within your applications, enabling automation and efficiency in workflow management.
+
+**[External Services Integration](/documentation/tooling/integrations/)**: Seamlessly integrate with external services and APIs, expanding the functionality of applications and enhancing user experiences.
+
+**[Testing and Debugging](/documentation/tooling/debugger/)**: Facilitate robust testing and debugging processes to identify and resolve issues efficiently, ensuring the reliability and stability of applications.
+
+**[Operations and Monitoring](/documentation/tooling/operations/)**: Monitor application performance and operations in real-time, enabling proactive maintenance and optimization to meet evolving demands.
+
+### Who Is It For?
+
+The Community Plan is ideal for development teams and communities seeking a collaborative platform for comprehensive application development. Whether you're a group of developers working on a project together or a community-driven initiative aiming to build powerful applications, this plan provides the necessary tools and capabilities to support your endeavors.
+
+### Commercial and Non-Commercial Use:
+
+The Community Plan is suitable for both commercial and non-commercial use. Whether you're developing applications for business purposes or contributing to open-source projects, this plan offers a flexible solution to meet your needs.
+
+### Service Level Agreements (SLAs):
+
+It's important to note that the Community Plan does not include Service Level Agreements (SLAs). However, it provides a robust set of features and capabilities for development projects without the formal SLA commitments.
 
 <br>
 
-Support in this case is via <a href="https://github.com/eclipse/dirigible/issues">public channels</a> of Dirigible project itself.
-
 <hr>
 
-<table>
-<tr>
-<td>
-<div style="width:5em"><a href="https://www.dirigible.io"><img src="/images/logos/dirigible-logo.png" ></a></div>
-</td>
-</tr>
-</table>
+The Community Plan offered by <b>codbex</b> is a comprehensive solution for collaborative development processes, empowering teams and communities to streamline the entire development lifecycle. With its diverse range of features, including database management, services authoring, dynamic languages support, user interface generation, security measures, integration capabilities, testing, debugging, operations, and monitoring, this plan facilitates efficient and effective application development. Embrace the power of collaboration and unlock new possibilities with the Community Plan from <b>codbex</b>.
+
+<br>
+
+Support in this case is via <a href="https://github.com/codbex/codbex-support/issues">public channels</a>.
 
 <hr>
