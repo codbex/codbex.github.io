@@ -60,7 +60,7 @@ The Iapetus Edition is designed for organizations and development teams seeking 
             implementation. It supports also the synchronous programming model in contracts to 
             Node.js which makes it very easy to learn and use. The latest ECMA specification 
             is supported as well as the Common.js one for compatibility reasons. 
-            The <a href="https://www.dirigible.io/api/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
+            The <a href="/documentation/platform/sdk/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
         </div>
         <div class="image">
             <img src="{{ site.baseurl }}/images/features/js-editor.png" alt="Screenshot" class="screenshot editable" />
