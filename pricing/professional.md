@@ -9,7 +9,7 @@ The Professional Plan offered by <b>codbex</b> is an all-encompassing solution, 
 The Professional Plan is designed to cater to the needs of small and mid-size businesses, providing them with a robust platform for rapid application development of cloud applications. This plan is tailored to offer a comprehensive suite of features coupled with basic Service Level Agreements (SLAs), ensuring a seamless and efficient experience for businesses looking to enhance their digital presence.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/professional.jpg" style="width: 60%; !important;"/>
+   <img src="/images/pricing/professional.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
 </div>
 
 ### Key Features:

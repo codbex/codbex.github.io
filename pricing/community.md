@@ -7,7 +7,7 @@ title: Community Plan
 The Community Plan by <b>codbex</b> is crafted to support collaborative development processes, offering a comprehensive suite of capabilities for end-to-end development. From database modeling and management to RESTful services authoring, dynamic languages support, pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring, this plan is designed to streamline the entire development lifecycle.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/community.jpg" style="width: 60%; !important;"/>
+   <img src="/images/pricing/community.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
 </div>
 
 ### Key Features:
