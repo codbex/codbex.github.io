@@ -8,9 +8,18 @@ title: Hades Edition
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-hades" target="_blank" class="product-link">Source Code</a></div>
 
-Hades Edition includes all necessary features for Database Management for PostgreSQL, MySQL, H2, SAP HANA, Snowflake and more.
+The Hades Edition of the <b>codbex</b> platform is your ultimate solution for comprehensive database management. With a focus on PostgreSQL, MySQL, H2, SAP HANA, Snowflake, and more, the Hades Edition includes all the necessary features to streamline your database operations. From database modeling and management to data transfer and import/export capabilities, Hades Edition equips database administrators with the tools they need to efficiently manage their data infrastructure.
 
-It provides capabilities for database modeling and management, such as Database Explorer - where the database metadata can be inspected, SQL Console - where any SQL query can be executed against the selected data source, Preview - where the results of the query execution can be seen in tabular format, Data Transfer - for on-line schema replication, Data Sources - where the set of the connected databases can be managed.
+### Comprehensive Database Management:
+
+With support for a wide range of database systems, including PostgreSQL, MySQL, H2, SAP HANA, Snowflake, and more, the Hades Edition provides a unified platform for managing your entire data ecosystem. Whether you're designing database schemas, executing SQL queries, or transferring data between systems, Hades Edition offers the flexibility and scalability you need to succeed.
+
+### Who Is It For?
+
+The Hades Edition is tailored for database administrators and data professionals responsible for managing complex data infrastructures. Whether you're overseeing a single database instance or a distributed data environment, Hades Edition provides the tools and capabilities to streamline your database operations and optimize performance.
+
+
+### Key Features:
 
 <section>
     <div class="container flex">
@@ -111,6 +120,8 @@ It provides capabilities for database modeling and management, such as Database 
 * Federated authentication (SAML, OpenId)
 
 <br>
+
+With the Hades Edition of the <b>codbex</b> platform, you can take control of your database management processes with confidence. From database modeling and management to data transfer and import/export capabilities, Hades Edition offers a comprehensive suite of features to meet the demands of modern data environments. Empower your database administrators, streamline operations, and unlock the full potential of your data infrastructure with Hades Edition from <b>codbex</b>.
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 

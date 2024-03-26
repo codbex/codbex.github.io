@@ -8,16 +8,26 @@ title: Atlas Edition
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-atlas" target="_blank" class="product-link">Source Code</a></div>
 
-Atlas Edition includes all the available features for rapid application development of cloud applications, as well as the devops tools for opearating the workloads.
+The Atlas Edition of the <b>codbex</b> platform is your comprehensive solution for rapid application development and streamlined operations.
 
-It provides capabilities for end-to-end development process from database modeling and management, through RESTful services authoring using various dynamic languages, to pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring.
+Designed to empower developers and DevOps teams alike, this edition includes all available features for end-to-end development processes, from database modeling and management to operations and monitoring. With a rich set of capabilities, the Atlas Edition enables you to build, deploy, and manage cloud applications with ease.
+
+### End-to-End Development Process:
+
+The Atlas Edition provides capabilities for the entire development process, allowing you to model databases, author services, generate user interfaces, enforce security measures, integrate external services, conduct testing and debugging, and monitor operations—all within a single platform. This streamlined approach accelerates development cycles and enhances productivity.
+
+### Who Is It For?
+
+The Atlas Edition is ideal for organizations and development teams seeking a comprehensive solution for cloud application development and operations. Whether you're a startup building your first application or an enterprise managing a portfolio of cloud services, the Atlas Edition provides the tools and capabilities to support your needs.
+
+### Key Features:
 
 <section>
     <div class="container flex">
         <div class="text">
             <h2>Enterprise JavaScript Development</h2>
             <p>JavaScript Engine included is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> 
-            implementation. It supports also the synchronous programming model in contracts to 
+            implementation. It supports also the synchronous programming model in contrast to 
             Node.js which makes it very easy to learn and use. The latest ECMA specification 
             is supported as well as the Common.js one for compatibility reasons. 
             The <a href="https://www.dirigible.io/api/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
@@ -32,7 +42,9 @@ It provides capabilities for end-to-end development process from database modeli
     <div class="container flex">
         <div class="text">
             <h2>Debugger</h2>
-            <p>The Debugger enables you to monitor the execution of your code, stop it, 
+            <p>Facilitate robust testing and debugging processes to identify and resolve issues efficiently,
+            ensuring the reliability and stability of applications.
+            The Debugger enables you to monitor the execution of your code, stop it, 
             restart it or set breakpoints, and change values in memory.</p>
         </div>
         <div class="image">
@@ -167,5 +179,7 @@ It provides capabilities for end-to-end development process from database modeli
 * Federated authentication (SAML, OpenId)
 
 <br>
+
+With the Atlas Edition of the <b>codbex</b> platform, you can accelerate your cloud application development and streamline operations like never before. From database modeling to operations and monitoring, this edition provides a seamless end-to-end solution for building and managing cloud applications. Empower your teams, enhance productivity, and drive innovation with the Atlas Edition from <b>codbex</b>.
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.

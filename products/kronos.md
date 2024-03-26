@@ -8,15 +8,33 @@ title: Kronos Edition
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-kronos" target="_blank" class="product-link">Source Code</a></div>
 
-Kronos Edition provides a compatible environment for 
-[SAP HANA Extended Application Services](https://help.sap.com/viewer/52715f71adba4aaeb480d946c742d1f6/2.0.03/en-US/a6c0749255d84a81a154a7fc87dd33ce.html) 
-(XS) based applications. It is deployed outside of 
-[SAP HANA](https://www.sap.com/products/hana.html?btp=991d50bf-fa15-4979-ac4b-b280b0eb951f) instance as a 
-[Docker](https://www.docker.com/) a container on [Kubernetes](https://kubernetes.io/). 
-Hence, some of the features can work against any other JDBC compliant RDBMS such as [PostgreSQL](https://www.postgresql.org/). 
-The compatibility stack is an extension of the [Eclipse Dirigible](https://github.com/eclipse/dirigible) cloud development platform.
+The Kronos Edition of the <b>codbex</b> platform provides a compatible environment for [SAP HANA Extended Application Services](https://help.sap.com/viewer/52715f71adba4aaeb480d946c742d1f6/2.0.03/en-US/a6c0749255d84a81a154a7fc87dd33ce.html) (XS) based applications. Deployed as a Docker container on Kubernetes, Kronos Edition offers seamless integration with [SAP HANA](https://www.sap.com/products/hana.html?btp=991d50bf-fa15-4979-ac4b-b280b0eb951f) and extends compatibility to other JDBC compliant RDBMS, such as PostgreSQL. Kronos Edition is the official fork of the [Project "XSK"](https://www.xsk.io) which was discontinued by SAP in 2022, ensuring continuity and support for XS applications.
 
-This is the official fork of the <a href="https://www.xsk.io" target="_blank">Project "XSK"</a>, which was discontinued by SAP in 2022.
+**Compatible Environment for SAP HANA XS**:
+   Kronos Edition provides a compatible environment for SAP HANA Extended Application Services (XS) based applications, ensuring seamless deployment and integration with SAP HANA instances.
+
+**Docker Container Deployment**:
+   Deployed as a Docker container on Kubernetes, Kronos Edition offers scalability, portability, and ease of management, enabling efficient deployment and orchestration of XS applications.
+
+**Compatibility with Other JDBC Compliant RDBMS**:
+   While designed for SAP HANA, Kronos Edition extends compatibility to other JDBC compliant RDBMS, such as PostgreSQL, allowing users to leverage XS capabilities across diverse data environments.
+
+**Official Fork of Project "XSK"**:
+   Kronos Edition is the official fork of the Project "XSK," ensuring continuity and support for XS applications following the discontinuation of XSK by SAP in 2022. Users can confidently migrate and continue development with Kronos Edition.
+
+### Compatibility Stack:
+
+- **SAP HANA XS Compatibility**: Deploy and manage XS applications seamlessly within the Kronos Edition environment, leveraging SAP HANA XS capabilities for application development and deployment.
+- **JDBC Compliant RDBMS Compatibility**: Extend compatibility to other JDBC compliant RDBMS, such as PostgreSQL, allowing users to develop and deploy XS applications across diverse data environments.
+
+### Deployment and Management:
+
+- **Docker Container Deployment**: Deploy Kronos Edition as a Docker container, offering scalability, portability, and ease of management for XS applications.
+- **Kubernetes Orchestration**: Orchestrate Kronos Edition deployments with Kubernetes, ensuring efficient resource management and deployment automation for XS applications.
+
+### Who Is It For?
+
+The Kronos Edition is designed for organizations and development teams leveraging SAP HANA XS for application development. Whether you're developing XS applications for SAP HANA or seeking compatibility with other JDBC compliant RDBMS, Kronos Edition provides the tools and capabilities to support your needs.
 
 <section>
     <div class="container flex">
@@ -298,7 +316,7 @@ This is the official fork of the <a href="https://www.xsk.io" target="_blank">Pr
 
 - What about the tooling? Do we get state of the art tooling for maintaining and enhancing Kronos?
 
-  > Kronos tooling is based on [Eclipse Dirigible](https://www.dirigible.io/) and in the near future it will be possible to maintain Kronos projects with any modern IDE like VSCode, Eclipse Theia, etc.
+  > Kronos tooling is based on [codbex](/documentation/tooling/) and in the near future it will be possible to maintain Kronos projects with any modern IDE like VSCode, Eclipse Theia, etc.
 
 - What about the ops aspects - will Kronos be smoothly integrated into a state-of-the-art lifecycle and ops management (be it SAP-based or non-SAP based like GitHub Actions?
 
@@ -310,5 +328,7 @@ This is the official fork of the <a href="https://www.xsk.io" target="_blank">Pr
 
 
 <br>
+
+With the Kronos Edition of the <b>codbex</b> platform, you can empower your SAP HANA XS applications with confidence. Whether deploying on SAP HANA or other JDBC compliant RDBMS, Kronos Edition offers a compatible environment for XS application development and deployment. Benefit from continuity and support with Kronos Edition, the official fork of Project "XSK."
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.

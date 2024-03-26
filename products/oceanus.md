@@ -8,7 +8,17 @@ title: Oceanus Edition
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-oceanus" target="_blank" class="product-link">Source Code</a></div>
 
-Oceanus Edition includes all necessary features for Document Management for <b>CMIS</b> compliant repositories.
+The Oceanus Edition of the <b>codbex</b> platform is your comprehensive solution for efficient document management. Designed with a focus on CMIS compliant repositories, Oceanus Edition includes all the necessary features to organize, preview, import, and export documents with ease. Whether you're structuring content for organizational or project needs, Oceanus Edition empowers users with intuitive tools and seamless integration with FTP/SFTP protocols.
+
+### Comprehensive Document Management:
+
+With support for CMIS compliant repositories and seamless integration with FTP/SFTP protocols, Oceanus Edition offers a unified platform for managing documents across your organization. Whether you're collaborating on projects, sharing resources, or organizing content, Oceanus Edition provides the tools and capabilities to streamline your document management processes.
+
+### Who Is It For?
+
+The Oceanus Edition is ideal for organizations and teams looking to streamline their document management processes and enhance collaboration. Whether you're a small business managing internal documents or a large enterprise with complex document workflows, Oceanus Edition provides the flexibility and scalability to meet your needs.
+
+### Key Features:
 
 <section>
     <div class="container flex">
@@ -64,6 +74,8 @@ Oceanus Edition includes all necessary features for Document Management for <b>C
 * Modular architecture and allows to extend with own plugins
 
 <br>
+
+With the Oceanus Edition of the <b>codbex</b> platform, you can simplify your document management processes and enhance collaboration across your organization. From structuring content to previewing documents and integrating with FTP/SFTP protocols, Oceanus Edition offers a comprehensive suite of features to streamline your document workflows. Empower your teams, enhance productivity, and unlock the full potential of your document management with Oceanus Edition from <b>codbex</b>.
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 

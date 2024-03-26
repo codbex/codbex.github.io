@@ -8,7 +8,26 @@ title: Hyperion Edition
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-hyperion" target="_blank" class="product-link">Source Code</a></div>
 
-Hyperion Edition includes all necessary features for Business Processes Management fully compliant with BPMN v2 based on Flowable engine.
+The Hyperion Edition of the <b>codbex</b> platform is your ultimate solution for Business Processes Management (BPM) fully compliant with BPMN v2, powered by the Flowable engine. Hyperion Edition seamlessly integrates BPM capabilities with robust JavaScript development features, providing a comprehensive solution for optimizing business processes and accelerating application development.
+
+### BPM Features:
+
+- **Process Modeling**: Design and visualize business processes using intuitive BPMN diagrams.
+- **Process Execution**: Execute business processes with ease, ensuring smooth workflow orchestration and task management.
+- **Process Monitoring**: Monitor process performance and track key metrics in real-time, enabling continuous improvement and optimization.
+- **Process Optimization**: Identify bottlenecks and inefficiencies in your business processes, enabling data-driven decision-making and process optimization.
+
+### JavaScript Development Features:
+
+- **Server-Side Development**: Develop server-side applications using JavaScript, leveraging  <a href="/documentation/platform/sdk/" target="_blank">Enterprise JavaScript/TypeScript API</a> for backend development.
+- **Client-Side Development**: Build dynamic and interactive user interfaces with JavaScript frameworks like Angular, React, and Vue.js.
+- **Integration Capabilities**: Seamlessly integrate BPM processes with JavaScript applications, enabling seamless data exchange and workflow automation.
+
+### Who Is It For?
+
+The Hyperion Edition is designed for organizations and development teams seeking a comprehensive solution for BPM and JavaScript development. Whether you're optimizing business processes, building custom applications, or integrating BPM capabilities with existing systems, Hyperion Edition provides the tools and capabilities to support your needs.
+
+### Key Features:
 
 <section>
     <div class="container flex">
@@ -100,6 +119,8 @@ Hyperion Edition includes all necessary features for Business Processes Manageme
 * Federated authentication (SAML, OpenId)
 
 <br>
+
+With the Hyperion Edition of the <b>codbex</b> platform, you can power your business processes management and JavaScript development with confidence. From BPMN compliance and Flowable engine integration to robust JavaScript development features, Hyperion Edition offers a comprehensive solution for accelerating digital transformation and driving innovation in your organization.
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 

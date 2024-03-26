@@ -65,8 +65,11 @@ ol, ul, li, address {
 }
 
 .price-tag {
-    background-color: #000000;
-    color: white;
+    // background-color: #000000;
+    // color: white;
+	border: 3px solid #2196F3;
+    border-radius: 12px;
+    padding: 5px;
     font-size: 1.5em;
     font-weight: 700;
     padding: 1em;
@@ -78,6 +81,7 @@ ol, ul, li, address {
 .product-tag {
     background-color: #000000;
     color: white;
+	border-radius: 12px;
     font-size: 1.5em;
     font-weight: 700;
     padding: 1em;
