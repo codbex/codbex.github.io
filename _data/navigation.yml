@@ -10,6 +10,10 @@
   link: /blog/
   new_window: false
   highlight: false
+- name: Documentation
+  link: /documentation/
+  new_window: true
+  highlight: false
 - name: About
   link: /about/
   new_window: false
@@ -17,4 +21,4 @@
 - name: Contact
   link: /contact/
   new_window: false
-  highlight: false
+  highlight: true
