@@ -8,7 +8,7 @@ title: Enterprise Plan
 The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored specifically for large enterprises, delivering advanced features and unparalleled support to meet the demands of complex development environments. Building upon the comprehensive offerings of the Community and Professional Plans, the Enterprise Plan provides additional enhancements such as source code repository setup on any Git provider, private source code repositories, CI/CD pipelines for automatic updates on private servers, deployment on public cloud providers including GCP, AWS, and Azure, dedicated managed Kubernetes cluster, and dedicated support via email with a response time of two business hours.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/enterprise.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/pricing/enterprise.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
 </div>
 
 ### Key Features:
@@ -43,13 +43,15 @@ The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored spec
 
 **Support via Email with Response Time of Two Business Hours**: Receive dedicated support via email with a guaranteed response time of two business hours, ensuring rapid assistance and resolution of issues to minimize downtime and maximize productivity.
 
+<div style="text-align: center;">
+   <img src="/images/pricing/enterprise-who.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+</div>
+
 ### Who Is It For?
 
 The Enterprise Plan is specifically designed for large enterprises with complex development requirements, stringent security needs, and high-performance expectations. Whether you're a Fortune 500 company or an industry-leading organization, this plan offers the advanced features, scalability, and premium support needed to drive innovation and success in today's competitive landscape.
 
 <br>
-
-<hr>
 
 The Enterprise Plan offered by <b>codbex</b> is the ultimate solution for large enterprises seeking advanced solutions for rapid application development of cloud applications. With its comprehensive feature set, including database management, services authoring, dynamic languages support, user interface generation, security measures, integration capabilities, testing, debugging, operations, monitoring, processes modeling and execution, source code repository setup on any Git provider, private repositories, CI/CD pipelines for private servers, deployment on leading public cloud providers, dedicated managed Kubernetes cluster, and premium support via email with rapid response times, this plan empowers enterprises to innovate with confidence and achieve unparalleled success in their digital transformation journey.
 

@@ -9,7 +9,7 @@ The Professional Plan offered by <b>codbex</b> is an all-encompassing solution, 
 The Professional Plan is designed to cater to the needs of small and mid-size businesses, providing them with a robust platform for rapid application development of cloud applications. This plan is tailored to offer a comprehensive suite of features coupled with basic Service Level Agreements (SLAs), ensuring a seamless and efficient experience for businesses looking to enhance their digital presence.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/professional.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/pricing/professional.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
 </div>
 
 ### Key Features:
@@ -31,6 +31,10 @@ The Professional Plan is designed to cater to the needs of small and mid-size bu
 **[Testing and Debugging](/documentation/tooling/debugger/)**: Facilitate robust testing and debugging processes to identify and resolve issues efficiently, ensuring the reliability and stability of applications.
 
 **[Operations and Monitoring](/documentation/tooling/operations/)**: Monitor application performance and operations in real-time, enabling proactive maintenance and optimization to meet evolving demands.
+
+<div style="text-align: center;">
+   <img src="/images/pricing/professional-security.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+</div>
 
 **Source Code Repository Setup on GitHub**: Set up a dedicated source code repository on GitHub, providing a centralized location for version control and collaboration among team members.
 
@@ -56,13 +60,15 @@ The Professional Plan is designed to cater to the needs of small and mid-size bu
 
 **Cost-Effective Solution**: Designed with affordability in mind, the Professional Plan offers exceptional value for small and mid-size businesses, allowing them to leverage cutting-edge technology without breaking the bank.
 
+<div style="text-align: center;">
+   <img src="/images/pricing/professional-who.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
+</div>
+
 ### Who Is It For?
 
 The Professional Plan is ideal for businesses and development teams seeking a comprehensive solution for application development, deployment, and support. Whether you're a growing startup or an established enterprise, this plan provides the necessary tools, resources, and support to accelerate your development initiatives and drive business success.
 
 <br>
-
-<hr>
 
 The Professional Plan offered by <b>codbex</b> is a complete solution for organizations looking to streamline their development processes and enhance their digital capabilities. With its comprehensive feature set, including database management, services authoring, dynamic languages support, user interface generation, security measures, integration capabilities, testing, debugging, operations, monitoring, processes modeling and execution, source code repository setup on GitHub, CI/CD pipelines, deployment on Google Cloud Platform, and dedicated support via email, this plan offers a holistic approach to application development and deployment. Elevate your development efforts and achieve greater efficiency and agility with the Professional Plan from Codbex.
 
