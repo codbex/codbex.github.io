@@ -9,7 +9,7 @@ The Professional Plan offered by <b>codbex</b> is an all-encompassing solution, 
 The Professional Plan is designed to cater to the needs of small and mid-size businesses, providing them with a robust platform for rapid application development of cloud applications. This plan is tailored to offer a comprehensive suite of features coupled with basic Service Level Agreements (SLAs), ensuring a seamless and efficient experience for businesses looking to enhance their digital presence.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/professional.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
+   <img src="/images/pricing/professional.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
 </div>
 
 ### Key Features:
@@ -33,7 +33,7 @@ The Professional Plan is designed to cater to the needs of small and mid-size bu
 **[Operations and Monitoring](/documentation/tooling/operations/)**: Monitor application performance and operations in real-time, enabling proactive maintenance and optimization to meet evolving demands.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/professional-security.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/pricing/professional-security.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
 </div>
 
 **Source Code Repository Setup on GitHub**: Set up a dedicated source code repository on GitHub, providing a centralized location for version control and collaboration among team members.
@@ -61,7 +61,7 @@ The Professional Plan is designed to cater to the needs of small and mid-size bu
 **Cost-Effective Solution**: Designed with affordability in mind, the Professional Plan offers exceptional value for small and mid-size businesses, allowing them to leverage cutting-edge technology without breaking the bank.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/professional-who.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
+   <img src="/images/pricing/professional-who.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
 </div>
 
 ### Who Is It For?

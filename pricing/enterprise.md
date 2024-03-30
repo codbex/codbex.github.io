@@ -31,6 +31,10 @@ The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored spec
 
 **[Operations and Monitoring](/documentation/tooling/operations/)**: Monitor application performance and operations in real-time, enabling proactive maintenance and optimization to meet evolving demands.
 
+<div style="text-align: center;">
+   <img src="/images/pricing/enterprise-support.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+</div>
+
 **Source Code Repository Setup on Any Git Provider**: Set up source code repositories on any Git provider of your choice, ensuring flexibility and compatibility with your existing infrastructure and workflows.
 
 **Private Source Code Repositories**: Maintain private source code repositories for enhanced security and control over your codebase.
@@ -44,7 +48,7 @@ The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored spec
 **Support via Email with Response Time of Two Business Hours**: Receive dedicated support via email with a guaranteed response time of two business hours, ensuring rapid assistance and resolution of issues to minimize downtime and maximize productivity.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/enterprise-who.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/pricing/enterprise-who.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
 </div>
 
 ### Who Is It For?
