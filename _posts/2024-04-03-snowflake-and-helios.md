@@ -224,21 +224,33 @@ In Helios we have added the ability to connect to Snowflake database using the `
 
 ### Using your newly deployed Helios
 
-Now lets use Helios' `Git` perspective and clone some already existing repositories to continue the tutorial:
+Now lets use Helios' __Git__ perspective and clone some already existing repositories to continue the tutorial:
 
 [https://github.com/codbex/codbex-uoms](https://github.com/codbex/codbex-uoms) - application for managing Units of Measure
 
 [https://github.com/codbex/codbex-uoms-data](https://github.com/codbex/codbex-uoms-data) - predefined units that will be automatically imported into the Snowflake database
 
-Go back to the _*Workspace*_, here you will find that `codbex-uoms` is a full-stack application and usable withing Snowpark.
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/clone-uom.png" width="800em">
+
+Go back to the __Workspace__, here you will find that `codbex-uoms` is a full-stack application and usable withing Snowpark.
+
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/publish-all.png" width="800em">
 
 1. Publish all projects in the Workspace
 2. Navigate to codbex-uoms -> gen -> index.html
 3. Open the link at the bottom and explore the dashboard
 
-<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/uom-ui.png" width="800em">
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/select-index.png" width="800em">
 
-In the _*Database*_ perspective select your `SNOWFLAKE` datasource and in the SQL console execute: 
+* or copy the URL and open it in a new browser tab:
+
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/open-new.png" width="800em">
+
+* and select UoM tile:
+
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/uom-ui.png" width="400em">
+
+In the __Database__ perspective select your `SNOWFLAKE` datasource and in the SQL console execute: 
 
 ```sql
 ALTER SESSION SET JDBC_QUERY_RESULT_FORMAT='JSON';
