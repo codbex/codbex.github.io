@@ -26,7 +26,9 @@ For more key features you can visit the <a href="{{ site.baseurl }}/products/hel
 
 In Helios we have added the ability to connect to Snowflake database using the `Database` perspective, with that in mind will also use the `Git` perspective to clone an already build application, create stored procudere and utilize both Helios' and Snowflake's strengths.
 
-  In this section we will dive into how to deploy Helios on Snowpark and connect to Snowflake automatically.
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/codbex-on-snowpark.png" width="800em">
+
+In this section we will dive into how to deploy Helios on Snowpark and connect to Snowflake automatically.
 
 #### Snowflake setup
 
