@@ -31,9 +31,35 @@ One of the key features that defines Atlas is the ability, with minimal effort, 
 
 ## Process centric
 
+Atlas Edition embraces a process-centric approach to application development, providing developers with powerful tools to model, automate, and optimize business processes effectively. At the heart of Atlas' process-centric capabilities lies support for Business Process Model and Notation (BPMN) standards, along with a sophisticated BPM editor. Here's how Atlas enhances process-centric development:
+
+- **BPMN Support:** With Atlas, you can leverage the BPMN standard to design and visualize business processes using industry-standard notation. BPMN provides a common language for stakeholders to understand and collaborate on process design, ensuring clarity and alignment across teams.
+- **BPM Editor:** Atlas features a BPM editor that empowers developers to create, edit, and manage BPMN diagrams with ease. The intuitive drag-and-drop interface, coupled with a rich set of BPMN elements and properties, allows developers to model complex workflows effortlessly.
+- **Task Orchestration:** Atlas enables seamless orchestration of tasks within business processes, allowing developers to define task dependencies, assign responsibilities, and automate task execution. From simple approvals to complex multi-step workflows, Atlas provides the flexibility to model diverse business scenarios.
+- **Process Monitoring and Optimization:** Atlas offers robust monitoring and analytics capabilities to track process performance, identify bottlenecks, and optimize workflows continuously. Developers can gain insights into process execution metrics, analyze historical data, and make informed decisions to improve efficiency and throughput.
+- **In-System Development:** Atlas facilitates in-system development, allowing developers to build and extend process-centric applications directly within the platform. With support for TypeScript/JavaScript Tasks, developers can leverage familiar programming languages and frameworks to implement custom logic, integrate with external systems, and enhance process automation.
+
+By leveraging BPMN standards and the powerful BPM editor, Atlas empowers developers to streamline business processes, enhance collaboration, and drive operational excellence across the organization.
+
+<div class="image">
+    <img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/atlas-process-centric.png" alt="Screenshot" class="screenshot editable" />
+</div>
 
 ## Integration flows
 
+Atlas Edition provides comprehensive support for designing and managing integration flows, enabling seamless communication and data exchange between heterogeneous systems. Central to Atlas' integration flow capabilities is its integration with Apache Camel, along with a feature-rich Integration Editor. Here's how Atlas enhances integration flow development:
+
+- **Apache Camel Integration:** Atlas seamlessly integrates with Apache Camel, a leading open-source integration framework, enabling developers to build robust, scalable integration solutions. Camel's extensive library of components and patterns simplifies integration with diverse systems, protocols, and data formats.
+- **Integration Editor:** Atlas features a dedicated Integration Editor that empowers developers to design, configure, and deploy integration flows visually. The editor provides a rich set of tools for defining endpoints, routing logic, data transformations, and error handling, streamlining the development of complex integration solutions.
+- **Connectivity:** Atlas offers a wide range of connectors and adapters to facilitate seamless connectivity with external systems and services. Whether integrating with REST APIs, SOAP services, databases, or messaging queues, developers can leverage Atlas' intuitive interface to configure connections and manage integration endpoints efficiently.
+- **Event-Driven Architecture:** With Atlas, developers can embrace event-driven architecture and build reactive integration solutions that respond to changes in real-time. By leveraging Camel's support for event-driven patterns such as pub-sub, message routing, and event aggregation, developers can create highly responsive and scalable integration flows.
+- **In-System Development:** Atlas empowers developers to extend integration flows with custom logic and business rules using TypeScript/JavaScript Beans. By enabling in-system development, Atlas provides developers with the flexibility to implement custom data transformations, integrate with external APIs, and enrich integration flows with additional functionality.
+
+By harnessing the power of Apache Camel and the Integration Editor, Atlas empowers developers to build robust, scalable integration solutions that seamlessly connect disparate systems, streamline business processes, and unlock new opportunities for innovation and growth.
+
+<div class="image">
+    <img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/atlas-integration flows.png" alt="Screenshot" class="screenshot editable" />
+</div>
 
 ## Deploying Atlas on Snowpark and utilizing Snowflake
 
@@ -234,6 +260,16 @@ You can query your data from Atlas and from Snowflake:
 <img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/snowflake-sheet-select.png" />
 
 You can find the full tutorial and references [here](https://github.com/codbex/codbex-hades-snowflake/blob/main/README.md).
+
+## Try it Out
+
+Ready to experience the power of Atlas Edition firsthand? You can now access a hosted instance of Atlas on Codbex's platform with just your GitHub credentials.
+
+Simply visit [https://platform.eu1.codbex.com](https://platform.eu1.codbex.com) to start building and deploying cloud-native applications with Atlas. With a user-friendly interface and a comprehensive suite of features at your fingertips, you can explore the capabilities of Atlas, from modeling applications to orchestrating business processes and managing integration flows.
+
+Whether you're a seasoned developer or just getting started with cloud application development, Atlas provides the tools and resources you need to accelerate your projects and drive innovation. Sign up today and unleash your creativity on the Atlas platform.
+
+Happy coding!
 
 ## Conclusion
 
