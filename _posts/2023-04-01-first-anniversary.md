@@ -16,15 +16,15 @@ Shortly thereafter, Yordan our CTO, joined me in this endevour, and now there ar
 
 So, we deserved a good anniversary party...
 
-<img src="/images/2023-04-first-anniversary/cake1.jpg" width="800em">
+<img src="/images/2023-04-01-first-anniversary/cake1.jpg" width="800em">
 
-<img src="/images/2023-04-first-anniversary/celebration.jpg" width="800em">
+<img src="/images/2023-04-01-first-anniversary/celebration.jpg" width="800em">
 
-<img src="/images/2023-04-first-anniversary/celebration-selfie.jpg" width="800em">
+<img src="/images/2023-04-01-first-anniversary/celebration-selfie.jpg" width="800em">
 
-<img src="/images/2023-04-first-anniversary/workshop.jpg" width="800em">
+<img src="/images/2023-04-01-first-anniversary/workshop.jpg" width="800em">
 
-<img src="/images/2023-04-first-anniversary/team.jpg" width="800em">
+<img src="/images/2023-04-01-first-anniversary/team.jpg" width="800em">
 
 The first year was tough, but we enjoyed every single moment, preparing for the next hundred.
 

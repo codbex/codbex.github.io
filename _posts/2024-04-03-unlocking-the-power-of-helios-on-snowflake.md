@@ -1,6 +1,6 @@
 ---
-date: 2024-04-02
-title: Using apps and procedures with Helios on Snowflake
+date: 2024-04-03
+title: Unlocking the Power of Helios on Snowflake
 categories:
   - marketing
 author: nedelchojr
@@ -8,7 +8,7 @@ author: nedelchojr
 
 Introducing <a href="{{ site.baseurl }}/products/helios/">Helios Edition</a> – tailored specifically for enterprise JavaScript/TypeScript development, providing a powerful set of features to accelerate your development workflow. With a focus on server-side RESTful services authoring, pattern-based user interface generation, role-based security, and comprehensive testing and monitoring capabilities.
 
-<img src="{{ site.baseurl }}/images/2024-04-02-using-apps-with-helios/helios-snowflake.png" width="800em">
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/helios-snowflake.png" width="800em">
 
 ## Unveiling Helios
 
@@ -119,7 +119,8 @@ In Helios we have added the ability to connect to Snowflake database using the `
         cd snowcli
         # install
         hatch build && pip install .
-        # during install you may observe some dependency errors, which should be okay for the time being 
+        # during install you may observe some dependency errors,
+        # which should be okay for the time being 
         ```
     7. Configure your Snowflake CLI connection by following the steps
         ```bash
@@ -172,7 +173,8 @@ In Helios we have added the ability to connect to Snowflake database using the `
             DIRIGIBLE_DATABASE_DATASOURCE_NAME_DEFAULT: SNOWFLAKE
             DIRIGIBLE_SINGLE_TENANT_MODE_ENABLED: true
             SNOWFLAKE_DRIVER: net.snowflake.client.jdbc.SnowflakeDriver
-            SNOWFLAKE_URL: jdbc:snowflake://your-snowlfake-account.snowflakecomputing.com/?db=CONTAINER_HOL_DB&schema=PUBLIC&warehouse=CONTAINER_HOL_WH
+            SNOWFLAKE_URL: jdbc:snowflake://your-snowlfake-account.snowflakecomputing.com/ \
+            ?db=CONTAINER_HOL_DB&schema=PUBLIC&warehouse=CONTAINER_HOL_WH
             SNOWFLAKE_USERNAME: your-snowflake-username
             SNOWFLAKE_PASSWORD: your-snowflake-password
             SNOWFLAKE_WAREHOUSE: CONTAINER_HOL_WH
@@ -193,7 +195,8 @@ In Helios we have added the ability to connect to Snowflake database using the `
       ```
   2. Deploy the spec file:
       ```bash
-      snow object stage copy ./src/codbex-helios-snowpark/codbex-helios.yaml  @specs --overwrite --connection CONTAINER_hol
+      snow object stage copy ./src/codbex-helios-snowpark/codbex-helios.yaml \
+       @specs --overwrite --connection CONTAINER_hol
       ```
   3. In the Snowflake worksheet execute the following command:
       ```sql
@@ -224,13 +227,21 @@ Now lets use Helios' `Git` perspective and clone some already existing repositor
 
 [UoMs Data](https://github.com/codbex/codbex-uoms-data) - predefined units that will be automatically imported into the Snowflake database
 
-Go back to the _*Workspace*_ and publish both of our projects.
+Go back to the _*Workspace*_, here you will find that `codbex-uoms` is a full-stack application and usable withing Snowpark.
+
+1. Publish all projects in the Workspace
+2. Navigate to codbex-uoms -> gen -> index.html
+3. Open the link at the bottom and explore the dashboard
+
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/uom-ui.png" width="800em">
 
 In the _*Database*_ perspective select your `SNOWFLAKE` datasource and in the SQL console execute: 
 
 ```sql
 ALTER SESSION SET JDBC_QUERY_RESULT_FORMAT='JSON';
 ```
+
+> Note: The above statement is just for information only as it is applied by default for Snowflake database connections.
 
 Its time to write a stored procedure that will use the Units of Measure and do a simple conversion
 
@@ -242,15 +253,24 @@ Its time to write a stored procedure that will use the Units of Measure and do a
     LANGUAGE JAVASCRIPT
     AS
     $$  
-        var entitySource = snowflake.execute({sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", binds: [SOURCE]});
-        var entityTarget = snowflake.execute({sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", binds: [TARGET]});
+        var entitySource = snowflake.execute(
+            {
+                sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", 
+                binds: [SOURCE]
+            });
+        var entityTarget = snowflake.execute(
+            {
+                sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?",
+                binds: [TARGET]
+            });
         
         if (entitySource.next() && entityTarget.next()) {
             var dimensionSource = entitySource.getColumnValue("UOM_DIMENSION");
             var dimensionTarget = entityTarget.getColumnValue("UOM_DIMENSION");
 
             if (dimensionSource !== dimensionTarget) {
-                throw "Both Source and Target Unit of Measures should have the same Dimension";
+                throw "Both Source and Target Units of Measures \ 
+                 must have the same Dimension";
             }
 
             var numeratorSource = entitySource.getColumnValue("UOM_NUMERATOR");
@@ -275,7 +295,7 @@ Its time to write a stored procedure that will use the Units of Measure and do a
     CALL convert_value('GRM', 'KGM', 10);
     ```
 
-<img src="{{ site.baseurl }}/images/2024-04-02-using-apps-with-helios/executed-procedure.png" width="800em">
+<img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/executed-procedure.png" width="800em">
 
 ## Conclusion
 
