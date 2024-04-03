@@ -2,7 +2,7 @@
 date: 2024-04-03
 title: Snowflake and Helios - A Harmonious Tale of Data and Development
 categories:
-  - marketing
+  - technology
 author: nedelchojr
 ---
 
