@@ -226,9 +226,9 @@ In Helios we have added the ability to connect to Snowflake database using the `
 
 Now lets use Helios' `Git` perspective and clone some already existing repositories to continue the tutorial:
 
-[UoMs](https://github.com/codbex/codbex-uoms) - application for managing Units of Measure
+[https://github.com/codbex/codbex-uoms](https://github.com/codbex/codbex-uoms) - application for managing Units of Measure
 
-[UoMs Data](https://github.com/codbex/codbex-uoms-data) - predefined units that will be automatically imported into the Snowflake database
+[https://github.com/codbex/codbex-uoms-data](https://github.com/codbex/codbex-uoms-data) - predefined units that will be automatically imported into the Snowflake database
 
 Go back to the _*Workspace*_, here you will find that `codbex-uoms` is a full-stack application and usable withing Snowpark.
 
