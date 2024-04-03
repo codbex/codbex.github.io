@@ -1,5 +1,5 @@
 ---
-date: 2024-03-07
+date: 2024-04-04
 title: Building Apps with Atlas on Snowflake
 categories:
   - marketing
@@ -8,7 +8,7 @@ author: nedelchojr
 
 Introducing <a href="{{ site.baseurl }}/products/atlas/">Atlas Edition</a> - the all-in-one platform – comprehensive solution designed to empower developers in building and operating cloud applications with unparalleled efficiency and agility. Atlas Edition brings together a rich set of features and tools tailored to streamline the end-to-end development process, from model driven application, processes and integration flows.
 
-<img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/architecture-monument-statue-landmark-atlas-austria.jpg" width="800em">
+<img src="{{ site.baseurl }}/images/2024-04-04-building-apps-with-atlas-on-snowflake/architecture-monument-statue-landmark-atlas-austria.jpg" width="800em">
 
 ## Unveiling Atlas
 
@@ -25,7 +25,7 @@ One of the key features that defines Atlas is the ability, with minimal effort, 
 - Generating and previewing the pages/code and the ability to change your logic on the go
 
 <div class="image">
-    <img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/atlas-edm-editor.png" alt="Screenshot" class="screenshot editable" />
+    <img src="{{ site.baseurl }}/images/2024-04-04-building-apps-with-atlas-on-snowflake/atlas-edm-editor.png" alt="Screenshot" class="screenshot editable" />
 </div>
 
 
@@ -42,7 +42,7 @@ Atlas Edition embraces a process-centric approach to application development, pr
 By leveraging BPMN standards and the powerful BPM editor, Atlas empowers developers to streamline business processes, enhance collaboration, and drive operational excellence across the organization.
 
 <div class="image">
-    <img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/atlas-process-centric.png" alt="Screenshot" class="screenshot editable" />
+    <img src="{{ site.baseurl }}/images/2024-04-04-building-apps-with-atlas-on-snowflake/atlas-process-centric.png" alt="Screenshot" class="screenshot editable" />
 </div>
 
 ## Integration flows
@@ -58,7 +58,7 @@ Atlas Edition provides comprehensive support for designing and managing integrat
 By harnessing the power of Apache Camel and the Integration Editor, Atlas empowers developers to build robust, scalable integration solutions that seamlessly connect disparate systems, streamline business processes, and unlock new opportunities for innovation and growth.
 
 <div class="image">
-    <img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/atlas-integration flows.png" alt="Screenshot" class="screenshot editable" />
+    <img src="{{ site.baseurl }}/images/2024-04-04-building-apps-with-atlas-on-snowflake/atlas-integration flows.png" alt="Screenshot" class="screenshot editable" />
 </div>
 
 ## Deploying Atlas on Snowpark and utilizing Snowflake
@@ -240,7 +240,7 @@ As mentioned in the intro, recently we have added the ability to connect to Snow
       SHOW SERVICES like 'codbex_atlas';
       ```
 
-<img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/atlas-snowflake-sheet.png" />
+<img src="{{ site.baseurl }}/images/2024-04-04-building-apps-with-atlas-on-snowflake/atlas-snowflake-sheet.png" />
 
   5. Get service endpoint
       ```sql
@@ -253,11 +253,11 @@ Congratulations !!!
 
 Now you can use Atlas to develop your first application and utilize Snowflake's database.
 
-<img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/atlas-final-application.png" />
+<img src="{{ site.baseurl }}/images/2024-04-04-building-apps-with-atlas-on-snowflake/atlas-final-application.png" />
 
 You can query your data from Atlas and from Snowflake:
 
-<img src="{{ site.baseurl }}/images/2024-03-07-application-development-with-atlas/snowflake-sheet-select.png" />
+<img src="{{ site.baseurl }}/images/2024-04-04-building-apps-with-atlas-on-snowflake/snowflake-sheet-select.png" />
 
 You can find the full tutorial and references [here](https://github.com/codbex/codbex-hades-snowflake/blob/main/README.md).
 
