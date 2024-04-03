@@ -6,7 +6,7 @@ categories:
 author: nedelchojr
 ---
 
-Introducing <a href="{{ site.baseurl }}/products/helios/">Helios Edition</a> – tailored specifically for enterprise JavaScript/TypeScript development, providing a powerful set of features to accelerate your development workflow. With a focus on server-side RESTful services authoring, pattern-based user interface generation, role-based security, and comprehensive testing and monitoring capabilitie.
+Introducing <a href="{{ site.baseurl }}/products/helios/">Helios Edition</a> – tailored specifically for enterprise JavaScript/TypeScript development, providing a powerful set of features to accelerate your development workflow. With a focus on server-side RESTful services authoring, pattern-based user interface generation, role-based security, and comprehensive testing and monitoring capabilities.
 
 <img src="{{ site.baseurl }}/images/2024-04-02-using-apps-with-helios/helios-snowflake.png" width="800em">
 
@@ -218,22 +218,67 @@ In Helios we have added the ability to connect to Snowflake database using the `
 
 ### Using your newly deployed Helios
 
-1. Now lets use Helios' `Git` perspective and clone some already existing repositories to continue the tutorial:
+Now lets use Helios' `Git` perspective and clone some already existing repositories to continue the tutorial:
 
-    [UoMs](https://github.com/codbex/codbex-uoms) - application for managing Units of Measure
+[UoMs](https://github.com/codbex/codbex-uoms) - application for managing Units of Measure
 
-    [UoMs Data](https://github.com/codbex/codbex-uoms-data) - predefined units that will be automatically imported into the Snowflake database
-2. In the `Database` perspective select your `SNOWFLAKE` datasource and in the SQL console execute: 
+[UoMs Data](https://github.com/codbex/codbex-uoms-data) - predefined units that will be automatically imported into the Snowflake database
+
+Go back to the _*Workspace*_ and publish both of our projects.
+
+In the _*Database*_ perspective select your `SNOWFLAKE` datasource and in the SQL console execute: 
 
 ```sql
 ALTER SESSION SET JDBC_QUERY_RESULT_FORMAT='JSON';
 ```
 
-3. Let's write a stored procedure that uses the `converter.ts` located in the `codbex-uoms` folder
+Its time to write a stored procedure that will use the Units of Measure and do a simple conversion
 
+1. Go to your `Snowflake` worksheet and paste the following:
+
+    ```sql
+    CREATE OR REPLACE PROCEDURE convert_value(source VARCHAR, target VARCHAR, value FLOAT)
+    RETURNS FLOAT
+    LANGUAGE JAVASCRIPT
+    AS
+    $$  
+        var entitySource = snowflake.execute({sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", binds: [SOURCE]});
+        var entityTarget = snowflake.execute({sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", binds: [TARGET]});
+        
+        if (entitySource.next() && entityTarget.next()) {
+            var dimensionSource = entitySource.getColumnValue("UOM_DIMENSION");
+            var dimensionTarget = entityTarget.getColumnValue("UOM_DIMENSION");
+
+            if (dimensionSource !== dimensionTarget) {
+                throw "Both Source and Target Unit of Measures should have the same Dimension";
+            }
+
+            var numeratorSource = entitySource.getColumnValue("UOM_NUMERATOR");
+            var denominatorSource = entitySource.getColumnValue("UOM_DENOMINATOR");
+            var numeratorTarget = entityTarget.getColumnValue("UOM_NUMERATOR");
+            var denominatorTarget = entityTarget.getColumnValue("UOM_DENOMINATOR");
+
+            var valueBase = VALUE * numeratorSource / denominatorSource;
+            var valueTarget = valueBase * denominatorTarget / numeratorTarget;
+            
+            return valueTarget;
+        } else {
+            throw "Unit of Measures not found: [" + source + "] and/or [" + target + "]";
+        }
+    $$
+    ;
+    ```
+
+2. Execute the procedure:
+
+    ```sql
+    CALL convert_value('GRM', 'KGM', 10);
+    ```
+
+<img src="{{ site.baseurl }}/images/2024-04-02-using-apps-with-helios/executed-procedure.png" width="800em">
 
 ## Conclusion
 
-In conclusion, Atlas Edition stands as the ultimate solution for rapid application development of cloud applications, offering a comprehensive suite of features and devops tools to streamline the entire development lifecycle. With its extensive capabilities spanning database modeling, RESTful services authoring, dynamic language support, user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring, Atlas Edition provides developers with everything they need to bring their ideas to life quickly and efficiently.
+In conclusion, Helios stands as a beacon of innovation and efficiency in the realm of enterprise JavaScript development. With its comprehensive suite of tools and tailored features, it empowers developers to navigate the complexities of modern application development with ease. Helios is more than just a platform – it's a catalyst for success. By embracing Helios paired with Snowflake, enterprises and development teams can unlock the full potential of JavaScript and propel their projects to new heights of excellence.
 
 For more details about the <a href="https://www.codbex.com/products/">products</a> and <a href="https://www.codbex.com/pricing/">pricing</a> we are available through any of the channels in <a href="https://www.codbex.com/contact/">contacts</a>.
