@@ -208,7 +208,8 @@ In Helios we have added the ability to connect to Snowflake database using the `
   4. Check your service:
       ```sql
       CALL SYSTEM$GET_SERVICE_STATUS('CONTAINER_HOL_DB.PUBLIC.CODBEX_HELIOS');
-      CALL SYSTEM$GET_SERVICE_LOGS('CONTAINER_HOL_DB.PUBLIC.CODBEX_HELIOS', '0', 'codbex-helios', 10);
+      CALL SYSTEM$GET_SERVICE_LOGS('CONTAINER_HOL_DB.PUBLIC.CODBEX_HELIOS', '0',
+       'codbex-helios', 10);
       CALL SYSTEM$REGISTRY_LIST_IMAGES('/CONTAINER_HOL_DB/PUBLIC/IMAGE_REPO');
 
       SHOW SERVICES like 'codbex_helios';
