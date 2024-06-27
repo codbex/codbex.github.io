@@ -6,7 +6,8 @@ categories:
 author: iliyan
 ---
 
-We decided to invest in a new functionality which will help our customers to run ABAP code easily and for free .<br>
+We decided to invest in a new functionality which will help our customers to run ABAP code easily and for free.<br>
+
 Let's see what ChatGPT thinks about this topic.<br>
 <img src="{{ site.baseurl }}/images/2024-06-25-run-abap-for-free/chatgpt-run-abap-for-free.png"><br>
 <img src="{{ site.baseurl }}/images/2024-06-25-run-abap-for-free/chatgpt-easily-run-abap.png"><br>
