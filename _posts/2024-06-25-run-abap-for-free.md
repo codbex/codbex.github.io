@@ -372,7 +372,7 @@ Let's summarize what you can do with Kronos
 - you can easily run ABAP code in Kronos
 - it costs you nothing since Kronos is open source project
 - licenses are not required
-- you can use any Database supported by codbex Atlas like H2, PostgreSQL, MySQL, Snowflake, HANA, etc.<br>
+- you can use any database which is supported, like H2, PostgreSQL, MySQL, Snowflake, HANA etc.<br>
 - your ABAP code can run on any modern container platform
 - the code can be executed locally as well
 - if you have an ABAP application with thousands of lines of code but no ABAP developers, you can still use the existing ABAP code and call it from JavaScript or TypeScript.
