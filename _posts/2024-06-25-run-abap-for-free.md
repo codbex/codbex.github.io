@@ -383,5 +383,9 @@ Note that this functionality is relatively new.
 There may be some ABAP functionalities which will not work but the journey has just begun.<br>
 We are willing to support you!
 
+**Credits**<br>
+Special thanks to the contributors who implemented [open-abap](https://github.com/open-abap) and [abaplint](https://github.com/abaplint).<br>
+Without these projects, this [Kronos](https://www.codbex.com/products/kronos/) functionality wouldn't be possible.
+
 I hope you enjoyed this blog. Stay tuned for more great functionality by __codbex__!<br>
 If you have any questions, ideas or want to contribute, feel free [to contact us](https://www.codbex.com/contact/).
