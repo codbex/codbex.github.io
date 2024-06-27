@@ -1,4 +1,7 @@
 # codbex.github.io
 The corporate site of the `codbex` company
-
-> bundle exec jekyll serve
+```
+sudo gem install bundler -v 2.4.22
+sudo bundle update --bundler
+bundle exec jekyll serve
+```

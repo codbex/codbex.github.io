@@ -4,5 +4,5 @@ position: Java
 image_path: /images/staff/iliyan.png
 github: https://github.com/iliyan-velichkov
 twitter: 
-blurb: Iliyan likes fishing and camping.
+blurb: Iliyan likes SUP, rifle shooting and fishing.
 ---
