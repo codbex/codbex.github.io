@@ -101,11 +101,7 @@ ENDCLASS.
 It is a simple DAO for employees management, which uses ABAP inline SQL with hardcoded data for simplicity.<br>
 <br>
 To run this ABAP code, follow the steps bellow or watch the recorded video.<br>
-<video width="600" controls>
-  <source src="{{ site.baseurl }}/images/2024-06-25-run-abap-for-free/blog-steps.mov" type="video/mp4">
-  Your browser does not support the video tag.
-  </source>
-</video>
+<iframe src="https://drive.google.com/file/d/1bjN0HgxZLMwzubFyCSbgbnNCA19W1IDx/preview" width="100%" height="450rem" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 1. Start a Kronos instance using Docker<br>
    Open your terminal and execute the following:
