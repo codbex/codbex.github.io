@@ -384,6 +384,8 @@ Note that this functionality is relatively new.
 There may be some ABAP functionalities which will not work but the journey has just begun.<br>
 We are willing to support you!
 
+The project we implemented can be found in [this GitHub project](https://github.com/codbex/codbex-sample-abap-employees).
+
 **Credits**<br>
 Special thanks to the contributors who implemented [open-abap](https://github.com/open-abap) and [abaplint](https://github.com/abaplint).<br>
 Without these projects, this [Kronos](https://www.codbex.com/products/kronos/) functionality wouldn't be possible.
