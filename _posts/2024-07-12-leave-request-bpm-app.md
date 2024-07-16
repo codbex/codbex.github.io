@@ -324,22 +324,21 @@ Let's create our first form.
    | DIRIGIBLE_MAIL_SMTPS_PORT           | SMTPS port                                        | `2525`                     |
    | DIRIGIBLE_MAIL_SMTPS_AUTH           | whether authentication is required `true`/`false` | `true`                     |
 
-- To start the Kronos image with the needed mail configurations use the following command
-    ```shell
-    HYPERION_WORKSPACE_DIR='/tmp/hyperion'
-    IMAGE_VERSION='1.0.5' # use version 1.0.5 or later
-    
-    docker run --name codbex-hyperion --rm -p 80:80 \
-        -v "$HYPERION_WORKSPACE_DIR:/target/dirigible" \
-        -e DIRIGIBLE_MAIL_USERNAME=6eeaaee24cfdec \
-        -e DIRIGIBLE_MAIL_PASSWORD=06ec8a05a2ee6a \
-        -e DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL=smtp \
-        -e DIRIGIBLE_MAIL_SMTP_HOST=sandbox.smtp.mailtrap.io \
-        -e DIRIGIBLE_MAIL_SMTP_PORT=2525 \
-        -e DIRIGIBLE_MAIL_SMTP_AUTH=true \
-        ghcr.io/codbex/codbex-hyperion:$IMAGE_VERSION
-    ```
-
+    - To start the Kronos image with the needed mail configurations use the following command
+        ```shell
+        HYPERION_WORKSPACE_DIR='/tmp/hyperion'
+        IMAGE_VERSION='1.0.5' # use version 1.0.5 or later
+        
+        docker run --name codbex-hyperion --rm -p 80:80 \
+            -v "$HYPERION_WORKSPACE_DIR:/target/dirigible" \
+            -e DIRIGIBLE_MAIL_USERNAME=6eeaaee24cfdec \
+            -e DIRIGIBLE_MAIL_PASSWORD=06ec8a05a2ee6a \
+            -e DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL=smtp \
+            -e DIRIGIBLE_MAIL_SMTP_HOST=sandbox.smtp.mailtrap.io \
+            -e DIRIGIBLE_MAIL_SMTP_PORT=2525 \
+            -e DIRIGIBLE_MAIL_SMTP_AUTH=true \
+            ghcr.io/codbex/codbex-hyperion:$IMAGE_VERSION
+        ```
 1. Now, we can test our application
    1. Create new leave request
       - Make sure that all files are saved
@@ -396,39 +395,47 @@ Let's create our first form.
         <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/approved-leave-request-email.png" target="_blank">
         <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/approved-leave-request-email.png" alt="approved-leave-request-email.png">
         </a>
+
 1. Authentication and authorization<br>
 To make our application ready for production we have to add authentication and authorization.<br>
 With [Hyperion](https://www.codbex.com/products/hyperion/) it is an easy task.<br>
-Let's define two roles<br>
-  - `employee` - for employees
-  - `employee_manager` - for managers
-    
-  - Create folder `leave-request/security`
-  - Right click on folder `security` -> `New` -> `Roles Definitions`
-  - Set name `roles.roles`
-  - Click `Create` button
+Let's define two roles `employee` and `employee_manager`
+  - create folder `leave-request/security`
+  - right click on folder `security` -> `New` -> `Roles Definitions`
+  - set name `roles.roles`
+  - click `Create` button
   - open file `roles.roles`
   - edit the predefined entries to match our use case
-  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/roles-file.png" target="_blank">
-     <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/roles-file.png" alt="roles-file.png">
-  </a>
+      <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/roles-file.png" target="_blank">
+       <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/roles-file.png" alt="roles-file.png">
+      </a>
 Now, we have to protect the created forms and exposed REST APIs.<br>
-Here are the requirements
-    - users with `employee` role should have access to
-      - submit form
-      - REST API for creating new leave request (process instance)
-    - users with `employee_manager` role should have access to
-        - leave request processing form
-        - REST API for approve/decline leave request 
-To implement this requirement
-    - Right click on folder `security` -> `New` -> `Access Constraints`
-    - Type `access.access`
-    - Open file `access.access`
+Here are the requirements:
+        - users with `employee` role should have access to
+          - submit form
+          - REST API for creating new leave request (process instance)
+        - users with `employee_manager` role should have access to
+            - leave request processing form
+            - REST API for approve/decline leave request 
+  To implement this requirements
+    - right click on folder `security` -> `New` -> `Access Constraints`
+    - type `access.access` for name
+    - open file `access.access`
     - edit the predefined constraints to match our use case
       <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/access-constraints.png" target="_blank">
         <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/access-constraints.png" alt="access-constraints.png">
       </a>
-      You can replace the content of the file with [this one](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/b0cb728f37ec985e5ea34a9267f06e4d38fc557f/leave-request/security/access.access) if it is easier for you.
+    You can replace the content of the file with [this one](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/b0cb728f37ec985e5ea34a9267f06e4d38fc557f/leave-request/security/access.access) if it is easier for you.<br>
+Now, let's open the forms - [submit form](http://localhost/services/web/leave-request/gen/submit-leave-request/forms/submit-leave-request/index.html) and [process form](http://localhost/services/web/leave-request/gen/process-leave-request/forms/process-leave-request/index.html?taskId=103)
+  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/submit-from-forbidden.png" target="_blank">
+    <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/submit-from-forbidden.png" alt="submit-from-forbidden.png">
+  </a>
+  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/process-from-forbidden.png" target="_blank">
+    <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/process-from-forbidden.png" alt="process-from-forbidden.png">
+  </a>
+Both forms must be protected.<br>
+
+
 
 ---
 ## Summary
