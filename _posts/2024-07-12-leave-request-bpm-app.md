@@ -18,14 +18,14 @@ Let's have the following use cases:
 - employee managers want to receive emails when a new request is submitted
 - employees want to receive an email when their requests are processed
 
+---
 ## Implementation steps
 
 1. Start a [Hyperion](https://www.codbex.com/products/hyperion/) instance using [Docker](https://www.docker.com/)<br>
 Open your terminal and execute the following:
-    ```
+    ```shell
     # mount a volume to preserve your changes during the image restarts
     HYPERION_WORKSPACE_DIR='/tmp/hyperion'
-    
     IMAGE_VERSION='1.0.5' # use version 1.0.5 or later
     
     docker run --name codbex-hyperion --rm -p 80:80 \
@@ -39,7 +39,7 @@ Open your terminal and execute the following:
 - At the `Welcome` view search for `BPM` and select `BPM Project Starter` template<br>
   <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-select-template.png">
 - Type project, file name (process name) and process identifier - for example `leave-request`, `leave-request-process` and `leave-request-id`
-  <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-template-data.png">
+  [![steps-template-data]({{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-template-data.png)]({{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-template-data.png)
 - Click on `Ok` button<br>
 - An BPM project starter will be automatically generated<br>
   <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-generated-bpm-project.png">
@@ -71,31 +71,33 @@ Open your terminal and execute the following:
   <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-triggered-process.png"><br>
 - Also, a log from the executed task `tasks/my-service-task.ts` should be available in the console once the task is executed
     <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-task-logged-message.png"><br>
-1. BPM process<br>
+1. BPM process<br><br>
 We want to implement a process which has:
-- a service tasks which sends a notification email to all employee managers when a new leave request is submitted (a new process instance is creaetd)
-- a user task which waits for an employee manger to process (approve/decline) the leave request
-- an exclusive gateway which routes the flow to different service task depending on a variable called `requestApproved`
-- a task which notifies the requester that the request is approved
-- a task which notifies the requester that the request is declined<br><br>
-   In the end it will look like this:
-   <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process.png"><br>
+   - a service tasks which sends a notification email to all employee managers when a new leave request is submitted (a new process instance is creaetd)
+   - a user task which waits for an employee manger to process (approve/decline) the leave request
+   - an exclusive gateway which routes the flow to different service task depending on a variable called `requestApproved`
+   - a task which notifies the requester that the request is approved
+   - a task which notifies the requester that the request is declined<br><br>
+      In the end it will look like this:
+      <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process.png"><br>
 1. Model the BPM process<br>
    Let's open the process `leave-request-process.bpmn` and modify it
-    1. Employee managers notification task
-    - Select task `MyServiceTask`
-    - Set `Id` to `notify-approvers`
+     1. Employee managers notification task
+     - Select task `MyServiceTask`
+      - Set `Id` to `notify-approvers`
    - Set `Name` to `Notify approvers`
    - Edit `Class fields` and change `String value` from `leave-request/tasks/my-service-task.ts` to `leave-request/tasks/notify-approvers-task.ts`
    - Save the process file using the `Save the model` button
    - Rename file `my-service-task.ts` to `notify-approvers-task.ts`
    - Create a mail util file `mail-util.ts` in folder `tasks` with [this](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/b0cb728f37ec985e5ea34a9267f06e4d38fc557f/leave-request/tasks/mail-util.ts) content for sending emails or logging (if the mail configurations are not present)<br>
-   - Delete the content of `notify-approvers-task.ts` and put [this](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/b0cb728f37ec985e5ea34a9267f06e4d38fc557f/leave-request/tasks/notify-approvers-task.ts) content
-    1. Process request task
+   - Delete the content of `notify-approvers-task.ts` and put [this](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/e9bee0415495aa6428bd4bce7ee2c1322619b604/leave-request/tasks/notify-approvers-task.ts) content
+     1. Process request task
     - Drag and drop `User task` from `Activities`
     - Set `Id` to `process-request`
-   - Set `Name` to `Process request`
-   - Connect service task `Notify approvers` to `Process request`
+    - Set `Name` to `Process request`
+    - We need to specify who can process this user task. For now, let's set `Assignments` to candidate group called `ADMINISTRATOR`. Later on, we will create a dedicated group for employee managers.
+      <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-user-task-assignments.png"><br>
+    - Connect service task `Notify approvers` to `Process request`
     1. Add exclusive gateway
     - Drag and drop `Exclusive gateway` from `Gateways`
     - Connect user task `Process request` to the gateway
@@ -128,10 +130,10 @@ We want to implement a process which has:
     - Save the process<br>
 Here is the final version of the process:
 <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-modeled-process.png"><br>
-If you have any issues with the modeling, you can right-click on process file `leave-request-process.bpmn` -> `Open With` -> `Code Editor` and put the file content from [this link](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/b0cb728f37ec985e5ea34a9267f06e4d38fc557f/leave-request/leave-request-process.bpmn).
+If you have any issues with the modeling, you can right-click on process file `leave-request-process.bpmn` -> `Open With` -> `Code Editor` and put the file content from [this link](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/5cab08ef7713b8c54fd4206ae163de201e9d15b7/leave-request/leave-request-process.bpmn).
 
 1. Implement REST API<br>
-   Open `leave-request/api/ProcessService.ts` and replace the content with [this](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/df625883f3243b988ab9142ad78233693cb834f5/leave-request/api/ProcessService.ts) one.<br>
+   Open `leave-request/api/ProcessService.ts` and replace the content with [this](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/c00bf2e4f882e3022394ec7640a399e5329041bb/leave-request/api/ProcessService.ts) one.<br>
    It uses the [BPM](https://www.codbex.com/documentation/platform/sdk/bpm/) and [security](https://www.codbex.com/documentation/platform/sdk/security/user/) APIs to trigger a new leave request process, approve/decline a request and to get details about a request.<br><br>
    Here are the implemented APIs:
 - Create a new leave request<br>
@@ -213,22 +215,22 @@ Let's create our first form.
      - the generated UI should be located in folder `leave-request/gen/submit-leave-request/forms/submit-leave-request`<br>
 
 1. Implement user interface for leave request processing
-- create new form with name `process-leave-request.form`
-- drag and drop
-- header for the form title
-- text field for the requester
-- two date fields for from and to dates
-- `Approve` and `Decline` buttons
-  <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process-leave-request-form.png"><br>
-- update the labels
-- set `requester` for requester `Model` config
-- set `fromDate` for from date `Model`
-- set `toDate` for to date `Model`
-- set `onApproveClicked()` for approve button `Callback function` configuration
-- set `onDeclineClicked()` for approve button `Callback function` configuration
-- under the `Code` tab we will put the controller logic
-- here is the code
-    ```
+   - create new form with name `process-leave-request.form`
+   - drag and drop
+   - header for the form title
+   - text field for the requester
+   - two date fields for from and to dates
+   - `Approve` and `Decline` buttons
+     <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process-leave-request-form.png"><br>
+   - update the labels
+   - set `requester` for requester `Model` config
+   - set `fromDate` for from date `Model`
+   - set `toDate` for to date `Model`
+   - set `onApproveClicked()` for approve button `Callback function` configuration
+   - set `onDeclineClicked()` for approve button `Callback function` configuration
+   - under the `Code` tab we will put the controller logic
+   - here is the code
+        <pre>
         const url = new URL(window.location);
         const params = new URLSearchParams(url.search);
         const taskId = params.get("taskId");
@@ -274,28 +276,145 @@ Let's create our first form.
                 $scope.model.fromDate = new Date(details.fromDate);
                 $scope.model.toDate = new Date(details.toDate);
             });
-    ``` 
+        </pre>
+    - save the form using `Save` button
+    - generate the UI
+    - right-click on `process-leave-request.form` -> `Generate`
+    - choose template `AngularJS Generator from Form Model`
+    - click on `OK` button
+    - close file `process-leave-request.form` if it is opened
+    - open `process-leave-request.form`
+    - click on `Regenerate` button under `Designer` tab
+    - the generated UI should be located in folder `leave-request/gen/process-leave-request/forms/process-leave-request`
+    - now, we have to register the form in the BPM process
+        - open the generated UI page `leave-request/gen/process-leave-request/forms/process-leave-request/index.html`
+        - copy the path `/services/web/leave-request/gen/process-leave-request/forms/process-leave-request/index.html` from the `Preview` tab
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process-leave-request-preview.png"><br>
+        - open `leave-request-process.bpmn`
+        - select task `Process request`
+        - set the copied path `/services/web/leave-request/gen/process-leave-request/forms/process-leave-request/index.html` for `Form key`
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process-form-key.png">
 
-- save the form using `Save` button
-- generate the UI
-  - right-click on `process-leave-request.form` -> `Generate`
-  - choose template `AngularJS Generator from Form Model`
-  - click on `OK` button
-  - close file `process-leave-request.form` if it is opened
-  - open `process-leave-request.form`
-  - click on `Regenerate` button under `Designer` tab
-  - the generated UI should be located in folder `leave-request/gen/process-leave-request/forms/process-leave-request`
-- now, we have to register the form in the BPM process
-    - open the generated UI page `leave-request/gen/process-leave-request/forms/process-leave-request/index.html`
-    - copy the path `/services/web/leave-request/gen/process-leave-request/forms/process-leave-request/index.html` from the `Preview` tab
-      <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process-leave-request-preview.png"><br>
-    - open `leave-request-process.bpmn`
-    - select task `Process request`
-    - set the copied path `/services/web/leave-request/gen/process-leave-request/forms/process-leave-request/index.html` for `Form key`
-      <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process-form-key.png"><br>
+1. Mail configuration
 
+   We will need some mail configurations if we want to send real emails. Otherwise, mails will be logged in the console.<br>
+   You can easily get a email testing account from [mailtrap.io](https://mailtrap.io/)<br>
+
+   - For SMTP you need the following variables:
+    
+    | Variable Name                      | Description                                      | Example value              | 
+    |------------------------------------|--------------------------------------------------|----------------------------|
+    | DIRIGIBLE_MAIL_USERNAME            | username                                         | `my_username`              |
+    | DIRIGIBLE_MAIL_PASSWORD            | password                                         | `my_password_123`          |
+    | DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL  | transport protocol                               | `smtp`                     |
+    | DIRIGIBLE_MAIL_SMTP_HOST           | SMTP host                                        | `sandbox.smtp.mailtrap.io` |
+    | DIRIGIBLE_MAIL_SMTP_PORT           | SMTP port                                        | `2525`                     |
+    | DIRIGIBLE_MAIL_SMTP_AUTH           | whether authentication is required `true`/`false` | `true`                     |
+
+   - For SMTPS you need the following variables:
+    
+    | Variable Name                      | Description                                       | Example value              | 
+    |------------------------------------|---------------------------------------------------|----------------------------|
+    | DIRIGIBLE_MAIL_USERNAME            | username                                          | `my_username`              |
+    | DIRIGIBLE_MAIL_PASSWORD            | password                                          | `my_password_123`          |
+    | DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL  | transport protocol                                | `smtps`                     |
+    | DIRIGIBLE_MAIL_SMTPS_HOST           | SMTPS host                                        | `sandbox.smtp.mailtrap.io` |
+    | DIRIGIBLE_MAIL_SMTPS_PORT           | SMTPS port                                        | `2525`                     |
+    | DIRIGIBLE_MAIL_SMTPS_AUTH           | whether authentication is required `true`/`false` | `true`                     |
+
+   - To start the Kronos image with the needed mail configurations use the following command
+       ```shell
+       HYPERION_WORKSPACE_DIR='/tmp/hyperion'
+       IMAGE_VERSION='1.0.5' # use version 1.0.5 or later
+    
+       docker run --name codbex-hyperion --rm -p 80:80 \
+           -v "$HYPERION_WORKSPACE_DIR:/target/dirigible" \
+           -e DIRIGIBLE_MAIL_USERNAME=6eeaaee24cfdec \
+           -e DIRIGIBLE_MAIL_PASSWORD=06ec8a05a2ee6a \
+           -e DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL=smtp \
+           -e DIRIGIBLE_MAIL_SMTP_HOST=sandbox.smtp.mailtrap.io \
+           -e DIRIGIBLE_MAIL_SMTP_PORT=2525 \
+           -e DIRIGIBLE_MAIL_SMTP_AUTH=true \
+           ghcr.io/codbex/codbex-hyperion:$IMAGE_VERSION
+       ```
+
+1. Now, we can test our application
+   1. Create new leave request
+      - Make sure that all files are saved
+      - Publish the project using `Publish all` button<br>
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-publish-all-button.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-publish-all-button.png" alt="steps-publish-all-button.png" style="width: 15rem;">
+        </a>
+      - Wait until the project is published successfully<br>
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-published-projects.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-published-projects.png" alt="steps-published-projects.png" style="width: 15rem;">
+        </a>
+      - Open the submit form at [http://localhost/services/web/leave-request/gen/submit-leave-request/forms/submit-leave-request/index.html](http://localhost/services/web/leave-request/gen/submit-leave-request/forms/submit-leave-request/index.html)
+      - Select dates for `From` and `To`
+      - Click on `Submit` button
+      - You should see a confirmation alert<br>
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-submitted-form.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-submitted-form.png" alt="steps-submitted-form.png">
+        </a>
+      - A new email should be received in your mailbox
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/new-leave-request-email.png" target="_blank">
+        <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/new-leave-request-email.png" alt="new-leave-request-email.png">
+        </a>
+      - You can open the BPM perspective using the `Processes Workspace` button and check the created process<br>
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/processes-workspace.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/processes-workspace.png" alt="processes-workspace.png" style="width: 15rem;">
+        </a>
+      - Here you can select our process instance with id `5` and see that the process is stopped at user task `Process request`. It will wait there until the leave request is processed.<br>
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/process-instance.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/process-instance.png" alt="process-instance.png">
+        </a>
+      - In `Process Context` tab you can check the process variables. In our case, there are values for the leave request.
+      - The UI has a lot of useful views and actions which can help you to manage your BPM processes
+   1. Process the submitted leave request
+       - Open the inbox UI at [http://localhost/services/web/inbox/](http://localhost/services/web/inbox/) or use the link from the email.
+        Inbox UI is the place where you can find all tasks (BPM user tasks in our case) which are applicable for the current user.
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process-inbox.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/steps-process-inbox.png" alt="steps-process-inbox.png">
+        </a>
+      - Select the created task and claim it using the `Claim` button
+      - Now, you can open the register form for processing using the `Open Form` button
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/open-form-button.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/open-form-button.png" alt="open-form-button.png">
+        </a>
+      - When you click it, you will see the processing form which we implemented with details for the current request
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/process-leave-request-form.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/process-leave-request-form.png" alt="process-leave-request-form.png">
+        </a>
+      - Let's approve the request by clicking on `Approve` button
+      - An alert for confirmation should be displayed
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/approved-request.png" target="_blank">
+        <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/approved-request.png" alt="approved-request.png">
+        </a>
+      - An email for the approved leave request should be received in your inbox
+        <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/approved-leave-request-email.png" target="_blank">
+        <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/approved-leave-request-email.png" alt="approved-leave-request-email.png">
+        </a>
+1. Authentication and authorization<br>
+To make our application ready for production we have to add authentication and authorization.
+With [Hyperion](https://www.codbex.com/products/hyperion/) it is an easy task.
+  - Let's define two roles
+    - `employee` - for employees
+    - `employee_manager` - for managers
+    
+  - Create folder `leave-request/security`
+  - Right click on folder `security` -> `New` -> `Roles Definitions`
+  - Set name `roles.roles`
+  - Click `Create` button
+  - open file `roles.roles`
+  - edit the predefined entries to match our use case
+  <a href="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/roles-file.png" target="_blank">
+     <img src="{{ site.baseurl }}/images/2024-07-12-leave-request-bpm-app/roles-file.png" alt="roles-file.png">
+  </a>
+
+
+---
 ## Summary
-Let's summarize what you can do with Hyperion
+Let's summarize what you can do with [Hyperion](https://www.codbex.com/products/hyperion/)
 - aaa
 - bbb
 - ccc
