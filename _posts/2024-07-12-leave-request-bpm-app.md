@@ -140,30 +140,30 @@ If you have any issues with the modeling, you can right-click on process file `l
   Example:
 ```shell
 curl --header 'Authorization: Basic YWRtaW46YWRtaW4=' \
-    --location 'http://localhost/services/ts/leave-request/api/ProcessService.ts/requests' \
     --header 'Content-Type: application/json' \
+    --location 'http://localhost/services/ts/leave-request/api/ProcessService.ts/requests' \
     --data '{
-        "toDate": "aaa",
-        "fromDate": "aaa"
+        "fromDate": "2024-07-18T09:39:43.638Z",
+        "toDate": "2024-07-19T09:39:43.638Z"
     }'
 ```
 - Approve a leave request<br>
   Example:
 ```shell
 curl --header 'Authorization: Basic YWRtaW46YWRtaW4=' \
-    --location --request PUT 'http://localhost/services/ts/leave-request/api/ProcessService.ts/requests/111/approve'
+  --location --request PUT 'http://localhost/services/ts/leave-request/api/ProcessService.ts/requests/46/approve'
 ```
 - Decline a leave request<br>
   Example:
 ```shell
 curl --header 'Authorization: Basic YWRtaW46YWRtaW4=' \
-    --location --request PUT 'http://localhost/services/ts/leave-request/api/ProcessService.ts/requests/111/decline'
+  --location --request PUT 'http://localhost/services/ts/leave-request/api/ProcessService.ts/requests/46/decline'
 ```
 - Get leave request details<br>
   Example:
 ```shell
 curl --header 'Authorization: Basic YWRtaW46YWRtaW4=' \
-    --location 'http://localhost/services/ts/leave-request/api/ProcessService.ts/requests/111/details'
+    --location 'http://localhost/services/ts/leave-request/api/ProcessService.ts/requests/46/details'
 ```
 1. Implement user interface for submitting new leave request<br>
 You can create easily user interfaces using the codbex forms functionality.<br><br>
@@ -295,48 +295,50 @@ Let's create our first form.
         - set the copied path `/services/web/leave-request/gen/process-leave-request/forms/process-leave-request/index.html` for `Form key`
             <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/steps-process-form-key.png">
 
-1. Mail configuration
-
-   We will need some mail configurations if we want to send real emails. Otherwise, mails will be logged in the console.<br>
-   You can easily get a email testing account from [mailtrap.io](https://mailtrap.io/)<br>
-
-   - For SMTP you need the following variables:
+1. Mail configurations<br>
+  We will need some mail configurations if we want to send real emails. Otherwise, mails will be logged in the console.<br>
+  You can easily get a email testing account from [mailtrap.io](https://mailtrap.io/)<br>
+  Under `Integration`-> `SMTP`, you can find the needed credentials.
+  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/mailtrap-configurations.png" target="_blank">
+    <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/mailtrap-configurations.png" alt="mailtrap-configurations.png">
+  </a>
+  - For SMTP you need the following variables:
     
-    | Variable Name                      | Description                                      | Example value              | 
-    |------------------------------------|--------------------------------------------------|----------------------------|
-    | DIRIGIBLE_MAIL_USERNAME            | username                                         | `my_username`              |
-    | DIRIGIBLE_MAIL_PASSWORD            | password                                         | `my_password_123`          |
-    | DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL  | transport protocol                               | `smtp`                     |
+    | Variable Name                      | Description                                      | Example value             | 
+    |------------------------------------|--------------------------------------------------|---------------------------|
+    | DIRIGIBLE_MAIL_USERNAME            | username                                         | `my_username`             |
+    | DIRIGIBLE_MAIL_PASSWORD            | password                                         | `my_password_123`         |
+    | DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL  | transport protocol                               | `smtp`                    |
     | DIRIGIBLE_MAIL_SMTP_HOST           | SMTP host                                        | `sandbox.smtp.mailtrap.io` |
-    | DIRIGIBLE_MAIL_SMTP_PORT           | SMTP port                                        | `2525`                     |
-    | DIRIGIBLE_MAIL_SMTP_AUTH           | whether authentication is required `true`/`false` | `true`                     |
+    | DIRIGIBLE_MAIL_SMTP_PORT           | SMTP port                                        | `2525`                    |
+    | DIRIGIBLE_MAIL_SMTP_AUTH           | whether authentication is required `true`/`false` | `true`                    |
 
-   - For SMTPS you need the following variables:
+    - For SMTPS you need the following variables:
     
-    | Variable Name                      | Description                                       | Example value              | 
-    |------------------------------------|---------------------------------------------------|----------------------------|
-    | DIRIGIBLE_MAIL_USERNAME            | username                                          | `my_username`              |
-    | DIRIGIBLE_MAIL_PASSWORD            | password                                          | `my_password_123`          |
-    | DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL  | transport protocol                                | `smtps`                     |
-    | DIRIGIBLE_MAIL_SMTPS_HOST           | SMTPS host                                        | `sandbox.smtp.mailtrap.io` |
-    | DIRIGIBLE_MAIL_SMTPS_PORT           | SMTPS port                                        | `2525`                     |
-    | DIRIGIBLE_MAIL_SMTPS_AUTH           | whether authentication is required `true`/`false` | `true`                     |
+   | Variable Name                      | Description                                       | Example value              | 
+   |------------------------------------|---------------------------------------------------|----------------------------|
+   | DIRIGIBLE_MAIL_USERNAME            | username                                          | `my_username`              |
+   | DIRIGIBLE_MAIL_PASSWORD            | password                                          | `my_password_123`          |
+   | DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL  | transport protocol                                | `smtps`                     |
+   | DIRIGIBLE_MAIL_SMTPS_HOST           | SMTPS host                                        | `sandbox.smtp.mailtrap.io` |
+   | DIRIGIBLE_MAIL_SMTPS_PORT           | SMTPS port                                        | `2525`                     |
+   | DIRIGIBLE_MAIL_SMTPS_AUTH           | whether authentication is required `true`/`false` | `true`                     |
 
-   - To start the Kronos image with the needed mail configurations use the following command
-       ```shell
-       HYPERION_WORKSPACE_DIR='/tmp/hyperion'
-       IMAGE_VERSION='1.0.5' # use version 1.0.5 or later
+- To start the Kronos image with the needed mail configurations use the following command
+    ```shell
+    HYPERION_WORKSPACE_DIR='/tmp/hyperion'
+    IMAGE_VERSION='1.0.5' # use version 1.0.5 or later
     
-       docker run --name codbex-hyperion --rm -p 80:80 \
-           -v "$HYPERION_WORKSPACE_DIR:/target/dirigible" \
-           -e DIRIGIBLE_MAIL_USERNAME=6eeaaee24cfdec \
-           -e DIRIGIBLE_MAIL_PASSWORD=06ec8a05a2ee6a \
-           -e DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL=smtp \
-           -e DIRIGIBLE_MAIL_SMTP_HOST=sandbox.smtp.mailtrap.io \
-           -e DIRIGIBLE_MAIL_SMTP_PORT=2525 \
-           -e DIRIGIBLE_MAIL_SMTP_AUTH=true \
-           ghcr.io/codbex/codbex-hyperion:$IMAGE_VERSION
-       ```
+    docker run --name codbex-hyperion --rm -p 80:80 \
+        -v "$HYPERION_WORKSPACE_DIR:/target/dirigible" \
+        -e DIRIGIBLE_MAIL_USERNAME=6eeaaee24cfdec \
+        -e DIRIGIBLE_MAIL_PASSWORD=06ec8a05a2ee6a \
+        -e DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL=smtp \
+        -e DIRIGIBLE_MAIL_SMTP_HOST=sandbox.smtp.mailtrap.io \
+        -e DIRIGIBLE_MAIL_SMTP_PORT=2525 \
+        -e DIRIGIBLE_MAIL_SMTP_AUTH=true \
+        ghcr.io/codbex/codbex-hyperion:$IMAGE_VERSION
+    ```
 
 1. Now, we can test our application
    1. Create new leave request
@@ -395,11 +397,11 @@ Let's create our first form.
         <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/approved-leave-request-email.png" alt="approved-leave-request-email.png">
         </a>
 1. Authentication and authorization<br>
-To make our application ready for production we have to add authentication and authorization.
-With [Hyperion](https://www.codbex.com/products/hyperion/) it is an easy task.
-  - Let's define two roles
-    - `employee` - for employees
-    - `employee_manager` - for managers
+To make our application ready for production we have to add authentication and authorization.<br>
+With [Hyperion](https://www.codbex.com/products/hyperion/) it is an easy task.<br>
+Let's define two roles<br>
+  - `employee` - for employees
+  - `employee_manager` - for managers
     
   - Create folder `leave-request/security`
   - Right click on folder `security` -> `New` -> `Roles Definitions`
@@ -410,7 +412,23 @@ With [Hyperion](https://www.codbex.com/products/hyperion/) it is an easy task.
   <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/roles-file.png" target="_blank">
      <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/roles-file.png" alt="roles-file.png">
   </a>
-
+Now, we have to protect the created forms and exposed REST APIs.<br>
+Here are the requirements
+    - users with `employee` role should have access to
+      - submit form
+      - REST API for creating new leave request (process instance)
+    - users with `employee_manager` role should have access to
+        - leave request processing form
+        - REST API for approve/decline leave request 
+To implement this requirement
+    - Right click on folder `security` -> `New` -> `Access Constraints`
+    - Type `access.access`
+    - Open file `access.access`
+    - edit the predefined constraints to match our use case
+      <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/access-constraints.png" target="_blank">
+        <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/access-constraints.png" alt="access-constraints.png">
+      </a>
+      You can replace the content of the file with [this one](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/b0cb728f37ec985e5ea34a9267f06e4d38fc557f/leave-request/security/access.access) if it is easier for you.
 
 ---
 ## Summary
