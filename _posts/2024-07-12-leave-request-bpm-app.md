@@ -399,7 +399,7 @@ Let's create our first form.
 1. Authentication and authorization<br>
 To make our application ready for production we have to add authentication and authorization.<br>
 With [Hyperion](https://www.codbex.com/products/hyperion/) it is an easy task.<br>
-Let's define two roles `employee` and `employee_manager`
+- Let's define two roles `employee` and `employee-manager`
   - create folder `leave-request/security`
   - right click on folder `security` -> `New` -> `Roles Definitions`
   - set name `roles.roles`
@@ -409,33 +409,89 @@ Let's define two roles `employee` and `employee_manager`
       <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/roles-file.png" target="_blank">
        <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/roles-file.png" alt="roles-file.png">
       </a>
-Now, we have to protect the created forms and exposed REST APIs.<br>
-Here are the requirements:
+- Now, we have to protect the created forms and exposed REST APIs.<br>
+  Here are the requirements:
         - users with `employee` role should have access to
-          - submit form
-          - REST API for creating new leave request (process instance)
-        - users with `employee_manager` role should have access to
+            - submit form
+            - REST API for creating new leave request (process instance)
+        - users with `employee-manager` role should have access to
             - leave request processing form
-            - REST API for approve/decline leave request 
-  To implement this requirements
-    - right click on folder `security` -> `New` -> `Access Constraints`
-    - type `access.access` for name
-    - open file `access.access`
-    - edit the predefined constraints to match our use case
-      <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/access-constraints.png" target="_blank">
-        <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/access-constraints.png" alt="access-constraints.png">
-      </a>
+            - REST API for approve/decline leave request
+        - leave requests must be processable only by users with role `employee-manager`<br> 
+To implement these requirements
+  - right click on folder `security` -> `New` -> `Access Constraints`
+  - type `access.access` for name
+  - open file `access.access`
+  - edit the predefined constraints to match our use case
+    <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/access-constraints.png" target="_blank">
+      <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/access-constraints.png" alt="access-constraints.png">
+    </a>
     You can replace the content of the file with [this one](https://github.com/codbex/codbex-sample-bpm-leave-request/blob/b0cb728f37ec985e5ea34a9267f06e4d38fc557f/leave-request/security/access.access) if it is easier for you.<br>
-Now, let's open the forms - [submit form](http://localhost/services/web/leave-request/gen/submit-leave-request/forms/submit-leave-request/index.html) and [process form](http://localhost/services/web/leave-request/gen/process-leave-request/forms/process-leave-request/index.html?taskId=103)
-  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/submit-from-forbidden.png" target="_blank">
+  Now, let's open the forms - [submit form](http://localhost/services/web/leave-request/gen/submit-leave-request/forms/submit-leave-request/index.html) and [process form](http://localhost/services/web/leave-request/gen/process-leave-request/forms/process-leave-request/index.html?taskId=103)
+    <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/submit-from-forbidden.png" target="_blank">
     <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/submit-from-forbidden.png" alt="submit-from-forbidden.png">
-  </a>
-  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/process-from-forbidden.png" target="_blank">
+    </a>
+    <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/process-from-forbidden.png" target="_blank">
     <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/process-from-forbidden.png" alt="process-from-forbidden.png">
+    </a>
+  Both forms must be protected.
+  - open the process `leave-request-process.bpmn`
+  - select user task `Process request`
+  - click on `Assignments`
+    <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/task-assignments.png" target="_blank">
+    <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/task-assignments.png" alt="task-assignments.png">
+    </a>
+  - change `Candidate groups` from `ADMINISTRATOR` to `employee-manager`
+    <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/changed-assignments.png" target="_blank">
+    <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/changed-assignments.png" alt="changed-assignments.png">
+    </a>
+  - click `Save`
+  - save the process file
+  - publish the project
+
+1. Create users for testing<br>
+- Now, to test our scenario we need two users
+  - employee user `john.doe.employee@example.com` with role `employee`
+  - employee manager user `emily.stone.mngr@example.com` with role `employee-manager`
+- To create these users follow the steps:
+  - Open the security perspective using the `Security` button<br>
+    <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/security-perspective-button.png" target="_blank">
+    <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/security-perspective-button.png" alt="security-perspective-button.png" style="width: 15rem;">
+    </a>
+  - Create user `john.doe.employee@example.com` with role `employee` in the default tenant
+    <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-user.png" target="_blank">
+    <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-user.png" alt="employee-user.png">
+    </a>
+  - Create user `emily.stone.mngr@example.com` with role `employee` in the default tenant
+    <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-manager-user.png" target="_blank">
+    <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-manager-user.png" alt="employee-manager-user.png">
+    </a>
+1. Finally, test the whole scenario again with the created users
+- open the [submit form](http://localhost/services/web/leave-request/gen/submit-leave-request/forms/submit-leave-request/index.html) and login with the employee user `john.doe.employee@example.com`
+- submit a new leave request
+  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-new-leave-request.png" target="_blank">
+  <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-new-leave-request.png" alt="employee-new-leave-request.png">
   </a>
-Both forms must be protected.<br>
+- check your mailbox
+  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-leave-request-email.png" target="_blank">
+  <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-leave-request-email.png" alt="employee-leave-request-email.png">
+  </a>
+- open the inbox UI at [http://localhost/services/web/inbox/](http://localhost/services/web/inbox/) or use the link from the email
+- login with the employee manager user `emily.stone.mngr@example.com`
+- claim the task and open the form using the `Open Form` button
+  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-manager-open-form.png" target="_blank">
+  <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-manager-open-form.png" alt="employee-manager-open-form.png">
+  </a>
+- this time, let's decline the request
+  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-manager-decline-task.png" target="_blank">
+  <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-manager-decline-task.png" alt="employee-manager-decline-task.png">
+  </a>
+- check the mailbox
+  <a href="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-manager-declined-email.png" target="_blank">
+  <img src="{{ site.baseurl }}/images/2024-07-16-leave-request-bpm-app/employee-manager-declined-email.png" alt="employee-manager-declined-email.png">
+  </a>
 
-
+Congratulations, your application is ready! 
 
 ---
 ## Summary
