@@ -380,11 +380,11 @@ Let's create our first form.
         
         docker run --name codbex-hyperion --rm -p 80:80 \
             -v "$HYPERION_WORKSPACE_DIR:/target/dirigible" \
-            -e DIRIGIBLE_MAIL_USERNAME=6eeaaee24cfdec \
-            -e DIRIGIBLE_MAIL_PASSWORD=06ec8a05a2ee6a \
+            -e DIRIGIBLE_MAIL_USERNAME=<username> \
+            -e DIRIGIBLE_MAIL_PASSWORD=<pass> \
             -e DIRIGIBLE_MAIL_TRANSPORT_PROTOCOL=smtp \
             -e DIRIGIBLE_MAIL_SMTP_HOST=sandbox.smtp.mailtrap.io \
-            -e DIRIGIBLE_MAIL_SMTP_PORT=2525 \
+            -e DIRIGIBLE_MAIL_SMTP_PORT=<port> \
             -e DIRIGIBLE_MAIL_SMTP_AUTH=true \
             ghcr.io/codbex/codbex-hyperion:$IMAGE_VERSION
         ```
