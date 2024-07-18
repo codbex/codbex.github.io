@@ -373,7 +373,7 @@ Let's create our first form.
    | DIRIGIBLE_MAIL_SMTPS_PORT           | SMTPS port                                        | `2525`                     |
    | DIRIGIBLE_MAIL_SMTPS_AUTH           | whether authentication is required `true`/`false` | `true`                     |
 
-    - to start the Kronos image with the needed mail configurations use the following command
+    - to start the Hyperion image with the needed mail configurations use the following command
         ```shell
         HYPERION_WORKSPACE_DIR='/tmp/hyperion'
         IMAGE_VERSION='1.0.7' # use version 1.0.7 or later
