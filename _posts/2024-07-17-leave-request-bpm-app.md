@@ -553,7 +553,7 @@ Using [Hyperion](https://www.codbex.com/products/hyperion/) you can
   - benefit from the [codbex platform, tooling and modules](https://www.codbex.com/documentation/)
   - add authentication and authorization to your application
 
-The project we implemented can be found in [this GitHub project](https://github.com/codbex/codbex-sample-bpm-leave-request).
+The project we implemented can be found in [this GitHub repository](https://github.com/codbex/codbex-sample-bpm-leave-request).
 
 I hope you enjoyed this blog. Stay tuned for more great functionality by __codbex__!<br>
 If you have any questions, ideas or want to contribute, feel free [to contact us](https://www.codbex.com/contact/).
