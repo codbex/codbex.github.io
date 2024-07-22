@@ -20,6 +20,8 @@ Let's have the following use cases:
 
 ---
 ## Implementation steps
+Follow the steps bellow or watch the recorded video.<br>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/ZIN2QdD6zYk" frameborder="0" allowfullscreen></iframe>
 
 1. Start a [Hyperion](https://www.codbex.com/products/hyperion/) instance using [Docker](https://www.docker.com/)<br>
 Open your terminal and execute the following:
