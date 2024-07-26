@@ -90,43 +90,8 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
     ```
 #### Setup local environment
 
-    1. Download and install the miniconda installer from https://conda.io/miniconda.html.
-    2. Create a file `conda_env.yaml`
-        ```yaml
-        name: snowpark-container-services-hol
-        channels:
-            - https://repo.anaconda.com/pkgs/snowflake
-        dependencies:
-            - python=3.10
-            - snowflake-snowpark-python[pandas]
-            - ipykernel
-        ```
-    3. Create the conda environment.
-        ```
-        conda env create -f conda_env.yml
-        ```
-    4. Activate the conda environment.
-        ```
-        conda activate snowpark-container-services-hol
-        ```
-    5. Install hatch so we can build the SnowCLI:
-        ```
-        pip install hatch
-        ```
-    6. Install SnowCLI:
-        ```bash
-        # naviage to where you want to download the snowcli GitHub repo, e.g. ~/Downloads
-        cd /your/preferred/path
-        # clone the git repo
-        git clone https://github.com/Snowflake-Labs/snowcli
-        # cd into the snowcli repo
-        cd snowcli
-        # install
-        hatch build && pip install .
-        # during install you may observe some dependency errors,
-        # which should be okay for the time being 
-        ```
-    7. Configure your Snowflake CLI connection by following the steps
+    1. Install [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/index) by following the instructions [here](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/installation/installation)
+    2. Configure your Snowflake CLI connection
         ```bash
         snow connection add
         ```
