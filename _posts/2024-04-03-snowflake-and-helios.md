@@ -92,104 +92,123 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
 
     1. Install [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/index) by following the instructions [here](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/installation/installation)
     2. Configure your Snowflake CLI connection
-        ```bash
-        snow connection add
-        ```
+        - Create a new connection with name `test` and set `role=ACCOUNTADMIN`, `warehouse=CONTAINER_HOL_WH`, `database=CONTAINER_HOL_DB`, `schema=public`
+          ```bash
+          snow connection add --default
+          ```
 
-        test the connection
-        ```bash
-        # test the connection:
-        snow connection test --connection "CONTAINER_hol"
-        ```
+        - Test created connection
+          ```bash
+          # test the connection:
+          snow connection test --connection "test"
+          ```
 
-#### Docker image preperation
+#### Docker image preparation
 
-  1. Pull latest codbex-helios image
-      ```bash
-      docker pull ghcr.io/codbex/codbex-helios:latest
-      ```
+1. Pull latest codbex-helios image
+    ```bash
+    docker pull ghcr.io/codbex/codbex-helios:latest --platform linux/amd64
+    ```
 
-      !!! If you are on ARM architecture:
-      
-      `export DOCKER_DEFAULT_PLATFORM=linux/amd64`
-
-  3. Login in your Snowflake image repository
-      ```bash
-      # snowflake_registry_hostname = org-account.registry.snowflakecomputing.com
-      docker login <snowflake_registry_hostname> -u <user_name>
-      ```
-  4. Tag and push
-      ```bash
-      # repository_url = org-account.registry.snowflakecomputing.com/CONTAINER_hol_db/public/image_repo
-      docker tag codbex-helios:latest <repository_url>/codbex-helios:dev
-      docker push <repository_url>/codbex-helios:dev
+1. Login in your Snowflake image repository
+    ```bash
+    # replace <org> and <account> with values for your snowflake account
+    snowflake_registry_hostname='<org>-<account>.registry.snowflakecomputing.com'
+    docker login "$snowflake_registry_hostname" -u <user_name>
+    ```
+1. Retag the pulled image and push it to the Snowflake repository
+    ```bash
+    # you can get the value for `repository_url`
+    # from the result of `SHOW IMAGE REPOSITORIES IN SCHEMA CONTAINER_HOL_DB.PUBLIC;`
+    repository_url="$snowflake_registry_hostname/CONTAINER_hol_db/public/image_repo"
+    docker tag ghcr.io/codbex/codbex-helios:latest "$repository_url/codbex-helios:dev"
+    docker push "$repository_url/codbex-helios:dev"
+    ```
 
 #### Creating the Helios service
 
-  1. Create spec file for service deployment
+- Create spec file `codbex-helios-snowpark.yaml` for service deployment
 
-      codbex-helios-snowpark.yaml
-      ```yaml
-      spec:
-      containers:
-          - name: codbex-helios-snowpark
-          image: <repository_hostname>/container_hol_db/public/image_repo/codbex-helios:dev
-          volumeMounts:
-              - name: codbex-helios-home
-              mountPath: /home/codbex-helios
-            env: 
-            DIRIGIBLE_DATABASE_CUSTOM_DATASOURCES: SNOWFLAKE
-            DIRIGIBLE_DATABASE_DATASOURCE_NAME_DEFAULT: SNOWFLAKE
-            DIRIGIBLE_SINGLE_TENANT_MODE_ENABLED: true
-            SNOWFLAKE_DRIVER: net.snowflake.client.jdbc.SnowflakeDriver
-            SNOWFLAKE_URL: jdbc:snowflake://your-snowlfake-account.snowflakecomputing.com/ \
-            ?db=CONTAINER_HOL_DB&schema=PUBLIC&warehouse=CONTAINER_HOL_WH
-            SNOWFLAKE_USERNAME: your-snowflake-username
-            SNOWFLAKE_PASSWORD: your-snowflake-password
-            SNOWFLAKE_WAREHOUSE: CONTAINER_HOL_WH
-            SNOWFLAKE_DATABASE: CONTAINER_HOL_DB
-            SNOWFLAKE_SCHEMA: PUBLIC
-            CLIENT_SESSION_KEEP_ALIVE: true
-      endpoints:
-          - name: codbex-helios-snowpark
-          port: 80
-          public: true
-      volumes:
-          - name: codbex-helios-home
-          source: "CONTAINER_HOL_DB.PUBLIC.VOLUMES"
-          uid: 1000
-          gid: 1000
-      networkPolicyConfig:
-          allowInternetEgress: true
-      ```
-  2. Deploy the spec file:
-      ```bash
-      snow object stage copy ./src/codbex-helios-snowpark/codbex-helios.yaml \
-       @specs --overwrite --connection CONTAINER_hol
-      ```
-  3. In the Snowflake worksheet execute the following command:
-      ```sql
-      CREATE SERVICE codbex_helios
-      in compute pool CONTAINER_HOL_POOL
-      from @specs
-      spec = 'codbex-helios-snowpark.yaml';
-      ```
-  4. Check your service:
-      ```sql
-      CALL SYSTEM$GET_SERVICE_STATUS('CONTAINER_HOL_DB.PUBLIC.CODBEX_HELIOS');
-      CALL SYSTEM$GET_SERVICE_LOGS('CONTAINER_HOL_DB.PUBLIC.CODBEX_HELIOS', '0',
-       'codbex-helios', 10);
-      CALL SYSTEM$REGISTRY_LIST_IMAGES('/CONTAINER_HOL_DB/PUBLIC/IMAGE_REPO');
+```yaml
+spec:
+  containers:
+    - name: codbex-helios-snowpark
+      image: <snowlfake-account>.registry.snowflakecomputing.com/container_hol_db/public/image_repo/codbex-helios:dev
+      volumeMounts:
+        - name: codbex-helios-home
+          mountPath: /home/codbex-helios
+      env:
+        DIRIGIBLE_DATABASE_CUSTOM_DATASOURCES: SNOWFLAKE
+        DIRIGIBLE_DATABASE_DATASOURCE_NAME_DEFAULT: SNOWFLAKE
+        SNOWFLAKE_DRIVER: net.snowflake.client.jdbc.SnowflakeDriver
+        SNOWFLAKE_URL: jdbc:snowflake://<snowlfake-account>.snowflakecomputing.com/?db=CONTAINER_HOL_DB&schema=PUBLIC&warehouse=CONTAINER_HOL_WH
+        SNOWFLAKE_USERNAME: <snowflake_username>
+        SNOWFLAKE_PASSWORD: <snowflake_password>
+        SNOWFLAKE_WAREHOUSE: CONTAINER_HOL_WH
+        SNOWFLAKE_DATABASE: CONTAINER_HOL_DB
+        SNOWFLAKE_SCHEMA: PUBLIC
+        CLIENT_SESSION_KEEP_ALIVE: true
+  endpoints:
+    - name: codbex-helios-snowpark
+      port: 80
+      public: true
+  volumes:
+    - name: codbex-helios-home
+      source: "@CONTAINER_HOL_DB.PUBLIC.VOLUMES"
+      uid: 1000
+      gid: 1000
+  networkPolicyConfig:
+    allowInternetEgress: true
+```
 
-      SHOW SERVICES like 'codbex_helios';
-      ```
+Replace the following placeholders in the above yaml.
 
-  5. Get service endpoint
-      ```sql
-      SHOW ENDPOINTS IN SERVICE codbex_helios;
-      ```
+| Placeholder | Description                                                                                           | Example                                           | 
+|---|-------------------------------------------------------------------------------------------------------|---------------------------------------------------| 
+|`<snowflake_username>`| snowflake username                                                                                    | myuser                                            |
+|`<snowflake_password>`| snowflake password                                                                                    | mypassword                                        |
+|`<snowlfake-account>`| snowflake account                                                                                     | jiixfdf-qd67203                                   |
 
-### Using your newly deployed Helios
+- Deploy the spec file:
+
+```bash
+snow stage copy codbex-helios-snowpark.yaml @specs \
+  --overwrite --connection test \
+  --database CONTAINER_HOL_DB --schema PUBLIC --role ACCOUNTADMIN
+```
+
+- In the Snowflake worksheet execute the following command:
+
+```sql
+USE DATABASE CONTAINER_HOL_DB;
+ 
+DROP SERVICE IF EXISTS codbex_helios;
+
+CREATE SERVICE codbex_helios
+in compute pool CONTAINER_HOL_POOL
+from @specs
+spec = 'codbex-helios-snowpark.yaml';
+```
+
+- Check your service:
+
+```sql
+CALL SYSTEM$GET_SERVICE_STATUS('codbex_helios');
+CALL SYSTEM$GET_SERVICE_LOGS('codbex_helios', '0',  'codbex-helios-snowpark');
+CALL SYSTEM$REGISTRY_LIST_IMAGES('/CONTAINER_HOL_DB/PUBLIC/IMAGE_REPO');
+
+SHOW SERVICES like 'codbex_helios';
+```
+
+- Get service endpoint
+
+```sql
+SHOW ENDPOINTS IN SERVICE codbex_helios;
+```
+
+## Using your newly deployed Helios
+
+Open the deployed Helios instance and login using the default credentials user `admin` and password `admin`.<br>
 
 Now lets use Helios' __Git__ perspective and clone some already existing repositories to continue the tutorial:
 
