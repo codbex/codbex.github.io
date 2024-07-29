@@ -73,11 +73,24 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
 
     ```sql
     USE ROLE ACCOUNTADMIN;
-    CREATE SECURITY INTEGRATION IF NOT EXISTS snowservices_ingress_oauth
-    TYPE=oauth
-    OAUTH_CLIENT=snowservices_ingress
-    ENABLED=true;
 
+    DROP NETWORK RULE allow_all_rule;
+    DROP EXTERNAL ACCESS INTEGRATION allow_all_rule_integration;
+
+    CREATE OR REPLACE NETWORK RULE allow_all_rule
+      MODE= 'EGRESS'
+      TYPE = 'HOST_PORT'
+      VALUE_LIST = ('0.0.0.0:443','0.0.0.0:80');
+
+    CREATE EXTERNAL ACCESS INTEGRATION allow_all_rule_integration
+      ALLOWED_NETWORK_RULES = (allow_all_rule)
+      ENABLED = true;
+
+    GRANT USAGE ON INTEGRATION allow_all_rule_integration TO ROLE CONTAINER_USER_ROLE;
+
+    DESC EXTERNAL ACCESS INTEGRATION allow_all_rule_integration;
+
+   
     USE ROLE CONTAINER_USER_ROLE;
     CREATE COMPUTE POOL IF NOT EXISTS CONTAINER_HOL_POOL
     MIN_NODES = 1
@@ -174,12 +187,13 @@ Replace the following placeholders in the above yaml.
 ```bash
 snow stage copy codbex-helios-snowpark.yaml @specs \
   --overwrite --connection test \
-  --database CONTAINER_HOL_DB --schema PUBLIC --role ACCOUNTADMIN
+  --database CONTAINER_HOL_DB --schema PUBLIC --role CONTAINER_USER_ROLE
 ```
 
 - In the Snowflake worksheet execute the following command:
 
 ```sql
+USE ROLE CONTAINER_USER_ROLE;
 USE DATABASE CONTAINER_HOL_DB;
  
 DROP SERVICE IF EXISTS codbex_helios;
@@ -187,6 +201,7 @@ DROP SERVICE IF EXISTS codbex_helios;
 CREATE SERVICE codbex_helios
 in compute pool CONTAINER_HOL_POOL
 from @specs
+EXTERNAL_ACCESS_INTEGRATIONS = (allow_all_rule_integration)
 spec = 'codbex-helios-snowpark.yaml';
 ```
 
