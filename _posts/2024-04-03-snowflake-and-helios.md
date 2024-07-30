@@ -263,53 +263,57 @@ Its time to write a stored procedure that will use the Units of Measure and do a
 
 1. Go to your `Snowflake` worksheet and paste the following:
 
-    ```sql
-    CREATE OR REPLACE PROCEDURE convert_value(source VARCHAR, target VARCHAR, value FLOAT)
-    RETURNS FLOAT
-    LANGUAGE JAVASCRIPT
-    AS
-    $$  
-        var entitySource = snowflake.execute(
-            {
-                sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", 
-                binds: [SOURCE]
-            });
-        var entityTarget = snowflake.execute(
-            {
-                sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?",
-                binds: [TARGET]
-            });
+```sql
+USE DATABASE CONTAINER_HOL_DB_ILIYAN_NEW;
+USE WAREHOUSE CONTAINER_HOL_WH_ILIYAN_NEW;
+
+USE ROLE CONTAINER_USER_ROLE_ILIYAN_NEW;
+
+CREATE OR REPLACE PROCEDURE convert_value(source VARCHAR, target VARCHAR, value FLOAT)
+RETURNS FLOAT
+LANGUAGE JAVASCRIPT
+AS
+$$  
+ var entitySource = snowflake.execute(
+     {
+         sqlText: "SELECT * FROM PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", 
+         binds: [SOURCE]
+     });
+ var entityTarget = snowflake.execute(
+     {
+         sqlText: "SELECT * FROM PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?",
+         binds: [TARGET]
+     });
+    
+ if (entitySource.next() && entityTarget.next()) {
+     var dimensionSource = entitySource.getColumnValue("UOM_DIMENSION");
+     var dimensionTarget = entityTarget.getColumnValue("UOM_DIMENSION");
+
+     if (dimensionSource !== dimensionTarget) {
+         throw "Both Source and Target Units of Measures must have the same Dimension";
+     }
+
+     var numeratorSource = entitySource.getColumnValue("UOM_NUMERATOR");
+     var denominatorSource = entitySource.getColumnValue("UOM_DENOMINATOR");
+     var numeratorTarget = entityTarget.getColumnValue("UOM_NUMERATOR");
+     var denominatorTarget = entityTarget.getColumnValue("UOM_DENOMINATOR");
+
+     var valueBase = VALUE * numeratorSource / denominatorSource;
+     var valueTarget = valueBase * denominatorTarget / numeratorTarget;
         
-        if (entitySource.next() && entityTarget.next()) {
-            var dimensionSource = entitySource.getColumnValue("UOM_DIMENSION");
-            var dimensionTarget = entityTarget.getColumnValue("UOM_DIMENSION");
-
-            if (dimensionSource !== dimensionTarget) {
-                throw "Both Source and Target Units of Measures \ 
-                 must have the same Dimension";
-            }
-
-            var numeratorSource = entitySource.getColumnValue("UOM_NUMERATOR");
-            var denominatorSource = entitySource.getColumnValue("UOM_DENOMINATOR");
-            var numeratorTarget = entityTarget.getColumnValue("UOM_NUMERATOR");
-            var denominatorTarget = entityTarget.getColumnValue("UOM_DENOMINATOR");
-
-            var valueBase = VALUE * numeratorSource / denominatorSource;
-            var valueTarget = valueBase * denominatorTarget / numeratorTarget;
-            
-            return valueTarget;
-        } else {
-            throw "Unit of Measures not found: [" + source + "] and/or [" + target + "]";
-        }
-    $$
-    ;
-    ```
+     return valueTarget;
+ } else {
+     throw "Unit of Measures not found: [" + source + "] and/or [" + target + "]";
+ }
+$$
+;
+```
 
 2. Execute the procedure:
 
-    ```sql
-    CALL convert_value('GRM', 'KGM', 10);
-    ```
+ ```sql
+ CALL convert_value('GRM', 'KGM', 10);
+ ```
 
 <img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/executed-procedure.png" width="800em">
 
