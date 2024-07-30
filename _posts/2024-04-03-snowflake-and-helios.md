@@ -311,9 +311,9 @@ $$
 
 2. Execute the procedure:
 
- ```sql
- CALL convert_value('GRM', 'KGM', 10);
- ```
+```sql
+CALL convert_value('GRM', 'KGM', 10);
+```
 
 <img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/executed-procedure.png" width="800em">
 
