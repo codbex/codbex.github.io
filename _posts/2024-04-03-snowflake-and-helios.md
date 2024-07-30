@@ -154,13 +154,13 @@ spec:
         DIRIGIBLE_DATABASE_CUSTOM_DATASOURCES: SNOWFLAKE
         DIRIGIBLE_DATABASE_DATASOURCE_NAME_DEFAULT: SNOWFLAKE
         SNOWFLAKE_DRIVER: net.snowflake.client.jdbc.SnowflakeDriver
-        SNOWFLAKE_URL: jdbc:snowflake://<snowlfake-account>.snowflakecomputing.com/?db=CONTAINER_HOL_DB&schema=PUBLIC&warehouse=CONTAINER_HOL_WH
+        SNOWFLAKE_URL: jdbc:snowflake://<snowflake-account>.snowflakecomputing.com
         SNOWFLAKE_USERNAME: <snowflake_username>
         SNOWFLAKE_PASSWORD: <snowflake_password>
         SNOWFLAKE_WAREHOUSE: CONTAINER_HOL_WH
         SNOWFLAKE_DATABASE: CONTAINER_HOL_DB
+        SNOWFLAKE_ROLE: CONTAINER_USER_ROLE
         SNOWFLAKE_SCHEMA: PUBLIC
-        CLIENT_SESSION_KEEP_ALIVE: true
   endpoints:
     - name: codbex-helios-snowpark
       port: 80
@@ -180,7 +180,7 @@ Replace the following placeholders in the above yaml.
 |---|-------------------------------------------------------------------------------------------------------|---------------------------------------------------| 
 |`<snowflake_username>`| snowflake username                                                                                    | myuser                                            |
 |`<snowflake_password>`| snowflake password                                                                                    | mypassword                                        |
-|`<snowlfake-account>`| snowflake account                                                                                     | jiixfdf-qd67203                                   |
+|`<snowflake-account>`| snowflake account                                                                                     | jiixfdf-qd67203                                   |
 
 - Deploy the spec file:
 
@@ -238,7 +238,7 @@ Go back to the __Workspace__, here you will find that `codbex-uoms` is a full-st
 <img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/publish-all.png" width="800em">
 
 1. Publish all projects in the Workspace
-2. Navigate to codbex-uoms -> gen -> index.html
+2. Navigate to `codbex-uoms/gen/codbex-uoms/index.html`
 3. Open the link at the bottom and explore the dashboard
 
 <img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/select-index.png" width="800em">
