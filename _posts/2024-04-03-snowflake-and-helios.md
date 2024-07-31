@@ -73,11 +73,24 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
 
     ```sql
     USE ROLE ACCOUNTADMIN;
-    CREATE SECURITY INTEGRATION IF NOT EXISTS snowservices_ingress_oauth
-    TYPE=oauth
-    OAUTH_CLIENT=snowservices_ingress
-    ENABLED=true;
 
+    DROP NETWORK RULE IF EXISTS allow_all_rule;
+    DROP EXTERNAL ACCESS INTEGRATION IF EXISTS allow_all_rule_integration;
+
+    CREATE OR REPLACE NETWORK RULE allow_all_rule
+      MODE= 'EGRESS'
+      TYPE = 'HOST_PORT'
+      VALUE_LIST = ('0.0.0.0:443','0.0.0.0:80');
+
+    CREATE EXTERNAL ACCESS INTEGRATION allow_all_rule_integration
+      ALLOWED_NETWORK_RULES = (allow_all_rule)
+      ENABLED = true;
+
+    GRANT USAGE ON INTEGRATION allow_all_rule_integration TO ROLE CONTAINER_USER_ROLE;
+
+    DESC EXTERNAL ACCESS INTEGRATION allow_all_rule_integration;
+
+   
     USE ROLE CONTAINER_USER_ROLE;
     CREATE COMPUTE POOL IF NOT EXISTS CONTAINER_HOL_POOL
     MIN_NODES = 1
@@ -90,141 +103,128 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
     ```
 #### Setup local environment
 
-    1. Download and install the miniconda installer from https://conda.io/miniconda.html.
-    2. Create a file `conda_env.yaml`
-        ```yaml
-        name: snowpark-container-services-hol
-        channels:
-            - https://repo.anaconda.com/pkgs/snowflake
-        dependencies:
-            - python=3.10
-            - snowflake-snowpark-python[pandas]
-            - ipykernel
-        ```
-    3. Create the conda environment.
-        ```
-        conda env create -f conda_env.yml
-        ```
-    4. Activate the conda environment.
-        ```
-        conda activate snowpark-container-services-hol
-        ```
-    5. Install hatch so we can build the SnowCLI:
-        ```
-        pip install hatch
-        ```
-    6. Install SnowCLI:
-        ```bash
-        # naviage to where you want to download the snowcli GitHub repo, e.g. ~/Downloads
-        cd /your/preferred/path
-        # clone the git repo
-        git clone https://github.com/Snowflake-Labs/snowcli
-        # cd into the snowcli repo
-        cd snowcli
-        # install
-        hatch build && pip install .
-        # during install you may observe some dependency errors,
-        # which should be okay for the time being 
-        ```
-    7. Configure your Snowflake CLI connection by following the steps
-        ```bash
-        snow connection add
-        ```
+    1. Install [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/index) by following the instructions [here](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/installation/installation)
+    2. Configure your Snowflake CLI connection
+        - Create a new connection with name `blog` and set `role=CONTAINER_USER_ROLE`, `warehouse=CONTAINER_HOL_WH`, `database=CONTAINER_HOL_DB`, `schema=PUBLIC`
+          ```bash
+          snow connection add --default
+          ```
 
-        test the connection
-        ```bash
-        # test the connection:
-        snow connection test --connection "CONTAINER_hol"
-        ```
+        - Test created connection
+          ```bash
+          # test the connection:
+          snow connection test --connection "blog"
+          ```
 
-#### Docker image preperation
+#### Docker image preparation
 
-  1. Pull latest codbex-helios image
-      ```bash
-      docker pull ghcr.io/codbex/codbex-helios:latest
-      ```
+1. Pull latest codbex-helios image
+```bash
+docker pull ghcr.io/codbex/codbex-helios:latest --platform linux/amd64
+```
 
-      !!! If you are on ARM architecture:
-      
-      `export DOCKER_DEFAULT_PLATFORM=linux/amd64`
-
-  3. Login in your Snowflake image repository
-      ```bash
-      # snowflake_registry_hostname = org-account.registry.snowflakecomputing.com
-      docker login <snowflake_registry_hostname> -u <user_name>
-      ```
-  4. Tag and push
-      ```bash
-      # repository_url = org-account.registry.snowflakecomputing.com/CONTAINER_hol_db/public/image_repo
-      docker tag codbex-helios:latest <repository_url>/codbex-helios:dev
-      docker push <repository_url>/codbex-helios:dev
+1. Login in your Snowflake image repository
+```bash
+# replace <org> and <account> with values for your snowflake account
+# example value: jiixfdf-qd67203
+snowflake_registry_hostname='<org>-<account>.registry.snowflakecomputing.com'
+docker login "$snowflake_registry_hostname" -u <user_name>
+```
+1. Retag the pulled image and push it to the Snowflake repository
+```bash
+# you can get the value for `repository_url`
+# from the result of `SHOW IMAGE REPOSITORIES IN SCHEMA CONTAINER_HOL_DB.PUBLIC;`
+repository_url="$snowflake_registry_hostname/container_hol_db/public/image_repo"
+docker tag ghcr.io/codbex/codbex-helios:latest "$repository_url/codbex-helios:dev"
+docker push "$repository_url/codbex-helios:dev"
+```
 
 #### Creating the Helios service
 
-  1. Create spec file for service deployment
+- Create spec file `codbex-helios-snowpark.yaml` for service deployment
 
-      codbex-helios-snowpark.yaml
-      ```yaml
-      spec:
-      containers:
-          - name: codbex-helios-snowpark
-          image: <repository_hostname>/container_hol_db/public/image_repo/codbex-helios:dev
-          volumeMounts:
-              - name: codbex-helios-home
-              mountPath: /home/codbex-helios
-            env: 
-            DIRIGIBLE_DATABASE_CUSTOM_DATASOURCES: SNOWFLAKE
-            DIRIGIBLE_DATABASE_DATASOURCE_NAME_DEFAULT: SNOWFLAKE
-            DIRIGIBLE_SINGLE_TENANT_MODE_ENABLED: true
-            SNOWFLAKE_DRIVER: net.snowflake.client.jdbc.SnowflakeDriver
-            SNOWFLAKE_URL: jdbc:snowflake://your-snowlfake-account.snowflakecomputing.com/ \
-            ?db=CONTAINER_HOL_DB&schema=PUBLIC&warehouse=CONTAINER_HOL_WH
-            SNOWFLAKE_USERNAME: your-snowflake-username
-            SNOWFLAKE_PASSWORD: your-snowflake-password
-            SNOWFLAKE_WAREHOUSE: CONTAINER_HOL_WH
-            SNOWFLAKE_DATABASE: CONTAINER_HOL_DB
-            SNOWFLAKE_SCHEMA: PUBLIC
-            CLIENT_SESSION_KEEP_ALIVE: true
-      endpoints:
-          - name: codbex-helios-snowpark
-          port: 80
-          public: true
-      volumes:
-          - name: codbex-helios-home
-          source: "CONTAINER_HOL_DB.PUBLIC.VOLUMES"
-          uid: 1000
-          gid: 1000
-      networkPolicyConfig:
-          allowInternetEgress: true
-      ```
-  2. Deploy the spec file:
-      ```bash
-      snow object stage copy ./src/codbex-helios-snowpark/codbex-helios.yaml \
-       @specs --overwrite --connection CONTAINER_hol
-      ```
-  3. In the Snowflake worksheet execute the following command:
-      ```sql
-      CREATE SERVICE codbex_helios
-      in compute pool CONTAINER_HOL_POOL
-      from @specs
-      spec = 'codbex-helios-snowpark.yaml';
-      ```
-  4. Check your service:
-      ```sql
-      CALL SYSTEM$GET_SERVICE_STATUS('CONTAINER_HOL_DB.PUBLIC.CODBEX_HELIOS');
-      CALL SYSTEM$GET_SERVICE_LOGS('CONTAINER_HOL_DB.PUBLIC.CODBEX_HELIOS', '0',
-       'codbex-helios', 10);
-      CALL SYSTEM$REGISTRY_LIST_IMAGES('/CONTAINER_HOL_DB/PUBLIC/IMAGE_REPO');
+```yaml
+spec:
+  containers:
+    - name: codbex-helios-snowpark
+      image: <snowflake-account>.registry.snowflakecomputing.com/container_hol_db/public/image_repo/codbex-helios:dev
+      volumeMounts:
+        - name: codbex-helios-home
+          mountPath: /home/codbex-helios
+      env:
+        DIRIGIBLE_DATABASE_CUSTOM_DATASOURCES: SNOWFLAKE
+        DIRIGIBLE_DATABASE_DATASOURCE_NAME_DEFAULT: SNOWFLAKE
+        SNOWFLAKE_DRIVER: net.snowflake.client.jdbc.SnowflakeDriver
+        SNOWFLAKE_URL: jdbc:snowflake://<snowflake-account>.snowflakecomputing.com
+        SNOWFLAKE_USERNAME: <snowflake_username>
+        SNOWFLAKE_PASSWORD: <snowflake_password>
+        SNOWFLAKE_WAREHOUSE: CONTAINER_HOL_WH
+        SNOWFLAKE_DATABASE: CONTAINER_HOL_DB
+        SNOWFLAKE_ROLE: CONTAINER_USER_ROLE
+        SNOWFLAKE_SCHEMA: PUBLIC
+  endpoints:
+    - name: codbex-helios-snowpark
+      port: 80
+      public: true
+  volumes:
+    - name: codbex-helios-home
+      source: "@CONTAINER_HOL_DB.PUBLIC.VOLUMES"
+      uid: 1000
+      gid: 1000
+  networkPolicyConfig:
+    allowInternetEgress: true
+```
 
-      SHOW SERVICES like 'codbex_helios';
-      ```
+Replace the following placeholders in the above yaml.
 
-  5. Get service endpoint
-      ```sql
-      SHOW ENDPOINTS IN SERVICE codbex_helios;
-      ```
+| Placeholder | Description                                                                                           | Example                                           | 
+|---|-------------------------------------------------------------------------------------------------------|---------------------------------------------------| 
+|`<snowflake_username>`| snowflake username                                                                                    | myuser                                            |
+|`<snowflake_password>`| snowflake password                                                                                    | mypassword                                        |
+|`<snowflake-account>`| snowflake account                                                                                     | jiixfdf-qd67203                                   |
 
-### Using your newly deployed Helios
+- Deploy the spec file:
+
+```bash
+snow stage copy codbex-helios-snowpark.yaml @specs \
+  --overwrite --connection blog \
+  --database CONTAINER_HOL_DB --schema PUBLIC --role CONTAINER_USER_ROLE
+```
+
+- In the Snowflake worksheet execute the following command:
+
+```sql
+USE ROLE CONTAINER_USER_ROLE;
+USE DATABASE CONTAINER_HOL_DB;
+ 
+DROP SERVICE IF EXISTS codbex_helios;
+
+CREATE SERVICE codbex_helios
+in compute pool CONTAINER_HOL_POOL
+from @specs
+EXTERNAL_ACCESS_INTEGRATIONS = (allow_all_rule_integration)
+spec = 'codbex-helios-snowpark.yaml';
+```
+
+- Check your service:
+
+```sql
+CALL SYSTEM$GET_SERVICE_STATUS('codbex_helios');
+CALL SYSTEM$GET_SERVICE_LOGS('codbex_helios', '0',  'codbex-helios-snowpark');
+CALL SYSTEM$REGISTRY_LIST_IMAGES('/CONTAINER_HOL_DB/PUBLIC/IMAGE_REPO');
+
+SHOW SERVICES like 'codbex_helios';
+```
+
+- Get service endpoint
+
+```sql
+SHOW ENDPOINTS IN SERVICE codbex_helios;
+```
+
+## Using your newly deployed Helios
+
+Open the deployed Helios instance and login using the default credentials user `admin` and password `admin`.<br>
 
 Now lets use Helios' __Git__ perspective and clone some already existing repositories to continue the tutorial:
 
@@ -239,7 +239,7 @@ Go back to the __Workspace__, here you will find that `codbex-uoms` is a full-st
 <img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/publish-all.png" width="800em">
 
 1. Publish all projects in the Workspace
-2. Navigate to codbex-uoms -> gen -> index.html
+2. Navigate to `codbex-uoms/gen/codbex-uoms/index.html`
 3. Open the link at the bottom and explore the dashboard
 
 <img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/select-index.png" width="800em">
@@ -264,53 +264,56 @@ Its time to write a stored procedure that will use the Units of Measure and do a
 
 1. Go to your `Snowflake` worksheet and paste the following:
 
-    ```sql
-    CREATE OR REPLACE PROCEDURE convert_value(source VARCHAR, target VARCHAR, value FLOAT)
-    RETURNS FLOAT
-    LANGUAGE JAVASCRIPT
-    AS
-    $$  
-        var entitySource = snowflake.execute(
-            {
-                sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", 
-                binds: [SOURCE]
-            });
-        var entityTarget = snowflake.execute(
-            {
-                sqlText: "SELECT * FROM CODBEX.PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?",
-                binds: [TARGET]
-            });
+```sql
+USE DATABASE CONTAINER_HOL_DB;
+USE WAREHOUSE CONTAINER_HOL_WH;
+USE ROLE CONTAINER_USER_ROLE;
+
+CREATE OR REPLACE PROCEDURE convert_value(source VARCHAR, target VARCHAR, value FLOAT)
+RETURNS FLOAT
+LANGUAGE JAVASCRIPT
+AS
+$$  
+ var entitySource = snowflake.execute(
+     {
+         sqlText: "SELECT * FROM PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?", 
+         binds: [SOURCE]
+     });
+ var entityTarget = snowflake.execute(
+     {
+         sqlText: "SELECT * FROM PUBLIC.CODBEX_UOM WHERE UOM_ISO = ?",
+         binds: [TARGET]
+     });
+    
+ if (entitySource.next() && entityTarget.next()) {
+     var dimensionSource = entitySource.getColumnValue("UOM_DIMENSION");
+     var dimensionTarget = entityTarget.getColumnValue("UOM_DIMENSION");
+
+     if (dimensionSource !== dimensionTarget) {
+         throw "Both Source and Target Units of Measures must have the same Dimension";
+     }
+
+     var numeratorSource = entitySource.getColumnValue("UOM_NUMERATOR");
+     var denominatorSource = entitySource.getColumnValue("UOM_DENOMINATOR");
+     var numeratorTarget = entityTarget.getColumnValue("UOM_NUMERATOR");
+     var denominatorTarget = entityTarget.getColumnValue("UOM_DENOMINATOR");
+
+     var valueBase = VALUE * numeratorSource / denominatorSource;
+     var valueTarget = valueBase * denominatorTarget / numeratorTarget;
         
-        if (entitySource.next() && entityTarget.next()) {
-            var dimensionSource = entitySource.getColumnValue("UOM_DIMENSION");
-            var dimensionTarget = entityTarget.getColumnValue("UOM_DIMENSION");
-
-            if (dimensionSource !== dimensionTarget) {
-                throw "Both Source and Target Units of Measures \ 
-                 must have the same Dimension";
-            }
-
-            var numeratorSource = entitySource.getColumnValue("UOM_NUMERATOR");
-            var denominatorSource = entitySource.getColumnValue("UOM_DENOMINATOR");
-            var numeratorTarget = entityTarget.getColumnValue("UOM_NUMERATOR");
-            var denominatorTarget = entityTarget.getColumnValue("UOM_DENOMINATOR");
-
-            var valueBase = VALUE * numeratorSource / denominatorSource;
-            var valueTarget = valueBase * denominatorTarget / numeratorTarget;
-            
-            return valueTarget;
-        } else {
-            throw "Unit of Measures not found: [" + source + "] and/or [" + target + "]";
-        }
-    $$
-    ;
-    ```
+     return valueTarget;
+ } else {
+     throw "Unit of Measures not found: [" + source + "] and/or [" + target + "]";
+ }
+$$
+;
+```
 
 2. Execute the procedure:
 
-    ```sql
-    CALL convert_value('GRM', 'KGM', 10);
-    ```
+```sql
+CALL convert_value('GRM', 'KGM', 10);
+```
 
 <img src="{{ site.baseurl }}/images/2024-04-03-using-apps-with-helios/executed-procedure.png" width="800em">
 
