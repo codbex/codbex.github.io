@@ -74,8 +74,8 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
     ```sql
     USE ROLE ACCOUNTADMIN;
 
-    DROP NETWORK RULE allow_all_rule;
-    DROP EXTERNAL ACCESS INTEGRATION allow_all_rule_integration;
+    DROP NETWORK RULE IF EXISTS allow_all_rule;
+    DROP EXTERNAL ACCESS INTEGRATION IF EXISTS allow_all_rule_integration;
 
     CREATE OR REPLACE NETWORK RULE allow_all_rule
       MODE= 'EGRESS'
@@ -105,7 +105,7 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
 
     1. Install [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/index) by following the instructions [here](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/installation/installation)
     2. Configure your Snowflake CLI connection
-        - Create a new connection with name `test` and set `role=ACCOUNTADMIN`, `warehouse=CONTAINER_HOL_WH`, `database=CONTAINER_HOL_DB`, `schema=public`
+        - Create a new connection with name `blog` and set `role=CONTAINER_USER_ROLE`, `warehouse=CONTAINER_HOL_WH`, `database=CONTAINER_HOL_DB`, `schema=PUBLIC`
           ```bash
           snow connection add --default
           ```
@@ -113,30 +113,31 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
         - Test created connection
           ```bash
           # test the connection:
-          snow connection test --connection "test"
+          snow connection test --connection "blog"
           ```
 
 #### Docker image preparation
 
 1. Pull latest codbex-helios image
-    ```bash
-    docker pull ghcr.io/codbex/codbex-helios:latest --platform linux/amd64
-    ```
+```bash
+docker pull ghcr.io/codbex/codbex-helios:latest --platform linux/amd64
+```
 
 1. Login in your Snowflake image repository
-    ```bash
-    # replace <org> and <account> with values for your snowflake account
-    snowflake_registry_hostname='<org>-<account>.registry.snowflakecomputing.com'
-    docker login "$snowflake_registry_hostname" -u <user_name>
-    ```
+```bash
+# replace <org> and <account> with values for your snowflake account
+# example value: jiixfdf-qd67203
+snowflake_registry_hostname='<org>-<account>.registry.snowflakecomputing.com'
+docker login "$snowflake_registry_hostname" -u <user_name>
+```
 1. Retag the pulled image and push it to the Snowflake repository
-    ```bash
-    # you can get the value for `repository_url`
-    # from the result of `SHOW IMAGE REPOSITORIES IN SCHEMA CONTAINER_HOL_DB.PUBLIC;`
-    repository_url="$snowflake_registry_hostname/CONTAINER_hol_db/public/image_repo"
-    docker tag ghcr.io/codbex/codbex-helios:latest "$repository_url/codbex-helios:dev"
-    docker push "$repository_url/codbex-helios:dev"
-    ```
+```bash
+# you can get the value for `repository_url`
+# from the result of `SHOW IMAGE REPOSITORIES IN SCHEMA CONTAINER_HOL_DB.PUBLIC;`
+repository_url="$snowflake_registry_hostname/container_hol_db/public/image_repo"
+docker tag ghcr.io/codbex/codbex-helios:latest "$repository_url/codbex-helios:dev"
+docker push "$repository_url/codbex-helios:dev"
+```
 
 #### Creating the Helios service
 
@@ -146,7 +147,7 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
 spec:
   containers:
     - name: codbex-helios-snowpark
-      image: <snowlfake-account>.registry.snowflakecomputing.com/container_hol_db/public/image_repo/codbex-helios:dev
+      image: <snowflake-account>.registry.snowflakecomputing.com/container_hol_db/public/image_repo/codbex-helios:dev
       volumeMounts:
         - name: codbex-helios-home
           mountPath: /home/codbex-helios
@@ -186,7 +187,7 @@ Replace the following placeholders in the above yaml.
 
 ```bash
 snow stage copy codbex-helios-snowpark.yaml @specs \
-  --overwrite --connection test \
+  --overwrite --connection blog \
   --database CONTAINER_HOL_DB --schema PUBLIC --role CONTAINER_USER_ROLE
 ```
 
@@ -264,10 +265,9 @@ Its time to write a stored procedure that will use the Units of Measure and do a
 1. Go to your `Snowflake` worksheet and paste the following:
 
 ```sql
-USE DATABASE CONTAINER_HOL_DB_ILIYAN_NEW;
-USE WAREHOUSE CONTAINER_HOL_WH_ILIYAN_NEW;
-
-USE ROLE CONTAINER_USER_ROLE_ILIYAN_NEW;
+USE DATABASE CONTAINER_HOL_DB;
+USE WAREHOUSE CONTAINER_HOL_WH;
+USE ROLE CONTAINER_USER_ROLE;
 
 CREATE OR REPLACE PROCEDURE convert_value(source VARCHAR, target VARCHAR, value FLOAT)
 RETURNS FLOAT
