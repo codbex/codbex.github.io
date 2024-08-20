@@ -196,7 +196,8 @@ Follow the steps bellow or watch the recorded video.<br>
         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/split-step-config.png" target="_blank">
           <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/split-step-config.png" alt="split-step-config.png">
         </a>
-   1. build merge statement for each order
+   1. Build merge statement for each order<br>
+        We are using the extracted data from the OpenCart database to create the statement. Total is converted from USD to EUR using the defined exchange rate property.
       - add `Set Body` step
       - set the following value for expression
         ```sql
@@ -248,20 +249,112 @@ Follow the steps bellow or watch the recorded video.<br>
         </a>
         __Note:__ if you had problems to model the `sync-orders-jdbc.camel`, you can get a working content of the file from [here](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/2b3980156f44fce22d7ee282c00edf54e64774a9/orders-etl/sync/sync-orders-jdbc.camel)
 1. Implement ETL using TypeScript
-   1. TODO
- 
-<br>Congratulations, you have implemented the scenario! 
+   1. create file `sync-orders-typescript.camel` in directory `sync`
+   1. open the created file
+   1. add cron to trigger the execution regularly
+      - click on `Create route` button
+      - search for `cron` component and select it
+      - set `Trigger Orders Replication` for description
+      - under component properties set `TriggerOrdersReplication` for name and add schedule `30 * * ? * *` (every minute at 30 seconds)
+        <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/cron-ts-config.png" target="_blank">
+        <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/cron-ts-config.png" alt="cron-ts-config.png">
+        </a>
+      - save the file
+   1. select the route and update the description to `Sync orders from OpenCart`
+      <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-route-config.png" target="_blank">
+        <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-route-config.png" alt="ts-route-config.png">
+      </a>
+   1. add step which logs that the synchronization has started
+      - add log step after the cron
+      - set `Log starting` for description
+      - set `Replicating orders from OpenCart using TypeScript...` for message
+      - log level to `INFO`
+      - set `OpenCartOrdersReplication` for `Log Name`
+         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-log-starting-config.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-log-starting-config.png" alt="ts-log-starting-config.png">
+         </a>
+     - save the file
+   1. Get all orders from OpenCart and current exchange rate using TypeScript
+      - create a folder called `dao`
+      - create file `oc_orderRepository.ts` in the created folder
+      - open the file
+      - set [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/ecdf03edcef6006691266bc7559a2e093bbff5e9/orders-etl/dao/oc_orderRepository.ts) content<br>
+      __Note:__ the code of this dao is automatically generated using another awesome codbex functionality, but I will give you more details about this is another blog.
+        <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-oc-dao-file.png" target="_blank">
+        <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-oc-dao-file.png" alt="ts-oc-dao-file.png">
+        </a>
+      - create file `get-all-orders.ts` in `sync` folder using [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/2b3980156f44fce22d7ee282c00edf54e64774a9/orders-etl/sync/get-all-orders.ts) content
+      - in `sync-orders-typescript.camel` add `Set Property` step
+         - set expression `orders-etl/sync/get-all-orders.ts`
+         - set description `Set get-all-orders.ts file`
+         - set name `resource`
+           <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-set-get-all-orders.png" target="_blank">
+           <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-set-get-all-orders.png" alt="ts-set-get-all-orders.png">
+           </a>
+      - add step `Class`
+        <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/class-step.png" target="_blank">
+        <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/class-step.png" alt="class-step.png">
+        </a>
+         - set description `Get all OpenCart orders`
+         - set bean name `org.eclipse.dirigible.components.engine.camel.invoke.Invoker`
+           <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-get-all-stores-execution.png" target="_blank">
+           <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-get-all-stores-execution.png" alt="ts-get-all-stores-execution.png">
+           </a>
+   1. now, the camel body will contain all orders
+   1. split the body into single orders
+       - add `Split` step
+       - set expression to `${body}`
+       - set `Split to single order` for description
+         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-split-step-config.png" target="_blank">
+         <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-split-step-config.png" alt="ts-split-step-config.png">
+         </a>
+   1. merge order using TypeScript
+      - create file `merger-order.ts` in folder `sync`
+      - set [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/97b08184e0558474f6c8d331ec4668981256e33e/orders-etl/sync/merger-order.ts) file content
+      - in `sync-orders-typescript.camel` add `Set Property` step
+          - set expression `orders-etl/sync/merger-order.ts`
+          - set description `Set merger-order.ts file`
+          - set name `resource`
+            <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-set-merge-ts-config.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-set-merge-ts-config.png" alt="ts-set-merge-ts-config.png">
+            </a>
+      - add step `Class`
+          - set description `Merge order`
+          - set bean name `org.eclipse.dirigible.components.engine.camel.invoke.Invoker`
+            <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-merge-order-execution.png" target="_blank">
+            <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-merge-order-execution.png" alt="ts-merge-order-execution.png">
+            </a>
+   1. add log step for completed
+       - add log step after the split
+       - set `Log completed` for description
+       - set `Successfully replicated orders from OpenCart using TypeScript` for message
+       - set logging level to `INFO`
+       - set `OpenCartOrdersReplication` for log name
+         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-log-completed-config.png" target="_blank">
+         <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-log-completed-config.png" alt="ts-log-completed-config.png">
+         </a>
+   1. Now the TypeScript implementation is done
+   1. Publish the project from the `Publish All` button
+   1. Verify that the synchronization works
+       - Check the console for output from the log steps which we added  
+         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-sync-console-logs.png" target="_blank">
+         <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-sync-console-logs.png" alt="ts-sync-console-logs.png">
+         </a>
+       - go to `Database` perspective and check the content of table `ORDERS` in `DefaultDB` data source - it should contain the replicated orders with converted total in EUR
+         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-orders-table.png" target="_blank">
+         <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-orders-table.png" alt="ts-orders-table.png">
+         </a>
+         __Note:__ if you had problems to model the `sync-orders-typescript.camel`, you can get a working content of the file from [here](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/872292cf858eac462dd6d31c36681841b9d49130/orders-etl/sync/sync-orders-typescript.camel)
+
+<br>Congratulations, you have implemented the ETL scenario in two different ways! 
 
 ---
 ## Summary
 Using [Iapetus](https://www.codbex.com/products/iapetus/) you can
-  - TODO
-  - implement simple and complicated BPM processes using [Flowable](https://www.flowable.com/)
-  - model modern user interfaces using forms (UI builder)
-  - write code in TypeScript
-  - use the comprehensive [codbex SDK](https://www.codbex.com/documentation/platform/sdk) which uses different modern open source projects for messaging, jobs scheduling, REST, OData, mails etc.
-  - benefit from the [codbex platform, tooling and modules](https://www.codbex.com/documentation/)
-  - add authentication and authorization to your application
+   - easily implement [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) scenarios
+   - use all available [Apache Camel](https://camel.apache.org/) functionalities 
+   - benefit from the [codbex platform, tooling and modules](https://www.codbex.com/documentation/)
+   - use the comprehensive [codbex SDK](https://www.codbex.com/documentation/platform/sdk) which uses different modern open source projects for messaging, jobs scheduling, REST, OData, mails etc.
 
 The project we implemented can be found in [this GitHub repository](https://github.com/codbex/codbex-sample-camel-opencart-etl).
 
