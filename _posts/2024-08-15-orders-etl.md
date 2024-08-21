@@ -81,7 +81,7 @@ Follow the steps below to implement the scenario.<br>
   - create file `OpenCartDB.datasource` in the created folder
   - and add [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/68ae27e337afee064da4f1132685dd2d2b10fbdc/orders-etl/datasources/OpenCartDB.datasource) content 
 1. Verify that the created data source works
-  - go to `Database` perspective by clicking on the `Database` button
+  - navigate to the `Database` perspective by clicking on the `Database` button
     <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/db-perspective-button.png" target="_blank">
     <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/db-perspective-button.png" alt="db-perspective-button.png">
     </a>
