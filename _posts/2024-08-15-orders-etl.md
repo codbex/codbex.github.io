@@ -283,7 +283,7 @@ Follow the steps below to implement the scenario.<br>
       - create file `oc_orderRepository.ts` in the created folder
       - open the file
       - set [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/ecdf03edcef6006691266bc7559a2e093bbff5e9/orders-etl/dao/oc_orderRepository.ts) content<br>
-      __Note:__ the code of this dao is automatically generated using another awesome codbex functionality, but I will give you more details about this is another blog post.
+      __Note:__ the code of this dao is automatically generated using another awesome codbex functionality, but I will give you more details about this in another blog post.
         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-oc-dao-file.png" target="_blank">
         <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-oc-dao-file.png" alt="ts-oc-dao-file.png">
         </a>
