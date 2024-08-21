@@ -21,7 +21,7 @@ Let's have the following use cases:
 
 ---
 ## Implementation steps
-Follow the steps bellow to implement the scenario.<br>
+Follow the steps below to implement the scenario.<br>
 
 1. Start an OpenCart instance using [Docker](https://www.docker.com/)<br>
    - create `docker-compose.yml` file with [MariaDB](https://mariadb.org/) and OpenCart images in a directory with [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/68ae27e337afee064da4f1132685dd2d2b10fbdc/opencart/docker-compose.yml) content.
@@ -60,7 +60,7 @@ Follow the steps bellow to implement the scenario.<br>
      -v "$WORKSPACE_DIR:/target/dirigible" \
      ghcr.io/codbex/codbex-iapetus:$IMAGE_VERSION
    ```
-1. Open Iapetus and create a project with name `orders-etl`
+1. Open Iapetus and create a project named `orders-etl`
 - open Iapetus at [http://localhost:8080](http://localhost:8080)
 - login using the default user - username: `admin`, password: `admin`
 - right-click on workbench and click on `New Project`
@@ -76,7 +76,7 @@ Follow the steps bellow to implement the scenario.<br>
   <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/blank-project.png" target="_blank">
   <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/blank-project.png" alt="blank-project.png">
   </a>
-1. Create datasouce to the OpenCart database which will be used to extract data 
+1. Create datasource to the OpenCart database which will be used to extract data 
   - create folder `datasources`
   - create file `OpenCartDB.datasource` in the created folder
   - and add [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/68ae27e337afee064da4f1132685dd2d2b10fbdc/orders-etl/datasources/OpenCartDB.datasource) content 
@@ -115,8 +115,8 @@ Follow the steps bellow to implement the scenario.<br>
      </a>
      <br>You may need to click on the `Refresh` button to see the newly created table.
 1. Implement ETL using JDBC 
-   1. create folder with name `sync`
-   1. create file called `sync-orders-jdbc.camel` in the created folder
+   1. create folder named `sync`
+   1. create file named `sync-orders-jdbc.camel` in the created folder
    1. open the file 
    1. add cron to trigger the execution regularly
      - click on `Create route` button
@@ -159,7 +159,7 @@ Follow the steps bellow to implement the scenario.<br>
           <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/set-property-step.png" alt="set-property-step.png">
         </a>
       - set expression `0.92`
-      - set `Set USD to EU exchange rate property` for description
+      - set `Set USD to EUR exchange rate property` for description
       - set `currencyExchangeRate` for name
         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/exchange-property-config.png" target="_blank">
           <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/exchange-property-config.png" alt="exchange-property-config.png">
@@ -279,11 +279,11 @@ Follow the steps bellow to implement the scenario.<br>
          </a>
       - save the file
    1. get all orders from OpenCart and current exchange rate from the [frankfurter API](https://www.frankfurter.app/) using TypeScript
-      - create a folder called `dao`
+      - create a folder named `dao`
       - create file `oc_orderRepository.ts` in the created folder
       - open the file
       - set [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/ecdf03edcef6006691266bc7559a2e093bbff5e9/orders-etl/dao/oc_orderRepository.ts) content<br>
-      __Note:__ the code of this dao is automatically generated using another awesome codbex functionality, but I will give you more details about this is another blog.
+      __Note:__ the code of this dao is automatically generated using another awesome codbex functionality, but I will give you more details about this is another blog post.
         <a href="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-oc-dao-file.png" target="_blank">
         <img src="{{ site.baseurl }}/images/2024-08-19-orders-etl/ts-oc-dao-file.png" alt="ts-oc-dao-file.png">
         </a>
