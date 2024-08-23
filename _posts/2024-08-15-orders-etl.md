@@ -1,6 +1,6 @@
 ---
 date: 2024-08-19
-title: Iapetus - Implement orders ETL
+title: Iapetus - Implement ETL for Sales Orders
 categories:
   - technology
 author: iliyan
