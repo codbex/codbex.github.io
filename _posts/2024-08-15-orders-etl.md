@@ -21,7 +21,8 @@ Let's have the following use cases:
 
 ---
 ## Implementation steps
-Follow the steps below to implement the scenario.<br>
+Follow the steps below or watch the recorded video.<br>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/gC5NlFuKeL8" frameborder="0" allowfullscreen></iframe>
 
 1. Start an OpenCart instance using [Docker](https://www.docker.com/)<br>
    - create `docker-compose.yml` file with [MariaDB](https://mariadb.org/) and OpenCart images in a directory with [this](https://github.com/codbex/codbex-sample-camel-opencart-etl/blob/68ae27e337afee064da4f1132685dd2d2b10fbdc/opencart/docker-compose.yml) content.
