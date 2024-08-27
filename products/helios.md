@@ -113,3 +113,8 @@ The Helios Edition is designed for enterprises and development teams focused on 
 With the Helios Edition of the <b>codbex</b> platform, you can elevate your enterprise JavaScript development to new heights. From server-side RESTful services authoring to role-based security and comprehensive testing and monitoring, Helios Edition equips developers with the tools they need to build robust, scalable, and secure applications. Empower your teams, accelerate development cycles, and drive innovation with Helios Edition from <b>codbex</b>.
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
+
+### References
+
+* [Ultimate Cloud IDE for JavaScript and TypeScript](/marketing/2023/09/26/helios-ultimate-cloud-ide-for-javascript-and-typescript/)
+* [Snowflake and Helios - A Harmonious Tale of Data and Development](/technology/2024/04/03/snowflake-and-helios/)

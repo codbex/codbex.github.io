@@ -135,3 +135,7 @@ With the Iapetus Edition of the <b>codbex</b> platform, you can elevate your ser
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 
+### References
+
+* [Unleash Service Integrations with Iapetus](/marketing/2024/03/26/iapetus-unleash-service-integration/)
+* [Implement ETL for Sales Orders](/technology/2024/08/19/orders-etl/)

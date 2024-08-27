@@ -79,3 +79,6 @@ With the Oceanus Edition of the <b>codbex</b> platform, you can simplify your do
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 
+### References
+
+* [Dive into Innovation with Oceanus](/marketing/2024/01/23/oceanus-dive-into-innovation/)

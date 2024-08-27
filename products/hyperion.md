@@ -124,3 +124,8 @@ With the Hyperion Edition of the <b>codbex</b> platform, you can power your busi
 
 Support depends on the plan you selected from <a href="https://www.codbex.com/pricing/">Pricing</a>.
 
+### References
+
+* [Unlocking Enterprise Efficiency with Hyperion](/marketing/2024/03/20/hyperion-unlocking-enterprise-efficiency/)
+* [Implement a BPM application for leave requests](/technology/2024/07/17/leave-request-bpm-app/)
+
