@@ -15,7 +15,7 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
 1. Create a non-trial Snowflake account
 
 1. In a [worksheet](https://docs.snowflake.com/en/user-guide/ui-snowsight-worksheets-gs) execute the following commands:
-   - Create a new role with privileges, warehouse and DB
+   - create a new role with privileges, warehouse and DB
 
      ```sql
      // Create an CONTAINER_USER_ROLE with required privileges
@@ -50,7 +50,7 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
      ```
       Adjust the warehouse size if needed. Details about supported sizes [here](https://docs.snowflake.com/en/sql-reference/sql/create-warehouse).
 
-   - Create compute pool and image repository
+   - create compute pool and image repository
 
      ```sql
      USE ROLE CONTAINER_USER_ROLE;
@@ -66,8 +66,7 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
      ```
      Adjust the size of the provisioned machines if needed. More details about the different sizes [here](https://docs.snowflake.com/en/sql-reference/sql/create-compute-pool).
 
-   - Create network rule which allows egress communication to all hosts on ports `443` and `80`. This will allow codbex products to communicate with the outside world.
-
+   - create network rule which allows egress communication to all hosts on ports `443` and `80`<br>
      ```sql
      USE ROLE ACCOUNTADMIN;
 
@@ -85,6 +84,7 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
 
      GRANT USAGE ON INTEGRATION allow_all_rule_integration TO ROLE CONTAINER_USER_ROLE;
      ```
+     This will allow codbex products to communicate with the outside world.
 
 ## Docker image preparation
 
@@ -131,9 +131,9 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
      containers:
        - name: codbex-application
          image: <snowflake-image>
-         volumeMounts:
-           - name: app-volume
-             mountPath: /target
+         # volumeMounts:
+         #   - name: app-volume
+         #     mountPath: /target
          env:
            DIRIGIBLE_DATABASE_CUSTOM_DATASOURCES: SNOWFLAKE
            DIRIGIBLE_DATABASE_DATASOURCE_NAME_DEFAULT: SNOWFLAKE
@@ -149,14 +149,15 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
        - name: app-endpoint
          port: 80
          public: true
-     volumes:
-       - name: app-volume
-         source: "@CONTAINER_HOL_DB.PUBLIC.VOLUMES"
-         uid: 1000
-         gid: 1000
+     # volumes:
+     #   - name: app-volume
+     #     source: "@CONTAINER_HOL_DB.PUBLIC.VOLUMES"
+     #     uid: 0
+     #     gid: 0
      networkPolicyConfig:
        allowInternetEgress: true
    ```
+   Uncomment `volumes` and `volumeMounts` sections if you need persistent repository and SystemDB.<br>
    Details about the Snowpark Container Services specification YAML could be found [here](https://docs.snowflake.com/en/developer-guide/snowpark-container-services/specification-reference).
 
 1. Replace the following placeholders in the above yaml
@@ -168,33 +169,33 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
 1. Upload the spec file
 
    - Upload the file to the created stage `specs` using the UI ([Snowsight](https://docs.snowflake.com/en/user-guide/ui-snowsight))
-     - Go to Snowsight UI
-     - Open `Data` -> `Add Data`
-     - Select `Load files into a Stage`
+     - go to Snowsight UI
+     - open `Data` -> `Add Data`
+     - select `Load files into a Stage`
        <a href="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/add-file-to-stage.png" target="_blank">
        <img src="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/add-file-to-stage.png" alt="add-file-to-stage.png">
        </a>
-     - Select database `CONTAINER_HOL_DB` and schema `PUBLIC`
-     - Select stage `specs`
-     - Click on `Upload` button
+     - select database `CONTAINER_HOL_DB` and schema `PUBLIC`
+     - select stage `specs`
+     - click on `Upload` button
        <a href="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/upload-file.png" target="_blank">
        <img src="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/upload-file.png" alt="upload-file.png">
        </a>
      - [Here](https://docs.snowflake.com/en/user-guide/data-load-local-file-system-stage-ui#uploading-files-onto-a-stage) you ca find more details about the user interface if you have any troubles.
      
    - Alternatively, you can use the [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/index)
-      - Install Snowflake CLI by following the instructions [here](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/installation/installation)
-      - Create a new connection with name `blog` and set `role=CONTAINER_USER_ROLE`, `warehouse=CONTAINER_HOL_WH`, `database=CONTAINER_HOL_DB`, `schema=PUBLIC`
+      - install Snowflake CLI by following the instructions [here](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/installation/installation)
+      - create a new connection with name `blog` and set `role=CONTAINER_USER_ROLE`, `warehouse=CONTAINER_HOL_WH`, `database=CONTAINER_HOL_DB`, `schema=PUBLIC`
         ```bash
         snow connection add --default
         ```
 
-      - Test created connection
+      - test created connection
         ```bash
         snow connection test --connection "blog"
         ```
         
-      - Upload the created spec YAML file
+      - upload the created spec YAML file
         ```bash
         snow stage copy codbex-kronos-snowpark.yaml @specs \
           --overwrite --connection blog \
@@ -202,7 +203,7 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
         ```
 
 1. Create (deploy) the application service
-   - In the Snowflake worksheet execute the following command:
+   - in a Snowflake worksheet execute the following command:
      ```sql
      USE ROLE CONTAINER_USER_ROLE;
      USE DATABASE CONTAINER_HOL_DB;
@@ -216,15 +217,15 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
      spec = 'codbex-kronos-snowpark.yaml';
      ```
 
-   - Check your service status:
+   - check your service status:
      ```sql
      CALL SYSTEM$GET_SERVICE_STATUS('codbex_kronos');
      ```
-   - At first, it will be in status `PENDING`
+   - at first, it will be in status `PENDING`
      <a href="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/service-status-pending.png" target="_blank">
      <img src="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/service-status-pending.png" alt="service-status-pending.png">
      </a>
-   - Wait until it become `READY`
+   - wait until it become `READY`
      <a href="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/service-status-ready.png" target="_blank">
      <img src="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/service-status-ready.png" alt="service-status-ready.png">
      </a>
@@ -256,15 +257,15 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
 
 1. Next, you can validate the connection to the Snowflake database
 
-   - Go to `Database` perspective by clicking on the corresponding button
+   - go to `Database` perspective by clicking on the corresponding button
      <a href="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/db-perspective.png" target="_blank">
         <img src="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/db-perspective.png" alt="db-perspective.png">
      </a>
-   - Select `SNOWFLAKE` datasource
+   - select `SNOWFLAKE` datasource
      <a href="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/snowflake-ds.png" target="_blank">
         <img src="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/snowflake-ds.png" alt="snowflake-ds.png">
      </a>
-   - Create a test table, insert data into it and select all entries
+   - create a test table, insert data into it and select all entries
      ```sql
      DROP TABLE IF EXISTS STUDENTS;
 
