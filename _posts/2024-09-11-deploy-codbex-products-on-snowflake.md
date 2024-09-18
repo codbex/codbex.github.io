@@ -5,7 +5,7 @@ categories:
   - technology
 author: iliyan
 ---
-Enhance your Snowflake environment with [codbex's low-code solutions](https://www.codbex.com/products/), effortlessly deployed as Docker images for maximum efficiency.
+Enhance your [Snowflake](https://www.snowflake.com/) environment with [codbex's low-code solutions](https://www.codbex.com/products/), effortlessly deployed as Docker images for maximum efficiency.
 
 In this tutorial, I'm going to show you how you can easily deploy [codbex](https://www.codbex.com/) products on Snowflake.
 I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbex.com/products/kronos/). By following the steps, you can deploy any other codbex product in the same way.
