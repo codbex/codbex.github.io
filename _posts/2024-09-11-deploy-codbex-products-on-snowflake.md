@@ -109,20 +109,27 @@ I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbe
    ```
 
 1. Retag the pulled image and push it to the Snowflake repository
+- get your repository URL from `repository_url` of the following sql:
+```sql
+SHOW IMAGE REPOSITORIES like 'IMAGE_REPO' IN SCHEMA CONTAINER_HOL_DB.PUBLIC;
+```
+<a href="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/repo-url.png" target="_blank">
+<img src="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/repo-url.png" alt="repo-url.png">
+</a>
+- retag the image
 
    ```bash
-   # you can get the value for `REPO_URL`
-   # from the result of the following sql:
-   # SHOW IMAGE REPOSITORIES like 'IMAGE_REPO' IN SCHEMA CONTAINER_HOL_DB.PUBLIC;
-   REPO_URL="$SNOWFLAKE_REGISTRY_HOSTNAME/container_hol_db/public/image_repo"
+   # replace `<your-repo-url>` with your value, example:
+   # REPO_URL="jiixfdf-qd67203.registry.snowflakecomputing.com/container_hol_db/public/image_repo"
+   REPO_URL="<your-repo-url>"
    SNOWFLAKE_IMAGE="$REPO_URL/$IMAGE_NAME:$IMAGE_VERSION"
-  
+    
    docker tag ghcr.io/codbex/$IMAGE_NAME:$IMAGE_VERSION "$SNOWFLAKE_IMAGE"
-  
+    
    echo "Pushing image $SNOWFLAKE_IMAGE"
    docker push "$SNOWFLAKE_IMAGE"
    ```
-
+     
 ## Deploy the application
 1. Create spec file `codbex-kronos-snowpark.yaml` for service deployment with the following content
 
