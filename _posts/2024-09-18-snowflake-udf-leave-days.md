@@ -86,7 +86,7 @@ To implement the UDF logic you will need to deploy a Kronos instance on Snowflak
      Also, make sure that the REST path in `AS` matches your implementation.<br>
      `CREATE FUNCTION` reference [here](https://docs.snowflake.com/en/sql-reference/sql/create-function).
 
-## Test implemented Snowflake UDF.
+## Test implemented Snowflake UDF
 
 We have the following sample data in table `LEAVE_REQUESTS`.
 <a href="{{ site.baseurl }}/images/2024-09-18-snowflake-udf-leave-days/leave-requests-before.png" target="_blank">
