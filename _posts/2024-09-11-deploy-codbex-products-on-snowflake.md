@@ -117,18 +117,17 @@ SHOW IMAGE REPOSITORIES like 'IMAGE_REPO' IN SCHEMA CONTAINER_HOL_DB.PUBLIC;
 <img src="{{ site.baseurl }}/images/2024-09-11-deploy-codbex-products-on-snowflake/repo-url.png" alt="repo-url.png">
 </a>
 - retag the image
-
-   ```bash
-   # replace `<your-repo-url>` with your value, example:
-   # REPO_URL="jiixfdf-qd67203.registry.snowflakecomputing.com/container_hol_db/public/image_repo"
-   REPO_URL="<your-repo-url>"
-   SNOWFLAKE_IMAGE="$REPO_URL/$IMAGE_NAME:$IMAGE_VERSION"
+     ```bash
+     # replace `<your-repo-url>` with your value, example:
+     # REPO_URL="jiixfdf-qd67203.registry.snowflakecomputing.com/container_hol_db/public/image_repo"
+     REPO_URL="<your-repo-url>"
+     SNOWFLAKE_IMAGE="$REPO_URL/$IMAGE_NAME:$IMAGE_VERSION"
     
-   docker tag ghcr.io/codbex/$IMAGE_NAME:$IMAGE_VERSION "$SNOWFLAKE_IMAGE"
+     docker tag ghcr.io/codbex/$IMAGE_NAME:$IMAGE_VERSION "$SNOWFLAKE_IMAGE"
     
-   echo "Pushing image $SNOWFLAKE_IMAGE"
-   docker push "$SNOWFLAKE_IMAGE"
-   ```
+     echo "Pushing image $SNOWFLAKE_IMAGE"
+     docker push "$SNOWFLAKE_IMAGE"
+     ```
      
 ## Deploy the application
 1. Create spec file `codbex-kronos-snowpark.yaml` for service deployment with the following content
