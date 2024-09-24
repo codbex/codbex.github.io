@@ -10,6 +10,9 @@ Enhance your [Snowflake](https://www.snowflake.com/) environment with [codbex's 
 In this tutorial, I'm going to show you how you can easily deploy [codbex](https://www.codbex.com/) products on Snowflake.
 I will describe the steps needed to deploy __codbex__ [Kronos](https://www.codbex.com/products/kronos/). By following the steps, you can deploy any other codbex product in the same way.
 
+Follow the steps below or watch the recorded video.<br>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/HTuvLz5Xpr0" frameborder="0" allowfullscreen></iframe>
+
 ## Snowflake setup
 
 1. Create a non-trial Snowflake account

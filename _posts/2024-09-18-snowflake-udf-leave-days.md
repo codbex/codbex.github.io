@@ -12,6 +12,10 @@ To implement the UDF logic you will need to deploy a Kronos instance on Snowflak
 [Here]({{ site.baseurl }}/technology/2024/09/11/deploy-codbex-products-on-snowflake/) you can find a blog which will help you with this task.
 
 ## Implementation steps
+
+Follow the steps below or watch the recorded video.<br>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/m8_8QSiJrns" frameborder="0" allowfullscreen></iframe>
+
 1. Create a Snowflake UDF project
 - open Kronos and login
 - at the `Welcome` view search for `Snowflake` and select `Snowflake Function API` template. If the view is missing - `Window` -> `Show View` -> `Welcome`<br>
