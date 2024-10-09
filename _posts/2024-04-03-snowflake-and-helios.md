@@ -171,8 +171,6 @@ spec:
       source: "@CONTAINER_HOL_DB.PUBLIC.VOLUMES"
       uid: 1000
       gid: 1000
-  networkPolicyConfig:
-    allowInternetEgress: true
 ```
 
 Replace the following placeholders in the above yaml.

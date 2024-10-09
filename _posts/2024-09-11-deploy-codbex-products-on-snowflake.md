@@ -163,8 +163,6 @@ SHOW IMAGE REPOSITORIES like 'IMAGE_REPO' IN SCHEMA CONTAINER_HOL_DB.PUBLIC;
      #     source: "@CONTAINER_HOL_DB.PUBLIC.VOLUMES"
      #     uid: 0
      #     gid: 0
-     networkPolicyConfig:
-       allowInternetEgress: true
    ```
    Uncomment `volumes` and `volumeMounts` sections if you need persistent repository and SystemDB.<br>
    Details about the Snowpark Container Services specification YAML could be found [here](https://docs.snowflake.com/en/developer-guide/snowpark-container-services/specification-reference).
