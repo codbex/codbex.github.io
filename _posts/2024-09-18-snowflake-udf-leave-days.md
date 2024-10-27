@@ -5,6 +5,7 @@ categories:
   - technology
 author: iliyan
 ---
+
 Discover how to implement a [UDF (User-defined function)](https://docs.snowflake.com/en/developer-guide/udf/udf-overview) in Snowflake with [Kronos](https://www.codbex.com/products/kronos/) by __codbex__, calculating leave request days and factoring in holidays from [OpenHolidays API](https://www.openholidaysapi.org/en/).
 
 ## Prerequisites
