@@ -10,6 +10,8 @@ author: tomislav
 
 At **codbex**, we leverage Docker for creating lightweight, portable application images. In this blog, we’ll walk through building a Docker image for a **codbex** application using GitHub Actions and releasing it.
 
+This blog referances 
+
 We’ll explore:
 
 [1. Necessary files](#1-necessary-files)
