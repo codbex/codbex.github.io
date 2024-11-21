@@ -10,7 +10,7 @@ author: tomislav
 
 At **codbex**, we leverage Docker for creating lightweight, portable application images. In this blog, we’ll walk through building a Docker image for a **codbex** application using GitHub Actions and releasing it.
 
-This blog referances 
+This blog referances [Building and Releasing a Docker Image for an Eclipse Dirigible Application](https://www.dirigible.io/blogs/2024/11/18/build-and-release/)
 
 We’ll explore:
 
