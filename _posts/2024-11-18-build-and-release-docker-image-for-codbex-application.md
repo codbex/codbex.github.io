@@ -90,7 +90,7 @@ ENV DIRIGIBLE_HOME_URL=/services/web/your-application/index.html
 
 Dirigible automatically creates a `package.json` file in every project. You just need to add the npm packages your application is dependent on in the dependencies section.
 
-The` package.jso`n file is essential for:
+The` package.json` file is essential for:
 
 - Listing dependencies and scripts required for your application to run.
 
