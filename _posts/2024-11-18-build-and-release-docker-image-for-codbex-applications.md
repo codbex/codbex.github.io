@@ -1,12 +1,10 @@
 ---
 date: 2024-11-18
-title:  Building and Releasing Docker Image for codbex Application
+title:  Building and Releasing Docker Image for codbex Applications
 categories:
   - technology
 author: tomislav
 ---
-
-# Building and Releasing Docker Images for codbex Applications
 
 At **codbex**, we rely on Docker to create lightweight, portable application images. This post will guide you through the step-by-step process of building a Docker image for a **codbex** application using **GitHub Actions** and automating its release.
 
