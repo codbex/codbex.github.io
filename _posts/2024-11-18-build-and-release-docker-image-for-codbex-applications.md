@@ -3,14 +3,12 @@ date: 2024-11-18
 title:  Building and Releasing Docker Image for codbex Applications
 categories:
   - technology
-author: tomislav
+author: tomi
 ---
 
 At **codbex**, we rely on Docker to create lightweight, portable application images. This post will guide you through the step-by-step process of building a Docker image for a **codbex** application using **GitHub Actions** and automating its release.
 
 > _**Related:** Learn more about Dockerizing Eclipse Dirigible applications in [this blog post](https://www.dirigible.io/blogs/2024/11/18/build-and-release/)._
-
----
 
 ## Why Docker for codbex Applications?
 
@@ -21,8 +19,6 @@ Docker streamlines deployment by packaging your application with all its depende
 - **Efficiency**: Reduce manual setup with automated workflows.
 
 In this guide, we’ll focus on creating Docker images for **codbex** applications, including setup, GitHub Actions workflows, and best practices.
-
----
 
 ## Setting Up Your Project
 
@@ -51,8 +47,6 @@ ENV DIRIGIBLE_HOME_URL=/services/web/<your-application>/index.html
 - Always include `@codbex/ide-branding` in your `package.json` dependencies, or your own custom branding module.  
 - You can set additional [Eclipse Dirigible environment variables](https://www.dirigible.io/help/setup/setup-environment-variables/).  
 
----
-
 ### package.json
 
 The `package.json` file manages build-time dependencies and scripts. Here's an example:
@@ -73,8 +67,6 @@ The `package.json` file manages build-time dependencies and scripts. Here's an e
 **Why package.json?**
 - Ensures consistent dependency management across builds.  
 - Specifies required npm packages in the `dependencies` section.  
-
----
 
 ## Automating with GitHub Actions
 
@@ -115,8 +107,6 @@ jobs:
 - Dependencies are installed automatically if `install-dependencies` is set to `true`.
 - Secrets are passed securely via `secrets: inherit`.
 
----
-
 ### Pull Request Workflow
 
 For pull requests, skip deployments but still build Docker images. Here’s a sample configuration:
@@ -138,8 +128,6 @@ jobs:
       dockerfile-location: application/
     secrets: inherit
 ```
-
----
 
 ### Release Workflow
 
@@ -167,8 +155,6 @@ jobs:
     secrets: inherit
 ```
 
----
-
 ## Releasing the Docker Image
 
 1. Navigate to the **Actions** tab in your repository.  
@@ -176,8 +162,6 @@ jobs:
 3. Input the release version (e.g., `1.0.0`) and click **Run workflow**.  
 
 Once complete, your Docker image will be available in GitHub Container Registry (GHCR).
-
----
 
 ## Key Takeaways
 
