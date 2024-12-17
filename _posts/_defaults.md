@@ -1,6 +1,0 @@
----
-title:
-categories:
-author:
-date:
----

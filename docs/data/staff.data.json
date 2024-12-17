@@ -1,0 +1,262 @@
+[
+  {
+     "id": "atanas",
+     "name":"Atanas Himchev",
+     "title":"CSO",
+     "avatar":"/images/staff/atanas.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/himchev/"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/atanas-himchev-a4a9114/"
+        }
+     ]
+  },
+  {
+     "id": "boris",
+     "name":"Boris Nenchovski",
+     "title":"Platform",
+     "avatar":"/images/staff/boris.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/BorisNen/"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/boris-n-b27b19195/"
+        }
+     ]
+  },
+  {
+     "id": "desislava",
+     "name":"Desislava Rasheva",
+     "title":"Legal Advisor",
+     "avatar":"/images/staff/desislava.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/dessislava-rasheva-pavlova-ab1a9a107/"
+        }
+     ]
+  },
+  {
+     "id": "dimitar",
+     "name":"Dimitar Velev",
+     "title":"Blockchain",
+     "avatar":"/images/staff/dimitar.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/d-velev/"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/d-velev/"
+        }
+     ]
+  },
+  {
+     "id": "emil",
+     "name":"Emil Momchev",
+     "title":"Student",
+     "avatar":"/images/staff/emil.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/Mrgoblings/"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/emil-momchev/"
+        }
+     ]
+  },
+  {
+     "id": "iliyan",
+     "name":"Iliyan Velichkov",
+     "title":"Core",
+     "avatar":"/images/staff/iliyan.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/iliyan-velichkov/"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/iliyan-velichkov/"
+        }
+     ]
+  },
+  {
+     "id": "ivo",
+     "name":"Ivo Yakov",
+     "title":"IoT",
+     "avatar":"/images/staff/ivo.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/Fluctuationqt"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/ivo-yakov-9681b9226/"
+        }
+     ]
+  },
+  {
+     "id": "mimi",
+     "name":"Mimi Delcheva",
+     "title":"Marketing",
+     "avatar":"/images/staff/mimi.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/mimi-delcheva-998b12231/"
+        }
+     ]
+  },
+  {
+     "id": "mina",
+     "name":"Mina Doncheva",
+     "title":"Developer",
+     "avatar":"/images/staff/mina.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/MinaDoncheva"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/mina-doncheva-136594183/"
+        }
+     ]
+  },
+  {
+     "id": "nedelcho",
+     "name":"Nedelcho Delchev",
+     "title":"CEO",
+     "avatar":"/images/staff/nedelcho.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/delchev"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/nedelcho-delchev-67089421/"
+        }
+     ]
+  },
+  {
+     "id": "nedelchojr",
+     "name":"Nedelcho Delchev Jr.",
+     "title":"Applications",
+     "avatar":"/images/staff/nedelchojr.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/nedelcho-delchev-tues"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/nedelcho-delchev/"
+        }
+     ]
+  },
+  {
+     "id": "stan",
+     "name":"Stan Genchev",
+     "title":"UX",
+     "avatar":"/images/staff/stan.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/StanZGenchev"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/stan-genchev/"
+        }
+     ]
+  },
+  {
+     "id": "tomi",
+     "name":"Tomislav Ivanov",
+     "title":"Student",
+     "avatar":"/images/staff/tomi.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/TIVMOF"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/tomy-ivanov-1b0224289/"
+        }
+     ]
+  },
+  {
+     "id": "vladimir",
+     "name":"Vladimir Mutafov",
+     "title":"Research",
+     "avatar":"/images/staff/vladimir.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/vmutafov"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/vladimir-mutafov-a84055114/"
+        }
+     ]
+  },
+  {
+     "id": "yordan",
+     "name":"Yordan Pavlov",
+     "title":"CTO",
+     "avatar":"/images/staff/yordan.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/ThuF"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/jordan-pavlov/"
+        }
+     ]
+  },
+  {
+     "id": "pavel",
+     "name":"Pavel Baltiyski",
+     "title":"Guest (ABAP/BI/BW)",
+     "avatar":"/images/staff/pavel.jpg",
+     "internal": false,
+     "links":[
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/pavelbaltiyski/"
+        }
+     ]
+  }
+]
