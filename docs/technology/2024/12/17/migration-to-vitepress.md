@@ -94,6 +94,22 @@ JavaScript and TypeScript support was a key motivator for our decision to migrat
 - **Enhanced User Experience**: Optimized builds result in faster load times for end-users.
 - **Future-Proofing**: VitePress’s modern architecture ensures long-term compatibility with evolving web technologies.
 
+## Before and After: A Visual Comparison
+
+To give you a clearer picture of the changes, here are some screenshots showcasing our documentation site before and after the migration:
+
+Before Migration (Jekyll):
+![Before VitePress Migration 1](/images/2024-12-17-migration-to-vitepress/vitepress-migration-1.png)
+![Before VitePress Migration 3](/images/2024-12-17-migration-to-vitepress/vitepress-migration-3.png)
+
+Before Migration (Material for MkDocs):
+![Before VitePress Migration 2](/images/2024-12-17-migration-to-vitepress/vitepress-migration-2.png)
+
+After Migration (VitePress):
+![After VitePress Migration 4](/images/2024-12-17-migration-to-vitepress/vitepress-migration-4.png)
+![After VitePress Migration 6](/images/2024-12-17-migration-to-vitepress/vitepress-migration-6.png)
+![After VitePress Migration 5](/images/2024-12-17-migration-to-vitepress/vitepress-migration-5.png)
+
 ## Final Thoughts
 
 Migrating to VitePress from Jekyll or Material for MkDocs can seem daunting at first, but with careful planning and execution, it’s a rewarding process. For us, it took around one week to migrate all 400+ pages of our site to VitePress, from getting started to completion. You’ll gain a faster, more flexible documentation site that’s easier to maintain and expand. Whether you're building for a small project or a large-scale enterprise, VitePress is a solid choice for the modern web.
