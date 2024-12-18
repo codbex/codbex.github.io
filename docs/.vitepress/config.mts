@@ -10,7 +10,7 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises to design, develop and deliver their industry solutions' }],
     ['meta', { property: 'og:image', content: 'https://www.codbex.com/social-card.png' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:title', content: 'codbex - High-Productivity Application Platform' }],
     ['meta', { name: 'twitter:description', content: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises to design, develop and deliver their industry solutions' }],
     ['meta', { name: 'twitter:image', content: 'https://www.codbex.com/social-card.png' }],
