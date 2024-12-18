@@ -26,16 +26,38 @@ One of the key features that defines Atlas is the ability, with minimal effort, 
 - Addition of custom logic to each entity/property via calculation fields and extension points
 - Generating and previewing the pages/code and the ability to change your logic on the go
 
-<div class="image">
-    <img src="/images/2024-03-07-application-development-with-atlas/atlas-edm-editor.png" alt="Screenshot" class="screenshot editable" />
-</div>
+<img src="/images/2024-03-07-application-development-with-atlas/atlas-edm-editor.png" />
 
 
-## Process centric
+## Process-Driven Workflows
 
+Atlas excels in enabling process-driven application development, allowing users to visually define workflows, decision points, and conditions. Leveraging a robust BPMN 2.0-compliant engine powered by [Flowable](https://www.flowable.com/), developers can build standardized and scalable business processes with ease. These process steps can be implemented in JavaScript or TypeScript, empowering developers with a powerful and dynamic In-System Development experience directly within Atlas.
 
-## Integration flows
+<img src="/images/features/bpm-perspective.png" />
 
+::: info Workflow Scenarios
+- Automated employee onboarding.
+- Order processing with conditional approvals.
+- Inventory management with restocking triggers.
+- Expense claim approvals with multiple decision points.
+- User task workflows where a person must review and approve a document before the process continues.
+- Customer support ticket escalation based on SLA breaches.
+- Scheduling and notifications for appointment reminders. 
+:::
+
+## Seamless System Integrations
+
+Atlas provides powerful tools to handle complex integration scenarios with a wide range of out-of-the-box connectors, leveraging the robust capabilities of the [Apache Camel](https://camel.apache.org/) engine. By utilizing Atlas, developers can seamlessly integrate services, systems, and applications to create unified solutions. Integration handlers can be implemented directly in JavaScript or TypeScript, offering developers the flexibility to create tailored solutions efficiently. This dynamic capability unlocks an unparalleled in-system development experience, enabling rapid iteration and customization.
+
+<img src="/documentation/images/camel-sample-flow.png" />
+
+::: info Integration Scenarios
+- Syncing data between ERP and CRM systems.
+- Real-time processing of IoT sensor data into analytics platforms.
+- Automating order fulfillment with third-party logistics providers.
+- Enabling single sign-on (SSO) across multiple applications.
+- Connecting payment gateways to e-commerce platforms.
+:::
 
 ## Deploying Atlas on Snowpark and utilizing Snowflake
 
