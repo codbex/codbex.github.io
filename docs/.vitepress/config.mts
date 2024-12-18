@@ -4,14 +4,22 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'codbex',
   description: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { property: 'og:title', content: 'codbex' }],
+    ['meta', { property: 'og:description', content: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises' }],
+    ['meta', { property: 'og:image', content: '/social-card.png' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'codbex' }],
+    ['meta', { name: 'twitter:description', content: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises' }],
+    ['meta', { name: 'twitter:image', content: '/social-card.png' }],
+  ],
   base: '/',
   sitemap: {
     hostname: 'https://www.codbex.com/'
   },
   cleanUrls: true,
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
-  ],
   appearance: {
     // @ts-expect-error not fully supported yet
     initialValue: 'light'
