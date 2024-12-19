@@ -37,7 +37,7 @@ Are you looking to unlock the full potential of low code development within your
     Our expertise extends beyond low code development. We develop general Java and Node.js-based applications with Angular, Vue.js, and OpenUI5 frontend, ensuring versatility and compatibility with diverse technologies.
 
 <div style="text-align: center;">
-   <img src="/images/services/custom-development-right.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
+   <img src="/images/services/custom-development-deliver.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
 </div>
 
 ### Snowflake Context
@@ -59,6 +59,10 @@ Are you looking to unlock the full potential of low code development within your
 **Cloud Native Environment Modules**:
    Our expertise extends to building modules for cloud-native environments like <a href="https://discovery-center.cloud.sap/serviceCatalog/kyma-runtime?region=all" target="_blank">Kyma</a> and <a href="https://discovery-center.cloud.sap/serviceCatalog/cloud-foundry-runtime?region=all" target="_blank">Cloud Foundry</a>, enabling seamless integration and deployment in modern cloud architectures.
 
+
+<div style="text-align: center;">
+   <img src="/images/services/custom-development-partner.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+</div>
 
 ### Partner with Us:
 
