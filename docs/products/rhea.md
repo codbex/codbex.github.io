@@ -155,3 +155,4 @@ Support depends on the plan you selected from [pricing](/pricing/).
 ### References
 
 * [Deploy codbex products on Snowflake](/technology/2024/09/11/deploy-codbex-products-on-snowflake)
+* [Rhea - Low-Code Solution for Digital Transformation](/marketing/2024/12/19/rhea-low-code-solution-for-digital-transformation)
