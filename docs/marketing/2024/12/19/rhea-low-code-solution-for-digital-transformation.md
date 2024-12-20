@@ -10,9 +10,13 @@ editLink: false
 
 In today's fast-paced digital landscape, businesses demand tools that allow them to innovate and adapt quickly. Enter **Rhea by codbex**, the ultimate low-code platform designed to empower organizations through seamless modeling techniques and robust JavaScript/TypeScript development. Whether you're a business analyst, a developer, or a project manager, Rhea equips you with the tools to bring your ideas to life faster and more efficiently than ever before.
 
+<img src="/images/2024-12-19-rhea-low-code-solution-for-digital-transformation/rhea-crown.jpg" />
+
 Rhea goes beyond conventional tools by offering a comprehensive suite of features tailored to modern development needs. Its low-code capabilities ensure that both technical and non-technical users can collaborate effectively, bridging gaps between ideas and implementation. With Rhea, innovation isn’t just a goal—it’s a seamless process.
 
 ## Key Features Tailored for Your Success
+
+<img src="/images/2024-12-19-rhea-low-code-solution-for-digital-transformation/rhea-marketecture-diagram.png" />
 
 1. **Model-Driven Architecture**
    Rhea's visual designer empowers business developers to model application domain logic. By selecting from a variety of templates, you can generate and publish applications instantly, iterate with ease, and maintain consistency across deployments. The iterative nature of Rhea’s tools ensures that even as requirements evolve, your applications can keep pace without extensive rework.

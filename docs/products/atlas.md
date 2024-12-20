@@ -196,4 +196,4 @@ Support depends on the plan you selected from [pricing](/pricing/).
 ### References
 
 * [Deploy codbex products on Snowflake](/technology/2024/09/11/deploy-codbex-products-on-snowflake)
-* [Building Apps with Atlas on Snowflake](/marketing/2024/03/07/building-apps-with-atlas-on-snowflake)
+<!-- * [Building Apps with Atlas on Snowflake](/marketing/2024/12/23/building-apps-with-atlas-on-snowflake) -->

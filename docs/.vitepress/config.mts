@@ -105,11 +105,11 @@ export default defineConfig({
         {
           text: 'Marketing',
           items: [
+            // { text: 'Building Apps with Atlas on Snowflake', link: '/marketing/2024/12/23/building-apps-with-atlas-on-snowflake' },
             { text: 'Rhea - Low-Code Solution for Digital Transformation', link: '/marketing/2024/12/19/rhea-low-code-solution-for-digital-transformation' },
             { text: 'Kronos - Timeless Solution for Modern Challenges', link: '/marketing/2024/06/05/kronos-timeless-solution' },
             { text: 'Unleash Service Integrations with Iapetus', link: '/marketing/2024/03/26/iapetus-unleash-service-integration' },
             { text: 'Unlocking Enterprise Efficiency with Hyperion', link: '/marketing/2024/03/20/hyperion-unlocking-enterprise-efficiency' },
-            { text: 'Building Apps with Atlas on Snowflake', link: '/marketing/2024/03/07/building-apps-with-atlas-on-snowflake' },
             { text: 'Dive into Innovation with Oceanus', link: '/marketing/2024/01/23/oceanus-dive-into-innovation' },
             { text: 'Explore and Manage Databases in the Cloud', link: '/marketing/2023/10/11/hades-explore-and-manage-databases-in-the-cloud' },
             { text: 'Ultimate Cloud IDE for JavaScript and TypeScript', link: '/marketing/2023/09/26/helios-ultimate-cloud-ide-for-javascript-and-typescript' },
