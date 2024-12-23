@@ -105,7 +105,7 @@ export default defineConfig({
         {
           text: 'Marketing',
           items: [
-            // { text: 'Building Apps with Atlas on Snowflake', link: '/marketing/2024/12/23/building-apps-with-atlas-on-snowflake' },
+            { text: 'Building Apps with Atlas on Snowflake', link: '/marketing/2024/12/23/building-apps-with-atlas-on-snowflake' },
             { text: 'Rhea - Low-Code Solution for Digital Transformation', link: '/marketing/2024/12/19/rhea-low-code-solution-for-digital-transformation' },
             { text: 'Kronos - Timeless Solution for Modern Challenges', link: '/marketing/2024/06/05/kronos-timeless-solution' },
             { text: 'Unleash Service Integrations with Iapetus', link: '/marketing/2024/03/26/iapetus-unleash-service-integration' },
