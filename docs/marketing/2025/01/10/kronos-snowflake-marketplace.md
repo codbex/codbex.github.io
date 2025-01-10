@@ -1,12 +1,12 @@
 ---
-title: Kronos is Now Live on Snowflake Marketplace
-description: Kronos is Now Live on Snowflake Marketplace!
+title: Install Kronos from Snowflake Marketplace
+description: Install Kronos from Snowflake Marketplace
 date: 2025-01-10
 author: iliyan
 editLink: false
 ---
 
-# Kronos is Now Live on Snowflake Marketplace
+# Install Kronos from Snowflake Marketplace
 We’re thrilled to announce that [Kronos](https://www.codbex.com/products/kronos) by [codbex](https://www.codbex.com/) is now officially **available on the [Snowflake Marketplace](https://www.snowflake.com/en/data-cloud/marketplace/)**!<br>
 Revolutionizing the way you integrate SAP ABAP and HANA XS development into your Snowflake ecosystem, Kronos brings unparalleled ease and efficiency to your workflow. And the best part? It takes **only a few minutes to install** and start using this productivity-ready platform.
 
