@@ -6,36 +6,34 @@ author: iliyan
 editLink: false
 ---
 
-# Celebrating Two Years of Excellence 123
+# Kronos is Now Live on Snowflake Marketplace
+We’re thrilled to announce that [Kronos](https://www.codbex.com/products/kronos) by [codbex](https://www.codbex.com/) is now officially **available on the [Snowflake Marketplace](https://www.snowflake.com/en/data-cloud/marketplace/)**!<br>
+Revolutionizing the way you integrate SAP ABAP and HANA XS development into your Snowflake ecosystem, Kronos brings unparalleled ease and efficiency to your workflow. And the best part? It takes **only a few minutes to install** and start using this productivity-ready platform.
 
-123 Today marks a significant milestone for us at __codbex__ company - we're celebrating our second anniversary! It's been an incredible journey filled with challenges, growth, and most importantly, achievements. As we reflect on the past two years, we are proud of what we have accomplished and excited for what the future holds.
+## Why Choose Kronos?
+Kronos empowers organizations to streamline their SAP development by offering:
+- **Seamless integration** with Snowflake’s modern data cloud.
+- **Ease of deployment** with a few simple clicks.
+- A **30-day free trial** to experience the power of Kronos risk-free.
+- An **affordable pricing model**: $100/month after the trial and $2 per generated Snowflake credit, allowing you to scale based on your usage. Total monthly credits depend on your selected SPCS compute size and warehouse size.
 
-<img src="/images/2024-04-01-second-anniversary/IMG_1.jpg" width="800em">
+## Getting Started is Simple
+Follow these 3 easy steps to get up and running with Kronos:
+- Go to the Snowflake Marketplace and search for `Kronos - Compatible Platform for SAP ABAP & HANA XS`
+- Install and Configure<br>
+  Install the application and follow the guided setup to connect it to your environment. The intuitive configuration ensures you’re ready in no time.
+- Deploy a New Kronos Instance<br>
+  Start your new Kronos instance and unlock the potential of productive SAP development within minutes.
 
-Since our inception, our mission has been clear: to empower developers and enhance productivity through innovative tools and solutions. As we commemorate this anniversary, we reaffirm our commitment to this mission. We remain dedicated to building tools that simplify the development process, streamline workflows, and ultimately, make developers' lives easier.
+## See Kronos in Action
+Want to see just how easy it is? Check out our embedded video below showcasing the installation and setup process step by step. Watch as we take Kronos **live in under three minutes!**
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/VsJwvgCFcuo" frameborder="0" allowfullscreen></iframe>
 
-<div style="text-align: center;">
-   <img src="/images/2024-04-01-second-anniversary/IMG_2.jpg" style="width: 20%; !important; float: left !important; padding: 2em"/>
-</div>
+## What’s Next for codbex on Snowflake?
+Kronos is just the beginning. At codbex, we’re dedicated to bringing innovative solutions to the Snowflake Marketplace. Keep an eye out as we roll out more of our products designed to enhance productivity, streamline operations, and deliver incredible value.
 
-One of the cornerstones of our success has been our unwavering dedication to showcasing expertise in every project we undertake. Whether it's developing cutting-edge software, designing intuitive interfaces, or providing top-notch support, our team consistently demonstrates professionalism, skill, and passion. It's this commitment to excellence that has earned us the trust and loyalty of our clients and partners.
+Stay tuned for updates—the future is bright with codbex on Snowflake!
 
-<div style="text-align: center;">
-   <img src="/images/2024-04-01-second-anniversary/IMG_3.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
-</div>
+---
 
-As we look back on the past two years, we're proud of the projects we've been a part of and the impact we've made. From collaborating with startups to partnering with established enterprises, we've had the opportunity to work on a diverse range of projects across various industries. With each project, we've not only delivered exceptional results but also learned and grown as a team.
-
-<div style="text-align: center;">
-   <img src="/images/2024-04-01-second-anniversary/IMG_4.jpg" style="width: 30%; !important; float: left !important; padding: 2em"/>
-</div>
-
-But our journey doesn't end here. In fact, it's just the beginning. As we enter our third year, we are more determined than ever to continue our upward trajectory. We are committed to pushing the boundaries of innovation, exploring new technologies, and expanding our offerings to better serve our clients' needs.
-
-Furthermore, we are excited to announce that we are continuing to grow. Our team has expanded significantly over the past year, bringing together diverse talents and expertise from around the globe. This growth not only strengthens our capabilities but also enables us to take on more ambitious projects and deliver even greater value to our clients.
-
-<img src="/images/2024-04-01-second-anniversary/IMG_5.jpg" width="800em">
-
-As we celebrate this milestone, we want to express our heartfelt gratitude to everyone who has been a part of our journey - our clients, partners, and most importantly, our incredible team. Thank you for your trust, support, and dedication. Together, we have achieved so much, and we look forward to many more years of success ahead.
-
-Good luck!
+**Ready to experience the power of Kronos?** Visit [Kronos on the Snowflake Marketplace](https://app.snowflake.com/marketplace/listing/GZTDZFSWVO/codbex-kronos-compatible-platform-for-sap-abap-hana-xs) today and take the first step toward unlocking next-level SAP development on Snowflake.
