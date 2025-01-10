@@ -62,7 +62,7 @@ The AWS Marketplace simplifies deployment and management for Hades. By choosing 
 <img src="/images/2025-01-10-hades-on-aws/get-started.jpg" width="800em">
 
 ## Open Source Freedom
-As a fully **open-source platform**, Hades eliminates vendor lock-in and gives you full control over your data and tools. Customize, extend, or contribute to Hades via our community-driven approach on [GitHub](#).
+As a fully **open-source platform**, Hades eliminates vendor lock-in and gives you full control over your data and tools. Customize, extend, or contribute to Hades via our community-driven approach on [GitHub](https://github.com/codbex/codbex-hades).
 
 ## Why Hades?
 
