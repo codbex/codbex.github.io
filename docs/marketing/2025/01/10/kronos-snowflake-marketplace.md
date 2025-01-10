@@ -1,14 +1,16 @@
 ---
 title: Install Kronos from Snowflake Marketplace
-description: Install Kronos from Snowflake Marketplace
+description: Revolutionizing the way you integrate SAP ABAP and HANA XS development into your Snowflake ecosystem, Kronos brings unparalleled ease and efficiency to your workflow. And the best part? It takes only a few minutes to install and start using this productivity-ready platform
 date: 2025-01-10
 author: iliyan
 editLink: false
 ---
 
 # Install Kronos from Snowflake Marketplace
-We’re thrilled to announce that [Kronos](https://www.codbex.com/products/kronos) by [codbex](https://www.codbex.com/) is now officially **available on the [Snowflake Marketplace](https://www.snowflake.com/en/data-cloud/marketplace/)**!<br>
+We’re thrilled to announce that [Kronos](https://www.codbex.com/products/kronos) by **codbex** is now officially **available on the [Snowflake Marketplace](https://www.snowflake.com/en/data-cloud/marketplace/)**!<br>
 Revolutionizing the way you integrate SAP ABAP and HANA XS development into your Snowflake ecosystem, Kronos brings unparalleled ease and efficiency to your workflow. And the best part? It takes **only a few minutes to install** and start using this productivity-ready platform.
+
+<img src="/images/2025-01-10-kronos-on-snowflake-marketplace/kronos-on-snowflake.png" width="800em">
 
 ## Why Choose Kronos?
 Kronos empowers organizations to streamline their SAP development by offering:
@@ -33,6 +35,8 @@ Want to see just how easy it is? Check out our embedded video below showcasing t
 Kronos is just the beginning. At codbex, we’re dedicated to bringing innovative solutions to the Snowflake Marketplace. Keep an eye out as we roll out more of our products designed to enhance productivity, streamline operations, and deliver incredible value.
 
 Stay tuned for updates—the future is bright with codbex on Snowflake!
+
+<img src="/images/2025-01-10-kronos-on-snowflake-marketplace/bw-move-to-snowflake.jpg" width="800em">
 
 ---
 

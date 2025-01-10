@@ -1,6 +1,6 @@
 ---
 title: First Anniversary
-description: A year ago, we started our own business based on what we believed cloud developers needed to be productive.
+description: A year ago, we started our own business based on what we believed cloud developers needed to be productive
 date: 2023-04-01
 editLink: false
 author: nedelcho

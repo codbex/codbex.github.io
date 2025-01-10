@@ -1,6 +1,6 @@
 ---
 title: Company Dedicated to Developers Productivity
-description: Today, on April, 01, 2022 the company codbex has just been born.
+description: Today, on April, 01, 2022 the company codbex has just been born
 date: 2022-04-01
 author: nedelcho
 editLink: false

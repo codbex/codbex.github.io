@@ -1,6 +1,6 @@
 ---
 title: Kronos Now Available on the Snowflake Marketplace
-description: We are excited to announce that Kronos, our innovative, fully open-source data platform, is now officially available on the Snowflake Marketplace! This marks a significant milestone for codbex and a game-changing opportunity for businesses looking to modernize their data ecosystems.
+description: We are excited to announce that Kronos, our innovative, fully open-source data platform, is now officially available on the Snowflake Marketplace! This marks a significant milestone for codbex and a game-changing opportunity for businesses looking to modernize their data ecosystems
 date: 2025-01-10
 author: nedelcho
 editLink: false
