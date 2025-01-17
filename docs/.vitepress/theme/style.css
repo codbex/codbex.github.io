@@ -192,7 +192,7 @@
 }
 
 .price-tag {
-  border: 3px solid #2196F3;
+  border: 3px solid var(--vp-home-hero-name-color);
   border-radius: 12px;
   padding: 5px;
   font-size: 1.5em;
@@ -204,7 +204,7 @@
 }
 
 .product-tag {
-  border: 3px solid #2196F3;
+  border: 3px solid var(--vp-home-hero-name-color);
   border-radius: 12px;
   padding: 5px;
   font-size: 1.5em;
@@ -216,7 +216,8 @@
 }
 
 .product-link {
-  color: white
+  color: var(--vp-home-hero-name-color) !important;
+  text-transform: uppercase;
 }
 
 .vp-doc a {
