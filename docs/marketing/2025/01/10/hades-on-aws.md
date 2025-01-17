@@ -55,11 +55,15 @@ The AWS Marketplace simplifies deployment and management for Hades. By choosing 
 1. **Find Hades on AWS Marketplace**: [Hades AWS Marketplace Listing](#).
 2. Choose your deployment type:
    - As an **AMI** for traditional EC2 setups.
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/YXFGJGZFhYw" frameborder="0" allowfullscreen></iframe>
+
    - As a **container** for modern Kubernetes-based workflows on **EKS** or **ECS**.
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/BTTQCl0rnZI" frameborder="0" allowfullscreen></iframe>
+
 3. Connect Hades to your preferred database, whether it’s PostgreSQL, Snowflake, MongoDB, or others.
 4. Start managing your data efficiently with powerful tools and features.
-
-<img src="/images/2025-01-10-hades-on-aws/get-started.jpg" width="800em">
 
 ## Open Source Freedom
 As a fully **open-source platform**, Hades eliminates vendor lock-in and gives you full control over your data and tools. Customize, extend, or contribute to Hades via our community-driven approach on [GitHub](https://github.com/codbex/codbex-hades).
@@ -73,11 +77,11 @@ Hades isn’t just a data platform—it’s a productivity powerhouse. From simp
 - Protect sensitive data with **anonymization** and **masking** tools.
 - Develop with confidence using a robust **SQL editor** and modern support for NoSQL databases.
 
-<img src="/images/2025-01-10-hades-on-aws/powerhouse.jpg" width="800em">
-
 ## Ready to Dive into Hades?  
 
 Start using **Hades** today on the **AWS Marketplace** to unlock new possibilities for your data-driven applications. With its rich feature set, database compatibility, and open-source freedom, Hades is your partner in modern data management.
+
+<img src="/images/2025-01-10-hades-on-aws/get-started.jpg" width="800em">
 
 Explore Hades on AWS Marketplace now and experience the future of data management—free of charge.
 
