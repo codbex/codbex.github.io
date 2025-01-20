@@ -7,15 +7,14 @@ layout: home
 hero:
   name: Hyperion Edition
   text: Processes
+  tagline: The Hyperion Edition is your ultimate solution for Business Processes Management (BPM) fully compliant with BPMN v2, powered by the Flowable engine
+  image:
+      src: /images/products/hyperion.svg
 ---
-
-<!-- <div style="text-align: center;">
-   <img src="/images/products/Hyperion.svg" style="width: 30%; !important;"/>
-</div> -->
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-hyperion" target="_blank" class="product-link">Source Code</a></div>
 
-The Hyperion Edition of the <b>codbex</b> platform is your ultimate solution for Business Processes Management (BPM) fully compliant with BPMN v2, powered by the Flowable engine. Hyperion Edition seamlessly integrates BPM capabilities with robust JavaScript development features, providing a comprehensive solution for optimizing business processes and accelerating application development.
+The Hyperion Edition seamlessly integrates BPM capabilities with robust JavaScript development features, providing a comprehensive solution for optimizing business processes and accelerating application development.
 
 ### BPM Features:
 

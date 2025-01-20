@@ -7,15 +7,14 @@ layout: home
 hero:
   name: Hades Edition
   text: Databases
+  tagline: The Hades Edition is your ultimate solution for comprehensive database management for PostgreSQL, MySQL, H2, SAP HANA, Snowflake, and more
+  image:
+      src: /images/products/hades.svg
 ---
-
-<!-- <div style="text-align: center;">
-   <img src="/images/products/Hades.svg" style="width: 30%; !important;"/>
-</div> -->
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-hades" target="_blank" class="product-link">Source Code</a></div>
 
-The Hades Edition of the <b>codbex</b> platform is your ultimate solution for comprehensive database management. With a focus on PostgreSQL, MySQL, H2, SAP HANA, Snowflake, and more, the Hades Edition includes all the necessary features to streamline your database operations. From database modeling and management to data transfer and import/export capabilities, Hades Edition equips database administrators with the tools they need to efficiently manage their data infrastructure.
+The Hades Edition includes all the necessary features to streamline your database operations. From database modeling and management to data transfer and import/export capabilities, Hades Edition equips database administrators with the tools they need to efficiently manage their data infrastructure.
 
 ### Comprehensive Database Management:
 

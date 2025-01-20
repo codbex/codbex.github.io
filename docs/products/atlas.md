@@ -7,15 +7,12 @@ layout: home
 hero:
   name: Atlas Edition
   text: All in one
+  tagline: The Atlas Edition is your comprehensive solution for rapid application development and streamlined operations. Includes all the features of the technology platform, such as model driven development, processes and integrations management, databases and documents operations
+  image:
+      src: /images/products/atlas.svg
 ---
 
-<!-- <div style="text-align: center;">
-   <img src="/images/products/Atlas.svg" style="width: 30%; !important;"/>
-</div> -->
-
 <div class="product-tag"><a href="https://github.com/codbex/codbex-atlas" target="_blank" class="product-link">Source Code</a></div>
-
-The Atlas Edition of the <b>codbex</b> platform is your comprehensive solution for rapid application development and streamlined operations.
 
 Designed to empower developers and DevOps teams alike, this edition includes all available features for end-to-end development processes, from database modeling and management to operations and monitoring. With a rich set of capabilities, the Atlas Edition enables you to build, deploy, and manage cloud applications with ease.
 

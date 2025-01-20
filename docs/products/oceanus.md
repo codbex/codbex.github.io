@@ -7,15 +7,14 @@ layout: home
 hero:
   name: Oceanus Edition
   text: Documents
+  tagline: The Oceanus Edition is your comprehensive solution for efficient document management, with support for CMIS compliant repositories and seamless integration with FTP/SFTP protocols
+  image:
+      src: /images/products/oceanus.svg
 ---
-
-<!-- <div style="text-align: center;">
-   <img src="/images/products/Oceanus.svg" style="width: 30%; !important;"/>
-</div> -->
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-oceanus" target="_blank" class="product-link">Source Code</a></div>
 
-The Oceanus Edition of the <b>codbex</b> platform is your comprehensive solution for efficient document management. Designed with a focus on CMIS compliant repositories, Oceanus Edition includes all the necessary features to organize, preview, import, and export documents with ease. Whether you're structuring content for organizational or project needs, Oceanus Edition empowers users with intuitive tools and seamless integration with FTP/SFTP protocols.
+Designed with a focus on CMIS compliant repositories, Oceanus Edition includes all the necessary features to organize, preview, import, and export documents with ease. Whether you're structuring content for organizational or project needs, Oceanus Edition empowers users with intuitive tools and seamless integration with FTP/SFTP protocols.
 
 ### Comprehensive Document Management:
 

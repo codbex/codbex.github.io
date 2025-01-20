@@ -7,15 +7,14 @@ layout: home
 hero:
   name: Helios Edition
   text: Coding
+  tagline: The Helios Edition is tailored specifically for enterprise JavaScript/TypeScript development, providing a powerful set of features to accelerate your development workflow
+  image:
+      src: /images/products/helios.svg
 ---
-
-<!-- <div style="text-align: center;">
-   <img src="/images/products/Helios.svg" style="width: 30%; !important;"/>
-</div> -->
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-helios" target="_blank" class="product-link">Source Code</a></div>
 
-The Helios Edition of the <b>codbex</b> platform is tailored specifically for enterprise JavaScript/TypeScript development, providing a powerful set of features to accelerate your development workflow. With a focus on server-side RESTful services authoring, pattern-based user interface generation, role-based security, and comprehensive testing and monitoring capabilities, Helios Edition equips developers with the tools they need to build robust and scalable applications with ease.
+With a focus on server-side RESTful services authoring, pattern-based user interface generation, role-based security, and comprehensive testing and monitoring capabilities, Helios Edition equips developers with the tools they need to build robust and scalable applications with ease.
 
 The Helios Edition includes all necessary features for developing with <a href="/documentation/platform/sdk/" target="_blank">Enterprise JavaScript/TypeScript API</a>.
 

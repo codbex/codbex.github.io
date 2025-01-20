@@ -7,15 +7,14 @@ layout: home
 hero:
   name: Iapetus Edition
   text: Integrations
+  tagline: The Iapetus Edition is your comprehensive solution for Service Integrations Management, powered by Apache Camel, with a focus on ETL (Extract, Transform, Load) and other enterprise integration patterns
+  image:
+      src: /images/products/iapetus.svg
 ---
-
-<!-- <div style="text-align: center;">
-   <img src="/images/products/Iapetus.svg" style="width: 30%; !important;"/>
-</div> -->
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-iapetus" target="_blank" class="product-link">Source Code</a></div>
 
-The Iapetus Edition of the <b>codbex</b> platform is your comprehensive solution for Service Integrations Management, powered by Apache Camel. With a focus on ETL (Extract, Transform, Load) and other enterprise integration patterns, Iapetus Edition provides all the necessary features to streamline your integration processes. Additionally, Iapetus Edition includes robust JavaScript development features from the Helios Edition, offering a unified platform for building and managing integrations and applications.
+The Iapetus Edition provides all the necessary features to streamline your integration processes. Additionally, Iapetus Edition includes robust JavaScript development features from the Helios Edition, offering a unified platform for building and managing integrations and applications.
 
 ### Integration Management Features:
 

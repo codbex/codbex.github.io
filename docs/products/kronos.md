@@ -7,11 +7,10 @@ layout: home
 hero:
   name: Kronos Edition
   text: Compatibility
+  tagline: The Kronos Edition provides a compatible environment for SAP HANA Extended Application Services (XS) based applications as well as powerful ABAP engine to accelerate SAP BW migrations
+  image:
+      src: /images/products/kronos.svg
 ---
-
-<!-- <div style="text-align: center;">
-   <img src="/images/products/Kronos.svg" style="width: 30%; !important;"/>
-</div> -->
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-kronos" target="_blank" class="product-link">Source Code</a></div>
 

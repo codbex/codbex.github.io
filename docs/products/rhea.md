@@ -7,15 +7,14 @@ layout: home
 hero:
   name: Rhea Edition
   text: Modeling
+  tagline: The Rhea Edition is your comprehensive solution for modelling techniques, featuring Model-Driven Architecture (MDA) and Development (MDD) supporting components
+  image:
+      src: /images/products/rhea.svg
 ---
-
-<!-- <div style="text-align: center;">
-   <img src="/images/products/Rhea.svg" style="width: 30%; !important;"/>
-</div> -->
 
 <div class="product-tag"><a href="https://github.com/codbex/codbex-rhea" target="_blank" class="product-link">Source Code</a></div>
 
-The Rhea Edition of the <b>codbex</b> platform is your comprehensive solution for modelling techniques, featuring Model-Driven Architecture (MDA) supporting components. With a focus on Entity Data Modelling and Form Design, Rhea Edition empowers users to design domain models and custom forms with ease. Additionally, Rhea Edition includes robust JavaScript development features from the Helios Edition, providing a unified platform for modelling and application development.
+With a focus on Entity Data Modelling and Form Design, Rhea Edition empowers users to design domain models and custom forms with ease. Additionally, Rhea Edition includes robust JavaScript development features from the Helios Edition, providing a unified platform for modelling and application development.
 
 **Model-Driven Architecture (MDA)**:
    Rhea Edition supports Model-Driven Architecture (MDA) principles, enabling users to design application models and generate code with templates, streamlining the development process and ensuring consistency.
