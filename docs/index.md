@@ -5,6 +5,8 @@ hero:
   name: codbex
   text: High-Productivity Application Platform
   tagline: for Developers, Software Vendors and Enterprises to design, develop and deliver their industry solutions
+  image:
+      src: /images/styled/god-with-torch.svg
   actions:
     - theme: brand
       text: Products

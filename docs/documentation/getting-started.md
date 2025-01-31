@@ -7,7 +7,7 @@ Welcome to the Getting Started guide!
 This guide outlines the process of using the __codbex__ platform to create your initial 'Hello World' service. For more in-depth technical information on various aspects of the platform, its components, and capabilities, refer to the documentation listed in the references section below.
 
 <div style="text-align: center;">
-   <img src="./images/getting-started/openart-plant.jpg" style="width: 60%; !important; float: right !important; padding: 2em"/>
+   <img src="/images/styled/sprouting-plant.svg" style="height: 20rem; !important; float: right !important; padding: 2em"/>
 </div>
 
 ## Hello World

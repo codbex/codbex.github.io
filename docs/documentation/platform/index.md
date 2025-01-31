@@ -3,7 +3,7 @@
 Welcome to the Platform Documentation for __codbex__ a powerful cloud development platform that simplifies application development and deployment.! This comprehensive documentation serves as a detailed guide to understanding and utilizing the various components and features of our platform. Whether you're a new user seeking to familiarize yourself with the platform's capabilities or an experienced developer looking for advanced functionalities, this documentation provides valuable insights and resources to support your journey.
 
 <div style="text-align: center;">
-   <img src="../images/openart-platform.jpg" style="width: 60%; !important; float: right !important; padding: 2em"/>
+   <img src="/images/styled/aristotelis-with-pillar.svg" style="height: 20rem; !important; float: right !important; padding: 2em"/>
 </div>
 
 ### Languages

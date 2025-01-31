@@ -2,8 +2,11 @@
 layout: home
 
 hero:
-  name: News
-  text: Company Updates
+  name: News & Updates
+  text: Explore What’s New and Next
+  tagline: Discover our latest innovations, milestones, and insights as we continue to shape the future of technology and business excellence
+  image:
+      src: /images/styled/goddess-reading-book.svg
 
 editLink: false
 ---

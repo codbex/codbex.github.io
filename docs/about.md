@@ -2,9 +2,11 @@
 layout: home
 
 hero:
-  name: About
-  text: Innovations
+  name: About Us
+  text: Empowering innovation, growth, efficiency, and success
   tagline: Who we are, what do we provide and what it is for you?
+  image:
+      src: /images/styled/god-with-lightning.svg
 features:
   - title: Who we are?
     details: codbex is an innovative and dynamic technology company that specializes in providing software solutions to businesses in a variety of industries. We at codbex put our customers’ satisfaction first - our aspiration is to be a trusted partner for companies that want to use the full potential of their assets and drive sustainable success in an increasingly competitive digital environment.

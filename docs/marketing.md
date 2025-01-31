@@ -2,8 +2,11 @@
 layout: home
 
 hero:
-  name: Marketing
-  text: Opportunities
+  name: Marketing Insights
+  text: Ideas, Strategies, and Opportunities
+  tagline: Explore expert blogs and actionable insights designed to help you unlock new opportunities, drive engagement, and achieve business success
+  image:
+      src: /images/styled/goddess-sitting-with-book.svg
 
 editLink: false
 ---

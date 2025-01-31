@@ -10,7 +10,7 @@ title: Custom Development
 Are you looking to unlock the full potential of low code development within your organization? <b>codbex</b> offers custom development solutions tailored to your unique business needs, providing access to our expert development workforce at attractive rates. With our comprehensive expertise and cutting-edge technology stack, we can elevate your development initiatives and propel your business forward.
 
 <div style="text-align: center;">
-   <img src="/images/services/custom-development.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/styled/hercules-with-cerberus.svg" style="height: 20rem; !important; float: left !important; padding: 2em"/>
 </div>
 
 ### Our Offerings:
@@ -33,12 +33,12 @@ Are you looking to unlock the full potential of low code development within your
 **Custom BPMN Processes**:
    Leverage our stack to develop custom Business Process Model and Notation (BPMN) processes, orchestrating flows within your solutions for streamlined operations and enhanced productivity.
 
+<div style="text-align: center;">
+   <img src="/images/styled/hercules-with-hydra.svg" style="height: 20rem; !important; float: right !important; padding: 2em"/>
+</div>
+
 **General Java and Node.js Applications**:
     Our expertise extends beyond low code development. We develop general Java and Node.js-based applications with Angular, Vue.js, and OpenUI5 frontend, ensuring versatility and compatibility with diverse technologies.
-
-<div style="text-align: center;">
-   <img src="/images/services/custom-development-deliver.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
-</div>
 
 ### Snowflake Context
 
@@ -47,6 +47,7 @@ Are you looking to unlock the full potential of low code development within your
 
 **Snowpark Container Platform**:
    Harness the power of <a href="https://www.snowflake.com/en/data-cloud/snowpark/" target="_blank">Snowpark</a>, the containerized data processing framework for Snowflake. Our team can develop custom operational or analytical applications leveraging Snowpark, enabling you to unlock new insights and drive business innovation.
+
 
 ### SAP Context
 
@@ -59,12 +60,11 @@ Are you looking to unlock the full potential of low code development within your
 **Cloud Native Environment Modules**:
    Our expertise extends to building modules for cloud-native environments like <a href="https://discovery-center.cloud.sap/serviceCatalog/kyma-runtime?region=all" target="_blank">Kyma</a> and <a href="https://discovery-center.cloud.sap/serviceCatalog/cloud-foundry-runtime?region=all" target="_blank">Cloud Foundry</a>, enabling seamless integration and deployment in modern cloud architectures.
 
+### Partner with Us:
 
 <div style="text-align: center;">
-   <img src="/images/services/custom-development-partner.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/styled/hercules-with-spear-and-shield.svg" style="height: 20rem; !important; float: left !important; padding: 2em"/>
 </div>
-
-### Partner with Us:
 
 Unlock the full potential of low code development with Codbex's custom development solutions. Whether you're looking to build custom applications, extend existing platforms, or streamline development processes, our expert team is here to support your journey. Let's collaborate to transform your vision into reality and drive innovation in your organization. 
 

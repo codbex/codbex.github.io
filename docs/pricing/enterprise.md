@@ -12,7 +12,7 @@ editLink: false
 The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored specifically for large enterprises, delivering advanced features and unparalleled support to meet the demands of complex development environments. Building upon the comprehensive offerings of the Community and Professional Plans, the Enterprise Plan provides additional enhancements such as source code repository setup on any Git provider, private source code repositories, CI/CD pipelines for automatic updates on private servers, deployment on public cloud providers including GCP, AWS, and Azure, dedicated managed Kubernetes cluster, and dedicated support via email with a response time of two business hours.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/enterprise.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
+   <img src="/images/styled/god-with-horse.svg" style="height: 20rem; !important; float: right !important; padding: 2em"/>
 </div>
 
 ### Key Features:
@@ -36,7 +36,7 @@ The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored spec
 **[Operations and Monitoring](/documentation/tooling/operations/)**: Monitor application performance and operations in real-time, enabling proactive maintenance and optimization to meet evolving demands.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/enterprise-support.jpg" style="width: 40%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/styled/temples-with-mountain.svg" style="height: 20rem; !important; float: left !important; padding: 2em"/>
 </div>
 
 **Source Code Repository Setup on Any Git Provider**: Set up source code repositories on any Git provider of your choice, ensuring flexibility and compatibility with your existing infrastructure and workflows.
@@ -52,7 +52,7 @@ The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored spec
 **Support via Email with Response Time of Two Business Hours**: Receive dedicated support via email with a guaranteed response time of two business hours, ensuring rapid assistance and resolution of issues to minimize downtime and maximize productivity.
 
 <div style="text-align: center;">
-   <img src="/images/pricing/enterprise-who.jpg" style="width: 40%; !important; float: right !important; padding: 2em"/>
+   <img src="/images/styled/people-at-big-shop.svg" style="height: 20rem; !important; float: right !important; padding: 2em"/>
 </div>
 
 ### Who Is It For?

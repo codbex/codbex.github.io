@@ -2,9 +2,11 @@
 layout: home
 
 hero:
-  name: Services
-  text: "Services provided by codbex"
-  tagline: Complementary services to help in your digital transformation journey.
+  name: Our Services
+  text: Development and Consulting for Your Digital Transformation
+  tagline: Leverage our complementary services to drive innovation, streamline processes, and achieve your transformation goals
+  image:
+      src: /images/styled/goddess-with-two-torches.svg
 
 features:
   - title: Development

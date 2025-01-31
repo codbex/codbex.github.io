@@ -9,7 +9,7 @@ hide:
 Explore detailed information about __codbex__ across three main areas:
 
 <div style="text-align: center;">
-   <img src="./images/openart-welcome.jpg" style="width: 60%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/styled/goddess-with-books.svg" style="height: 20rem; !important; float: left !important; padding: 2em; padding-right: 4em;"/>
 </div>
 
 1. [Platform](platform/index.md): Learn about the __codbex__ Platform and its core features, including languages, engines, artefacts, SDK, widgets, services, and templates.

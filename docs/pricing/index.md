@@ -2,9 +2,11 @@
 layout: home
 
 hero:
-  name: Pricing
-  text: "Find the perfect plan for your business"
-  tagline: All plans include our award winning sales optimization solution.
+  name: Pricing Plans
+  text: Choose the Best Plan for Your Business
+  tagline: Every plan comes with our award-winning sales optimization solution to drive your success
+  image:
+      src: /images/styled/goddess-with-two-coins.svg
 
 features:
   - title: Community

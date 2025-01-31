@@ -8,6 +8,10 @@ A low-code development platform (LCDP) revolutionizes software creation by offer
 
 ## Our Insights
 
+<div style="text-align: center;">
+   <img src="/images/styled/god-with-ball.svg" style="height: 20rem; !important; float: left !important; padding: 2em"/>
+</div>
+
 Drawing from our extensive background as developers, product owners, architects, and software vendors, working with clients ranging from SMEs to large enterprises, we've observed several key challenges:
 
 1. Traditional application development entails significant effort.
@@ -34,9 +38,13 @@ We propose constructing a technology platform tailored to Line of Business (LoB)
 
 ## In the News
 
+<div style="text-align: center;">
+   <img src="/images/styled/goddess-with-two-books.svg" style="height: 20rem; !important; float: right !important; padding: 2em"/>
+</div>
+
 Gartner predicts that by 2024, low-code application development will drive over 65% of application development activity. Furthermore, three-quarters of large enterprises are anticipated to utilize at least four low-code development tools by 2024.
 
-## Market Trends
+__Market Trends__
 
 - Market size: Expected to reach $46.4 billion by 2026, growing at a CAGR of 25%.
 - $3.8 billion in 2017.
@@ -50,6 +58,10 @@ Gartner predicts that by 2024, low-code application development will drive over 
 We've engaged with over 250 users and individual contributors in the context of low-code development and high-productivity tooling. Feedback has been positive, with users expressing eagerness to utilize high-productivity tools that lower the barrier to cloud entry.
 
 ## Partner Ecosystem
+
+<div style="text-align: center;">
+   <img src="/images/styled/goddess-amazon-in-armor.svg" style="height: 20rem; !important; float: left !important; padding: 2em"/>
+</div>
 
 Establishing a robust partner network is a core objective for __codbex__. Our ecosystem accommodates various players with differing requirements, skills, and motivations. We provide essential development tools, deployment models, marketplaces, payment provider integrations, and collaboration tools, while ensuring fairness in business partner relationships through established rules.
 

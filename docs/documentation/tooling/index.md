@@ -3,7 +3,7 @@
 Welcome to the Tooling Documentation for __codbex__! This section provides comprehensive information about the various perspectives, concepts, and features available in our tooling environment. Whether you're a novice user or an experienced developer, this documentation will help you navigate through the tooling interface and utilize its functionalities effectively.
 
 <div style="text-align: center;">
-   <img src="../images/openart-tooling.jpg" style="width: 60%; !important; float: left !important; padding: 2em"/>
+   <img src="/images/styled/god-playing-with-lyre.svg" style="height: 20rem; !important; float: left !important; padding: 2em"/>
 </div>
 
 ### Perspectives

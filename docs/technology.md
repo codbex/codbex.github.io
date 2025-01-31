@@ -2,8 +2,11 @@
 layout: home
 
 hero:
-  name: Technology
-  text: User Guides
+  name: Technology Hub
+  text: Your Guide to Mastering Innovation
+  tagline: Dive into detailed user guides, tutorials, and best practices that empower you to leverage our cutting-edge technologies with confidence and ease
+  image:
+      src: /images/styled/god-with-book.svg
 
 editLink: false
 ---

@@ -2,9 +2,11 @@
 layout: home
 
 hero:
-  name: Products
-  text: "Find the edition that best suits your needs"
-  tagline: All editions are fully customizable and extendable
+  name: Our Products
+  text: Discover the Perfect Solution for Your Needs
+  tagline: Each edition is fully customizable and extendable, designed to adapt to your unique business requirements
+  image:
+      src: /images/styled/goddess-with-coins.svg
 
 features:
   - title: Atlas
