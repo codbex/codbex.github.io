@@ -2,7 +2,7 @@
   {
      "id": "atanas",
      "name":"Atanas Himchev",
-     "title":"CSO",
+     "title":"Chief Strategy Officer",
      "avatar":"/images/staff/atanas.jpg",
      "internal": true,
      "links":[
@@ -19,7 +19,7 @@
   {
      "id": "boris",
      "name":"Boris Nenchovski",
-     "title":"Platform",
+     "title":"Head of Platform",
      "avatar":"/images/staff/boris.jpg",
      "internal": true,
      "links":[
@@ -49,7 +49,7 @@
   {
      "id": "dimitar",
      "name":"Dimitar Velev",
-     "title":"Blockchain",
+     "title":"Head of Blockchain",
      "avatar":"/images/staff/dimitar.jpg",
      "internal": true,
      "links":[
@@ -66,7 +66,7 @@
   {
      "id": "emil",
      "name":"Emil Momchev",
-     "title":"Student",
+     "title":"Developer",
      "avatar":"/images/staff/emil.jpg",
      "internal": true,
      "links":[
@@ -83,7 +83,7 @@
   {
      "id": "iliyan",
      "name":"Iliyan Velichkov",
-     "title":"Core",
+     "title":"Chief Security Officer",
      "avatar":"/images/staff/iliyan.jpg",
      "internal": true,
      "links":[
@@ -100,7 +100,7 @@
   {
      "id": "ivo",
      "name":"Ivo Yakov",
-     "title":"IoT",
+     "title":"Head of IoT",
      "avatar":"/images/staff/ivo.jpg",
      "internal": true,
      "links":[
@@ -117,7 +117,7 @@
   {
      "id": "mimi",
      "name":"Mimi Delcheva",
-     "title":"Marketing",
+     "title":"Head of Marketing",
      "avatar":"/images/staff/mimi.jpg",
      "internal": true,
      "links":[
@@ -147,7 +147,7 @@
   {
      "id": "nedelcho",
      "name":"Nedelcho Delchev",
-     "title":"CEO",
+     "title":"Cheif Executive Officer",
      "avatar":"/images/staff/nedelcho.jpg",
      "internal": true,
      "links":[
@@ -164,7 +164,7 @@
   {
      "id": "nedelchojr",
      "name":"Nedelcho Delchev Jr.",
-     "title":"Applications",
+     "title":"Head of Applications",
      "avatar":"/images/staff/nedelchojr.jpg",
      "internal": true,
      "links":[
@@ -181,7 +181,7 @@
   {
      "id": "stan",
      "name":"Stan Genchev",
-     "title":"UX",
+     "title":"Head of UX",
      "avatar":"/images/staff/stan.jpg",
      "internal": true,
      "links":[
@@ -198,7 +198,7 @@
   {
      "id": "tomi",
      "name":"Tomislav Ivanov",
-     "title":"Student",
+     "title":"Developer",
      "avatar":"/images/staff/tomi.jpg",
      "internal": true,
      "links":[
@@ -215,7 +215,7 @@
   {
      "id": "vladimir",
      "name":"Vladimir Mutafov",
-     "title":"Research",
+     "title":"Head of Research",
      "avatar":"/images/staff/vladimir.jpg",
      "internal": true,
      "links":[
@@ -232,7 +232,7 @@
   {
      "id": "yordan",
      "name":"Yordan Pavlov",
-     "title":"CTO",
+     "title":"Chief Technology Officer",
      "avatar":"/images/staff/yordan.jpg",
      "internal": true,
      "links":[
@@ -249,7 +249,7 @@
   {
      "id": "pavel",
      "name":"Pavel Baltiyski",
-     "title":"Guest (ABAP/BI/BW)",
+     "title":"Guest Star (ABAP/BI/BW)",
      "avatar":"/images/staff/pavel.jpg",
      "internal": false,
      "links":[
