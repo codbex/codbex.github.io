@@ -10,6 +10,9 @@ editLink: false
 
 It is common to create BEx Variables which are processed within a Customer Exit with the help of ABAP coding.
 
+Follow the steps below or watch the recorded video:<br>
+<iframe width="100%" height="450" src="https://www.youtube.com/watch?v=C0l0HpGAdO4" frameborder="0" allowfullscreen></iframe>
+
 <img src="/images/2024-10-27-migrate-bex-abap-snowflake-tableau/global-settings.png" alt="global-settings.png">
 
 Coding can be implemented within BADI or User-Exit but to avoid locking and versioning issues (a well known ABAP problem where 2 people cannot work on the same piece of coding and transport locking) many customers are implementing a wrapper class, which dynamically calls the respective class for each variable.
