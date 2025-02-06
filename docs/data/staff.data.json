@@ -34,6 +34,23 @@
      ]
   },
   {
+     "id": "bobi",
+     "name":"Borislav Milanov",
+     "title":"Developer",
+     "avatar":"/images/staff/bobi.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/bob4o-afk"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/borislav-milanov-b2a941281/"
+        }
+     ]
+  },
+  {
      "id": "desislava",
      "name":"Desislava Rasheva",
      "title":"Legal Advisor",
@@ -175,6 +192,23 @@
         {
            "icon":"linkedin",
            "link":"https://www.linkedin.com/in/nedelcho-delchev/"
+        }
+     ]
+  },
+  {
+     "id": "nikol",
+     "name":"Nikol Georgieva",
+     "title":"Developer",
+     "avatar":"/images/staff/nikol.jpg",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/NicoleNG18"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/nikol-georgieva-500b3522b/"
         }
      ]
   },
