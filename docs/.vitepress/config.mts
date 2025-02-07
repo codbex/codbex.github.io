@@ -582,8 +582,9 @@ export default defineConfig({
     },
 
     socialLinks: [
+      { icon: 'youtube', link: 'https://www.youtube.com/@codbex7089/videos' },
       { icon: 'github', link: 'https://github.com/codbex/' },
-      { icon: 'linkedin', link: 'https://www.linkedin.com/company/codbex/' }
+      { icon: 'linkedin', link: 'https://www.linkedin.com/company/codbex/' },
     ],
 
     lastUpdated: {
