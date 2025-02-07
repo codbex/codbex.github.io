@@ -247,6 +247,23 @@
      ]
   },
   {
+     "id": "valio",
+     "name":"Valentin Asenov",
+     "title":"Developer",
+     "avatar":"/images/staff/valio.png",
+     "internal": true,
+     "links":[
+        {
+           "icon":"github",
+           "link":"https://github.com/alt-plus-f4"
+        },
+        {
+           "icon":"linkedin",
+           "link":"https://www.linkedin.com/in/valentin-assenov/"
+        }
+     ]
+  },
+  {
      "id": "vladimir",
      "name":"Vladimir Mutafov",
      "title":"Head of Research",
