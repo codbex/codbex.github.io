@@ -61,7 +61,7 @@ features:
 					Implementing the task’s custom script require additional time.</p>
 			</div>
 			<div class="image">
-				<img src="/images/features/bpm-perspective.png" alt="Screenshot" class="screenshot editable" />
+				<img src="/images/ide-bpm.png" alt="Screenshot" class="screenshot editable" />
 			</div>
 		</div>
 	</section>
@@ -82,6 +82,28 @@ features:
 			</div>
 		</div>
 	</section>
+	<section>
+		<div class="container flex">
+			<div class="text">
+				<h2>Effortlessly Connect Your Systems and Data with <strong>Integration Services</strong></h2>
+				<p>Our Integration Services provide a seamless way to connect your existing tools, platforms, and data sources into a unified, efficient ecosystem. Whether you're integrating on-premise applications, cloud services, or third-party APIs, our customizable, scalable solutions ensure smooth data flow and system interoperability. With automated workflows and real-time data processing, Codbex helps you reduce manual intervention, improve data accuracy, and enhance collaboration across teams. Our integration framework is built to grow with your business, empowering you to optimize operations and unlock new opportunities without disruption.</p>
+			</div>
+			<div class="image">
+				<img src="/images/ide-integrations.png" alt="Screenshot" class="screenshot editable" />
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container flex">
+			<div class="text">
+				<h2>Unlock Advanced <strong>Customization</strong> with Flexibility and Precision</h2>
+				<p>While codbex empowers teams with low-code architecture for rapid development, we also provide powerful pro-code tooling that allows developers to create tailored extensions and integrations. This unique combination ensures that businesses can accelerate innovation without sacrificing the ability to implement complex, custom solutions. With our pro-code capabilities, developers can enhance the platform’s functionality by writing custom scripts, creating advanced workflows, and integrating third-party systems with full control. These tools provide the flexibility to implement sophisticated business logic, integrate with unique data sources, and ensure that your custom features are fully optimized for your needs.</p>
+			</div>
+			<div class="image">
+				<img src="/images/ide-coding.png" alt="Screenshot" class="screenshot editable" />
+			</div>
+		</div>
+	</section>
 	<section class="partners">
 		<h2><strong>Build</strong> your next industry solution faster</h2>
 		<div class="button alt"><a href="mailto:office@codbex.com">Join as a Partner</a></div>
@@ -98,6 +120,7 @@ features:
 				<li><a href="https://bix-consulting.com/" target="_blank">biX</a></li>
 				<li><a href="https://bosch.com/" target="_blank">Bosch</a></li>
 				<li><a href="https://clolytic.com/" target="_blank">Clolytic</a></li>
+				<li><a href="https://www.telekom.com/en" target="_blank">Deutsche Telekom</a></li>
 				<li><a href="https://digitall.com" target="_blank">Digitall</a></li>
 				<li><a href="https://lights.digital" target="_blank">Digital Lights</a></li>
 				<li><a href="https://glencore.com" target="_blank">Glencore</a></li>
@@ -108,7 +131,7 @@ features:
 				<li><a href="https://snowflake.com/" target="_blank">Snowflake</a></li>
 				<li><a href="https://www.sofia.bg/web/sofia-municipality" target="_blank">Sofia Municipality</a></li>
 				<li><a href="https://valantic.com/" target="_blank">valantic</a></li>
-				<li><a href="https://wisertech.com/" target="_blank">Wiser</a></li>
+				<!-- <li><a href="https://wisertech.com/" target="_blank">Wiser</a></li> -->
 			</ul>
 			</div>
 	</section>
