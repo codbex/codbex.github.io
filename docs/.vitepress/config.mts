@@ -58,6 +58,7 @@ export default defineConfig({
             { text: 'Iapetus', link: '/products/iapetus' },
             { text: 'Rhea', link: '/products/rhea' },
             { text: 'Kronos', link: '/products/kronos' },
+            { text: 'Phoebe', link: '/products/phoebe' },
           ]
         }
       ],
