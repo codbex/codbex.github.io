@@ -12,7 +12,14 @@ hero:
       src: /images/products/atlas.svg
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-atlas" target="_blank" class="product-link">Source Code</a></div>
+<div class="product-tag">
+
+<a href="https://github.com/codbex/codbex-atlas" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<a href="https://github.com/codbex/codbex-atlas/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+
+</div>
+
 
 Designed to empower developers and DevOps teams alike, this edition includes all available features for end-to-end development processes, from database modeling and management to operations and monitoring. With a rich set of capabilities, the Atlas Edition enables you to build, deploy, and manage cloud applications with ease.
 

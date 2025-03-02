@@ -12,7 +12,13 @@ hero:
       src: /images/products/phoebe.svg
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-phoebe" target="_blank" class="product-link">Source Code</a></div>
+<div class="product-tag">
+
+<a href="https://github.com/codbex/codbex-phoebe" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<a href="https://github.com/codbex/codbex-phoebe/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+
+</div>
 
 The Phoebe Edition at its core, it is Apache Airflow which enables Directed Acyclic Graphs (DAGs) to define workflows, where tasks are represented as nodes, and dependencies between tasks form the edges of the graph. This structure ensures that workflows execute in the correct sequence while allowing for retries, logging, and monitoring. It is designed to help organizations manage complex data workflows and automate tasks in a scalable and reliable way.
 

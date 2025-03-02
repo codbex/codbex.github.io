@@ -12,7 +12,13 @@ hero:
       src: /images/products/oceanus.svg
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-oceanus" target="_blank" class="product-link">Source Code</a></div>
+<div class="product-tag">
+
+<a href="https://github.com/codbex/codbex-oceanus" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<a href="https://github.com/codbex/codbex-oceanus/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+
+</div>
 
 Designed with a focus on CMIS compliant repositories, Oceanus Edition includes all the necessary features to organize, preview, import, and export documents with ease. Whether you're structuring content for organizational or project needs, Oceanus Edition empowers users with intuitive tools and seamless integration with FTP/SFTP protocols.
 

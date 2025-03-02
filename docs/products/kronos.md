@@ -12,7 +12,13 @@ hero:
       src: /images/products/kronos.svg
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-kronos" target="_blank" class="product-link">Source Code</a></div>
+<div class="product-tag">
+
+<a href="https://github.com/codbex/codbex-kronos" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<a href="https://github.com/codbex/codbex-kronos/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+
+</div>
 
 The Kronos Edition of the <b>codbex</b> platform provides a compatible environment for [SAP HANA Extended Application Services](https://help.sap.com/viewer/52715f71adba4aaeb480d946c742d1f6/2.0.03/en-US/a6c0749255d84a81a154a7fc87dd33ce.html) (XS) based applications. Deployed as a Docker container on Kubernetes, Kronos Edition offers seamless integration with [SAP HANA](https://www.sap.com/products/hana.html?btp=991d50bf-fa15-4979-ac4b-b280b0eb951f) and extends compatibility to other JDBC compliant RDBMS, such as PostgreSQL. Kronos Edition is the official fork of the [Project "XSK"](https://www.xsk.io) which was discontinued by SAP in 2022, ensuring continuity and support for XS applications.
 

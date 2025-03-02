@@ -12,7 +12,13 @@ hero:
       src: /images/products/hyperion.svg
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-hyperion" target="_blank" class="product-link">Source Code</a></div>
+<div class="product-tag">
+
+<a href="https://github.com/codbex/codbex-hyperion" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<a href="https://github.com/codbex/codbex-hyperion/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+
+</div>
 
 The Hyperion Edition seamlessly integrates BPM capabilities with robust JavaScript development features, providing a comprehensive solution for optimizing business processes and accelerating application development.
 

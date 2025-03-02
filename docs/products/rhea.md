@@ -12,7 +12,13 @@ hero:
       src: /images/products/rhea.svg
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-rhea" target="_blank" class="product-link">Source Code</a></div>
+<div class="product-tag">
+
+<a href="https://github.com/codbex/codbex-rhea" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<a href="https://github.com/codbex/codbex-rhea/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+
+</div>
 
 With a focus on Entity Data Modelling and Form Design, Rhea Edition empowers users to design domain models and custom forms with ease. Additionally, Rhea Edition includes robust JavaScript development features from the Helios Edition, providing a unified platform for modelling and application development.
 

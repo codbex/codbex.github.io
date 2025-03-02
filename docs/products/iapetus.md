@@ -12,7 +12,13 @@ hero:
       src: /images/products/iapetus.svg
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-iapetus" target="_blank" class="product-link">Source Code</a></div>
+<div class="product-tag">
+
+<a href="https://github.com/codbex/codbex-iapetus" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<a href="https://github.com/codbex/codbex-iapetus/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+
+</div>
 
 The Iapetus Edition provides all the necessary features to streamline your integration processes. Additionally, Iapetus Edition includes robust JavaScript development features from the Helios Edition, offering a unified platform for building and managing integrations and applications.
 

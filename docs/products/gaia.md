@@ -9,7 +9,13 @@ hero:
   text: Runtime basis
 ---
 
-<div class="product-tag"><a href="https://github.com/codbex/codbex-gaia" target="_blank" class="product-link">Source Code</a></div>
+<div class="product-tag">
+
+<a href="https://github.com/codbex/codbex-gaia" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+
+<a href="https://github.com/codbex/codbex-gaia/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+
+</div>
 
 Gaia Edition includes all the basic platform runtime for products.
 
