@@ -38,7 +38,7 @@
      "name":"Borislav Milanov",
      "title":"Developer",
      "avatar":"/images/staff/bobi.jpg",
-     "internal": true,
+     "internal": false,
      "links":[
         {
            "icon":"github",
@@ -85,7 +85,7 @@
      "name":"Emil Momchev",
      "title":"Developer",
      "avatar":"/images/staff/emil.jpg",
-     "internal": true,
+     "internal": false,
      "links":[
         {
            "icon":"github",
