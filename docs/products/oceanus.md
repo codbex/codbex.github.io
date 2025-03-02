@@ -14,9 +14,11 @@ hero:
 
 <div class="product-tag">
 
-<a href="https://github.com/codbex/codbex-oceanus" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/codbex/codbex-oceanus)
 
-<a href="https://github.com/codbex/codbex-oceanus/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge&logoColor=white"/></a>
+[![Eclipse License](https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg?style=for-the-badge)](https://github.com/codbex/codbex-oceanus/blob/main/LICENSE)
+
+[![Maven Central](https://img.shields.io/maven-central/v/com.codbex.oceanus/codbex-oceanus-application.svg?style=for-the-badge)](https://central.sonatype.com/namespace/com.codbex.oceanus)
 
 </div>
 
