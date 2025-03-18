@@ -12,6 +12,8 @@ publish_date: March 18, 2025
 *******************************
 
 In today’s fast-paced business world, low-code platforms are revolutionizing app development, enabling users to create powerful applications with minimal coding. Rhea Edition simplifies application modeling by offering a robust environment for designing domain models, custom forms, and automating business processes. One standout feature of Rhea is “Depends On”, which ensures that data and workflows are seamlessly interconnected. This unique feature automatically adjusts related elements, making it easier to manage complex app relationships and build scalable solutions faster.
+
+
 ## Modeling the Application
 
 ---
@@ -60,11 +62,13 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
     - `Id` for dropdown key
     - `Name` for dropdown value
 
-
 ## Customer Entity
 - **Add perspective for Customer**
 - **Create entity `Customer`**
-- Right-click on the entity and open **Properties**. In the **User Interface** section, set **Layout type** to *Manage master entity* and choose the already defined perspective - **Customer**.
+- Open **Properties**
+  - In the **User Interface** section:
+    - Set **Layout type** to `Manage Master Entities`
+    - Choose the already defined perspective - `Customer`
 - **Add text field** for `Name`
 - **Add relationship to `Country`**
   - From **User Interface** view, choose:
@@ -90,14 +94,18 @@ Fill the widgets with:
 #### **Case I - Country-City Dependency**
 > This is the so-called **“Country-City Dependency”**, which represents the relation via the **Id** of the referred entity. This configuration selects a **country**, and the **City dropdown** will then display only the cities that belong to the chosen country.
 
+
 ![country-city-depends-on-demo](../../../../images/2025-03-18-rhea-depends-on/countryCityDependsDemo.gif)
 
 ---
 
 ## Customer Payment Entity
 - **Create entity `CustomerPayment`**
-- Right-click on the entity. From **General tab**, set **entity type** to *Dependent*.
-- Open **Properties**. In the **User Interface** section, set **Layout type** to *Manage Details Entity* and choose the already defined perspective - **Customer**.
+- Right-click on the entity. From **General tab**, set **entity type** to *`Dependent`*.
+- Open **Properties**
+  - In the **User Interface** section:
+    - Set **Layout type** to `Manage Details Entity`
+    - Choose the already defined perspective - `Customer`
 - **Add text field** for `Title`
 - **Add relationship to `Customer`** and set its properties:
 
@@ -114,7 +122,10 @@ Fill the widgets with:
 ## Unit Of Measurement Entity
 - **Add perspective for `UoM`**
 - **Create entity `UoM` (Unit of Measurement)**
-- Right-click on the entity and open **Properties**. In the **User Interface** section, set **Layout type** to *Manage master entity* and choose the already defined perspective - **UoM**.
+- Open **Properties**
+  - In the **User Interface** section:
+    - Set **Layout type** to `Manage Master Entity`
+    - Choose the already defined perspective - `UoM`
 - **Add text field** for `Name`
 
 ---
@@ -122,7 +133,10 @@ Fill the widgets with:
 ## Product Entity
 - **Add perspective for `Product`**
 - **Create entity `Product`**
-- Right-click on the entity and open **Properties**. In the **User Interface** section, set **Layout type** to *Manage master entity* and choose the already defined perspective - **Product**.
+- Open **Properties**
+- In the **User Interface** section:
+    - Set **Layout type** to `Manage Master Entity`
+    - Choose the already defined perspective - `Product`
 - **Add text field** for `Name`
 - **Add relationship to `UoM`**
   - From **User Interface** view, choose:
@@ -136,7 +150,10 @@ Fill the widgets with:
 ## Sales Order Entity
 - **Add perspective for `Sales Order`**
 - **Create entity `Sales Order`**
-- Right-click on the entity and open **Properties**. In the **User Interface** section, set **Layout type** to *Manage master entity* and choose the already defined perspective - **Sales Order**.
+- Open **Properties**
+- In the **User Interface** section:
+    - Set **Layout type** to `Manage Master Entity`
+    - Choose the already defined perspective - `SalesOrder`
 - **Add relationship to `Customer`**
   - From **User Interface** view, choose:
     - `Dropdown` for widget type
@@ -149,7 +166,10 @@ Fill the widgets with:
 ## Sales Order Item Entity
 - **Create entity `SalesOrderItem`**
 - Right-click on the entity. From **General tab**, set **entity type** to *Dependent*.
-- Open **Properties**. In the **User Interface** section, set **Layout type** to *Manage Details Entity* and choose the already defined perspective - **SalesOrder**.
+- Open **Properties**
+- In the **User Interface** section:
+    - Set **Layout type** to `Manage Details Entity`
+    - Choose the already defined perspective - `SalesOrder`
 - **Add relationship to `SalesOrder`** and set its properties.
 - **Add relationship to `Product`**
   - From **User Interface** view, choose:
@@ -186,7 +206,10 @@ Another use of the **"Depends On"** feature. Fill the widgets with:
 ## Sales Order Payment Entity
 - **Create entity `SalesOrderPayment`**
 - Right-click on the entity. From **General tab**, set **entity type** to *Dependent*.
-- Open **Properties**. In the **User Interface** section, set **Layout type** to *Manage Details Entity* and choose the already defined perspective - **SalesOrder**.
+- Open **Properties**
+- In the **User Interface** section:
+    - Set **Layout type** to `Manage Details Entity`
+    - Choose the already defined perspective - `SalesOrder`
 - **Add relationship to `SalesOrder`** and set its properties.
 - **Add relationship to `Customer`**
   - From **User Interface** view, choose:
@@ -256,8 +279,8 @@ In this guide, we’ve shown how [Rhea](https://www.codbex.com/products/rhea) by
 
   - `Case IV` - Entity Configuration: Managing Master and Dependent Entities
 
-Ready to build your own? Click here to learn more or access the Sales Order App code.
-Rhea by codbex helps organizations turn complex visions into fully-functional apps quickly, without heavy technical expertise. The "Depends On" feature ensures seamless data flow between related entities, keeping your app consistent and efficient. For businesses looking to stay ahead, Rhea by codbex offers a flexible, cost-effective solution to build tailored applications and manage data with ease.
+Ready to build your own? Click [here](https://github.com/codbex/codbex-sample-model-depends-on) to learn more or access the Sales Order App code.
+codbex Rhea helps organizations turn complex visions into fully-functional apps quickly, without heavy technical expertise. The **"Depends On"** feature ensures seamless data flow between related entities, keeping your app consistent and efficient. For businesses looking to stay ahead, codbex Rhea offers a flexible, cost-effective solution to build tailored applications and manage data with ease.
 
 
 
