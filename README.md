@@ -2,7 +2,7 @@
 
 ## Overview
 
-Sample Static Site Generation (SSG) based on [VitePress](https://vitepress.dev/).
+Website of codbex.com Static Site Generation (SSG) based on [VitePress](https://vitepress.dev/).
 - [Getting Started](https://vitepress.dev/guide/getting-started)
 - [Routing](https://vitepress.dev/guide/routing)
 - [Markdown Extensions](https://vitepress.dev/guide/markdown)
@@ -11,7 +11,7 @@ Sample Static Site Generation (SSG) based on [VitePress](https://vitepress.dev/)
 - [Using a Custom Theme](https://vitepress.dev/guide/custom-theme)
 - [Deploy Your VitePress Site](https://vitepress.dev/guide/deploy)
 
-> Check [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-www-codbex-com/4u4nv0k9n1?form_factor=mobile) for the codbex-sample-vitepress site.
+> Check [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-codbex-com/2r3r99r5bh?form_factor=mobile) for the codbex.com site.
 
 ## Development
 
