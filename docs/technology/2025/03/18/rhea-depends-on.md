@@ -52,10 +52,12 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
 
 ![relatioship](../../../../images/2025-03-18-rhea-depends-on/relationship.gif)
 
-- From **User Interface** view, choose:
-    - **`Dropdown`** for widget type
-    - **`Id`** for dropdown key
-    - **`Name`** for dropdown value
+Configuration for **`Country`** field
+
+ - From **User Interface** view, choose:
+   - **`Dropdown`** for widget type
+   - **`Id`** for dropdown key
+   - **`Name`** for dropdown value
 
 #### Customer Entity
 - Add perspective for **`Customer`**
@@ -66,18 +68,27 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
     - Choose the already defined perspective - **`Customer`**
 - Add text field for **`Name`**
 - Add relationship to **`Country`**
-    - From **User Interface** view, choose:
-        - **`Dropdown`** for widget type
-        - **`Id`** for dropdown key
-        - **`Name`** for dropdown value
+
+Configuration for **`Country`** field
+
+ - From **User Interface** view, choose:
+    - **`Dropdown`** for widget type
+    - **`Id`** for dropdown key
+    - **`Name`** for dropdown value
+
 - Add relationship to **`City`**
-    - From **User Interface** view, choose:
-        - **`Dropdown`** for widget type
-        - **`Id`** for dropdown key
-        - **`Name`** for dropdown value
+
+Configuration for **`City`** field
+
+  - From **User Interface** view, choose:
+    - **`Dropdown`** for widget type
+    - **`Id`** for dropdown key
+    - **`Name`** for dropdown value
 - Add text field for **`Address`**
 
 ### Configuration:
+
+In the **`Country`** field set:
 
 - Depends on Property: **`Country`**
 - Depends on Entity: **`Country`**
@@ -88,10 +99,9 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
 
 ### Case I - Country-City Dependency - Showcase
 
-> **Note:** This is the so-called **“Country-City Dependency”**, which represents the relation via the **Id** of the referred entity. This configuration selects a **Country**, and the **City dropdown** will then display only the cities that belong to the chosen **Country**.
-
 ![country-city-depends-on-demo](../../../../images/2025-03-18-rhea-depends-on/countryCityDependsDemo.gif)
 
+> **Note:** This is the so-called **“Country-City Dependency”**, which represents the relation via the **Id** of the referred entity. This configuration selects a **Country**, and the **City dropdown** will then display only the cities that belong to the chosen **Country**.
 
 ## Case II - Product-UoM
 
@@ -104,15 +114,18 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
 - In the **User Interface** section:
     - Set **Layout type** to **`Manage Details Entity`**
     - Choose the already defined perspective - **`Customer`**
-- Add text field for **`Title`**
+- Add text field for **`Name`**
 - Add relationship to **`Customer`** and set its properties:
 
 <img src="../../../../images/2025-03-18-rhea-depends-on/customerPaymentRelationship.png" width="200" height="200">
+
+Configuration for **`Customer`** field
 
 - From **User Interface** view, choose:
     - **`Dropdown`** for widget type
     - **`Id`** for dropdown key
     - **`Name`** for dropdown value
+  
 - Add number field for **`Amount`**
 
 #### Unit Of Measurement Entity
@@ -133,10 +146,14 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
     - Choose the already defined perspective - **`Product`**
 - Add text field for **`Name`**
 - Add relationship to **`UoM`**
-    - From **User Interface** view, choose:
-        - **`Dropdown`** for widget type
-        - **`Id`** for dropdown key
-        - **`Name`** for dropdown value
+
+Configuration for **`UoM`** field
+
+  - From **User Interface** view, choose:
+    - **`Dropdown`** for widget type
+    - **`Id`** for dropdown key
+    - **`Name`** for dropdown value
+    
 - Add decimal field for **`Price`**
 
 #### Sales Order Entity
@@ -147,10 +164,14 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
     - Set **Layout type** to **`Manage Master Entity`**
     - Choose the already defined perspective - **`Product`**
 - Add relationship to **`SalesOrder`**
-    - From **User Interface** view, choose:
-        - **`Dropdown`** for widget type
-        - **`Id`** for dropdown key
-        - **`Name`** for dropdown value
+
+Configuration for **`SalesOrder`** field
+
+  - From **User Interface** view, choose:
+    - **`Dropdown`** for widget type
+    - **`Id`** for dropdown key
+    - **`Name`** for dropdown value
+    
 - Add date field for **`Date`**
 
 #### Sales Order Item Entity
@@ -162,17 +183,26 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
     - Choose the already defined perspective - **`SalesOrder`**
 - Add relationship to **`SalesOrder`** and set its properties.
 - Add relationship to **`Product`**
-    - From **User Interface** view, choose:
-        - **`Dropdown`** for widget type
-        - **`Id`** for dropdown key
-        - **`Name`** for dropdown value
+
+Configuration for **`Product`** field
+     
+  - From **User Interface** view, choose:
+     - **`Dropdown`** for widget type
+     - **`Id`** for dropdown key
+     - **`Name`** for dropdown value
+    
 - Add relationship to **`UoM`**
-    - From **User Interface** view, choose:
-        - **`Dropdown`** for widget type
-        - **`Id`** for dropdown key
-        - **`Name`** for dropdown value
+
+Configuration for **`UoM`** field
+
+  - From **User Interface** view, choose:
+    - **`Dropdown`** for widget type
+    - **`Id`** for dropdown key
+    - **`Name`** for dropdown value
 
 ### Configuration
+
+In the **`UoM`** field set: 
 
 - Depends on Property: **`Product`**
 - Depends on Entity: **`Product`**
@@ -181,10 +211,9 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
 
 ### Case II - Product-UoM - Showcase
 
-> **Note:** This configuration selects the chosen **Product**, retrieves its **UoM**, and automatically sets it for the **Sales Order Item**.
-
 ![products-uom](../../../../images/2025-03-18-rhea-depends-on/productsUoM.gif)
 
+> **Note:** This configuration selects the chosen **Product**, retrieves its **UoM**, and automatically sets it for the **Sales Order Item**.
 
 ## Case III - Product-Price
 
@@ -193,9 +222,10 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
 In this case we will reuse the entities from the previous section, just will add one more configuration for the user interface:
 
 ### Configuration
-
 - Add decimal field for **`Price`**
-  Another use of the **"Depends On"** feature. Fill the widgets with:
+
+In the **`Price`** field set:
+
 - Depends on Property: **`Product`**
 - Depends on Entity: **`Product`**
 - Value From: **`Price`**
@@ -203,11 +233,9 @@ In this case we will reuse the entities from the previous section, just will add
 
 ### Case III - Product-Price - Showcase
 
-> **Note:** This configuration selects the chosen **Product**, retrieves its **Price**, and automatically sets it for the **Sales Order Item**.
-
-> The **"Depends On"** function ensures that two fields are **automatically populated** based on values from other entities.
-
 ![products-uom](../../../../images/2025-03-18-rhea-depends-on/productsUoM.gif)
+
+> **Note:** This configuration selects the chosen **Product**, retrieves its **Price**, and automatically sets it for the **Sales Order Item**.
 
 ## Case IV - Order-Customer
 
@@ -222,12 +250,17 @@ In this case we will reuse the entities from the previous section, just will add
     - Choose the already defined perspective - **`SalesOrder`**
 - Add relationship to **`SalesOrder`** and set its properties.
 - Add relationship to **`Customer`**
-    - From **User Interface** view, choose:
-        - **`Dropdown`** for widget type
-        - **`Id`** for dropdown key
-        - **`Name`** for dropdown value
+
+Configuration for **`Customer`** field
+
+  - From **User Interface** view, choose:
+    - **`Dropdown`** for widget type
+    - **`Id`** for dropdown key
+    - **`Name`** for dropdown value
 
 ### Configuration:
+
+In the **`Customer`** field set:
 
 - Depends on Property: **`SalesOrder`**
 - Depends on Entity: **`SalesOrder`**
@@ -235,49 +268,70 @@ In this case we will reuse the entities from the previous section, just will add
 - Filter By: **`Id`**
 
 
-### **Case III - Multi-step Process**
+### Case IV - Order-Customer - Showcase
 
-Next three configurations ensure that:
-1. We retrieve only the **Customer** from the **Sales Orders**.
-2. We include their respective **Payments**.
-3. We automatically set the **Payment Amounts**.
-
-### **Case IV - Entity Configuration: Managing Master and Dependent Entities**
-
-Another use of the **"Depends On"** feature. Fill the widgets with:
+![customer](../../../../images/2025-03-18-rhea-depends-on/customer.gif)
 
 > **Note:** This configuration selects **Sales Order**, and the **Customer dropdown** will then display only the **Customers** that belong to the chosen **Sales Order**.
 
+## Case V - Customer-CustomerPayment
 
+### Entities
 
+In this case we will reuse the entities from the previous section, just will add one more configuration for the user interface:
 
 - Add relationship to **`CustomerPayment`**
-    - From **User Interface** view, choose:
-        - **`Dropdown`** for widget type
-        - **`Id`** for dropdown key
-        - **`Title`** for dropdown value
 
-Another use of the **"Depends On"** feature. Fill the widgets with:
+Configuration for **`CustomerPayment`** field
+
+  - From **User Interface** view, choose:
+    - **`Dropdown`** for widget type
+    - **`Id`** for dropdown key
+    - **`Title`** for dropdown value
+
+### Configuration:
+
+In the **`Customer`** field set:
+
 - Depends on Property: **`Customer`**
 - Depends on Entity: **`CustomerPayment`**
 - Value From: **`Id`**
 - Filter By: **`Customer`**
+
+### Case V - Customer-CustomerPayment - Showcase
+
+![customer-payment-1](../../../../images/2025-03-18-rhea-depends-on/customerPayment1.gif)
+
 > **Note:** This configuration retrieves the **Customer**, and the **CustomerPayment dropdown** will then display only the **CustomerPayments** that belong to the chosen **Customer**.
 
+![customer-payment-2](../../../../images/2025-03-18-rhea-depends-on/customerPayment2.gif)
+
+## Case VI - CustomerPayment-Amount
+
 - Add decimal field for **`Amount`**
-  Another use of the **"Depends On"** feature. Fill the widgets with:
+
+### Configuration:
+
+In the **`Amount`** field set:
+
 - Depends on Property: **`CustomerPayment`**
 - Depends on Entity: **`CustomerPayment`**
 - Value From: **`Amount`**
+
+### Case VI - CustomerPayment-Amount - Showcase
+
+![payment-amount](../../../../images/2025-03-18-rhea-depends-on/paymentAmount.gif)
+
 > **Note:** This configuration retrieves the **CustomerPayment** and automatically sets the **Payment Amount**.
 
-![first-customer](../../../../images/2025-03-18-rhea-depends-on/firstCust.gif)
-
-![second-customer](../../../../images/2025-03-18-rhea-depends-on/secondCust.gif)
+With the last three configurations ensure that:
+1. We retrieve only the **Customer** from the **Sales Orders**.
+2. We include their respective **Payments**.
+3. We automatically set the **Payment Amounts**.
 
 ## **Final EDM**
 
-![final-EDM](../../../../images/2025-03-18-rhea-depends-on/finalEDM.png)
+![final-EDM](../../../../images/2025-03-18-rhea-depends-on/finalEDMFile.png)
 
 1. Right-click on **EDM file → Generate** and choose **Entity Data to JSON Transformer Model**.
 
@@ -289,13 +343,13 @@ Another use of the **"Depends On"** feature. Fill the widgets with:
 
 ## Conclusion
 In this guide, we’ve shown how [Rhea](https://www.codbex.com/products/rhea) by codbex simplifies building a Sales Order App. With features like the "Depends On" functionality, businesses can easily create dynamic apps with minimal coding.
-- **`Case I`** - Country-City Dependency -  represents the relation via the “Id” of the referred entity.
+- [**`Case I`**](#case-i-country-city-dependency) - Country-City Dependency -  represents the relation via the “Id” of the referred entity.
 
-- **`Case II`** - Field auto-population - This case retrieves the field from another entity and automatically populates it in our entity.
+- [**`Case II`**](#case-ii-product-uom) - Product-UoM - This case retrieves the field from another entity and automatically populates it in our entity.
 
-- **`Case III`** - Multi-step process that combines multiple uses of **`"Depends On"`** to achieve a final result.
+- [**`Case III`**](#case-iii-product-price) - Multi-step process that combines multiple uses of **`"Depends On"`** to achieve a final result.
 
-- **`Case IV`** - Entity Configuration: Managing Master and Dependent Entities
+- [**`Case IV`**](#case-iv-order-customer) - Entity Configuration: Managing Master and Dependent Entities
 
 Ready to build your own? [Click here](https://github.com/codbex/codbex-sample-model-depends-on) to learn more or access the Sales Order App code.
 Rhea by codbex helps organizations turn complex visions into fully-functional apps quickly, without heavy technical expertise. The **`"Depends On"`** feature ensures seamless data flow between related entities, keeping your app consistent and efficient. For businesses looking to stay ahead, Rhea by codbex offers a flexible, cost-effective solution to build tailored applications and manage data with ease.
