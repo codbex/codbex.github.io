@@ -272,9 +272,9 @@ In the **`Customer`** field set:
 
 ![customer](../../../../images/2025-03-18-rhea-depends-on/customer.gif)
 
-> **Note:** This configuration selects **Sales Order**, and the **Customer dropdown** will then display only the **Customers** that belong to the chosen **Sales Order**.
+> **Note:** This configuration selects **Sales Order**, and the **Customer dropdown** will then display only the **Customer** that belongs to the chosen **Sales Order**.
 
-## Case V - Customer-CustomerPayment
+## Case V - Customer-Payment
 
 ### Entities
 
@@ -287,7 +287,7 @@ Configuration for **`CustomerPayment`** field
   - From **User Interface** view, choose:
     - **`Dropdown`** for widget type
     - **`Id`** for dropdown key
-    - **`Title`** for dropdown value
+    - **`Name`** for dropdown value
 
 ### Configuration:
 
@@ -298,7 +298,7 @@ In the **`Customer`** field set:
 - Value From: **`Id`**
 - Filter By: **`Customer`**
 
-### Case V - Customer-CustomerPayment - Showcase
+### Case V - Customer-Payment - Showcase
 
 ![customer-payment-1](../../../../images/2025-03-18-rhea-depends-on/customerPayment1.gif)
 
@@ -306,7 +306,7 @@ In the **`Customer`** field set:
 
 ![customer-payment-2](../../../../images/2025-03-18-rhea-depends-on/customerPayment2.gif)
 
-## Case VI - CustomerPayment-Amount
+## Case VI - Payment-Amount
 
 - Add decimal field for **`Amount`**
 
@@ -318,7 +318,7 @@ In the **`Amount`** field set:
 - Depends on Entity: **`CustomerPayment`**
 - Value From: **`Amount`**
 
-### Case VI - CustomerPayment-Amount - Showcase
+### Case VI - Payment-Amount - Showcase
 
 ![payment-amount](../../../../images/2025-03-18-rhea-depends-on/paymentAmount.gif)
 
@@ -352,9 +352,9 @@ In this guide, we’ve shown how [Rhea](https://www.codbex.com/products/rhea) by
 
 - [**`Case IV`**](#case-iv-order-customer) - Order-Customer - This case gets the selected entity and influences the other entity dropdown, which will adjust to show only the options associated with the chosen entity.
 
-- [**`Case V`**](#case-v-customer-customerpayment) - Customer-CustomerPayment -  represents the relation via the “Customer” of the referred entity.
+- [**`Case V`**](#case-v-customer-customerpayment) - Customer-Payment -  represents the relation via the “Customer” of the referred entity.
 
-- [**`Case VI`**](#case-vi-customerpayment-amount) - CustomerPayment-Amount - This case retrieves the field from another entity and automatically populates it in our entity.
+- [**`Case VI`**](#case-vi-customerpayment-amount) - Payment-Amount - This case retrieves the field from another entity and automatically populates it in our entity.
 
 Ready to build your own? [Click here](https://github.com/codbex/codbex-sample-model-depends-on) to learn more or access the Sales Order App code.
 Rhea by codbex helps organizations turn complex visions into fully-functional apps quickly, without heavy technical expertise. The **`"Depends On"`** feature ensures seamless data flow between related entities, keeping your app consistent and efficient. For businesses looking to stay ahead, Rhea by codbex offers a flexible, cost-effective solution to build tailored applications and manage data with ease.
