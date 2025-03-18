@@ -127,6 +127,7 @@ export default defineConfig({
         {
           text: 'Technology',
           items: [
+            { text: 'How "Depends On" feature in Rhea Simplifies App Development', link: '/technology/2025/03/18/rhea-depends-on' },
             { text: 'Migration to VitePress from Jekyll and Material for MkDocs', link: '/technology/2024/12/17/migration-to-vitepress' },
             { text: 'Building and Releasing Docker Image for codbex Applications', link: '/technology/2024/11/18/build-and-release-docker-image-for-codbex-applications' },
             { text: 'Migrate BW Query (BEx) with ABAP to Snowflake with Tableau', link: '/technology/2024/10/27/migrate-bex-abap-snowflake-tableau' },
