@@ -9,15 +9,17 @@ editLink: false
 
 ## Introduction
 
-In today’s fast-paced business world, low-code platforms are revolutionizing app development, enabling users to create powerful applications with minimal coding. Rhea Edition simplifies application modeling by offering a robust environment for designing domain models, custom forms, and automating business processes. One standout feature of Rhea is **`"Depends On"`**, which ensures that data and workflows are seamlessly interconnected. This unique feature automatically adjusts related elements, making it easier to manage complex app relationships and build scalable solutions faster.
+In today’s fast-paced business world, low-code platforms are revolutionizing app development, enabling users to create powerful applications with minimal coding. Rhea Edition simplifies application modeling by offering a robust environment for designing domain models and custom forms. One standout feature of Rhea is **"Depends On"**, which enables that data coming from different entities is seamlessly interconnected. This unique feature automatically adjusts related elements, making it easier to manage complex app relationships and build scalable solutions faster in the No-Code manner.
 
-# Modeling the Application
+## Case I - Country-City Dependency
 
-##  Create a New Project
+### Entities
+
+#### Create a New Project
 - Create a new project and name it **`sales-orders-app`**.
 - Right-click on **Project → New → Entity Data Model** and name it **`sales-order-app.edm`**.
 
-## Country Entity
+#### Country Entity
 
 - Add Perspective for **`Country`**
 
@@ -36,7 +38,7 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
 
 - Add text field for **`Name`**
 
-## City Entity
+#### City Entity
 
 - Create entity and set its name to **`City`**
 - Right-click on the entity
@@ -55,7 +57,7 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
     - **`Id`** for dropdown key
     - **`Name`** for dropdown value
 
-## Customer Entity
+#### Customer Entity
 - Add perspective for **`Customer`**
 - Create entity **`Customer`**
 - Open **Properties**
@@ -74,7 +76,9 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
         - **`Id`** for dropdown key
         - **`Name`** for dropdown value
 - Add text field for **`Address`**
-  Fill the widgets with:
+
+### Configuration:
+
 - Depends on Property: **`Country`**
 - Depends on Entity: **`Country`**
 - Value From: **`Id`**
@@ -82,12 +86,18 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
 
 ![country-city-depends-on](../../../../images/2025-03-18-rhea-depends-on/country-city-depends-on.png)
 
-#### **Case I - Country-City Dependency**
+### Case I - Country-City Dependency - Showcase
+
 > **Note:** This is the so-called **“Country-City Dependency”**, which represents the relation via the **Id** of the referred entity. This configuration selects a **Country**, and the **City dropdown** will then display only the cities that belong to the chosen **Country**.
 
 ![country-city-depends-on-demo](../../../../images/2025-03-18-rhea-depends-on/countryCityDependsDemo.gif)
 
-## Customer Payment Entity
+
+## Case II - Product-UoM
+
+### Entities
+
+#### Customer Payment Entity
 - Create entity **`CustomerPayment`**
 - Right-click on the entity. From **General** tab, set **Entity Type** to *Dependent*.
 - Open **Properties**
@@ -105,7 +115,7 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
     - **`Name`** for dropdown value
 - Add number field for **`Amount`**
 
-## Unit Of Measurement Entity
+#### Unit Of Measurement Entity
 - Add perspective for **`UoM`**
 - Create entity **`UoM`** (Unit of Measurement)
 - Open **Properties**
@@ -114,7 +124,7 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
     - Choose the already defined perspective - **`UoM`**
 - Add text field for **`Name`**
 
-## Product Entity
+#### Product Entity
 - Add perspective for **`Product`**
 - Create entity **`Product`**
 - Open **Properties**
@@ -129,7 +139,7 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
         - **`Name`** for dropdown value
 - Add decimal field for **`Price`**
 
-## Sales Order Entity
+#### Sales Order Entity
 - Add perspective for **`SalesOrder`**
 - Create entity **`SalesOrder`**
 - Open **Properties**
@@ -143,7 +153,7 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
         - **`Name`** for dropdown value
 - Add date field for **`Date`**
 
-## Sales Order Item Entity
+#### Sales Order Item Entity
 - Create entity **`SalesOrderItem`**
 - Right-click on the entity. From **General tab**, set **Entity Type** to **`Dependent`**.
 - Open **Properties**
@@ -162,26 +172,48 @@ In today’s fast-paced business world, low-code platforms are revolutionizing a
         - **`Id`** for dropdown key
         - **`Name`** for dropdown value
 
-### **Case II - Field Auto-population**
-Another use of the **"Depends On"** feature. Fill the widgets with:
+### Configuration
+
 - Depends on Property: **`Product`**
 - Depends on Entity: **`Product`**
 - Value From: **`UoM`**
 - Filter By: **`Id`**
+
+### Case II - Product-UoM - Showcase
+
 > **Note:** This configuration selects the chosen **Product**, retrieves its **UoM**, and automatically sets it for the **Sales Order Item**.
+
+![products-uom](../../../../images/2025-03-18-rhea-depends-on/productsUoM.gif)
+
+
+## Case III - Product-Price
+
+### Entities
+
+In this case we will reuse the entities from the previous section, just will add one more configuration for the user interface:
+
+### Configuration
 
 - Add decimal field for **`Price`**
   Another use of the **"Depends On"** feature. Fill the widgets with:
 - Depends on Property: **`Product`**
 - Depends on Entity: **`Product`**
 - Value From: **`Price`**
+
+
+### Case III - Product-Price - Showcase
+
 > **Note:** This configuration selects the chosen **Product**, retrieves its **Price**, and automatically sets it for the **Sales Order Item**.
 
 > The **"Depends On"** function ensures that two fields are **automatically populated** based on values from other entities.
 
 ![products-uom](../../../../images/2025-03-18-rhea-depends-on/productsUoM.gif)
 
-## Sales Order Payment Entity
+## Case IV - Order-Customer
+
+### Entities
+
+#### Sales Order Payment Entity
 - Create entity **`SalesOrderPayment`**
 - Right-click on the entity. From **General tab**, set **Entity Type** to **`Dependent`**.
 - Open **Properties**
@@ -195,14 +227,17 @@ Another use of the **"Depends On"** feature. Fill the widgets with:
         - **`Id`** for dropdown key
         - **`Name`** for dropdown value
 
-### **Case III - Multi-step Process**
-### **Case IV - Entity Configuration: Managing Master and Dependent Entities**
-Another use of the **"Depends On"** feature. Fill the widgets with:
+### Configuration:
+
 - Depends on Property: **`SalesOrder`**
 - Depends on Entity: **`SalesOrder`**
 - Value From: **`Customer`**
 - Filter By: **`Id`**
+
 > **Note:** This configuration selects **Sales Order**, and the **Customer dropdown** will then display only the **Customers** that belong to the chosen **Sales Order**.
+
+
+
 
 - Add relationship to **`CustomerPayment`**
     - From **User Interface** view, choose:
