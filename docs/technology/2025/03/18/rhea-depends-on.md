@@ -234,6 +234,18 @@ In this case we will reuse the entities from the previous section, just will add
 - Value From: **`Customer`**
 - Filter By: **`Id`**
 
+
+### **Case III - Multi-step Process**
+
+Next three configurations ensure that:
+1. We retrieve only the **Customer** from the **Sales Orders**.
+2. We include their respective **Payments**.
+3. We automatically set the **Payment Amounts**.
+
+### **Case IV - Entity Configuration: Managing Master and Dependent Entities**
+
+Another use of the **"Depends On"** feature. Fill the widgets with:
+
 > **Note:** This configuration selects **Sales Order**, and the **Customer dropdown** will then display only the **Customers** that belong to the chosen **Sales Order**.
 
 
@@ -258,11 +270,6 @@ Another use of the **"Depends On"** feature. Fill the widgets with:
 - Depends on Entity: **`CustomerPayment`**
 - Value From: **`Amount`**
 > **Note:** This configuration retrieves the **CustomerPayment** and automatically sets the **Payment Amount**.
-
-These three configurations ensure that:
-1. We retrieve only the **Customer** from the **Sales Orders**.
-2. We include their respective **Payments**.
-3. We automatically set the **Payment Amounts**.
 
 ![first-customer](../../../../images/2025-03-18-rhea-depends-on/firstCust.gif)
 
