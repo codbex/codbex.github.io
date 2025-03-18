@@ -342,14 +342,19 @@ With the last three configurations ensure that:
 <img src="../../../../images/2025-03-18-rhea-depends-on/generateApp.png" width="200" height="400">
 
 ## Conclusion
-In this guide, we’ve shown how [Rhea](https://www.codbex.com/products/rhea) by codbex simplifies building a Sales Order App. With features like the "Depends On" functionality, businesses can easily create dynamic apps with minimal coding.
+In this guide, we’ve shown how [Rhea](https://www.codbex.com/products/rhea) by codbex simplifies building a Sales Order App. With features like the **`"Depends On"`** functionality, businesses can easily create dynamic apps with minimal coding.
+
 - [**`Case I`**](#case-i-country-city-dependency) - Country-City Dependency -  represents the relation via the “Id” of the referred entity.
 
 - [**`Case II`**](#case-ii-product-uom) - Product-UoM - This case retrieves the field from another entity and automatically populates it in our entity.
 
-- [**`Case III`**](#case-iii-product-price) - Multi-step process that combines multiple uses of **`"Depends On"`** to achieve a final result.
+- [**`Case III`**](#case-iii-product-price) - Product-Price - This case retrieves the field from another entity and automatically populates it in our entity.
 
-- [**`Case IV`**](#case-iv-order-customer) - Entity Configuration: Managing Master and Dependent Entities
+- [**`Case IV`**](#case-iv-order-customer) - Order-Customer - This case gets the selected entity and influences the other entity dropdown, which will adjust to show only the options associated with the chosen entity.
+
+- [**`Case V`**](#case-v-customer-customerpayment) - Customer-CustomerPayment -  represents the relation via the “Customer” of the referred entity.
+
+- [**`Case VI`**](#case-vi-customerpayment-amount) - CustomerPayment-Amount - This case retrieves the field from another entity and automatically populates it in our entity.
 
 Ready to build your own? [Click here](https://github.com/codbex/codbex-sample-model-depends-on) to learn more or access the Sales Order App code.
 Rhea by codbex helps organizations turn complex visions into fully-functional apps quickly, without heavy technical expertise. The **`"Depends On"`** feature ensures seamless data flow between related entities, keeping your app consistent and efficient. For businesses looking to stay ahead, Rhea by codbex offers a flexible, cost-effective solution to build tailored applications and manage data with ease.
