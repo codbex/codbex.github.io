@@ -34,6 +34,9 @@ By leveraging **codbex’s** open-source, cloud-native approach, businesses can 
 
 With **codbex** now available on OTC Marketplace, enterprises can achieve faster innovation, greater efficiency, and future-proof modernization—without disruption.
 
-🔗 [Learn More](https://www.codbex.com/products/)
+
+🔗 [Explore our products on OTC today:](https://marketplace.otc.t-systems.com/)
+
+🔗 [Learn More about our Products](https://www.codbex.com/products/)
 
 Stay tuned for more updates as we continue to expand the capabilities of our products.
