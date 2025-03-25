@@ -99,6 +99,7 @@ export default defineConfig({
             { text: 'Our Products Now Available on Open Telekom Cloud Marketplace', link: '/news/2025/03/24/codbex-on-otc-marketplace' },
             { text: 'HackTUES 11 - Empowering Young Innovators', link: '/news/2025/03/22/hacktues-11-empowering-young-innovators' },
             { text: 'Kronos Now Available on the Snowflake Marketplace', link: '/news/2025/01/10/kronos-on-snowflake-marketplace' },
+            { text: 'jPrime 2024 - Innovation, Community, and Open Source', link: '/news/2024/05/29/jprime-2024-innovation-community-and-open-source' },
             { text: 'Celebrating Two Years of Excellence', link: '/news/2024/04/01/codbex-two-years' },
             { text: 'HackTUES X - Celebrating a Decade of Innovation', link: '/news/2024/03/16/hacktues-x-celebrating-a-decade-of-innovation' },
             { text: 'First Anniversary', link: '/news/2023/04/01/first-anniversary' },
