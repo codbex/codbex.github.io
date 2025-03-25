@@ -100,6 +100,7 @@ export default defineConfig({
             { text: 'HackTUES 11 - Empowering Young Innovators', link: '/news/2025/03/22/hacktues-11-empowering-young-innovators' },
             { text: 'Kronos Now Available on the Snowflake Marketplace', link: '/news/2025/01/10/kronos-on-snowflake-marketplace' },
             { text: 'Celebrating Two Years of Excellence', link: '/news/2024/04/01/codbex-two-years' },
+            { text: 'HackTUES X - Celebrating a Decade of Innovation', link: '/news/2024/03/16/hacktues-x-celebrating-a-decade-of-innovation' },
             { text: 'First Anniversary', link: '/news/2023/04/01/first-anniversary' },
             { text: 'Company Dedicated to Developers Productivity', link: '/news/2022/04/01/codbex-established' },
           ]

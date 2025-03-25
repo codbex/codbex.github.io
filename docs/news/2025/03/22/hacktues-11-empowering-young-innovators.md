@@ -6,7 +6,7 @@ author: yordan
 editLink: false
 ---
 
-**HackTUES 11 – Empowering Young Innovators**
+# HackTUES 11 – Empowering Young Innovators
 
 At codbex, we believe in the power of innovation and the importance of nurturing the next generation of tech leaders. That’s why we were proud to sponsor **HackTUES 11**, the annual hackathon organized by students of TUES, where young minds come together to create, innovate, and push technological boundaries.
 
