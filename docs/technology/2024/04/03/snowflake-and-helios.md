@@ -105,18 +105,21 @@ In this section we will dive into how to deploy Helios on Snowpark and connect t
     ```
 #### Setup local environment
 
-    1. Install [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/index) by following the instructions [here](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/installation/installation)
-    2. Configure your Snowflake CLI connection
-        - Create a new connection with name `blog` and set `role=CONTAINER_USER_ROLE`, `warehouse=CONTAINER_HOL_WH`, `database=CONTAINER_HOL_DB`, `schema=PUBLIC`
-          ```bash
-          snow connection add --default
-          ```
+1. Install [Snowflake CLI](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/index) by following the instructions [here](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/installation/installation)
+2. Configure your Snowflake CLI connection
 
-        - Test created connection
-          ```bash
-          # test the connection:
-          snow connection test --connection "blog"
-          ```
+  - Create a new connection with name `blog` and set `role=CONTAINER_USER_ROLE`, `warehouse=CONTAINER_HOL_WH`, `database=CONTAINER_HOL_DB`, `schema=PUBLIC`
+
+    ```bash
+    snow connection add --default
+    ```
+
+  - Test created connection
+
+    ```bash
+    # test the connection:
+    snow connection test --connection "blog"
+    ```
 
 #### Docker image preparation
 
