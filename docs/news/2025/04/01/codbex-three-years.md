@@ -1,6 +1,6 @@
 ---
 title: We Turn Three - A Journey of Stability, Growth, and Innovation
-description: As we celebrate __codbex__’s third anniversary, we take a moment to reflect on how far we’ve come—and more importantly, where we’re going. What began as a focused initiative to build smart developer tools has evolved into a stable and growing technology company that is earning trust across industries and geographies
+description: As we celebrate codbex’s third anniversary, we take a moment to reflect on how far we’ve come—and more importantly, where we’re going. What began as a focused initiative to build smart developer tools has evolved into a stable and growing technology company that is earning trust across industries and geographies
 date: 2025-04-01
 author: nedelcho
 editLink: false
