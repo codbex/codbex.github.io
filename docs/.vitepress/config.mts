@@ -96,6 +96,7 @@ export default defineConfig({
         {
           text: 'News',
           items: [
+            { text: 'We Turn Three - A Journey of Stability, Growth, and Innovation', link: '/news/2025/04/01/codbex-three-years' },
             { text: 'Our Products Now Available on Open Telekom Cloud Marketplace', link: '/news/2025/03/24/codbex-on-otc-marketplace' },
             { text: 'HackTUES 11 - Empowering Young Innovators', link: '/news/2025/03/22/hacktues-11-empowering-young-innovators' },
             { text: 'Kronos Now Available on the Snowflake Marketplace', link: '/news/2025/01/10/kronos-on-snowflake-marketplace' },
