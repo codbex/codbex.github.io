@@ -67,7 +67,7 @@ There needs to be a service task to send emails to the assignees and a user task
 ### Service task definition
 
 - In the tasks folder create a file called **`task-assignee-announcement.ts`**
-- Paste the following code in the file:
+- Paste the following code in the file
 
 <details>
   <summary>📄 View code</summary>
@@ -154,6 +154,8 @@ To not create a separate **form** for each assignee a single **form** and **user
 
 -	In the **Id** field type **`generic-user-task`**
 -	In the **Name** field type **`Generic User Task`**
+
+![assignee user task configuration](../../../../images/2025-05-07-onboarding-process/assignee-user-task-configuration.gif)
 
 ### Assignee form
 
@@ -273,7 +275,7 @@ angular.module('templateApp', ['blimpKit', 'platformView']).controller('template
 > The **controller** acts as an intermediary between the frontend and the backend. It receives data from the frontend, then passes it to a TypeScript service. The service, in turn, processes the data and interacts with the database to fetch or manipulate the required information.
 
 
-4. Inside the `forms` folder, create a new folder named **`api`**, then create a file called **`TaskCompletionFormService.ts`** within it. Place the following code inside this file:
+4. Inside the `forms` folder, create a new folder named **`api`**, then create a file called **`TaskCompletionFormService.ts`** within it. Place the following code inside this file
 
 
 <details>
