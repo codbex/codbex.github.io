@@ -1,8 +1,8 @@
 ---
-title:  Onboarding Process Tutorial 3: SMTP Connection
+title:  Onboarding Process Tutorial 3 SMTP Connection
 description: In the era of automation and seamless communication, integrating messaging capabilities into business processes is more essential than ever.
 date: 2025-05-07
-author: nikol, tivmof
+author: tomi
 editLink: false
 ---
 

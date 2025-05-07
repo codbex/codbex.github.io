@@ -1,8 +1,8 @@
 ---
-title:  Onboarding Process Tutorial 5: Configuring-Subprocess
+title:  Onboarding Process Tutorial 5 Configuring-Subprocess
 description: As business processes grow more complex, the need for modular and scalable workflow design becomes essential.
 date: 2025-05-07
-author: nikol, tivmof
+author: tomi
 editLink: false
 ---
 

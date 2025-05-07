@@ -1,10 +1,9 @@
 ---
-title:  Onboarding Process Tutorial 5: Completing Onboarding Process
-description: From triggering email notifications through SMTP service tasks, to assigning
+title:  Onboarding Process Tutorial 6 Completing Onboarding Process
+description: By bringing all these capabilities together, the onboarding process will be complete with clarity, control, and speed.
 date: 2025-05-07
-author: nikol, tivmof
+author: tomi
 editLink: false
----
 
 # Onboarding Process Tutorial 5: Configuring-Subprocess
 
