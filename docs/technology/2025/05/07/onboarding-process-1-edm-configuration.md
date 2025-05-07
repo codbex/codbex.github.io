@@ -1,8 +1,8 @@
 ---
-title:  Onboarding Process Tutorial 1: EDM Configuration
-description: In today’s dynamic digital landscape, building efficient and adaptable business processes is crucial for organizational success
+title:  Onboarding Process Tutorial 1 EDM Configuration
+description: Designing a solid data structure is one of the first and most important steps in building any application. In this blog post, we'll walk through
 date: 2025-05-07
-author: nikol, tivmof
+author: nikol
 editLink: false
 ---
 

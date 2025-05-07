@@ -1,8 +1,8 @@
 ---
-title:  Onboarding Process Tutorial 2: BPMN Configuration - Service Task Definition
+title:  Onboarding Process Tutorial 2 BPMN Configuration - Service Task Definition
 description: In today’s dynamic digital landscape, building efficient and adaptable business processes is crucial for organizational success
 date: 2025-05-07
-author: nikol, tivmof
+author: tomi
 editLink: false
 ---
 

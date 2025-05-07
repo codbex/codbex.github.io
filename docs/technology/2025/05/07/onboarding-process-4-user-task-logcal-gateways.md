@@ -1,8 +1,8 @@
 ---
-title:  Onboarding Process Tutorial 4: User Task Definition and Logical Gateways
+title:  Onboarding Process Tutorial 4 User Task Definition and Logical Gateways
 description: In today’s flexible business environments, workflows must balance automation with human input and smart decision-making.
 date: 2025-05-07
-author: nikol, tivmof
+author: tomi
 editLink: false
 ---
 
