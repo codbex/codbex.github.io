@@ -150,7 +150,7 @@ Configuration for **`Status`** field
 - In the **User Interface** section:
     - Choose **Widget type** to be **`Date picker`**
 
-## **Final EDM**
+### **Final EDM**
 
 ![final-EDM](../../../../images/2025-05-08-onboarding-process-edm-configuration/finalEDM.png)
 
@@ -198,6 +198,15 @@ ONBOARDINGSTATUS_ID,ONBOARDINGSTATUS_NAME
 
 - Publish the project
 - Open [Dashboard](http://localhost:80/services/web/dashboard/index.html) and now you can see the application
+
+### Adding to GitHub
+
+- Open the **`Git`** perspective.
+- Right-click your project and select **Share**.
+- Enter the required details and click **`Share`**
+- Your project is now shared to **GitHub**
+
+![share-to-GitHub](../../../../images/2025-05-08-onboarding-process-edm-configuration/shareToGitHub.gif)
 
 ## Conclusion
 
