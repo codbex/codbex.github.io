@@ -22,7 +22,7 @@ Designing a solid data structure is one of the first and most important steps in
 ![create edm](../../../../images/2025-05-08-onboarding-process-edm-configuration/createEDM.gif)
 
 ### Navigations
-- Add **`Employees`** and **`Tasks`** navigations
+- Add **`Employees`**, **`Tasks`** and **`EmployeeOnboarding`** navigations
 
 ![create navigation](../../../../images/2025-05-08-onboarding-process-edm-configuration/createNavigation.gif)
 
