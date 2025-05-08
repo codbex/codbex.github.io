@@ -278,7 +278,7 @@ class ManagerReviewFormService {
         return this.employeeDao.findAll({
             $filter: {
                 equals: {
-                    OnboardingStatus: 3
+                    Status: 3
                 }
             }
         }).map(function (value) {
@@ -294,7 +294,7 @@ class ManagerReviewFormService {
         return this.employeeDao.findAll({
             $filter: {
                 equals: {
-                    OnboardingStatus: 1
+                    Status: 1
                 }
             }
         }).map(function (value) {
@@ -439,3 +439,25 @@ sendMail(manager.Email, subject, content);
 > This script sends a reminder email to the manager when onboarding tasks for a new employee have been approved but still lack assigned team members. It retrieves relevant data from the BPM process and database—including the manager, employee, department, and process instance—then builds a styled HTML email with a dynamic link to the task review page. The email urges the manager to assign responsible personnel to pending tasks and is sent using the mail utility.
 
 ## Test BPMN Process
+
+- Go to the **Dashboard** of the application at http://localhost/services/web/dashboard/ → Click the **New Hire Navigation**
+- Enter the details of the new hire
+- After some time the tasks of the onboarding process will be created. To view them go to the **Dashboard** of the application at http://localhost/services/web/dashboard/ → Click the **Onboarding Tasks Navigation**
+- Check the email of the manager and click on the button from there
+- If you check the **Process Workspace** you'll see that the process has stop at the user task and waits for it to be completed
+
+![process waiting user task](../../../../images/2025-05-07-onboarding-process/process-user-task.png)
+
+- After that complete the **form** by assigning employees to the tasks.
+
+![assigning owners form](../../../../images/2025-05-07-onboarding-process/assigning-owners-form.png)
+
+
+::: details Other blogs
+- [Onboarding Process Tutorial 1: EDM Configuration](https://codbex.com/technology/2025/05/07/onboarding-process-1-edm-configuration)
+- [Onboarding Process Tutorial 2: BPMN Configuration - Service Task Definition](https://codbex.com/technology/2025/05/07/onboarding-process-2-services-task)
+- [Onboarding Process Tutorial 3: SMTP Connection](https://codbex.com/technology/2025/05/07/onboarding-process-3-smtp)
+- [Onboarding Process Tutorial 4: User Task Definition and Logical Gateways](https://codbex.com/technology/2025/05/07/onboarding-process-4-user-task-logical-gateways)
+- [Onboarding Process Tutorial 5: Configuring-Subprocess](https://codbex.com/technology/2025/05/07/onboarding-process-5-subprocess)
+- [Onboarding Process Tutorial 6: Completing Onboarding Process](https://codbex.com/technology/2025/05/07/onboarding-process-6-final-steps)
+:::

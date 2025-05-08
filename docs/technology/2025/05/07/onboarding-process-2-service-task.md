@@ -120,7 +120,7 @@ tasks.forEach(task => {
 execution.setVariable("tasks", tasks);
 
 // Employee status set to In Progres
-employee.OnboardingStatus = 2;
+employee.Status = 2;
 
 employeeDao.update(employee);
 ```
@@ -146,12 +146,6 @@ employeeDao.update(employee);
 
 Now that the **BPMN** is configured there needs to be a way to start it. In the business logic of the onboarding process this would happen when a HR of the company enters the details of the new hire.
 For this to happen there needs to be a **form** where the information can be submitted.
-
-### Navigations
-- Add **`EmployeeOnboarding`** navigation
-
-![createEmployeeOnboardingNavigation](../../../../images/2025-05-07-onboarding-process/addEmployeeOnboardingNavigation.gif)
-
 
 ### Form Configuration
 
@@ -322,7 +316,7 @@ angular.module('templateApp', ['blimpKit', 'platformView']).controller('template
             Email: $scope.entity.Email,
             Department: $scope.entity.Department,
             StartDate: new Date($scope.entity.StartDate),
-            OnboardingStatus: 1
+            Status: 1
         }
 
         $http.post(employeeUrl, employeeBody)
@@ -479,6 +473,19 @@ Now everything is ready to start the process.
 ![logout](../../../../images/2025-05-07-onboarding-process/logout.gif)
 
 - Go to the **Dashboard** of the application at http://localhost/services/web/dashboard/ → Click the **New Hire Navigation**
+
+![new hire](../../../../images/2025-05-07-onboarding-process/new-hire.png)
+
 - Enter the details of the new hire
 - After some time the tasks of the onboarding process will be created. To view them go to the **Dashboard** of the application at http://localhost/services/web/dashboard/ → Click the **Onboarding Tasks Navigation**
 
+![onboarding tasks](../../../../images/2025-05-07-onboarding-process/onboarding-tasks.png)
+
+::: details Other blogs
+- [Onboarding Process Tutorial 1: EDM Configuration](https://codbex.com/technology/2025/05/07/onboarding-process-1-edm-configuration)
+- [Onboarding Process Tutorial 2: BPMN Configuration - Service Task Definition](https://codbex.com/technology/2025/05/07/onboarding-process-2-services-task)
+- [Onboarding Process Tutorial 3: SMTP Connection](https://codbex.com/technology/2025/05/07/onboarding-process-3-smtp)
+- [Onboarding Process Tutorial 4: User Task Definition and Logical Gateways](https://codbex.com/technology/2025/05/07/onboarding-process-4-user-task-logical-gateways)
+- [Onboarding Process Tutorial 5: Configuring-Subprocess](https://codbex.com/technology/2025/05/07/onboarding-process-5-subprocess)
+- [Onboarding Process Tutorial 6: Completing Onboarding Process](https://codbex.com/technology/2025/05/07/onboarding-process-6-final-steps)
+:::

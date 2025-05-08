@@ -398,3 +398,37 @@ sendMail(employee.Email, subject, content);
 > This script sends a welcome email to a newly onboarded employee after their onboarding process is complete. It retrieves the employee and their department details using repository classes, constructs a personalized HTML email with a warm welcome message, and uses a mail utility to deliver it to the employee's email address.
 
 ## Test final BPMN process
+
+- Go to the **Dashboard** of the application at http://localhost/services/web/dashboard/ → Click the **New Hire Navigation**
+- Enter the details of the new hire
+- After some time the tasks of the onboarding process will be created. To view them go to the **Dashboard** of the application at http://localhost/services/web/dashboard/ → Click the **Onboarding Tasks Navigation**
+- Check the email of the manager and click on the button from there
+- If you check the **Process Workspace** you'll see that the process has stop at the user task and waits for it to be completed
+- After that complete the **form** by assigning employees to the tasks.
+- All the employees should recieve an email
+- If you check the **Process Workspace** you'll see that the process has stop at the subprocess
+- Now click on the button from a mail send to an assignee to open the form and complete the task
+- After completing the onboarding task a mail should be sent to the email of the process initiator - the initial HR
+
+![initiator mail](../../../../images/2025-05-07-onboarding-process/initiator-mail.png)
+
+- If you check the **Process Workspace** you'll see that the process has stop at the **Onboarding Completion Review** task
+
+![process waiting initiator](../../../../images/2025-05-07-onboarding-process/process-waiting-initiator.png)
+
+- Complete the form to continue with the process
+
+![hr-form](../../../../images/2025-05-07-onboarding-process/hr-form.png)
+
+- After completing the for a welcome email should be sent to the new employee
+
+![welcome email](../../../../images/2025-05-07-onboarding-process/welcome-email.png)
+
+::: details Other blogs
+- [Onboarding Process Tutorial 1: EDM Configuration](https://codbex.com/technology/2025/05/07/onboarding-process-1-edm-configuration)
+- [Onboarding Process Tutorial 2: BPMN Configuration - Service Task Definition](https://codbex.com/technology/2025/05/07/onboarding-process-2-services-task)
+- [Onboarding Process Tutorial 3: SMTP Connection](https://codbex.com/technology/2025/05/07/onboarding-process-3-smtp)
+- [Onboarding Process Tutorial 4: User Task Definition and Logical Gateways](https://codbex.com/technology/2025/05/07/onboarding-process-4-user-task-logical-gateways)
+- [Onboarding Process Tutorial 5: Configuring-Subprocess](https://codbex.com/technology/2025/05/07/onboarding-process-5-subprocess)
+- [Onboarding Process Tutorial 6: Completing Onboarding Process](https://codbex.com/technology/2025/05/07/onboarding-process-6-final-steps)
+:::
