@@ -1,5 +1,5 @@
 ---
-title:  Onboarding Process Tutorial 5 Configuring-Subprocess
+title:  Onboarding Process Tutorial 5 - Configuring-Subprocess
 description: As business processes grow more complex, the need for modular and scalable workflow design becomes essential.
 date: 2025-05-07
 author: tomi
@@ -10,7 +10,7 @@ editLink: false
 
 ## Introduction
 
-As business processes grow more complex, the need for modular and scalable workflow design becomes essential. **Hyperion Edition** meets this challenge with its support for Subprocesses in BPMN, allowing users to group related tasks into self-contained units for better organization and reuse. These subprocesses can be configured for parallel or sequential execution, giving users full control over how tasks are handled within each block. Whether tasks need to run simultaneously to save time or in a strict order to maintain dependencies, this flexibility ensures that processes are both efficient and logically sound.
+As business processes grow more complex, the need for modular and scalable workflow design becomes essential. **Hyperion Edition** meets this challenge with its support for **Subprocesses in BPMN**, allowing users to group related tasks into self-contained units for better organization and reuse. These subprocesses can be configured for **parallel** or **sequential** execution, giving users full control over how tasks are handled within each block. Whether tasks need to run simultaneously to save time or in a strict order to maintain dependencies, this flexibility ensures that processes are both efficient and logically sound.
 
 ## Subprocess
 
@@ -28,7 +28,7 @@ To incorporate the onboarding task created by the first service - **Document Gen
 
 ### Subprocess configuration
 
-To make the subprocess execution parallel there needs to be a variable holding the employees fow which we want the services in the subprocess to execute. The subprocess esentially iterates this array variable. We've created this variable in the Manager Review form, so it's already in the execution context.
+To make the subprocess execution parallel there needs to be a variable holding the employees fow which we want the services in the subprocess to execute. The subprocess esentially iterates this array variable. We've created this variable in the **Manager Review form**, so it's already in the execution context.
 
 - Click on the subprocess
 - In the **Id** field type **`onboarding-tasks-implementation`**
@@ -143,8 +143,14 @@ sendMail(employee.Email, subject, content);
 
 </details>
 
-> 💡 **Note** 
->This script sends a notification email to an employee when they are assigned a new onboarding task related to a recently hired colleague. It retrieves the task, new hire, and assignee details from the BPM process and the database, constructs a professional HTML email containing task information and a direct link to the task page, and sends it using a mail utility. The email prompts the assignee to take action promptly to support the onboarding process.
+> 💡 **Note**  
+> This script sends a notification email to an employee when they are
+> assigned a new onboarding task related to a recently hired colleague. It  
+> retrieves the task, new hire, and assignee details from the BPM process
+> and the database, constructs a professional HTML email containing task 
+> information and a direct link to the task page, and sends it using a mail
+> utility. The email prompts the assignee to take action promptly to support
+> the onboarding process.
 
 ## Assignee User Task
 
@@ -271,7 +277,7 @@ angular.module('templateApp', ['blimpKit', 'platformView']).controller('template
 ```
 </details>
 
-> 💡 **Note**  
+> 💡 **Note**   
 > The **controller** acts as an intermediary between the frontend and the backend. It receives data from the frontend, then passes it to a TypeScript service. The service, in turn, processes the data and interacts with the database to fetch or manipulate the required information.
 
 
@@ -342,7 +348,7 @@ class TaskCompletionFormService {
 
 </details>
 
-> 💡 **Note**  
+> 💡 **Note**   
 > This service handles communication with the database. It processes the data passed from the controller and interacts with the database to perform the necessary operations, such as fetching, inserting, or updating records.
 
 ## Test BPMN Process

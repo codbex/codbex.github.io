@@ -1,5 +1,5 @@
 ---
-title:  Onboarding Process Tutorial 3 SMTP Connection
+title:  Onboarding Process Tutorial 3 - SMTP Connection
 description: In the era of automation and seamless communication, integrating messaging capabilities into business processes is more essential than ever.
 date: 2025-05-07
 author: tomi
@@ -131,7 +131,7 @@ if (isMailConfigured()) {
 
 </details>
 
-> 💡 **Note:**
+> 💡 **Note**  
 > This code defines the **utility to send emails** in **Hyperion** by first checking if the **mail client** is properly configured using the required **environment variables** (username, password, protocol, and SMTP/SMTPS details). If configuration is valid, it logs the action and sends an **HTML email** using the **inner mail library**; otherwise, it logs and throws an error indicating the email could not be sent due to **missing configuration**.
 
 ### Onboarding Announcement Definition
@@ -214,7 +214,7 @@ sendMail(manager.Email, subject, content);
 
 </details>
 
-> 💡 **Note:**
+> 💡 **Note**  
 > This script  retrieves the manager, employee, and department details from the database using their respective DAOs, constructs a personalized HTML email prompting the manager to review and assign onboarding tasks, and sends the email using a mail utility. It ensures the necessary data is present, generates a dynamic link to the onboarding process, and includes professional formatting to guide the manager's next steps.
 The manager form will be created in the next tutorial
 

@@ -1,5 +1,5 @@
 ---
-title:  Onboarding Process Tutorial 4 User Task Definition and Logical Gateways
+title:  Onboarding Process Tutorial 4 - User Task Definition and Logical Gateways
 description: In today’s flexible business environments, workflows must balance automation with human input and smart decision-making.
 date: 2025-05-07
 author: tomi
@@ -351,7 +351,7 @@ class ManagerReviewFormService {
 
 </details>
 
-> 💡 **Note**  
+> 💡 **Note**   
 > This service handles communication with the database. It processes the data passed from the controller and interacts with the database to perform the necessary operations, such as fetching, inserting, or updating records.
 > The **complete task** endpoint sends the boolean parameter for the logical gateway as well as list of the assignees (for the next step) to the execution context
 
@@ -435,7 +435,7 @@ sendMail(manager.Email, subject, content);
 
 </details>
 
-> 💡 **Note** 
+> 💡 **Note**  
 > This script sends a reminder email to the manager when onboarding tasks for a new employee have been approved but still lack assigned team members. It retrieves relevant data from the BPM process and database—including the manager, employee, department, and process instance—then builds a styled HTML email with a dynamic link to the task review page. The email urges the manager to assign responsible personnel to pending tasks and is sent using the mail utility.
 
 ## Test BPMN Process

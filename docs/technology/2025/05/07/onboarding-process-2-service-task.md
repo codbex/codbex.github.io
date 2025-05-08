@@ -1,5 +1,5 @@
 ---
-title:  Onboarding Process Tutorial 2 BPMN Configuration - Service Task Definition
+title:  Onboarding Process Tutorial 2 - BPMN Configuration - Service Task Definition
 description: In today’s dynamic digital landscape, building efficient and adaptable business processes is crucial for organizational success
 date: 2025-05-07
 author: tomi
@@ -20,7 +20,7 @@ To start the implementation of a process a BPMN file needs to be created. In the
 
  - Right click on the **Project Name** → **New** → **Business Process Model**
  - Type the **`onboarding-process.bpmn`** as a name
- - Click create
+ - Click **create**
 
 ![creating bpmn](../../../../images/2025-05-07-onboarding-process/creating-bpmn.gif)
 
@@ -37,7 +37,7 @@ For the configuration of the BPMN to be finished a **process id** and **name** m
 
 ## Service Tasks
 
-Tasks are elements of the BPMN that allow you to define a single step in the execution of the process. There are different kinds of tasks. **Service Tasks** define an operation done internally (only on the **server side** of the platform) by the process. They don't require resources by other services nor supervision by users. They are marked by a cogwheel in the upper left corner.
+Tasks are elements of the BPMN that allow you to define a single step in the execution of the process. There are different kinds of tasks. **Service Tasks** define an operation done internally (only on the **server side** of the platform) by the process. They don't require resources by other services nor supervision by users. They are marked by a **cogwheel** in the upper left corner.
 
 ### Configuring Service Task
 
@@ -127,8 +127,8 @@ employeeDao.update(employee);
 
 </details>
 
-> 💡 **Note:**  
-> This code uses the generated **DAO** from the **EDM model**. It retrieves the current process context and employee ID from the BPM system, verifies if employee exists, and then creates three onboarding tasks: HR contract preparation, IT setup, and department training. Each task is structured with details like name, description, status, and a tracking link, then saved to the database. The tasks are also stored in the process context for reference, and the employee's onboarding status is updated to "In Progress" to reflect the workflow's advancement.
+> 💡 **Note**   
+> This code uses the generated **DAO** from the **EDM model**. It retrieves the current process context and employee ID from the BPM system, verifies if employee exists, and then creates three onboarding tasks: **`HR contract preparation`**, **`IT setup`** and **`Department training`**. Each task is structured with details like **name**, **description**, **status** and a **tracking link**, then saved to the database. The tasks are also stored in the **process context** for reference, and the employee's onboarding status is updated to **`"In Progress"`** to reflect the workflow's advancement.
 
 - Open the BPMN again
 - Click on the **service task**
@@ -146,6 +146,12 @@ employeeDao.update(employee);
 
 Now that the **BPMN** is configured there needs to be a way to start it. In the business logic of the onboarding process this would happen when a HR of the company enters the details of the new hire.
 For this to happen there needs to be a **form** where the information can be submitted.
+
+### Navigations
+- Add **`EmployeeOnboarding`** navigation
+
+![createEmployeeOnboardingNavigation](../../../../images/2025-05-07-onboarding-process/addEmployeeOnboardingNavigation.gif)
+
 
 ### Form Configuration
 
@@ -176,9 +182,8 @@ if (typeof exports !== 'undefined') {
 </details>
 
 
-> 💡 **Note:**  
-> This code creates a **perspective**, sets the **view** within that perspective,  
-> and specifies **where in the navigation** that perspective should appear.
+> 💡 **Note**  
+> This code creates a **perspective**, sets the **view** within that perspective, and specifies **where in the navigation** that perspective should appear.
 
 
 4. Within the **`forms`** folder, create a new file named **`new-hire-details-form.html`** and place the required code inside it.
