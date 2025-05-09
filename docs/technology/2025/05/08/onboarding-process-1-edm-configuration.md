@@ -68,14 +68,14 @@ Designing a solid data structure is one of the first and most important steps in
 
 - Add text field for **`Name`**, make it **required** and set its length to be 100 characters
 
-- Add field for **`Email`** and set its length to be 150 characters
+- Add field for **`Email`**, make it **required** and set its length to be 150 characters
 - Right-click on the entity and open field **`Properties`**
 - In the **User Interface** section:
     - Choose **Widget type** to be **`e-mail`**
 
 ![adding emal](../../../../images/2025-05-08-onboarding-process-edm-configuration/addEmailField.gif)
 
-- Add field for **`StartDate`** 
+- Add field for **`StartDate`** and make it **required**
 - Right-click on the entity and open field **`Properties`**
 - In the **Data** section:
     - Choose **Data type** to be **`DATE`**
@@ -84,7 +84,7 @@ Designing a solid data structure is one of the first and most important steps in
     
 ![adding date](../../../../images/2025-05-08-onboarding-process-edm-configuration/addDateField.gif)
 
-- Add relationship to **`Department`**
+- Add relationship to **`Department`** and make it **required**
 
 Configuration for **`Department`** field
 
@@ -95,7 +95,7 @@ Configuration for **`Department`** field
 
    ![plain relationship](../../../../images/2025-05-08-onboarding-process-edm-configuration/addRelationship.gif)
 
-- Add relationship to **`Onboarding Status`**
+- Add relationship to **`Onboarding Status`** and make it **required**
 
 Configuration for **`Onboarding Status`** field
 
@@ -107,7 +107,7 @@ Configuration for **`Onboarding Status`** field
 
 #### 4. Onboarding Task Entity
 
-- Add Perspective for **`Onboarding Task`** this way
+- Add Perspective for **`Onboarding Task`**
 
 - Create an entity and set its name to **`Onboarding Task`**
 
@@ -116,7 +116,7 @@ Configuration for **`Onboarding Status`** field
         - Set **Layout type** to **`Manage Master Entity`**
         - Choose the already defined perspective - **`Onboarding Task`**
 
-- Add relationship to **`Employee`**
+- Add relationship to **`Employee`** and make it **required**
 
 Configuration for **`Employee`** field
 
@@ -125,7 +125,7 @@ Configuration for **`Employee`** field
    - **`Id`** for dropdown key
    - **`Name`** for dropdown value
 
-- Add relationship to **`Employee`** and set field name to be **`Assignee`**
+- Add relationship to **`Employee`**, set field name to be **`Assignee`** and make it **required**
 
 Configuration for **`Assignee`** field
 
@@ -134,7 +134,7 @@ Configuration for **`Assignee`** field
    - **`Id`** for dropdown key
    - **`Name`** for dropdown value
 
-- Add relationship to **`Onboarding Status`** and set field name to be **`Status`**
+- Add relationship to **`Onboarding Status`**, set field name to be **`Status`** and make it **required**
 
 Configuration for **`Status`** field
 
@@ -143,7 +143,7 @@ Configuration for **`Status`** field
    - **`Id`** for dropdown key
    - **`Name`** for dropdown value
 
-- Add field for **`CompletedAt`** 
+- Add field for **`CompletedAt`** and make it **required**
 - Right-click on the entity and open field **`Properties`**
 - In the **Data** section:
     - Choose **Data type** to be **`DATE`**
