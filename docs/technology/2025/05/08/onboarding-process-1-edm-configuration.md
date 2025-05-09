@@ -214,11 +214,11 @@ Ready to build your own? [Click here](LINK) to learn more or access the Employee
 By following this guide, you've taken the first steps in building a well-structured Entity Data Model using **`codbex Rhea`**. Through the **`Sample Employee Onboarding Process`**, we've demonstrated how to define entities, set up relationships, and create a model that accurately represents your data. Whether you're scaling this up for a larger system or just experimenting to learn, this foundation will serve you well in any project. Keep exploring, keep modeling—and don’t forget, a well-designed data model is the backbone of a successful application.
 
 ::: details Other blogs
-- [Onboarding Process Tutorial 1: EDM Configuration](https://codbex.com/technology/2025/05/07/onboarding-process-1-edm-configuration)
-- [Onboarding Process Tutorial 2: BPMN Configuration - Service Task Definition](https://codbex.com/technology/2025/05/07/onboarding-process-2-services-task)
-- [Onboarding Process Tutorial 3: SMTP Connection](https://codbex.com/technology/2025/05/07/onboarding-process-3-smtp)
-- [Onboarding Process Tutorial 4: User Task Definition and Logical Gateways](https://codbex.com/technology/2025/05/07/onboarding-process-4-user-task-logical-gateways)
-- [Onboarding Process Tutorial 5: Configuring-Subprocess](https://codbex.com/technology/2025/05/07/onboarding-process-5-subprocess)
-- [Onboarding Process Tutorial 6: Completing Onboarding Process](https://codbex.com/technology/2025/05/07/onboarding-process-6-final-steps)
+- [Onboarding Process Tutorial 1: EDM Configuration](https://codbex.com/technology/2025/05/08/onboarding-process-1-edm-configuration)
+- [Onboarding Process Tutorial 2: BPMN Configuration - Service Task Definition](https://codbex.com/technology/2025/05/09/onboarding-process-2-services-task)
+- [Onboarding Process Tutorial 3: SMTP Connection](https://codbex.com/technology/2025/05/10/onboarding-process-3-smtp)
+- [Onboarding Process Tutorial 4: User Task Definition and Logical Gateways](https://codbex.com/technology/2025/05/11/onboarding-process-4-user-task-logical-gateways)
+- [Onboarding Process Tutorial 5: Configuring-Subprocess](https://codbex.com/technology/2025/05/12/onboarding-process-5-subprocess)
+- [Onboarding Process Tutorial 6: Completing Onboarding Process](https://codbex.com/technology/2025/05/13/onboarding-process-6-final-steps)
 :::
 
