@@ -198,14 +198,16 @@ To not create a separate **form** for each assignee a single **form** and **user
                 <bk-message-page-subtitle>Great job! Every task in the list has been successfully completed.
                 </bk-message-page-subtitle>
             </bk-message-page>
-            <bk-panel ng-if="!completed" expanded="true" compact="true" class="bk-restrict-width--sm bk-full-width">
+            <bk-panel ng-if="!completed" expanded="true" compact="true" style="max-width: 80%;" class=" bk-full-width">
                 <bk-panel-content aria-label="Panel Content">
 
                     <bk-list byline="true">
                         <bk-list-item ng-repeat="next in taskList">
                             <bk-list-content item-title="{{ next.Name }}">
                                 <bk-list-byline align="left">
-                                    {{ next.Description }}
+                                    <bk-textarea style="height: 100px; max-width: 100%" class="bk-no-border">
+                                        {{ next.Description }}
+                                    </bk-textarea>
                                 </bk-list-byline>
                                 <bk-list-byline align="right">
                                     <bk-button ng-if="!next.isCompleted" label="Complete" state="emphasized" ng-click="completeTask(next)">
@@ -222,7 +224,6 @@ To not create a separate **form** for each assignee a single **form** and **user
     </body>
 
 </html>
-
 ```
 </details>
 
