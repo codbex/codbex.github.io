@@ -121,7 +121,6 @@ tasks.forEach(task => {
 
 execution.setVariable("tasks", tasks);
 
-// Employee status set to In Progres
 employee.Status = 2;
 
 employeeDao.update(employee);
