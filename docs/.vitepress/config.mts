@@ -163,6 +163,14 @@ export default defineConfig({
                 {
                   text: 'Basic Authentication',
                   link: '/documentation/configurations/basic-auth',
+                },
+                {
+                  text: 'Cognito Authentication',
+                  link: '/documentation/configurations/cognito-auth',
+                },
+                {
+                  text: 'Keycloak Authentication',
+                  link: '/documentation/configurations/keycloak-auth',
                 }
               ]
             },
