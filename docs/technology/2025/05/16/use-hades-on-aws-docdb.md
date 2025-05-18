@@ -15,6 +15,8 @@ That’s where [Hades](https://www.codbex.com/products/hades) by __codbex__ step
 
 > Hades is a lightweight, open-source database management UI that can run as a container in your AWS environment—co-located with your services, inside your VPC, next to your MongoDB-compatible databases.
 
+![hades](../../../../images/2025-05-16-use-hades-on-aws-docdb/hades.png)
+
 ## What Is NoSQL and Why It Matters?
 
 NoSQL databases store data in flexible, non-relational formats like JSON. Unlike traditional RDBMS systems, NoSQL allows you to:
@@ -65,8 +67,9 @@ This architecture is especially useful for dev/test environments, data engineers
 1. In Hades UI `Explorer` view, navigate to your DocumentDB database
 1. In the `Statements` view enter:
 
-```
-update: { create: "orders"}
+**update:**
+```json
+{ create: "orders"}
 ```
 
 <img src="../../../../images/2025-05-16-use-hades-on-aws-docdb/mongodb-create-collection.png" width="450">
@@ -77,8 +80,9 @@ update: { create: "orders"}
 
 ### Step 4: Insert a few records
 
-```
-update: {insert: "orders", documents: [
+**update:**
+```json
+{insert: "orders", documents: [
     {
     "orderId": "ORD-10001",
     "contractId": "C-2023-001",
@@ -139,22 +143,25 @@ Step 5: Query the Collection
 
 * Count all orders
 
-```
-query: {count: "orders"}
+**query:**
+```json
+{count: "orders"}
 ```
 
 Use Hades UI to run a simple query and check the count.
 
 * Find all orders
 
-```
-query: {find: "orders"}
+**query:**
+```json
+{find: "orders"}
 ```
 
 * Filter by `createdAt`
 
-```
-query: {find: "orders",
+**query:**
+```json
+{find: "orders",
   filter: {
     "createdAt": {
       "$gte": "2024-10-03T00:00:00Z"
@@ -165,14 +172,16 @@ query: {find: "orders",
 
 * Limit results
 
-```
-query: {find: "orders", limit: 2}
+**query:**
+```json
+{find: "orders", limit: 2}
 ```
 
 * Projection (include specific fields)
 
-```
-query: {find: "orders",
+**query:**
+```json
+{find: "orders",
   filter: {
     "totalAmount": {
       "$gte": 1000
@@ -190,8 +199,9 @@ query: {find: "orders",
 
 Update order status
 
-```
-update: {update: "orders",
+**update:**
+```json
+{update: "orders",
 	updates: [
 	  {
 	    q: { "orderId": "ORD-10001" },
@@ -205,18 +215,20 @@ update: {update: "orders",
 
 Delete an order
 
-```
-update: {delete: "orders",
+**update:**
+```json
+{delete: "orders",
   deletes: [
 		{ q:  {"orderId": "ORD-10003"}, limit: 0}
 	]
 }
 ```
 
-### Step 8: Delete Records
+### Step 8: Drop Collection
 
-```
-update: { drop: "orders-archives"}
+**update:**
+```json
+{ drop: "orders-archives"}
 ```
 
 
