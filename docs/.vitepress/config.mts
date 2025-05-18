@@ -132,6 +132,7 @@ export default defineConfig({
         {
           text: 'Technology',
           items: [
+            { text: 'NoSQL Database Management Simplified', link: '/technology/2025/05/16/use-hades-on-aws-docdb' },
             { text: 'How "Depends On" feature in Rhea Simplifies App Development', link: '/technology/2025/03/18/rhea-depends-on' },
             { text: 'Migration to VitePress from Jekyll and Material for MkDocs', link: '/technology/2024/12/17/migration-to-vitepress' },
             { text: 'Building and Releasing Docker Image for codbex Applications', link: '/technology/2024/11/18/build-and-release-docker-image-for-codbex-applications' },
