@@ -138,11 +138,6 @@ features:
 				<li id="slide25"><a href="https://tredence.com/" target="_blank">Tredence</a></li>
 				<li id="slide26"><a href="https://valantic.com/" target="_blank">valantic</a></li>
 			</ul>
-			<div class="nav">
-				<a href="#slide1">1</a>
-				<a href="#slide2">2</a>
-				<a href="#slide3">3</a>
-			</div>
 		</div>
 	</section>
 	<section class="testimonial">

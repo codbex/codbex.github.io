@@ -436,23 +436,4 @@ blockquote:before {
   display: none; /* Hide scrollbar */
 }
 
-.nav {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.nav a {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  text-indent: -9999px;
-  transition: background 0.3s;
-}
-
-.nav a:hover {
-  background: #333;
-}
 
