@@ -109,36 +109,9 @@ features:
 		<div class="button alt"><a href="mailto:office@codbex.com">Join as a Partner</a></div>
 		<br><br>
 		<h3><strong>Who</strong> trust us by using our products and services or partnering with us</h3>
-		<div class="container text-center">
-			<ul class="carousel" id="carousel">
-				<li id="slide1"><a href="https://aareon.com/" target="_blank">Aareon</a></li>
-				<li id="slide2"><a href="https://allane.com/" target="_blank">Allane</a></li>
-				<li id="slide3"><a href="https://amista.be" target="_blank">Amista</a></li>
-				<li id="slide4"><a href="https://anthill.one/" target="_blank">Anthill</a></li>
-				<li id="slide5"><a href="https://apollogic.com/" target="_blank">Apollogic</a></li>
-				<li id="slide6"><a href="https://arcware.io" target="_blank">Arcware</a></li>
-				<li id="slide7"><a href="https://atos.net/" target="_blank">Atos</a></li>
-				<li id="slide8"><a href="https://bix-consulting.com/" target="_blank">biX</a></li>
-				<li id="slide9"><a href="https://boomdata.com.au/" target="_blank">BOOMDATA</a></li>
-				<li id="slide10"><a href="https://bosch.com/" target="_blank">Bosch</a></li>
-				<li id="slide11"><a href="https://clolytic.com/" target="_blank">Clolytic</a></li>
-				<li id="slide12"><a href="https://www.telekom.com/en" target="_blank">Deutsche Telekom</a></li>
-				<li id="slide13"><a href="https://digitall.com" target="_blank">Digitall</a></li>
-				<li id="slide14"><a href="https://eviden.com" target="_blank">Eviden</a></li>
-				<li id="slide15"><a href="https://lights.digital" target="_blank">Digital Lights</a></li>
-				<li id="slide16"><a href="https://glencore.com" target="_blank">Glencore</a></li>
-				<li id="slide17"><a href="https://heliconialabs.com/" target="_blank">Heliconia Labs</a></li>
-				<li id="slide18"><a href="https://ikea.com/" target="_blank">IKEA</a></li>
-				<li id="slide19"><a href="https://pythian.com/" target="_blank">Pythian</a></li>
-				<li id="slide20"><a href="https://www.reflectionsglobal.com/" target="_blank">Reflections</a></li>
-				<li id="slide21"><a href="https://sap.com/" target="_blank">SAP</a></li>
-				<li id="slide22"><a href="https://snowflake.com/" target="_blank">Snowflake</a></li>
-				<li id="slide23"><a href="https://www.sofia.bg/web/sofia-municipality" target="_blank">Sofia Municipality</a></li>
-				<li id="slide24"><a href="https://www.t-systems.com/" target="_blank">T.Systems</a></li>
-				<li id="slide25"><a href="https://tredence.com/" target="_blank">Tredence</a></li>
-				<li id="slide26"><a href="https://valantic.com/" target="_blank">valantic</a></li>
-			</ul>
-		</div>
+		<ClientOnly>
+			<SwiperPartners />
+		</ClientOnly>
 	</section>
 	<section class="testimonial">
 		<div class="container flex">
