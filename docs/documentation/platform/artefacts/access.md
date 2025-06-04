@@ -80,7 +80,7 @@ Explanation of Properties:
 ## Notes
 
 * Always use the correct path prefix matching your artifact’s deployed location: `/services/web/`, `/services/js/`, `/services/ts/`, etc.
-* Public access (unauthorized) should be defined using the `/public/` prefix and the special `Public` role.
+* Public access (unauthorized) should be defined using the `/public/` prefix and the special `PUBLIC` role.
 * Wildcards are supported in the `path` property, allowing flexible pattern matching for groups of resources. This is powered by the `org.springframework.util.AntPathMatcher` utility from Spring Framework.
 * Always refer to the latest documentation or release notes for __codbex__ platform, as details and features may evolve over time.
 
