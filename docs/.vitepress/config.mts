@@ -112,6 +112,7 @@ export default defineConfig({
         {
           text: 'Marketing',
           items: [
+            { text: 'Migrating SAP BW with Kronos - From Legacy to Flexibility', link: '/marketing/2025/06/10/kronos-bw-migration' },
             { text: 'Hades Now Available on AWS Marketplace', link: '/marketing/2025/01/10/hades-on-aws' },
             { text: 'Kronos is Now Live on Snowflake Marketplace', link: '/marketing/2025/01/10/kronos-snowflake-marketplace' },
             { text: 'Building Apps with Atlas on Snowflake', link: '/marketing/2024/12/23/building-apps-with-atlas-on-snowflake' },
@@ -171,6 +172,21 @@ export default defineConfig({
                 {
                   text: 'Keycloak Authentication',
                   link: '/documentation/configurations/keycloak-auth',
+                }
+              ]
+            },
+            {
+              text: 'Migrations',
+              link: '/documentation/migrations/',
+              collapsed: true,
+              items: [
+                {
+                  text: 'ABAP Code Migration',
+                  link: '/documentation/migrations/abap-migration.md',
+                },
+                {
+                  text: 'SAP HANA XS Classic Migration',
+                  link: '/documentation/migrations/xsc-migration.md',
                 }
               ]
             },
