@@ -14,6 +14,18 @@ export default defineConfig({
     ['meta', { name: 'twitter:title', content: 'codbex - High-Productivity Application Platform' }],
     ['meta', { name: 'twitter:description', content: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises to design, develop and deliver their industry solutions' }],
     ['meta', { name: 'twitter:image', content: 'https://www.codbex.com/social-card.png' }],
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-QWPZ5B9RH8',
+      },
+    ],
+    [
+      'script',
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-QWPZ5B9RH8');",
+    ],
   ],
   base: '/',
   sitemap: {
