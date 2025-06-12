@@ -46,7 +46,7 @@ In the next section of this blog, we’ll walk step-by-step through the implemen
 ## Step-by-Step: Implementing the ETL in Phoebe
 
 ### Start Phoebe instance locally
-- To start a Phoebe instance locally we need a postgres instance. To simplify the setup, let's define a `docker-compose.yaml` file using the following content:
+- To start a Phoebe instance locally we need a PostgreSQL instance. To simplify the setup, let's define a `docker-compose.yaml` file using the following content:
 ```yaml
 services:
   postgres:
@@ -117,9 +117,9 @@ docker compose up
   </a>
 
 
-### Register data source to the postgres instance
-To allow the Phoebe instance to connect to the postgres instance, we need to define a data source file.
-This will allow us to inspect the postgres in the database perspective.
+### Register data source to the PostgreSQL instance
+To allow the Phoebe instance to connect to the PostgreSQL instance, we need to define a data source file.
+This will allow us to inspect the PostgreSQL in the database perspective.
 - Create a new folder with name `db` in the created project
 - Create a file `demo-postgre.datasource` in folder `db`
 - Add the content from [this link](https://github.com/codbex/codbex-sample-phoebe-employees-etl/blob/0770ad48cce39d818f19469de062c89a832ac38f/employees-etl/db/demo-postgre.datasource)
@@ -134,7 +134,7 @@ To define the structure of the tables and to fill the source table with a sample
 - Next, add a sample data file `source_employees.csv` with the content from [this link](https://github.com/codbex/codbex-sample-phoebe-employees-etl/blob/0770ad48cce39d818f19469de062c89a832ac38f/employees-etl/db/source_employees.csv)
 - Create a file `demo-data.csvim` with [this content](https://github.com/codbex/codbex-sample-phoebe-employees-etl/blob/0770ad48cce39d818f19469de062c89a832ac38f/employees-etl/db/demo-data.csvim)
 
-### Verify tables structure and data are created 
+### Verify tables structure and data are created
 - Save all files and click on `Publish all` button. After a few seconds these files will be registered and tables will be created. The source table should be filled with a sample data.
   <a href="/images/2025-06-12-phoebe-airflow-etl/publish-all-btn.png" target="_blank">
   <img src="/images/2025-06-12-phoebe-airflow-etl/publish-all-btn.png" alt="publish-all-btn.png">
@@ -151,7 +151,7 @@ To define the structure of the tables and to fill the source table with a sample
   <a href="/images/2025-06-12-phoebe-airflow-etl/tables-structure.png" target="_blank">
   <img src="/images/2025-06-12-phoebe-airflow-etl/tables-structure.png" alt="tables-structure.png">
   </a>
-- Execute the following sql statements to ensure that table `source_employees` has `1000` entries and that the target table is empty
+- Execute the following SQL statements to ensure that table `source_employees` has `1000` entries and that the target table is empty
   ```sql
   -- source_employees table
   SELECT * FROM source_employees;
@@ -164,7 +164,7 @@ To define the structure of the tables and to fill the source table with a sample
   SELECT COUNT(*) FROM target_employees;
   ```
   <a href="/images/2025-06-12-phoebe-airflow-etl/source-table-data.png" target="_blank">
-  <img src="/images/2025-06-12-phoebe-airflow-etl/source-table-data.png" alt="source-table-data.png">
+   <img src="/images/2025-06-12-phoebe-airflow-etl/source-table-data.png" alt="source-table-data.png">
   </a>
 
 ### Implement the ETL using DAG
@@ -197,8 +197,8 @@ To define the structure of the tables and to fill the source table with a sample
   <a href="/images/2025-06-12-phoebe-airflow-etl/created-dags.png" target="_blank">
   <img src="/images/2025-06-12-phoebe-airflow-etl/created-dags.png" alt="created-dags.png">
   </a>
-- Click on `etl_employees_dag` DAG
-- Trigger new execution using the `Trigger` button
+- Click on the `etl_employees_dag` DAG
+- Trigger a new execution using the `Trigger` button
   <a href="/images/2025-06-12-phoebe-airflow-etl/trigger-dag-btn.png" target="_blank">
   <img src="/images/2025-06-12-phoebe-airflow-etl/trigger-dag-btn.png" alt="trigger-dag-btn.png">
   </a>
@@ -206,11 +206,10 @@ To define the structure of the tables and to fill the source table with a sample
   <a href="/images/2025-06-12-phoebe-airflow-etl/successful-dag-execution.png" target="_blank">
   <img src="/images/2025-06-12-phoebe-airflow-etl/successful-dag-execution.png" alt="successful-dag-execution.png">
   </a>
-
 - Verify ETL execution
-  Now, let's verify that the target table has entries with upper case for first name and last name
+  Now, let's verify that the target table contains entries with upper case for first name and last name
   - Go to `Database` perspective
-  - Execute the following sql statements
+  - Execute the following SQL statements
     ```sql
     SELECT COUNT(*) FROM target_employees;
     
@@ -218,11 +217,11 @@ To define the structure of the tables and to fill the source table with a sample
     ```
   - Table `target_employees` should have `1000` entries
     <a href="/images/2025-06-12-phoebe-airflow-etl/target-entries-count.png" target="_blank">
-      <img src="/images/2025-06-12-phoebe-airflow-etl/target-entries-count.png" alt="target-entries-count.png">
+    <img src="/images/2025-06-12-phoebe-airflow-etl/target-entries-count.png" alt="target-entries-count.png">
     </a>
-  - All entries must be in upper case
+  - All entries must be in uppercase
     <a href="/images/2025-06-12-phoebe-airflow-etl/target-entries.png" target="_blank">
-      <img src="/images/2025-06-12-phoebe-airflow-etl/target-entries.png" alt="target-entries.png">
+    <img src="/images/2025-06-12-phoebe-airflow-etl/target-entries.png" alt="target-entries.png">
     </a>
 
 **Congratulations, you have successfully implemented the ETL scenario!**
