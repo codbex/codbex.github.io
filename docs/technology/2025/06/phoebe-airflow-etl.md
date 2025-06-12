@@ -95,7 +95,7 @@ volumes:
 docker compose up
 ```
 
-- Once the created instance is started, access the Phoebe instance at [http://localhost:80](http://localhost:80)
+- Once the created instance is started, access the Phoebe instance at `http://localhost:80`
 - Login using the default credentials (user: `admin`, password `admin`)
 
 ### Create a project using the starter template
