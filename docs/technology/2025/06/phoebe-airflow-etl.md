@@ -119,7 +119,7 @@ docker compose up
 
 ### Register data source to the postgres instance
 To allow the Phoebe instance to connect to the postgres instance, we need to define a data source file.
-This will allow as to inspect the postgres in the database perspective.
+This will allow us to inspect the postgres in the database perspective.
 - Create a new folder with name `db` in the created project
 - Create a file `demo-postgre.datasource` in folder `db`
 - Add the content from [this link](https://github.com/codbex/codbex-sample-phoebe-employees-etl/blob/0770ad48cce39d818f19469de062c89a832ac38f/employees-etl/db/demo-postgre.datasource)
