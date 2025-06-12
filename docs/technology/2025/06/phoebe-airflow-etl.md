@@ -1,20 +1,20 @@
 ---
-title:  Building a Simple ETL Workflow with codbex Phoebe and Apache Airflow v3
-description: In this blog post, we’ll explore how to use codbex Phoebe to implement a simple ETL scenario, transforming employee data from a source table to a target table by applying a basic transformation
+title:  Building a Simple ETL Workflow with Phoebe and Apache Airflow
+description: In this blog post, we’ll explore how to use Phoebe to implement a simple ETL scenario, transforming employee data from a source table to a target table by applying a basic transformation
 date: 2025-06-12
 author: iliyan
 editLink: false
 ---
 
-# Building a Simple ETL Workflow with codbex Phoebe and Apache Airflow v3
+# Building a Simple ETL Workflow with Phoebe and Apache Airflow
 
 ## Overview
 
-Modern data engineering requires not only powerful tools for orchestration but also intuitive development environments. This is where [codbex Phoebe](https://www.codbex.com/products/phoebe) comes in—a modern Web IDE tailored for designing and managing [Apache Airflow](https://airflow.apache.org/) v3 workflows with ease.
+Modern data engineering requires not only powerful tools for orchestration but also intuitive development environments. This is where [Phoebe](https://www.codbex.com/products/phoebe) comes in—a modern Web IDE tailored for designing and managing [Apache Airflow](https://airflow.apache.org/) v3 workflows with ease.
 
-In this blog post, we’ll explore how to use codbex Phoebe to implement a simple [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) scenario, transforming employee data from a source table to a target table by applying a basic transformation: converting names to uppercase. Along the way, we’ll take advantage of Phoebe’s rich development perspectives, which streamline every aspect of the workflow design process.
+In this blog post, we’ll explore how to use Phoebe to implement a simple [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) scenario, transforming employee data from a source table to a target table by applying a basic transformation: converting names to uppercase. Along the way, we’ll take advantage of Phoebe’s rich development perspectives, which streamline every aspect of the workflow design process.
 
-## Overview of codbex Phoebe
+## Overview of Phoebe
 [Phoebe](https://www.codbex.com/products/phoebe) is a web-based IDE purpose-built for developing and managing workflows in [Apache Airflow](https://airflow.apache.org/) v3. It provides a seamless, integrated development experience with several powerful perspectives:
 
 - Workbench: Central area for writing and editing your DAGs and other files.
@@ -37,15 +37,15 @@ This simple transformation highlights how Airflow can orchestrate database opera
 ## Next Steps
 In the next section of this blog, we’ll walk step-by-step through the implementation:
 
-1. Setting up the project and Airflow DAG in codbex Phoebe.
+1. Setting up the project and Airflow DAG in Phoebe.
 1. Creating source and target tables. Adding sample data to the source table.
 1. Writing the transformation logic in Python using Airflow’s PythonOperator.
 1. Testing and deploying the DAG via the embedded Airflow instance.
 1. Verifying the result in the target table.
 
-## Step-by-Step: Implementing the ETL in codbex Phoebe
+## Step-by-Step: Implementing the ETL in Phoebe
 
-### Start codbex Phoebe instance locally
+### Start Phoebe instance locally
 - To start a Phoebe instance locally we need a postgres instance. To simplify the setup, let's define a `docker-compose.yaml` file using the following content:
 ```yaml
 services:
@@ -120,12 +120,13 @@ docker compose up
 ### Register data source to the postgres instance
 To allow the Phoebe instance to connect to the postgres instance, we need to define a data source file.
 This will allow as to inspect the postgres in the database perspective.
+- Create a new folder with name `db` in the created project
 - Create a file `demo-postgre.datasource` in folder `db`
 - Add the content from [this link](https://github.com/codbex/codbex-sample-phoebe-employees-etl/blob/0770ad48cce39d818f19469de062c89a832ac38f/employees-etl/db/demo-postgre.datasource)
 
 ### Define DB schema and add sample data
 To define the structure of the tables and to fill the source table with a sample data, we need to create a several special files.
-- Create a new folder with name `db` in the created project
+
 - Add new file called `demo.schema` (for the schema definition) to folder `db` with the content from [this link](https://github.com/codbex/codbex-sample-phoebe-employees-etl/blob/0770ad48cce39d818f19469de062c89a832ac38f/employees-etl/db/demo.schema)
   <a href="/images/2025-06-12-phoebe-airflow-etl/schema-file.png" target="_blank">
   <img src="/images/2025-06-12-phoebe-airflow-etl/schema-file.png" alt="schema-file.png">
@@ -228,7 +229,7 @@ To define the structure of the tables and to fill the source table with a sample
 
 ## GitHub repository for the project
 The project we implemented can be found in [this GitHub repository](https://github.com/codbex/codbex-sample-phoebe-employees-etl).<br>
-If you don't want to go through the blog steps, you can clone the repository using the `Git` perspective of codbex Phoebe.<br>
+If you don't want to go through the blog steps, you can clone the repository using the `Git` perspective of Phoebe.<br>
 Once the project is cloned, you have to publish it.<br>
 Next you can explore and play with the content of the project.
 
@@ -236,11 +237,11 @@ Next you can explore and play with the content of the project.
 ## Final Thoughts
 
 This ETL pipeline, while simple, illustrates a foundational use case that many real-world workflows build upon.<br>
-Using codbex Phoebe, we can:
+Using Phoebe, we can:
 - Rapidly prototype and test data workflows.
 - Stay within a single, unified development environment.
 - Easily manage code, data, and execution—all from the browser.
 
-Whether you're just starting with Airflow or looking to streamline your pipeline development, codbex Phoebe offers a productive and modern approach to orchestrating data workflows.
+Whether you're just starting with Airflow or looking to streamline your pipeline development, Phoebe offers a productive and modern approach to orchestrating data workflows.
 
 
