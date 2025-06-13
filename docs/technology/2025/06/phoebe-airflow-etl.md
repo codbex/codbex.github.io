@@ -44,7 +44,7 @@ In the next section of this blog, we’ll walk step-by-step through the implemen
 1. Verifying the result in the target table.
 
 Follow the steps below or watch the recorded video.<br>
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/ADD_ID_ONCE_UPLOADED" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/HIVaVywI6wE" frameborder="0" allowfullscreen></iframe>
 
 ## Step-by-Step: Implementing the ETL in Phoebe
 
