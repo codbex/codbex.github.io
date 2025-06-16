@@ -184,6 +184,10 @@ export default defineConfig({
                 {
                   text: 'Keycloak Authentication',
                   link: '/documentation/configurations/keycloak-auth',
+                },
+                {
+                  text: 'Client Registration',
+                  link: '/documentation/configurations/client-registration',
                 }
               ]
             },
