@@ -53,7 +53,7 @@ Follow the steps below or watch the recorded video.<br>
 ```yaml
 services:
   postgres:
-    image: postgres:13
+    image: postgres:16
     container_name: postgres
     hostname: postgres
     environment:
@@ -70,12 +70,12 @@ services:
       - phoebe_net
 
   codbex-phoebe:
-    image: ghcr.io/codbex/codbex-phoebe:3.0.0 # you can use latest tag as well
+    image: ghcr.io/codbex/codbex-phoebe:3.6.0
     container_name: phoebe
     environment:
       - PHOEBE_AIRFLOW_POSTGRES_USER=postgres
       - PHOEBE_AIRFLOW_POSTGRES_PASS=postgres
-      - PHOEBE_AIRFLOW_POSTGRES_HOSTpostgres
+      - PHOEBE_AIRFLOW_POSTGRES_HOST=postgres
       - PHOEBE_AIRFLOW_POSTGRES_DB=postgres
     ports:
       - "80:80"
