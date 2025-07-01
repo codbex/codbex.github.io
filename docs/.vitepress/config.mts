@@ -145,6 +145,7 @@ export default defineConfig({
         {
           text: 'Technology',
           items: [
+            { text: 'Building a Simple ETL Workflow with Phoebe and Apache Airflow', link: '/technology/2025/06/phoebe-airflow-etl' },
             { text: 'NoSQL Database Management Simplified', link: '/technology/2025/05/16/use-hades-on-aws-docdb' },
             { text: 'How "Depends On" feature in Rhea Simplifies App Development', link: '/technology/2025/03/18/rhea-depends-on' },
             { text: 'Migration to VitePress from Jekyll and Material for MkDocs', link: '/technology/2024/12/17/migration-to-vitepress' },
