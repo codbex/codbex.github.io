@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'codbex',
+  title: ' ',
   description: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -79,6 +79,7 @@ export default defineConfig({
           text: 'Pricing',
           items: [
             { text: 'Community', link: '/pricing/community' },
+            { text: 'Starter', link: '/pricing/starter' },
             { text: 'Professional', link: '/pricing/professional' },
             { text: 'Enterprise', link: '/pricing/enterprise' },
             {
