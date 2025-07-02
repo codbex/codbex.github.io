@@ -109,6 +109,7 @@ export default defineConfig({
         {
           text: 'News',
           items: [
+            { text: 'Introducing the New Pricing Model', link: '/news/2025/07/01/new-flat-pricing-model' },
             { text: 'We Turn Three - A Journey of Stability, Growth, and Innovation', link: '/news/2025/04/01/codbex-three-years' },
             { text: 'Our Products Now Available on Open Telekom Cloud Marketplace', link: '/news/2025/03/24/codbex-on-otc-marketplace' },
             { text: 'HackTUES 11 - Empowering Young Innovators', link: '/news/2025/03/22/hacktues-11-empowering-young-innovators' },
