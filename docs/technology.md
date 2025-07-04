@@ -23,11 +23,36 @@ const sortedPosts = getSorted( posts );
 <section class="blog-posts">
   <ul class="post-list">
     <li class="post-item" v-for="post of sortedPosts">
-      <p class="post-meta">
-        <img :src="getMember(post.frontmatter.author).avatar" alt="{{ getMember(post.frontmatter.author).name }}" class="author-image" />
-        <span class="post-author">{{ getMember(post.frontmatter.author).name }}</span>&nbsp;&nbsp;  
-        <span class="post-date">{{ new Date(post.frontmatter.date).toDateString() }}</span>
-      </p>
+<p class="post-meta">
+  <template v-if="Array.isArray(post.frontmatter.author)">
+    <span
+      v-for="(authorId, index) in post.frontmatter.author"
+      :key="authorId"
+      class="post-author"
+    >
+      <img
+        :src="getMember(authorId).avatar"
+        :alt="getMember(authorId).name"
+        class="author-image"
+      />
+      {{ getMember(authorId).name }}
+      <span v-if="index < post.frontmatter.author.length - 1">,&nbsp;</span>
+    </span>
+  </template>
+  <template v-else>
+    <span
+      class="post-author"
+    >
+      <img
+        :src="getMember(post.frontmatter.author).avatar"
+        :alt="getMember(post.frontmatter.author).name"
+        class="author-image"
+      />
+      {{ getMember(post.frontmatter.author).name }}
+    </span>
+  </template>
+  <span class="post-date">{{ new Date(post.frontmatter.date).toDateString() }}</span>
+</p>
       <h4 class="post-title"><a :href="withBase(post.url)">{{ post.frontmatter.title }}</a></h4>
       <p>{{ post.frontmatter.description }}...</p>
     </li>
