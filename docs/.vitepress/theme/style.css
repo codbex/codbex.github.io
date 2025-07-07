@@ -409,3 +409,31 @@ blockquote:before {
 	}
 }
 
+.carousel {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.carousel li {
+  list-style: none;
+  flex: 0 0 15%;
+  scroll-snap-align: start;
+  padding: 2rem;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 0px !important;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+

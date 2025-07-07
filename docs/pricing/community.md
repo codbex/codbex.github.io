@@ -6,7 +6,7 @@ editLink: false
 # Community Plan
 <br/>
 
-<div class="price-tag">€0.00 and always will be free</div>
+<div class="price-tag">€0/month, free forever</div>
 
 The Community Plan by <b>codbex</b> is crafted to support collaborative development processes, offering a comprehensive suite of capabilities for end-to-end development. From database modeling and management to RESTful services authoring, dynamic languages support, pattern-based user interface generation, role-based security, external services integration, testing, debugging, operations, and monitoring, this plan is designed to streamline the entire development lifecycle.
 

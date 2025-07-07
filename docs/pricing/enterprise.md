@@ -6,10 +6,11 @@ editLink: false
 # Enterprise Plan
 <br/>
 
-<div class="price-tag">€249 per user (minimum 100 users)</div>
+<div class="price-tag">€2 999/month</div>
 
+The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored specifically for large enterprises, delivering advanced features and unparalleled support to meet the demands of complex development environments. Building upon the comprehensive offerings of the Professional Plan, the Enterprise Plan provides additional enhancements such as source code repository setup on any Git provider, private source code repositories, CI/CD pipelines for automatic updates on private servers, deployment on public cloud providers including GCP, AWS, and Azure, dedicated managed Kubernetes cluster, and dedicated support via email and Slack with a response time of four business hours.
 
-The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored specifically for large enterprises, delivering advanced features and unparalleled support to meet the demands of complex development environments. Building upon the comprehensive offerings of the Community and Professional Plans, the Enterprise Plan provides additional enhancements such as source code repository setup on any Git provider, private source code repositories, CI/CD pipelines for automatic updates on private servers, deployment on public cloud providers including GCP, AWS, and Azure, dedicated managed Kubernetes cluster, and dedicated support via email with a response time of two business hours.
+The Enterprise Plan also is best suited for IT innovators and early adopters looking to validate feasibility, with replacing legacy ABAP and BW logic, and evaluate integration patterns with Snowflake for scaling into production-grade use.
 
 <div style="text-align: center;">
    <img src="/images/styled/god-with-horse.svg" style="height: 20rem; !important; float: right !important; padding: 2em"/>
@@ -49,7 +50,7 @@ The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored spec
 
 **Dedicated Managed Kubernetes Cluster**: Utilize a dedicated managed Kubernetes cluster for orchestrating containerized applications, providing scalability, reliability, and ease of management.
 
-**Support via Email with Response Time of Two Business Hours**: Receive dedicated support via email with a guaranteed response time of two business hours, ensuring rapid assistance and resolution of issues to minimize downtime and maximize productivity.
+**Support via Email with Response Time of Two Business Hours**: Receive dedicated support via email and Slack with a guaranteed response time of four business hours, ensuring rapid assistance and resolution of issues to minimize downtime and maximize productivity.
 
 <div style="text-align: center;">
    <img src="/images/styled/people-at-big-shop.svg" style="height: 20rem; !important; float: right !important; padding: 2em"/>
@@ -58,6 +59,10 @@ The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored spec
 ### Who Is It For?
 
 The Enterprise Plan is specifically designed for large enterprises with complex development requirements, stringent security needs, and high-performance expectations. Whether you're a Fortune 500 company or an industry-leading organization, this plan offers the advanced features, scalability, and premium support needed to drive innovation and success in today's competitive landscape.
+
+The Enterprise Plan is purpose-built for large organizations undergoing complex SAP BW migrations and looking to modernize ABAP-based logic into scalable, cloud-native architectures. It provides full access to the Codbex suite, including advanced process orchestration, data integration, and native Snowflake execution capabilities — all backed by premium support and dedicated success engineering.
+
+Empower your organization to modernize critical SAP workloads at scale — with the speed, agility, and control that only the Enterprise Plan from codbex can offer.
 
 <br>
 
