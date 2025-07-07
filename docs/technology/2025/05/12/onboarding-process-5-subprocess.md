@@ -174,7 +174,7 @@ To not create a separate **form** for each assignee a single **form** and **user
 <details>
   <summary>📄 View code</summary>
   
-```
+```html
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="templateApp" ng-controller="templateController">
 
@@ -237,7 +237,7 @@ To not create a separate **form** for each assignee a single **form** and **user
 <details>
   <summary>📄 View code</summary>
 
-```
+```javascript
 angular.module('templateApp', ['blimpKit', 'platformView']).controller('templateController', ($scope, $http) => {
 
     $scope.entity = {};
@@ -290,7 +290,7 @@ angular.module('templateApp', ['blimpKit', 'platformView']).controller('template
 <details>
   <summary>📄 View code</summary>
 
-```
+```typescript
 import { OnboardingTaskRepository as OnboardingTaskDao } from "codbex-sample-hyperion-employee-onboarding/gen/codbex-sample-hyperion-employee-onboarding/dao/OnboardingTask/OnboardingTaskRepository";
 import { EmployeeRepository as EmployeeDao } from "codbex-sample-hyperion-employee-onboarding/gen/codbex-sample-hyperion-employee-onboarding/dao/Employee/EmployeeRepository";
 
