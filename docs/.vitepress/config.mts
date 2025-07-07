@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'codbex',
+  title: ' ',
   description: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -14,6 +14,18 @@ export default defineConfig({
     ['meta', { name: 'twitter:title', content: 'codbex - High-Productivity Application Platform' }],
     ['meta', { name: 'twitter:description', content: 'High-Productivity Application Platform for Developers, Software Vendors and Enterprises to design, develop and deliver their industry solutions' }],
     ['meta', { name: 'twitter:image', content: 'https://www.codbex.com/social-card.png' }],
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-QWPZ5B9RH8',
+      },
+    ],
+    [
+      'script',
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-QWPZ5B9RH8');",
+    ],
   ],
   base: '/',
   sitemap: {
@@ -67,6 +79,7 @@ export default defineConfig({
           text: 'Pricing',
           items: [
             { text: 'Community', link: '/pricing/community' },
+            { text: 'Starter', link: '/pricing/starter' },
             { text: 'Professional', link: '/pricing/professional' },
             { text: 'Enterprise', link: '/pricing/enterprise' },
             {
@@ -96,6 +109,7 @@ export default defineConfig({
         {
           text: 'News',
           items: [
+            { text: 'Introducing the New Pricing Model', link: '/news/2025/07/01/new-flat-pricing-model' },
             { text: 'We Turn Three - A Journey of Stability, Growth, and Innovation', link: '/news/2025/04/01/codbex-three-years' },
             { text: 'Our Products Now Available on Open Telekom Cloud Marketplace', link: '/news/2025/03/24/codbex-on-otc-marketplace' },
             { text: 'HackTUES 11 - Empowering Young Innovators', link: '/news/2025/03/22/hacktues-11-empowering-young-innovators' },
@@ -112,6 +126,8 @@ export default defineConfig({
         {
           text: 'Marketing',
           items: [
+            { text: 'Why Modern Architectures Need Orchestration', link: '/marketing/2025/07/04/why-modern-architectures-need-orchestration' },
+            { text: 'Migrating SAP BW with Kronos - From Legacy to Flexibility', link: '/marketing/2025/06/10/kronos-bw-migration' },
             { text: 'Hades Now Available on AWS Marketplace', link: '/marketing/2025/01/10/hades-on-aws' },
             { text: 'Kronos is Now Live on Snowflake Marketplace', link: '/marketing/2025/01/10/kronos-snowflake-marketplace' },
             { text: 'Building Apps with Atlas on Snowflake', link: '/marketing/2024/12/23/building-apps-with-atlas-on-snowflake' },
@@ -132,6 +148,8 @@ export default defineConfig({
         {
           text: 'Technology',
           items: [
+            { text: 'Building a Simple ETL Workflow with Phoebe and Apache Airflow', link: '/technology/2025/06/phoebe-airflow-etl' },
+            { text: 'NoSQL Database Management Simplified', link: '/technology/2025/05/16/use-hades-on-aws-docdb' },
             { text: 'How "Depends On" feature in Rhea Simplifies App Development', link: '/technology/2025/03/18/rhea-depends-on' },
             { text: 'Migration to VitePress from Jekyll and Material for MkDocs', link: '/technology/2024/12/17/migration-to-vitepress' },
             { text: 'Building and Releasing Docker Image for codbex Applications', link: '/technology/2024/11/18/build-and-release-docker-image-for-codbex-applications' },
@@ -162,6 +180,33 @@ export default defineConfig({
                 {
                   text: 'Basic Authentication',
                   link: '/documentation/configurations/basic-auth',
+                },
+                {
+                  text: 'Cognito Authentication',
+                  link: '/documentation/configurations/cognito-auth',
+                },
+                {
+                  text: 'Keycloak Authentication',
+                  link: '/documentation/configurations/keycloak-auth',
+                },
+                {
+                  text: 'Client Registration',
+                  link: '/documentation/configurations/client-registration',
+                }
+              ]
+            },
+            {
+              text: 'Migrations',
+              link: '/documentation/migrations/',
+              collapsed: true,
+              items: [
+                {
+                  text: 'ABAP Code Migration',
+                  link: '/documentation/migrations/abap-migration.md',
+                },
+                {
+                  text: 'SAP HANA XS Classic Migration',
+                  link: '/documentation/migrations/xsc-migration.md',
                 }
               ]
             },

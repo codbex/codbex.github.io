@@ -4,33 +4,53 @@ layout: home
 hero:
   name: Pricing Plans
   text: Choose the Best Plan for Your Business
-  tagline: Every plan comes with our award-winning sales optimization solution to drive your success
+  tagline: No metering. No surprise bills. One flat monthly fee per organization.
   image:
       src: /images/styled/goddess-with-two-coins.svg
 
 features:
   - title: Community
-    details: "<b>€0 per user per month</b><br><br>
-    for any kind of commercial or non-commercial use without SLAs<br><br>
-    Database Management, Schema Modeling, Data Import, Back-end Services, Enterprise JavaScript API, User Interfaces, Themes, Entity Data, Business Processes, Jobs, OData, Message Listeners, Extensions, Operations and Monitoring<br><br>
-    Unmanaged Instance Deployed Standalone<br><br>
-    Support via public channels"
+    details: "<b>€0/month</b><br><br>
+    <i>Experiment and learn. Great for side-projects or evaluation</i><br><br>
+    ✅ Free forever<br><br>
+    🔹 Access to all open-source libraries<br>
+    🔹 Sample projects on GitHub<br>
+    🔹 Community documentation<br><br>
+    🛠️ Best-effort support via GitHub Issues<br>
+    🚫 No SLAs or commercial guarantees<br><br>"
     link: /pricing/community
     linkText: Learn more
+  - title: Starter
+    details: "<b>€249/month</b><br><br>
+    <i>Perfect for starting your cloud modernization journey</i><br><br>
+    ✅ Ideal for small teams or proof-of-concept<br><br>
+    🔹 Access to all modules<br>
+    🔹 Unlimited instances, users, flows<br><br>
+    🛠️ 2 hours/month support (email only)<br>
+    ⏱️ 2 business day SLA<br>"
+    link: /pricing/starter
+    linkText: Learn more
   - title: Professional
-    details: "<b>€49 per user per month</b><br><br>
-    for small and mid-size businesses with basic SLAs and minimum 10 users<br><br>
-    Everything included in Community version, Source code repository setup on GitHub, CI/CD pipelines for automatic udates on GitHub<br><br>
-    Managed Instance on Google Cloud Platform<br><br>
-    Support via e-mail with reponse time of two business days<br><br>"
+    details: "<b>€999/month</b><br><br>
+    <i>Designed for active teams automating business processes</i><br><br>
+    ✅ For mid-sized organizations in transition<br><br>
+    🔹 Full platform access<br>
+    🔹 Unlimited instances, developers and flows<br>
+    🔹 Integration & data flow reviews<br><br>
+    🛠️ 5 hours/month support (email + Slack)<br>
+    ⏱️ 1 business day SLA<br><br>"
     link: /pricing/professional
     linkText: Learn more
   - title: Enterprise
-    details: "<b>€249 per user per month</b><br><br>
-    for large enterprises with premium SLAs and minimum 100 users<br><br>
-    Everything included in Professional version, Source code repository setup on any Git provider, Private source code repositories, CI/CD pipelines for automatic udates on private servers<br><br>
-    Managed Instance on GCP, AWS, Azure as Dedicated Kubernetes Cluster<br><br>
-    Support via e-mail with reponse time of two business hours"
+    details: "<b>€2 999/month</b><br><br>
+    <i>For mission-critical transformations and regulated environments</i><br><br>
+    ✅ For global companies modernizing their workloads<br><br>
+    🔹 All modules, all features<br>
+    🔹 Multiple Snowflake accounts supported<br>
+    🔹 Named support engineer<br>
+    🔹 Security & compliance review<br><br>
+    🛠️ 12 hours/month premium support (email + Slack)<br>
+    ⏱️ 4h SLA (business hours)"
     link: /pricing/enterprise
     linkText: Learn more
 ---
@@ -39,6 +59,21 @@ features:
 <br>
 
 # Pricing FAQ
+
+::: info How many instances are included in each plan?
+The pricing is per customer organization, not per instance. <br>
+So the price includes <b>any</b> number of:
+<ul>
+<li>Running instances (VMs, containers)</li>
+<li>Environments (dev, test, prod)</li>
+<li>Users and developers</li>
+<li>BPMN workflows or integrations</li>
+</ul>
+:::
+
+::: info How will infrastructure cost be charged?
+Snowflake consumption (e.g., Snowpark CaaS) is billed separately on your Snowflake invoice. For other cloud providers like Open Telekom Cloud, no markup unless we are managing your infrastructure
+:::
 
 ::: info What types of payment do you accept?
 Credit cards including MasterCard, Visa or American Express.

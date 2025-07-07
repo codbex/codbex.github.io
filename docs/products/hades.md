@@ -145,4 +145,6 @@ Support depends on the plan you selected from [pricing](/pricing/).
 
 * [Explore and Manage Databases in the Cloud](/marketing/2023/10/11/hades-explore-and-manage-databases-in-the-cloud)
 * [Deploy codbex products on Snowflake](/technology/2024/09/11/deploy-codbex-products-on-snowflake)
+* [Hades Now Available on AWS Marketplace](/marketing/2025/01/10/hades-on-aws)
+* [NoSQL Database Management Simplified](/technology/2025/05/16/use-hades-on-aws-docdb)
 
