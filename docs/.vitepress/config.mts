@@ -150,6 +150,9 @@ export default defineConfig({
           items: [
             { text: 'Building a Simple ETL Workflow with Phoebe and Apache Airflow', link: '/technology/2025/06/phoebe-airflow-etl' },
             { text: 'NoSQL Database Management Simplified', link: '/technology/2025/05/16/use-hades-on-aws-docdb' },
+            { text: 'Onboarding Process Tutorial 3 - SMTP Connection', link: '/technology/2025/05/10/onboarding-process-3-smtp' },
+            { text: 'Onboarding Process Tutorial 2 - BPMN Configuration - Service Task Definition', link: '/technology/2025/05/09/onboarding-process-2-service-task' },
+            { text: 'Onboarding Process Tutorial 1 - EDM Configuration', link: '/technology/2025/05/08/onboarding-process-1-edm-configuration' },
             { text: 'How "Depends On" feature in Rhea Simplifies App Development', link: '/technology/2025/03/18/rhea-depends-on' },
             { text: 'Migration to VitePress from Jekyll and Material for MkDocs', link: '/technology/2024/12/17/migration-to-vitepress' },
             { text: 'Building and Releasing Docker Image for codbex Applications', link: '/technology/2024/11/18/build-and-release-docker-image-for-codbex-applications' },
