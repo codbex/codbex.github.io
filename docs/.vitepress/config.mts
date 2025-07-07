@@ -150,6 +150,7 @@ export default defineConfig({
           items: [
             { text: 'Building a Simple ETL Workflow with Phoebe and Apache Airflow', link: '/technology/2025/06/phoebe-airflow-etl' },
             { text: 'NoSQL Database Management Simplified', link: '/technology/2025/05/16/use-hades-on-aws-docdb' },
+            { text: 'Onboarding Process Tutorial 5 - Configuring Subprocess', link: '/technology/2025/05/12/onboarding-process-5-subprocess' },
             { text: 'Onboarding Process Tutorial 4 - User Task Definition and Logical Gateways', link: '/technology/2025/05/11/onboarding-process-4-user-task-logcal-gateways' },
             { text: 'Onboarding Process Tutorial 3 - SMTP Connection', link: '/technology/2025/05/10/onboarding-process-3-smtp' },
             { text: 'Onboarding Process Tutorial 2 - BPMN Configuration - Service Task Definition', link: '/technology/2025/05/09/onboarding-process-2-service-task' },

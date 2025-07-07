@@ -1,5 +1,5 @@
 ---
-title:  Onboarding Process Tutorial 5 - Configuring-Subprocess
+title:  Onboarding Process Tutorial 5 - Configuring Subprocess
 description: As business processes grow more complex, the need for modular and scalable workflow design becomes essential.
 date: 2025-05-12
 author: tomi
@@ -8,7 +8,7 @@ author: tomi
 editLink: false
 ---
 
-# Onboarding Process Tutorial 5: Configuring-Subprocess
+# Onboarding Process Tutorial 5: Configuring Subprocess
 
 ## Introduction
 
@@ -379,6 +379,6 @@ class TaskCompletionFormService {
 - [Onboarding Process Tutorial 2: BPMN Configuration - Service Task Definition](https://codbex.com/technology/2025/05/09/onboarding-process-2-services-task)
 - [Onboarding Process Tutorial 3: SMTP Connection](https://codbex.com/technology/2025/05/10/onboarding-process-3-smtp)
 - [Onboarding Process Tutorial 4: User Task Definition and Logical Gateways](https://codbex.com/technology/2025/05/11/onboarding-process-4-user-task-logical-gateways)
-- [Onboarding Process Tutorial 5: Configuring-Subprocess](https://codbex.com/technology/2025/05/12/onboarding-process-5-subprocess)
+- [Onboarding Process Tutorial 5: Configuring Subprocess](https://codbex.com/technology/2025/05/12/onboarding-process-5-subprocess)
 - [Onboarding Process Tutorial 6: Completing Onboarding Process](https://codbex.com/technology/2025/05/13/onboarding-process-6-final-steps)
 :::
