@@ -95,7 +95,7 @@ Follow these steps to create the necessary folder structure and file:
 <details>
   <summary>📄 View code</summary>
   
-```
+```html
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="templateApp" ng-controller="templateController">
 
@@ -152,7 +152,7 @@ Follow these steps to create the necessary folder structure and file:
 <details>
   <summary>📄 View code</summary>
 
-```
+```javascript
 angular.module('templateApp', ['blimpKit', 'platformView']).controller('templateController', ($scope, $http) => {
 
     const employeeId = new URLSearchParams(window.location.search).get('employeeId');
@@ -240,7 +240,7 @@ angular.module('templateApp', ['blimpKit', 'platformView']).controller('template
 <details>
   <summary>📄 View code</summary>
 
-```
+```typescript
 import { OnboardingTaskRepository as OnboardingTaskDao } from "codbex-sample-hyperion-employee-onboarding/gen/codbex-sample-hyperion-employee-onboarding/dao/OnboardingTask/OnboardingTaskRepository";
 import { EmployeeRepository as EmployeeDao } from "codbex-sample-hyperion-employee-onboarding/gen/codbex-sample-hyperion-employee-onboarding/dao/Employee/EmployeeRepository";
 

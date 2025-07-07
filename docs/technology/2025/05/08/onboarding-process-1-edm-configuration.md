@@ -197,7 +197,7 @@ ONBOARDINGSTATUS_ID,ONBOARDINGSTATUS_NAME
 ### Publishing
 
 - Publish the project
-- Open [Dashboard](http://localhost:80/services/web/dashboard/index.html) and now you can see the application
+- Open [Dashboard](http://localhost/services/web/dashboard/) and now you can see the application
 
 ### Adding to GitHub
 
@@ -210,7 +210,7 @@ ONBOARDINGSTATUS_ID,ONBOARDINGSTATUS_NAME
 
 ## Conclusion
 
-Ready to build your own? [Click here](LINK) to learn more or access the Employee Onboarding Sample App.
+Ready to build your own? [Click here](https://github.com/codbex/codbex-sample-hyperion-employee-onboarding) to learn more or access the Employee Onboarding Sample App.
 By following this guide, you've taken the first steps in building a well-structured Entity Data Model using **`codbex Rhea`**. Through the **`Sample Employee Onboarding Process`**, we've demonstrated how to define entities, set up relationships, and create a model that accurately represents your data. Whether you're scaling this up for a larger system or just experimenting to learn, this foundation will serve you well in any project. Keep exploring, keep modeling—and don’t forget, a well-designed data model is the backbone of a successful application.
 
 ::: details Other blogs
