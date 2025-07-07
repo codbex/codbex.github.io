@@ -109,31 +109,9 @@ features:
 		<div class="button alt"><a href="mailto:office@codbex.com">Join as a Partner</a></div>
 		<br><br>
 		<h3><strong>Who</strong> trust us by using our products and services or partnering with us</h3>
-		<div class="container text-center">
-			<ul class="partner-list">
-				<li><a href="https://aareon.com/" target="_blank">Aareon</a></li>
-				<li><a href="https://allane.com/" target="_blank">Allane</a></li>
-				<li><a href="https://amista.be" target="_blank">Amista</a></li>
-				<li><a href="https://anthill.one/" target="_blank">Anthill</a></li>
-				<li><a href="https://apollogic.com/" target="_blank">Apollogic</a></li>
-				<li><a href="https://arcware.io" target="_blank">Arcware</a></li>
-				<li><a href="https://bix-consulting.com/" target="_blank">biX</a></li>
-				<li><a href="https://bosch.com/" target="_blank">Bosch</a></li>
-				<li><a href="https://clolytic.com/" target="_blank">Clolytic</a></li>
-				<li><a href="https://www.telekom.com/en" target="_blank">Deutsche Telekom</a></li>
-				<li><a href="https://digitall.com" target="_blank">Digitall</a></li>
-				<li><a href="https://lights.digital" target="_blank">Digital Lights</a></li>
-				<li><a href="https://glencore.com" target="_blank">Glencore</a></li>
-				<li><a href="https://heliconialabs.com/" target="_blank">Heliconia Labs</a></li>
-				<li><a href="https://ikea.com/" target="_blank">IKEA</a></li>
-				<li><a href="https://pythian.com/" target="_blank">Pythian</a></li>
-				<li><a href="https://sap.com/" target="_blank">SAP</a></li>
-				<li><a href="https://snowflake.com/" target="_blank">Snowflake</a></li>
-				<li><a href="https://www.sofia.bg/web/sofia-municipality" target="_blank">Sofia Municipality</a></li>
-				<li><a href="https://valantic.com/" target="_blank">valantic</a></li>
-				<!-- <li><a href="https://wisertech.com/" target="_blank">Wiser</a></li> -->
-			</ul>
-			</div>
+		<ClientOnly>
+			<SwiperPartners />
+		</ClientOnly>
 	</section>
 	<section class="testimonial">
 		<div class="container flex">

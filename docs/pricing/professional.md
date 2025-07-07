@@ -6,9 +6,9 @@ editLink: false
 # Professional Plan
 <br/>
 
-<div class="price-tag">€49 per user (minimum 10 users)</div>
+<div class="price-tag">€999/month</div>
 
-The Professional Plan offered by <b>codbex</b> is an all-encompassing solution, building upon the features of the Community Plan while adding further enhancements to streamline the development process. This plan not only provides the collaborative tools and capabilities for end-to-end development but also offers additional benefits such as source code repository setup on GitHub, CI/CD pipelines for automatic updates, deployment on Google Cloud Platform, and dedicated support via email with a response time of two business days.
+The Professional Plan offered by <b>codbex</b> is an all-encompassing solution, building upon the features of the Starter Plan while adding further enhancements to streamline the development process. This plan not only provides the collaborative tools and capabilities for end-to-end development but also offers additional benefits such as source code repository setup on GitHub, CI/CD pipelines for automatic updates, deployment on Google Cloud Platform, and dedicated support via email with a response time of two business days.
 
 The Professional Plan is designed to cater to the needs of small and mid-size businesses, providing them with a robust platform for rapid application development of cloud applications. This plan is tailored to offer a comprehensive suite of features coupled with basic Service Level Agreements (SLAs), ensuring a seamless and efficient experience for businesses looking to enhance their digital presence.
 
@@ -46,7 +46,7 @@ The Professional Plan is designed to cater to the needs of small and mid-size bu
 
 **Deployment on Google Cloud Platform**: Deploy applications on the Google Cloud Platform, leveraging its scalable infrastructure and services for reliable and efficient hosting.
 
-**Support via Email with Response Time of Two Business Days**: Receive dedicated support via email with a guaranteed response time of two business days, ensuring prompt assistance and resolution of issues.
+**Support via Email with Response Time of Two Business Days**: Receive dedicated support via email and Slack with a guaranteed response time of one business day, ensuring prompt assistance and resolution of issues.
 
 **Advanced Development Tools**: The Professional Plan includes access to a range of advanced development tools, empowering businesses to create sophisticated cloud applications efficiently.
 
