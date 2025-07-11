@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import SwiperPartners from '../../components/SwiperPartners.vue'
+import './utils/cookie-banner.js'
 
 export default {
   extends: DefaultTheme,
