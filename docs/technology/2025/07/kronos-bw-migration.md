@@ -16,8 +16,8 @@ In this blog post, we present a technical deep dive into migrating SAP BW scenar
 SAP BW systems, while historically robust, are built on tightly-coupled ABAP logic and rigid data models. Migrating to Kronos allows you to retain your BW logic while adopting modern, flexible, and cloud-native data platforms. Using Kronos, you can:
 
 - Export and reimplement BW transformation logic.
-- Replicate BW data models (Master Data, DataSources, DSOs, InfoCubes, MultiProviders).
-- Rebuild multi-provider logic with BPM orchestration.
+- Replicate BW data models (InfoObjects, DataSources, DSOs, InfoCubes, MultiProviders).
+- Rebuild data model flows logic with BPM orchestration.
 - Visualize the result using modern tools.
 - Run on Snowflake, HANA, PostgreSQL or even H2 for local testing.
 
@@ -26,9 +26,9 @@ The Kronos allows this entire process to be modular, reusable, and executable on
 ## Lift-and-Shift Migration Approach
 The "lift and shift" strategy provides a straightforward and transparent method to migrate your SAP BW logic with minimal redesign. The following steps outline the process using Kronos:
 
-1. Replicate BW Tables to Target Platform
+1. Replicate BW Objects to Target Platform
 
-   All BW tables relevant to your MasterData, DataSources, DSOs, and InfoCubes are copied over to the destination platform. This can be done using any data migration tools such as Fivetran, SNP Glue, etc.
+   All BW objects (InfoObjects, DataSources, DSOs, InfoCubes, etc.) are copied over to the destination platform. This can be done using any data migration tools.
 
    <a href="/images/2025-07-21-kronos-bw-migration/data-structures.gif" target="_blank">
    <img src="/images/2025-07-21-kronos-bw-migration/data-structures.gif" alt="data-structures.gif">
@@ -36,15 +36,11 @@ The "lift and shift" strategy provides a straightforward and transparent method 
 
 1. Migrate Data
 
-   Once the target structures are in place, all associated data must also be migrated to ensure full alignment with the original BW system. This step guarantees a one-to-one semantic correspondence between the source and target environments.
+   Once the data structures are in place, all associated data must also be migrated to ensure full alignment with the original BW system. This step guarantees a one-to-one semantic correspondence between the source and target environments.
 
 1. Export BW Transformation Logic
    
-   Each transformation — whether ABAP routines or rule-based mappings — is exported from the BW system using a dedicated export tool. This includes: **CHECK WITH YANI AND LARS**
-   - DataSource to DSO mappings
-   - DSO to Cube transformations
-   - Lookup logic
-   - Start/End/Field routines
+   Each ABAP transformation is completely exported from the BW system using a dedicated export tool.
    
    The exported artifacts must be pushed to a Kronos project stored in a git repository.
    <a href="/images/2025-07-21-kronos-bw-migration/abap-transformations-export.png" target="_blank">
@@ -67,12 +63,12 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    <img src="/images/2025-07-21-kronos-bw-migration/camel-routes.png" alt="camel-routes.png">
    </a>
 
-1. Multiproviders as BPM Processes
+1. BW Data Model Flows as BPM Processes
    
-   Multiproviders — which combine data from multiple sources — are implemented as Kronos BPM processes:
+   Each data model flow is implemented as Kronos BPM process:
    - Each BPM task calls an ETL Camel route
    - Aggregated results are stored
-   - Fully orchestrated execution flow mirrors BW’s MultiProvider behavior
+   - Fully orchestrated execution flow mirrors BW’s data model flow behavior
 
    <a href="/images/2025-07-21-kronos-bw-migration/bpm-process.png" target="_blank">
    <img src="/images/2025-07-21-kronos-bw-migration/bpm-process.png" alt="bpm-process.png">
