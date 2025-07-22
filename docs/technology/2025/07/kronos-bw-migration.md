@@ -71,7 +71,7 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    - Fully orchestrated execution flow mirrors BW’s data model flow behavior
 
    <a href="/images/2025-07-21-kronos-bw-migration/bpm-process.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/bpm-process.png" alt="bpm-process.png">
+   <img src="/images/2025-07-21-kronos-bw-migration/bpm-process.png" alt="bpm-process.png" style="width: 70%;">
    </a>
 
 1. Visualization
