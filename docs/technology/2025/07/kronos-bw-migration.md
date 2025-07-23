@@ -1,16 +1,16 @@
 ---
-title: Migrating SAP BW with Kronos – Technical Guide
-description: In this blog post, we present a technical deep dive into migrating SAP BW scenarios using Krono
+title: Hands-On Guide to Migrating SAP BW with Kronos
+description: In this blog post, we present a practical overview of migrating SAP BW scenarios using Kronos
 date: 2025-07-21
 author: iliyan
 editLink: false
 ---
 
-# Migrating SAP BW with Kronos – Technical Guide
+# Hands-On Guide to Migrating SAP BW with Kronos
 
 ## Overview
 
-In this blog post, we present a technical deep dive into migrating SAP BW scenarios using Kronos — codbex’s modern data integration platform — onto modern platforms like Snowflake, SAP HANA, and even lightweight setups like H2 for local testing. For a broader, business-focused perspective on this migration journey, check out our companion post: [Migrating SAP BW with Kronos - From Legacy to Flexibility](https://www.codbex.com/marketing/2025/06/10/kronos-bw-migration)
+In this blog post, we present a practical overview of migrating SAP BW scenarios using Kronos — codbex's modern data integration platform — onto modern platforms like Snowflake, SAP HANA, and even lightweight setups like H2 for local testing. For a broader, business-focused perspective on this migration journey, check out our companion post: [Migrating SAP BW with Kronos - From Legacy to Flexibility](/marketing/2025/06/10/kronos-bw-migration)
 
 ## Migration Summary
 SAP BW systems, while historically robust, are built on tightly-coupled ABAP logic and rigid data models. Migrating to Kronos allows you to retain your BW logic while adopting modern, flexible, and cloud-native data platforms. Using Kronos, you can:
@@ -26,7 +26,7 @@ The Kronos allows this entire process to be modular, reusable, and executable on
 ## Lift-and-Shift Migration Approach
 The "lift and shift" strategy provides a straightforward and transparent method to migrate your SAP BW logic with minimal redesign. The following steps outline the process using Kronos:
 
-1. Replicate BW Objects to Target Platform
+### 1. Replicate BW Objects to Target Platform
 
    All BW objects (InfoObjects, DataSources, DSOs, InfoCubes, etc.) are copied over to the destination platform. This can be done using any data migration tools.
 
@@ -34,11 +34,11 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    <img src="/images/2025-07-21-kronos-bw-migration/data-structures.gif" alt="data-structures.gif">
    </a>
 
-1. Migrate Data
+### 2. Migrate Data
 
    Once the data structures are in place, all associated data must also be migrated to ensure full alignment with the original BW system. This step guarantees a one-to-one semantic correspondence between the source and target environments.
 
-1. Export BW Transformation Logic
+### 3. Export BW Transformation Logic
    
    Each ABAP transformation is completely exported from the BW system using a dedicated export tool.
    
@@ -47,7 +47,7 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    <img src="/images/2025-07-21-kronos-bw-migration/abap-transformations-export.png" alt="abap-transformations-export.png">
    </a>
 
-1. ABAP Transformation code to JavaScript code
+### 4. ABAP Transformation code to JavaScript code
    
    On build time, the ABAP transformation code is automatically transpiled to JavaScript. This allows Kronos to execute it during the transformation.
 
@@ -55,7 +55,7 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    <img src="/images/2025-07-21-kronos-bw-migration/transpilation.png" alt="transpilation.png">
    </a>
    
-1. Rebuild Transformations as ETL Camel Routes
+### 5. Rebuild Transformations as ETL Camel Routes
 
    Using Kronos ETL modules based on Apache Camel, each transformation is re-implemented as a Camel route.
 
@@ -63,18 +63,18 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    <img src="/images/2025-07-21-kronos-bw-migration/camel-routes.png" alt="camel-routes.png">
    </a>
 
-1. BW Data Model Flows as BPM Processes
+### 6. BW Data Model Flows as BPM Processes
    
    Each data model flow is implemented as Kronos BPM process:
    - Each BPM task calls an ETL Camel route
    - Aggregated results are stored
-   - Fully orchestrated execution flow mirrors BW’s data model flow behavior
+   - Fully orchestrated execution flow mirrors BW's data model flow behavior
 
    <a href="/images/2025-07-21-kronos-bw-migration/bpm-process.png" target="_blank">
    <img src="/images/2025-07-21-kronos-bw-migration/bpm-process.png" alt="bpm-process.png" style="width: 70%;">
    </a>
 
-1. Visualization
+### 7. Visualization
 
    Once all BPM processes have been executed and the underlying ETL transformations have run successfully, the data is ready for visualization. At this stage, you can:
    - Connect to modern BI tools like Tableau, Power BI, or Apache Superset
@@ -85,25 +85,117 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    <img src="/images/2025-07-21-kronos-bw-migration/visualize.png" alt="visualize.png">
    </a>
 
-1. Decommission the BW System
+### 8. Decommission the BW System
 
    Once all data structures, transformations, and reporting flows have been successfully migrated and validated within Kronos, the legacy SAP BW system can be safely decommissioned. This marks the completion of the migration, allowing you to reduce infrastructure costs and eliminate technical debt associated with maintaining the older BW environment.
 
-## Demo: Bike Sales MultiProvider Migration 
+## Demo: Bike Sales Data Flow Migration
 
-**TODO**
+To demonstrate the Kronos-based SAP BW migration approach, we've prepared a complete demo scenario showcasing the migration of a BW data flow related to Bike Sales. This scenario illustrates how a typical end-to-end pipeline — from raw DataSources to final processed data — can be rebuilt using Kronos components.
 
-As a practical showcase, we provide a demo migration project of a BW scenario for Bike Sales, consisting of:
+### Scenario Overview
+**TODO: Yani to review this section**
 
-- DataSources: Product Master, Sales Orders, Customer Info
-- DSOs: Sales Order Header/Items, Inventory
-- Cubes: Aggregated Sales Data
-- MultiProvider: Consolidated Bike Sales Overview
+The demo simulates a classic BI data flow consisting of:
 
-Each layer is implemented with Kronos components and runs on any supported backend. The project includes:
-- Schema definitions for Snowflake/PostgreSQL
-- Sample ETL Camel Routes
-- BPM Orchestration
-- Sample dashboards and reports
+- DataSources:
+  - Product Master
+  - Sales Orders
+  - Customer Info
 
-Full source code available [here.](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration)
+- DSOs:
+  - Sales Order Header
+  - Sales Order Items
+  - Inventory Levels
+
+- Cubes:
+  - Aggregated Sales Data for bikes by region, customer segment, and product
+
+- Data Model Flow:
+
+   <a href="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" target="_blank">
+   <img src="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" alt="data-model-flow.png" style="width: 70%;">
+   </a>
+
+You can find more details about the scenario [in the description file here.](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/docs/scenario/Description.docx.pdf)
+
+### Sample Project Implementation
+
+This section outlines how the Bike Sales data flow scenario is implemented in [the sample Git repository](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration). 
+While the scenario can run on any supported target platform — including Snowflake, PostgreSQL, and SAP HANA—it is described using the H2 Database for simplicity and ease of local execution. 
+
+Each step demonstrates how core components—such as table structures, transformation logic, and orchestration flows—are realized using Kronos, following the principles of the lift-and-shift migration approach.
+
+#### Start Kronos instance locally
+Start a Kronos container locally using the following command:
+```shell
+docker run --name codbex-kronos \
+  -p 80:80 -p 8081:8081 \
+  ghcr.io/codbex/codbex-kronos:2.90.0 # or newer
+```
+By default, Kronos uses the H2 database as the target platform, making it easy to run the demo locally without additional setup. No configuration changes are required to get started.
+
+#### Run the Sample Project
+Once the Kronos instance is up and running, you can open and run the sample project using the following steps:
+- Open Kronos in your browse at [http://localhost/](http://localhost/)
+- Login using the default credentials, user `admin` and password `admin`
+  <a href="/images/2025-07-21-kronos-bw-migration/welcome-kronos.png" target="_blank">
+  <img src="/images/2025-07-21-kronos-bw-migration/welcome-kronos.png" alt="welcome-kronos.png">
+  </a>
+- Go to the `Git` perspective
+  <a href="/images/2025-07-21-kronos-bw-migration/git-perspective.png" target="_blank">
+  <img src="/images/2025-07-21-kronos-bw-migration/git-perspective.png" alt="git-perspective.png" style="width: 40%;">
+  </a>
+- Click on the `Clone` button
+  <a href="/images/2025-07-21-kronos-bw-migration/clone-btn.png" target="_blank">
+  <img src="/images/2025-07-21-kronos-bw-migration/clone-btn.png" alt="clone-btn.png" style="width: 40%;">
+  </a>
+- Set `https://github.com/codbex/codbex-sample-kronos-bw-sales-migration.git` for repository URL and click on the `Clone` button
+  <a href="/images/2025-07-21-kronos-bw-migration/clone-project.png" target="_blank">
+  <img src="/images/2025-07-21-kronos-bw-migration/clone-project.png" alt="clone-project.png" style="width: 40%;">
+  </a>
+- Go back to the `Workbench` perspective
+  <a href="/images/2025-07-21-kronos-bw-migration/workbench-btn.png" target="_blank">
+  <img src="/images/2025-07-21-kronos-bw-migration/workbench-btn.png" alt="workbench-btn.png" style="width: 40%;">
+  </a>
+- Click on the `Publish all` button
+  <a href="/images/2025-07-21-kronos-bw-migration/publish-btn.png" target="_blank">
+  <img src="/images/2025-07-21-kronos-bw-migration/publish-btn.png" alt="publish-btn.png" style="width: 40%;">
+  </a>
+
+  Publishing the project activates it in the Kronos runtime. This step automatically sets up all required components, including database structures, sample data, transformation logic, BPM processes, etc.—so everything is ready to run without additional configuration.
+
+   Since this is an asynchronous process, it may take a few seconds for all components to be fully initialized.
+
+#### Define BW Objects in the Target Platform
+To simplify the setup and avoid using external data migration tools, all BW structures used in the scenario—such as tables for DataSources, DSOs, and Cubes—are predefined in the Kronos Database Schema Model (DSM) file: [sales/db/db-schema.dsm](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/db/db-schema.dsm):
+<a href="/images/2025-07-21-kronos-bw-migration/dsm.png" target="_blank">
+<img src="/images/2025-07-21-kronos-bw-migration/dsm.png" alt="dsm.png">
+</a>
+
+This schema is automatically applied when the project is published, creating all required tables in the target platform with no manual setup needed.
+
+#### Import Sample Data
+Following the same approach, sample data for the scenario is provided as CSV files located in dir: [sales/db/](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/db)
+
+These CSV files are automatically imported into the target platform during project publishing. This makes it possible to initialize the environment without relying on any external data migration tools.
+
+All CSV files which are used are configured in [CSVIM](/documentation/platform/artefacts/csvim) file [sales/db/data.csvim](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/db/data.csvim)
+
+✅ This simplified setup works out of the box across supported platforms, including H2, Snowflake, PostgreSQL, and HANA.
+
+#### Export BW Transformation Logic
+The ABAP transformation logic originally defined in SAP BW is exported using a dedicated export tool.
+In the sample project, the exported transformations are stored as `.abap` files in the following directory: [sales/src/](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/src)
+
+#### Transpile ABAP to JavaScript
+When the project is published in Kronos, the exported ABAP transformation logic from dir `sales/src/` is **automatically transpiled to JavaScript**. This makes it executable within Kronos during ETL processing.
+
+The transpilation is triggered by the build scripts defined in the project's configuration file
+[sales/project.json](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/project.json) when the project is published.
+
+The generated JavaScript files are stored in the `sales/dist/` folder of the project.
+<a href="/images/2025-07-21-kronos-bw-migration/dist-folder.png" target="_blank">
+<img src="/images/2025-07-21-kronos-bw-migration/dist-folder.png" alt="dist-folder.png"  style="width: 45%;">
+</a>
+
