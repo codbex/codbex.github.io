@@ -216,4 +216,4 @@ Here’s what the assembled route looks like:
 </a>
 
 💡 Want to implement your own route?
-Check out our [Tips & Tricks](TODO) on how to add Dirigible JavaScript steps to Camel routes and build flexible, script-driven data pipelines.
+Check out our [Tips & Tricks for the Integration Modeler](/documentation/tooling/integrations/#tips-tricks).
