@@ -57,7 +57,7 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    
 ### 5. Rebuild Transformations as ETL Camel Routes
 
-   Using Kronos ETL modules based on Apache Camel, each transformation is re-implemented as a Camel route.
+   Using Kronos ETL modules based on [Apache Camel](https://camel.apache.org/), each transformation is re-implemented as a [Camel route](/documentation/platform/artefacts/camel).
 
    <a href="/images/2025-07-21-kronos-bw-migration/camel-routes.png" target="_blank">
    <img src="/images/2025-07-21-kronos-bw-migration/camel-routes.png" alt="camel-routes.png">
@@ -65,7 +65,7 @@ The "lift and shift" strategy provides a straightforward and transparent method 
 
 ### 6. BW Data Model Flows as BPM Processes
    
-   Each data model flow is implemented as Kronos BPM process:
+   Each data model flow is implemented as Kronos [BPM process](/documentation/platform/artefacts/bpmn):
    - Each BPM task calls an ETL Camel route
    - Aggregated results are stored
    - Fully orchestrated execution flow mirrors BW's data model flow behavior
@@ -137,7 +137,7 @@ By default, Kronos uses the H2 database as the target platform, making it easy t
 
 #### Run the Sample Project
 Once the Kronos instance is up and running, you can open and run the sample project using the following steps:
-- Open Kronos in your browse at [http://localhost/](http://localhost/)
+- Open Kronos in your browser at [http://localhost/](http://localhost/)
 - Login using the default credentials, user `admin` and password `admin`
   <a href="/images/2025-07-21-kronos-bw-migration/welcome-kronos.png" target="_blank">
   <img src="/images/2025-07-21-kronos-bw-migration/welcome-kronos.png" alt="welcome-kronos.png">
@@ -168,7 +168,7 @@ Once the Kronos instance is up and running, you can open and run the sample proj
    Since this is an asynchronous process, it may take a few seconds for all components to be fully initialized.
 
 #### Define BW Objects in the Target Platform
-To simplify the setup and avoid using external data migration tools, all BW structures used in the scenario—such as tables for DataSources, DSOs, and Cubes—are predefined in the Kronos Database Schema Model (DSM) file: [sales/db/db-schema.dsm](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/db/db-schema.dsm):
+To simplify the setup and avoid using external data migration tools, all BW structures used in the scenario—such as tables for DataSources, DSOs, and Cubes—are predefined in the Kronos [Database Schema Model (DSM)](/documentation/platform/artefacts/dsm) file: [sales/db/db-schema.dsm](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/db/db-schema.dsm):
 <a href="/images/2025-07-21-kronos-bw-migration/dsm.png" target="_blank">
 <img src="/images/2025-07-21-kronos-bw-migration/dsm.png" alt="dsm.png">
 </a>
@@ -199,3 +199,21 @@ The generated JavaScript files are stored in the `sales/dist/` folder of the pro
 <img src="/images/2025-07-21-kronos-bw-migration/dist-folder.png" alt="dist-folder.png"  style="width: 45%;">
 </a>
 
+#### Rebuild Transformations as ETL Camel Routes
+Each transformation in the sample scenario is implemented as a reusable ETL [Camel route](/documentation/platform/artefacts/camel) located at [sales/etl/etl-route.camel](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/etl/etl-route.camel). The route perform a simplified [Extract → Transform → Load](https://en.wikipedia.org/wiki/Extract,_transform,_load) flow:
+- The **extract step** reads all data from the source table (full load used for simplicity) - [sales/etl/data-extractor.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/etl/data-extractor.ts)
+- The **transform step** invokes the corresponding transpiled ABAP transformation logic (in JavaScript) [sales/etl/transform-entries.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/etl/transform-entries.ts)
+- The **load step** writes the transformed results into the defined target table [sales/etl/data-loader.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/etl/data-loader.ts)
+
+Each step uses helper functions implemented in [sales/etl/etl.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/etl/etl.ts).
+These functions leverage the [codbex Database API](/documentation/platform/sdk/db/) to access and manipulate data.
+
+The route itself is parameterized — it accepts the source table, target table, and transformation ID as exchange properties, allowing it to be reused across different flows.
+
+Here’s what the assembled route looks like:
+<a href="/images/2025-07-21-kronos-bw-migration/etl-route.png" target="_blank">
+<img src="/images/2025-07-21-kronos-bw-migration/etl-route.png" alt="etl-route.png">
+</a>
+
+💡 Want to implement your own route?
+Check out our [Tips & Tricks](TODO) on how to add Dirigible JavaScript steps to Camel routes and build flexible, script-driven data pipelines.
