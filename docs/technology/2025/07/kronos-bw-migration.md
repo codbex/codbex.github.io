@@ -217,3 +217,33 @@ Here’s what the assembled route looks like:
 
 💡 Want to implement your own route?
 Check out our [Tips & Tricks for the Integration Modeler](/documentation/tooling/integrations/#tips-tricks).
+
+#### Model BW Data Flows as BPM Processes
+In SAP BW, data flows are often tightly orchestrated—from DataSources through DSOs to Cubes or MultiProviders—in a specific execution sequence. To replicate this orchestration in Kronos, these flows are reimplemented as BPM processes that preserve the original order of execution.
+
+In the demo project, this flow is modeled in the BPM file [sales/bpmn/sls_mp.bpmn](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/bpmn/sls_mp.bpmn).
+<a href="/images/2025-07-21-kronos-bw-migration/bpmn.png" target="_blank">
+<img src="/images/2025-07-21-kronos-bw-migration/bpmn.png" alt="bpmn.png"  style="width: 70%;">
+</a>
+
+Each BPM task:
+- Triggers the defined in the previous step ETL Camel route
+- Passes different parameters for source/target table names and the transformation ID depending on the current step
+
+The BPM tasks themselves are stored in the [sales/bpmn](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/5b3aede43ca7c224abd3b8c9f9500e08d44def01/sales/bpmn) folder. Each task uses the codbex Integrations API to programmatically trigger the route execution.
+
+This approach ensures a 1:1 match with the original BW process chains, while offering clean modularity in Kronos.
+<a href="/images/2025-07-21-kronos-bw-migration/1-to-1.png" target="_blank">
+<img src="/images/2025-07-21-kronos-bw-migration/1-to-1.png" alt="1-to-1.png">
+</a>
+
+Using BPM in Kronos comes with additional benefits:
+- Visual monitoring of running process instances
+- Status tracking, including step-level success/failure
+- Easy error inspection
+- Ability to retrigger failed processes
+
+All of this is available in [the Processes perspective](/documentation/tooling/processes/), providing clear operational insight and control over data flows.
+
+💡 Want to build your own BPM flow?
+Check out our [BPM Modeler Tips & Tricks](/documentation/tooling/processes/modeler#tips-tricks) to get started.
