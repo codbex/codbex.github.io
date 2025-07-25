@@ -1,16 +1,16 @@
 ---
-title: Hands-On Guide to Migrating SAP BW with Kronos
+title: 'Migrating SAP BW to Kronos: A Hands-On Guide'
 description: In this blog post, we present a practical overview of migrating SAP BW scenarios using Kronos
-date: 2025-07-21
+date: 2025-07-25
 author: iliyan
 editLink: false
 ---
 
-# Hands-On Guide to Migrating SAP BW with Kronos
+# Migrating SAP BW to Kronos: A Hands-On Guide
 
 ## Overview
 
-In this blog post, we present a practical overview of migrating SAP BW scenarios using Kronos — codbex's modern data integration platform — onto modern platforms like Snowflake, SAP HANA, and even lightweight setups like H2 for local testing. For a broader, business-focused perspective on this migration journey, check out our companion post: [Migrating SAP BW with Kronos - From Legacy to Flexibility](/marketing/2025/06/10/kronos-bw-migration)
+In this blog post, we present a practical overview of migrating SAP BW scenarios using [Kronos](/products/kronos) — codbex's modern data integration platform — onto modern platforms like Snowflake, SAP HANA, and even lightweight setups like H2 for local testing. For a broader, business-oriented view of this migration journey, check out our companion blog post: [Migrating SAP BW with Kronos - From Legacy to Flexibility](/marketing/2025/06/10/kronos-bw-migration)
 
 ## Migration Summary
 SAP BW systems, while historically robust, are built on tightly-coupled ABAP logic and rigid data models. Migrating to Kronos allows you to retain your BW logic while adopting modern, flexible, and cloud-native data platforms. Using Kronos, you can:
@@ -94,7 +94,6 @@ The "lift and shift" strategy provides a straightforward and transparent method 
 To demonstrate the Kronos-based SAP BW migration approach, we've prepared a complete demo scenario showcasing the migration of a BW data flow related to Bike Sales. This scenario illustrates how a typical end-to-end pipeline — from raw DataSources to final processed data — can be rebuilt using Kronos components.
 
 ### Scenario Overview
-**TODO: Yani to review this section**
 
 The demo simulates a classic BI data flow consisting of:
 
