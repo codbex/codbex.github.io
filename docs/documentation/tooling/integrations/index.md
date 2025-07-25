@@ -67,6 +67,60 @@ The Integrations Editor in the platform, powered by Apache Karavan, provides a v
 - **Extensibility:**
   - Developers can extend the functionality of integration flows by leveraging the wide range of Camel components and incorporating custom components as needed.
 
+## Tips & Tricks
+
+### How to create an empty route
+Follow these steps to create a new, empty integration route in your project:
+- Right-click on a project or folder
+- Select `New` -> `Route Definition`
+  ![route-definitions.png](../../images/tooling/integrations/route-definitions.png)
+- Enter a name for the route
+- Click on the `Create` button
+  ![route-definition-filename.png](../../images/tooling/integrations/route-definition-filename.png)
+- Double-click on the newly created file to open it
+- The Modeler will launch
+  ![route-definition-filename.png](../../images/tooling/integrations/integration-modeler-empty-route.png)
+- You can now model your integration flow visually using the modeler interface.
+
+  💡 Next step: [add a JavaScript step](#how-to-add-javascript-step-to-a-route) to bring your logic into the route.
+
+### How to add JavaScript step to a route
+
+- Prerequisites:
+  - An empty integration route
+
+Follow the steps bellow to add a JavaScript step to your route:
+1. Open your route file
+2. Add a source - for example a cron trigger
+    - Click on the `Create route` button
+      ![create-route-btn.png](../../images/tooling/integrations/create-route-btn.png)
+    - Open the `Components` tab
+    - Search for `cron`
+    - Select the cron tile
+      ![cron-component.png](../../images/tooling/integrations/cron-component.png)
+    - Enter a trigger name and schedule - for example `TestTrigger` and `0/10 * * ? * *` (every 10 seconds)
+      ![cron-component.png](../../images/tooling/integrations/cron-component-cfgs.png)
+3. Create route step handler (JavaScript/TypeScript file)
+    - Right-click on a project or folder
+    - Select `New` -> `Route Step Handler`
+      ![route-step-handler.png](../../images/tooling/integrations/route-step-handler.png)
+    - Enter a name for the handler
+    - Click `Create`
+      ![route-handler-filename.png](../../images/tooling/integrations/route-handler-filename.png)
+    - Double-click the created file to open it
+    - Add your logic inside the `onMessage` function. You can use the [codbex SDK API](/documentation/platform/sdk/) to access platform features.
+      ![handler-code.png](../../images/tooling/integrations/handler-code.png) 
+4. Add the JavaScript Step to the Route
+   - Click on `Add step` button after the configured source
+   ![add-route-step.png](../../images/tooling/integrations/add-route-step.png)
+   - Open the `Components` tab
+   - Search for `javascript`
+   - Select the tile
+     ![js-component.png](../../images/tooling/integrations/js-component.png)
+   - Set the path to the handler file, e.g.: `camel-demo/route-step-handler.ts`
+     ![js-step-cfg.png](../../images/tooling/integrations/js-step-cfg.png)
+   - Optionally, add a description for the step
+
 ## Conclusion
 
 The Integrations Editor based on Apache Karavan is a powerful tool for designing and managing integration flows within the platform. By leveraging the capabilities of the Apache Camel Integration Engine, developers can create scalable, reliable, and extensible integration solutions seamlessly.

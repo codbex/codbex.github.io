@@ -57,6 +57,74 @@ To start using the BPMN Modeler in the platform, follow these steps:
 4. **Save and Deploy:**
    - Save the BPMN diagram in BPMN XML format and deploy it to the execution runtime, such as the Flowable BPM platform, for execution.
 
+## Tips & Tricks
+### How to create an empty BPM process
+Follow these steps to create a new, empty process in your project:
+- Right-click on a project or folder
+- Select `New` -> `Business Process Model`
+  ![new-bpm.png](../../images/tooling/processes/modeler/new-bpm.png)
+- Enter a name for the process file
+- Click the `Create` button
+  ![bpm-filename.png](../../images/tooling/processes/modeler/bpm-filename.png)
+- Double-click on the newly created file to open it
+- The BPMN Modeler will launch
+  ![bpm-modeler-new-process.png](../../images/tooling/processes/modeler/bpm-modeler-new-process.png)
+- By default, the process identifier is set to `myprocess`. You can edit this to match your naming conventions or project needs.
+  ![bpm-identifier.png](../../images/tooling/processes/modeler/bpm-identifier.png)
+- You can now design your process visually using the drag-and-drop modeler interface.
+
+Next step: [add a JavaScript task](#how-to-add-javascript-task-to-a-process) to embed logic into your process flow.
+
+### How to add JavaScript task to a process
+Once you’ve created an empty BPM process, you can add executable logic using a JavaScript/TypeScript task. This lets you trigger custom code as part of your process flow.
+
+- Prerequisites:
+   - A BPMN file in your project (you can use the one created in the [How to create an empty BPM process](#how-to-create-an-empty-bpm-process)).
+   - To start clean, delete any default elements in the diagram so you can build from scratch.
+
+1. Add a Start Event
+   - In the `Start Events` panel, drag and drop a `Start event` onto the canvas.
+     ![start-event.png](../../images/tooling/processes/modeler/start-event.png)
+2. Create a TypeScript File for the Task
+   - Right-click on your project or a folder
+   - Select `New` -> `File`
+     ![new-file.png](../../images/tooling/processes/modeler/new-file.png)
+   - Set a file name, e.g., `mytask.ts`
+     ![task-filename.png](../../images/tooling/processes/modeler/task-filename.png)
+   - Open the file and define your task logic inside
+     You can use the [codbex SDK](/documentation/platform/sdk/) to implement your logic and [BPM API](/documentation/platform/sdk/bpm/) to interact with the process engine.
+     ![task-logic.png](../../images/tooling/processes/modeler/task-logic.png)
+3. Add a Service Task
+   - In the `Activities` panel, drag and drop a `Service task`
+     ![service-task.png](../../images/tooling/processes/modeler/service-task.png)
+   - Set task properties:
+      - `Id`, e.g., `my-task`
+      - `Name`, e.g., `My Task`
+        ![task-cfgs-id-name.png](../../images/tooling/processes/modeler/task-cfgs-id-name.png)
+     - `Delegate expression`: `${JSTask}`
+       ![task-cfgs-delegate-expression.png](../../images/tooling/processes/modeler/task-cfgs-delegate-expression.png)
+     - Configure the JavaScript Handler
+        - Click on the `Class fields` property
+          ![class-fields.png](../../images/tooling/processes/modeler/class-fields.png)
+        - Click `Add` button
+       - Add a field:
+          - `Name`: `handler`
+          - `String value`: the path to your file, e.g., `bpm-demo/mytask.ts`
+            ![class-fields-cfgs.png](../../images/tooling/processes/modeler/class-fields-cfgs.png)
+         - Click the `Save` button
+4. Connect the Flow
+   - Draw a sequence flow from the Start event to the Service task
+     ![seq-flow-btn.png](../../images/tooling/processes/modeler/seq-flow-btn.png)
+     ![seq-flow-start-task.png](../../images/tooling/processes/modeler/seq-flow-start-task.png)
+   - In the `End Events` panel, drag and drop an `End event`
+     ![end-event.png](../../images/tooling/processes/modeler/end-event.png)
+   - Connect the `Service task` to the `End event` using another sequence flow
+     ![process-ts-task.png](../../images/tooling/processes/modeler/process-ts-task.png)
+   - Save the model
+
+Once the project is published, the process definition will be automatically deployed and ready for execution.
+You can trigger it programmatically using the [Process API](/documentation/platform/sdk/bpm/process).
+
 ## Conclusion
 
 The BPMN Modeler in the __codbex__ platform, based on the Oryx Editor project and integrated with Flowable, provides a robust and user-friendly environment for BPMN modeling. Whether designing new processes, collaborating with team members, or simulating process execution, this modeler streamlines the BPMN lifecycle within the platform.
