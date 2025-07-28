@@ -95,26 +95,43 @@ To demonstrate the Kronos-based SAP BW migration approach, we've prepared a comp
 
 ### Scenario Overview
 
-The demo simulates a classic BI data flow consisting of:
+This scenario outlines the data flow architecture for reporting bike sales through two distinct sales channels: Internet Sales and Reseller Sales. The architecture is designed in SAP BW using standard InfoProviders and transformation logic to support unified and channel-specific reporting.
 
-- DataSources:
-  - Product Master
-  - Sales Orders
-  - Customer Info
+Sales Channels:
+- Internet Sales
+- Reseller Sales
 
-- DSOs:
-  - Sales Order Header
-  - Sales Order Items
-  - Inventory Levels
-
-- Cubes:
-  - Aggregated Sales Data for bikes by region, customer segment, and product
-
-- Data Model Flow:
+Each channel has its own independent data acquisition and processing pipeline, yet they are ultimately consolidated for unified analysis.
 
    <a href="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" alt="data-model-flow.png" style="width: 70%;">
+   <img src="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" alt="data-model-flow.png" style="width: 80%;">
    </a>
+
+Data Flow Description:
+1. Data Sources:
+- DS for Internet Sales Transactional Data (DS_IS_TD): Captures transactional data related to online (internet-based) sales.
+- DS for Reseller Sales Transactional Data (DS_RS_TD): Gathers transactional sales data from reseller partners.
+
+These data sources serve as the initial entry point of raw sales data into the SAP BW system.
+
+2. Data Targets (ODS Layer / DataStore Objects):
+- Internet Sales Fact (TD_IS)
+- Reseller Sales Fact (TD_RS)
+
+Transactional data is loaded 1:1 into these DataStore Objects. These represent the consolidation layer where data is cleansed and harmonized before being pushed into analytical InfoCubes.
+
+3. InfoCubes (Analytical Layer):
+- Internet Sales InfoCube (TD_IS_C)
+- Reseller Sales InfoCube (TD_RS_C)
+
+Data is transferred from the facts layer into the InfoCubes using direct assignments (1:1), formulas and abap routines, allowing for the enrichment of key figures and characteristics needed for reporting. These cubes store aggregated sales data for each channel, optimized for performance and analysis.
+
+4. Consolidation for Reporting - Sales Multiprovider (SLS_MP)
+
+The InfoCubes for both Internet and Reseller Sales are combined into a Multiprovider, enabling a unified view of total sales. This allows users to:
+- Analyze sales by channel, region, time, product, and customer.
+- Compare performance between Internet and Reseller sales.
+- Generate comprehensive reports for management insights.
 
 You can find more details about the scenario [in the description file here.](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/docs/scenario/Description.docx.pdf)
 
