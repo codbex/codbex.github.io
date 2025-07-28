@@ -104,7 +104,7 @@ Sales Channels:
 Each channel has its own independent data acquisition and processing pipeline, yet they are ultimately consolidated for unified analysis.
 
    <a href="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" alt="data-model-flow.png" style="width: 80%;">
+   <img src="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" alt="data-model-flow.png" style="width: 90%;">
    </a>
 
 Data Flow Description:
@@ -133,7 +133,7 @@ The InfoCubes for both Internet and Reseller Sales are combined into a Multiprov
 - Compare performance between Internet and Reseller sales.
 - Generate comprehensive reports for management insights.
 
-You can find more details about the scenario [in the description file here.](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/docs/scenario/Description.docx.pdf)
+You can find more details about the scenario [in the description file here.](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/docs/scenario/Description.docx.pdf)
 
 ### Sample Project Implementation
 
@@ -184,7 +184,7 @@ Once the Kronos instance is up and running, you can open and run the sample proj
    Since this is an asynchronous process, it may take a few seconds for all components to be fully initialized.
 
 #### Define BW Objects in the Target Platform
-To simplify the setup and avoid using external data migration tools, all BW structures used in the scenario—such as tables for DataSources, DSOs, and Cubes—are predefined in the Kronos [Database Schema Model (DSM)](/documentation/platform/artefacts/dsm) file: [sales/db/db-schema.dsm](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/db/db-schema.dsm):
+To simplify the setup and avoid using external data migration tools, all BW structures used in the scenario—such as tables for DataSources, DSOs, and Cubes—are predefined in the Kronos [Database Schema Model (DSM)](/documentation/platform/artefacts/dsm) file: [sales/db/db-schema.dsm](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/db/db-schema.dsm):
 <a href="/images/2025-07-21-kronos-bw-migration/dsm.png" target="_blank">
 <img src="/images/2025-07-21-kronos-bw-migration/dsm.png" alt="dsm.png">
 </a>
@@ -192,23 +192,23 @@ To simplify the setup and avoid using external data migration tools, all BW stru
 This schema is automatically applied when the project is published, creating all required tables in the target platform with no manual setup needed.
 
 #### Import Sample Data
-Following the same approach, sample data for the scenario is provided as CSV files located in dir: [sales/db/](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/db)
+Following the same approach, sample data for the scenario is provided as CSV files located in dir: [sales/db/](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/db)
 
 These CSV files are automatically imported into the target platform during project publishing. This makes it possible to initialize the environment without relying on any external data migration tools.
 
-All CSV files which are used are configured in [CSVIM](/documentation/platform/artefacts/csvim) file [sales/db/data.csvim](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/db/data.csvim)
+All CSV files which are used are configured in [CSVIM](/documentation/platform/artefacts/csvim) file [sales/db/data.csvim](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/db/data.csvim)
 
 ✅ This simplified setup works out of the box across supported platforms, including H2, Snowflake, PostgreSQL, and HANA.
 
 #### Export BW Transformation Logic
 The ABAP transformation logic originally defined in SAP BW is exported using a dedicated export tool.
-In the sample project, the exported transformations are stored as `.abap` files in the following directory: [sales/src/](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/src)
+In the sample project, the exported transformations are stored as `.abap` files in the following directory: [sales/src/](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/src)
 
 #### Transpile ABAP to JavaScript
 When the project is published in Kronos, the exported ABAP transformation logic from dir `sales/src/` is **automatically transpiled to JavaScript**. This makes it executable within Kronos during ETL processing.
 
 The transpilation is triggered by the build scripts defined in the project's configuration file
-[sales/project.json](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/project.json) when the project is published.
+[sales/project.json](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/project.json) when the project is published.
 
 The generated JavaScript files are stored in the `sales/dist/` folder of the project.
 <a href="/images/2025-07-21-kronos-bw-migration/dist-folder.png" target="_blank">
@@ -216,12 +216,12 @@ The generated JavaScript files are stored in the `sales/dist/` folder of the pro
 </a>
 
 #### Rebuild Transformations as ETL Camel Routes
-Each transformation in the sample scenario is implemented as a reusable ETL [Camel route](/documentation/platform/artefacts/camel) located at [sales/etl/etl-route.camel](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/etl/etl-route.camel). The route perform a simplified [Extract → Transform → Load](https://en.wikipedia.org/wiki/Extract,_transform,_load) flow:
-- The **extract step** reads all data from the source table (full load used for simplicity) - [sales/etl/data-extractor.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/etl/data-extractor.ts)
-- The **transform step** invokes the corresponding transpiled ABAP transformation logic (in JavaScript) [sales/etl/transform-entries.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/etl/transform-entries.ts)
-- The **load step** writes the transformed results into the defined target table [sales/etl/data-loader.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/etl/data-loader.ts)
+Each transformation in the sample scenario is implemented as a reusable ETL [Camel route](/documentation/platform/artefacts/camel) located at [sales/etl/etl-route.camel](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/etl/etl-route.camel). The route perform a simplified [Extract → Transform → Load](https://en.wikipedia.org/wiki/Extract,_transform,_load) flow:
+- The **extract step** reads all data from the source table (full load used for simplicity) - [sales/etl/data-extractor.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/etl/data-extractor.ts)
+- The **transform step** invokes the corresponding transpiled ABAP transformation logic (in JavaScript) [sales/etl/transform-entries.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/etl/transform-entries.ts)
+- The **load step** writes the transformed results into the defined target table [sales/etl/data-loader.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/etl/data-loader.ts)
 
-Each step uses helper functions implemented in [sales/etl/etl.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/etl/etl.ts).
+Each step uses helper functions implemented in [sales/etl/etl.ts](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/etl/etl.ts).
 These functions leverage the [codbex Database API](/documentation/platform/sdk/db/) to access and manipulate data.
 
 The route itself is parameterized — it accepts the source table, target table, and transformation ID as exchange properties, allowing it to be reused across different flows.
@@ -237,7 +237,7 @@ Check out our [Tips & Tricks for the Integration Modeler](/documentation/tooling
 #### Model BW Data Flows as BPM Processes
 In SAP BW, data flows are often tightly orchestrated—from DataSources through DSOs to Cubes or MultiProviders—in a specific execution sequence. To replicate this orchestration in Kronos, these flows are reimplemented as BPM processes that preserve the original order of execution.
 
-In the demo project, this flow is modeled in the BPM file [sales/bpmn/sls_mp.bpmn](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/bpmn/sls_mp.bpmn).
+In the demo project, this flow is modeled in the BPM file [sales/bpmn/sls_mp.bpmn](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/bpmn/sls_mp.bpmn).
 <a href="/images/2025-07-21-kronos-bw-migration/bpmn.png" target="_blank">
 <img src="/images/2025-07-21-kronos-bw-migration/bpmn.png" alt="bpmn.png"  style="width: 70%;">
 </a>
@@ -246,7 +246,7 @@ Each BPM task:
 - Triggers the defined in the previous step ETL Camel route
 - Passes different parameters for source/target table names and the transformation ID depending on the current step
 
-The BPM tasks themselves are stored in the [sales/bpmn](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/bpmn) folder. Each task uses the codbex Integrations API to programmatically trigger the route execution.
+The BPM tasks themselves are stored in the [sales/bpmn](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/bpmn) folder. Each task uses the codbex Integrations API to programmatically trigger the route execution.
 
 This approach ensures a 1:1 match with the original BW process chains, while offering clean modularity in Kronos.
 <a href="/images/2025-07-21-kronos-bw-migration/1-to-1.png" target="_blank">
@@ -266,11 +266,11 @@ Check out our [BPM Modeler Tips & Tricks](/documentation/tooling/processes/model
 
 #### Run the Data Flow via BPM Process
 Once everything is published, the full data pipeline—modeled as a BPM process—can be executed through a dedicated UI form:
-- A simple [user-facing form](/documentation/tooling/modeling/form) is modeled in the file: [sales/sls_mp-process.form](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/sls_mp-process.form)
+- A simple [user-facing form](/documentation/tooling/modeling/form) is modeled in the file: [sales/sls_mp-process.form](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/sls_mp-process.form)
   <a href="/images/2025-07-21-kronos-bw-migration/form-modeler.png" target="_blank">
   <img src="/images/2025-07-21-kronos-bw-migration/form-modeler.png" alt="form-modeler.png">
   </a>
-- When you open the form and click the `Regenerate` button, the corresponding UI is generated in the [sales/gen](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/017d99aea61e819e00af3153930b8d149c93a86b/sales/gen) directory
+- When you open the form and click the `Regenerate` button, the corresponding UI is generated in the [sales/gen](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/c7d9e1720b4996da1dfb764636ba320bcb181e06/sales/gen) directory
 - To access the form, open this URL in your browser: [http://localhost/services/web/sales/gen/sls_mp-process/forms/sls_mp-process/index.html](http://localhost/services/web/sales/gen/sls_mp-process/forms/sls_mp-process/index.html)
   <a href="/images/2025-07-21-kronos-bw-migration/process-form.png" target="_blank">
   <img src="/images/2025-07-21-kronos-bw-migration/process-form.png" alt="process-form.png">
