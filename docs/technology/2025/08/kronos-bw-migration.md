@@ -1,7 +1,7 @@
 ---
 title: 'Migrating SAP BW to Kronos: A Hands-On Guide'
 description: In this blog post, we present a practical overview of migrating SAP BW scenarios using Kronos
-date: 2025-07-25
+date: 2025-08-12
 author: iliyan
 editLink: false
 ---
@@ -30,8 +30,8 @@ The "lift and shift" strategy provides a straightforward and transparent method 
 
    All BW objects (InfoObjects, DataSources, DSOs, InfoCubes, etc.) are copied over to the destination platform. This can be done using any data migration tools.
 
-   <a href="/images/2025-07-21-kronos-bw-migration/data-structures.gif" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/data-structures.gif" alt="data-structures.gif">
+   <a href="/images/2025-08-12-kronos-bw-migration/data-structures.gif" target="_blank">
+   <img src="/images/2025-08-12-kronos-bw-migration/data-structures.gif" alt="data-structures.gif">
    </a>
 
 ### 2. Migrate Data
@@ -43,24 +43,24 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    Each ABAP transformation is completely exported from the BW system using a dedicated export tool.
    
    The exported artifacts must be pushed to a Kronos project stored in a git repository.
-   <a href="/images/2025-07-21-kronos-bw-migration/abap-transformations-export.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/abap-transformations-export.png" alt="abap-transformations-export.png">
+   <a href="/images/2025-08-12-kronos-bw-migration/abap-transformations-export.png" target="_blank">
+   <img src="/images/2025-08-12-kronos-bw-migration/abap-transformations-export.png" alt="abap-transformations-export.png">
    </a>
 
 ### 4. ABAP Transformation code to JavaScript code
    
    On build time, the ABAP transformation code is automatically transpiled to JavaScript. This allows Kronos to execute it during the transformation.
 
-   <a href="/images/2025-07-21-kronos-bw-migration/transpilation.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/transpilation.png" alt="transpilation.png">
+   <a href="/images/2025-08-12-kronos-bw-migration/transpilation.png" target="_blank">
+   <img src="/images/2025-08-12-kronos-bw-migration/transpilation.png" alt="transpilation.png">
    </a>
    
 ### 5. Rebuild Transformations as ETL Camel Routes
 
    Using Kronos ETL modules based on [Apache Camel](https://camel.apache.org/), each transformation is re-implemented as a [Camel route](/documentation/platform/artefacts/camel).
 
-   <a href="/images/2025-07-21-kronos-bw-migration/camel-routes.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/camel-routes.png" alt="camel-routes.png">
+   <a href="/images/2025-08-12-kronos-bw-migration/camel-routes.png" target="_blank">
+   <img src="/images/2025-08-12-kronos-bw-migration/camel-routes.png" alt="camel-routes.png">
    </a>
 
 ### 6. BW Data Model Flows as BPM Processes
@@ -70,8 +70,8 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    - Aggregated results are stored
    - Fully orchestrated execution flow mirrors BW's data model flow behavior
 
-   <a href="/images/2025-07-21-kronos-bw-migration/bpm-process.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/bpm-process.png" alt="bpm-process.png" style="width: 70%;">
+   <a href="/images/2025-08-12-kronos-bw-migration/bpm-process.png" target="_blank">
+   <img src="/images/2025-08-12-kronos-bw-migration/bpm-process.png" alt="bpm-process.png" style="width: 70%;">
    </a>
 
 ### 7. Visualization
@@ -81,8 +81,8 @@ The "lift and shift" strategy provides a straightforward and transparent method 
    - Recreate classic BEx Queries using Kronos or redesign reports with a modern UX
    - Enable self-service analytics and dynamic dashboards powered by the transformed, consolidated data
 
-   <a href="/images/2025-07-21-kronos-bw-migration/visualize.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/visualize.png" alt="visualize.png">
+   <a href="/images/2025-08-12-kronos-bw-migration/visualize.png" target="_blank">
+   <img src="/images/2025-08-12-kronos-bw-migration/visualize.png" alt="visualize.png">
    </a>
 
 ### 8. Decommission the BW System
@@ -103,8 +103,8 @@ Sales Channels:
 
 Each channel has its own independent data acquisition and processing pipeline, yet they are ultimately consolidated for unified analysis.
 
-   <a href="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" target="_blank">
-   <img src="/images/2025-07-21-kronos-bw-migration/data-model-flow.png" alt="data-model-flow.png" style="width: 90%;">
+   <a href="/images/2025-08-12-kronos-bw-migration/data-model-flow.png" target="_blank">
+   <img src="/images/2025-08-12-kronos-bw-migration/data-model-flow.png" alt="data-model-flow.png" style="width: 90%;">
    </a>
 
 Data Flow Description:
@@ -155,28 +155,28 @@ By default, Kronos uses the H2 database as the target platform, making it easy t
 Once the Kronos instance is up and running, you can open and run the sample project using the following steps:
 - Open Kronos in your browser at [http://localhost/](http://localhost/)
 - Login using the default credentials, user `admin` and password `admin`
-  <a href="/images/2025-07-21-kronos-bw-migration/welcome-kronos.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/welcome-kronos.png" alt="welcome-kronos.png">
+  <a href="/images/2025-08-12-kronos-bw-migration/welcome-kronos.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/welcome-kronos.png" alt="welcome-kronos.png">
   </a>
 - Go to the `Git` perspective
-  <a href="/images/2025-07-21-kronos-bw-migration/git-perspective.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/git-perspective.png" alt="git-perspective.png" style="width: 40%;">
+  <a href="/images/2025-08-12-kronos-bw-migration/git-perspective.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/git-perspective.png" alt="git-perspective.png" style="width: 40%;">
   </a>
 - Click on the `Clone` button
-  <a href="/images/2025-07-21-kronos-bw-migration/clone-btn.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/clone-btn.png" alt="clone-btn.png" style="width: 40%;">
+  <a href="/images/2025-08-12-kronos-bw-migration/clone-btn.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/clone-btn.png" alt="clone-btn.png" style="width: 40%;">
   </a>
 - Set `https://github.com/codbex/codbex-sample-kronos-bw-sales-migration.git` for repository URL and click on the `Clone` button
-  <a href="/images/2025-07-21-kronos-bw-migration/clone-project.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/clone-project.png" alt="clone-project.png" style="width: 40%;">
+  <a href="/images/2025-08-12-kronos-bw-migration/clone-project.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/clone-project.png" alt="clone-project.png" style="width: 40%;">
   </a>
 - Go back to the `Workbench` perspective
-  <a href="/images/2025-07-21-kronos-bw-migration/workbench-btn.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/workbench-btn.png" alt="workbench-btn.png" style="width: 40%;">
+  <a href="/images/2025-08-12-kronos-bw-migration/workbench-btn.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/workbench-btn.png" alt="workbench-btn.png" style="width: 40%;">
   </a>
 - Click on the `Publish all` button
-  <a href="/images/2025-07-21-kronos-bw-migration/publish-btn.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/publish-btn.png" alt="publish-btn.png" style="width: 40%;">
+  <a href="/images/2025-08-12-kronos-bw-migration/publish-btn.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/publish-btn.png" alt="publish-btn.png" style="width: 40%;">
   </a>
 
   Publishing the project activates it in the Kronos runtime. This step automatically sets up all required components, including database structures, sample data, transformation logic, BPM processes, etc.—so everything is ready to run without additional configuration.
@@ -185,8 +185,8 @@ Once the Kronos instance is up and running, you can open and run the sample proj
 
 #### Define BW Objects in the Target Platform
 To simplify the setup and avoid using external data migration tools, all BW structures used in the scenario—such as tables for DataSources, DSOs, and Cubes—are predefined in the Kronos [Database Schema Model (DSM)](/documentation/platform/artefacts/dsm) file: [sales/db/db-schema.dsm](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/d9486dd8110c0d1df15ce9ae82d460139e120c6f/sales/db/db-schema.dsm):
-<a href="/images/2025-07-21-kronos-bw-migration/dsm.png" target="_blank">
-<img src="/images/2025-07-21-kronos-bw-migration/dsm.png" alt="dsm.png">
+<a href="/images/2025-08-12-kronos-bw-migration/dsm.png" target="_blank">
+<img src="/images/2025-08-12-kronos-bw-migration/dsm.png" alt="dsm.png">
 </a>
 
 This schema is automatically applied when the project is published, creating all required tables in the target platform with no manual setup needed.
@@ -211,8 +211,8 @@ The transpilation is triggered by the build scripts defined in the project's con
 [sales/project.json](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/d9486dd8110c0d1df15ce9ae82d460139e120c6f/sales/project.json) when the project is published.
 
 The generated JavaScript files are stored in the `sales/dist/` folder of the project.
-<a href="/images/2025-07-21-kronos-bw-migration/dist-folder.png" target="_blank">
-<img src="/images/2025-07-21-kronos-bw-migration/dist-folder.png" alt="dist-folder.png"  style="width: 45%;">
+<a href="/images/2025-08-12-kronos-bw-migration/dist-folder.png" target="_blank">
+<img src="/images/2025-08-12-kronos-bw-migration/dist-folder.png" alt="dist-folder.png"  style="width: 45%;">
 </a>
 
 #### Rebuild Transformations as ETL Camel Routes
@@ -227,8 +227,8 @@ These functions leverage the [codbex Database API](/documentation/platform/sdk/d
 The route itself is parameterized — it accepts the source table, target table, and transformation ID as exchange properties, allowing it to be reused across different flows.
 
 Here’s what the assembled route looks like:
-<a href="/images/2025-07-21-kronos-bw-migration/etl-route.png" target="_blank">
-<img src="/images/2025-07-21-kronos-bw-migration/etl-route.png" alt="etl-route.png">
+<a href="/images/2025-08-12-kronos-bw-migration/etl-route.png" target="_blank">
+<img src="/images/2025-08-12-kronos-bw-migration/etl-route.png" alt="etl-route.png">
 </a>
 
 💡 Want to implement your own route?
@@ -238,8 +238,8 @@ Check out our [Tips & Tricks for the Integration Modeler](/documentation/tooling
 In SAP BW, data flows are often tightly orchestrated—from DataSources through DSOs to Cubes or MultiProviders—in a specific execution sequence. To replicate this orchestration in Kronos, these flows are reimplemented as BPM processes that preserve the original order of execution.
 
 In the demo project, this flow is modeled in the BPM file [sales/bpmn/sls_mp.bpmn](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/d9486dd8110c0d1df15ce9ae82d460139e120c6f/sales/bpmn/sls_mp.bpmn).
-<a href="/images/2025-07-21-kronos-bw-migration/bpmn.png" target="_blank">
-<img src="/images/2025-07-21-kronos-bw-migration/bpmn.png" alt="bpmn.png"  style="width: 70%;">
+<a href="/images/2025-08-12-kronos-bw-migration/bpmn.png" target="_blank">
+<img src="/images/2025-08-12-kronos-bw-migration/bpmn.png" alt="bpmn.png"  style="width: 70%;">
 </a>
 
 Each BPM task:
@@ -249,8 +249,8 @@ Each BPM task:
 The BPM tasks themselves are stored in the [sales/bpmn](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/d9486dd8110c0d1df15ce9ae82d460139e120c6f/sales/bpmn) folder. Each task uses the codbex Integrations API to programmatically trigger the route execution.
 
 This approach ensures a 1:1 match with the original BW process chains, while offering clean modularity in Kronos.
-<a href="/images/2025-07-21-kronos-bw-migration/1-to-1.png" target="_blank">
-<img src="/images/2025-07-21-kronos-bw-migration/1-to-1.png" alt="1-to-1.png">
+<a href="/images/2025-08-12-kronos-bw-migration/1-to-1.png" target="_blank">
+<img src="/images/2025-08-12-kronos-bw-migration/1-to-1.png" alt="1-to-1.png">
 </a>
 
 Using BPM in Kronos comes with additional benefits:
@@ -267,21 +267,21 @@ Check out our [BPM Modeler Tips & Tricks](/documentation/tooling/processes/model
 #### Run the Data Flow via BPM Process
 Once everything is published, the full data pipeline—modeled as a BPM process—can be executed through a dedicated UI form:
 - A simple [user-facing form](/documentation/tooling/modeling/form) is modeled in the file: [sales/sls_mp-process.form](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/d9486dd8110c0d1df15ce9ae82d460139e120c6f/sales/sls_mp-process.form)
-  <a href="/images/2025-07-21-kronos-bw-migration/form-modeler.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/form-modeler.png" alt="form-modeler.png">
+  <a href="/images/2025-08-12-kronos-bw-migration/form-modeler.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/form-modeler.png" alt="form-modeler.png">
   </a>
 - When you open the form and click the `Regenerate` button, the corresponding UI is generated in the [sales/gen](https://github.com/codbex/codbex-sample-kronos-bw-sales-migration/blob/d9486dd8110c0d1df15ce9ae82d460139e120c6f/sales/gen) directory
 - To access the form, open this URL in your browser: [http://localhost/services/web/sales/gen/sls_mp-process/forms/sls_mp-process/index.html](http://localhost/services/web/sales/gen/sls_mp-process/forms/sls_mp-process/index.html)
-  <a href="/images/2025-07-21-kronos-bw-migration/process-form.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/process-form.png" alt="process-form.png">
+  <a href="/images/2025-08-12-kronos-bw-migration/process-form.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/process-form.png" alt="process-form.png">
   </a>
 - Click the `Trigger execution` button in the form UI to start the process
-  <a href="/images/2025-07-21-kronos-bw-migration/process-form-triggered-exec.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/process-form-triggered-exec.png" alt="process-form-triggered-exec.png">
+  <a href="/images/2025-08-12-kronos-bw-migration/process-form-triggered-exec.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/process-form-triggered-exec.png" alt="process-form-triggered-exec.png">
   </a>
 - You can monitor the progress and status of the execution in the [Processes perspective](/documentation/tooling/processes/) within Kronos
-  <a href="/images/2025-07-21-kronos-bw-migration/processes-perspective.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/processes-perspective.png" alt="processes-perspective.png">
+  <a href="/images/2025-08-12-kronos-bw-migration/processes-perspective.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/processes-perspective.png" alt="processes-perspective.png">
   </a>
 
 ✅ Once the process completes successfully:
@@ -291,8 +291,8 @@ Once everything is published, the full data pipeline—modeled as a BPM process�
   SELECT * FROM TD_IS_C LIMIT 50;
   SELECT * FROM TD_RS_C LIMIT 50; 
   ```
-  <a href="/images/2025-07-21-kronos-bw-migration/explore-cubes.png" target="_blank">
-  <img src="/images/2025-07-21-kronos-bw-migration/explore-cubes.png" alt="explore-cubes.png">
+  <a href="/images/2025-08-12-kronos-bw-migration/explore-cubes.png" target="_blank">
+  <img src="/images/2025-08-12-kronos-bw-migration/explore-cubes.png" alt="explore-cubes.png">
   </a>
 
 This form-based interface offers a simple way to trigger the full BW data flow.
