@@ -147,7 +147,7 @@ Start a Kronos container locally using the following command:
 ```shell
 docker run --name codbex-kronos \
   -p 80:80 -p 8081:8081 \
-  ghcr.io/codbex/codbex-kronos:2.96.0
+  ghcr.io/codbex/codbex-kronos:2.99.0
 ```
 By default, Kronos uses the H2 database as the target platform, making it easy to run the demo locally without additional setup. No configuration changes are required to get started.
 
