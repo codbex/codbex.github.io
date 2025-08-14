@@ -12,6 +12,9 @@ editLink: false
 
 In this blog post, we present a practical overview of migrating SAP BW scenarios using [Kronos](/products/kronos) — codbex's modern data integration platform — onto modern platforms like Snowflake, SAP HANA, and even lightweight setups like H2 for local testing. For a broader, business-oriented view of this migration journey, check out our companion blog post: [Migrating SAP BW with Kronos - From Legacy to Flexibility](/marketing/2025/06/10/kronos-bw-migration)
 
+🎥 Prefer watching instead of reading? Here's the complete video walkthrough.
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/TgcbTj4hGOA" frameborder="0" allowfullscreen></iframe>
+
 ## Migration Summary
 SAP BW systems, while historically robust, are built on tightly-coupled ABAP logic and rigid data models. Migrating to Kronos allows you to retain your BW logic while adopting modern, flexible, and cloud-native data platforms. Using Kronos, you can:
 
