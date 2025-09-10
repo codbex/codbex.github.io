@@ -15,7 +15,7 @@ While the example was implemented on H2 for local testing, Kronos is designed to
 
 With that foundation in place, building the **BI layer is remarkably straightforward**. Using [Microsoft Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi) with DirectQuery, you can connect directly to Snowflake and query the data in real time. This allows you to model semantic relationships, build dashboards, and deliver live insights without additional ETL or data duplication.
 
-In this blog, we will show how to:
+This blog shows how to:
 
 - Connect Power BI directly to your Snowflake account
 - Build a semantic model on top of the migrated Kronos data
@@ -38,16 +38,16 @@ We take the account URL and the warehouse from Account Details section in Snowfl
 <img src="/images/2025-09-10-bw-migration-bi/snow-cr-details.png" alt="snow-cr-details.png">
 
 4. In the Navigator window, choose the destination of the tables in Snowflake - database and schema (BW_BI and PUBLIC in our case).
-    Then select the necessary tables you will use to build the semantic model in your report and click load (if any transformations are necessary before that, you should click on Transform Data button and implement them in the Power Query Editor)
+    Then select the necessary tables you will use to build the semantic model in your report and click `Load` (if any transformations are necessary before that, you should click on Transform Data button and implement them in the Power Query Editor)
 
-    For this specific demonstration, a small part of the building the final version of our semantic model will be shown, we will need:
+    For this demonstration, we will build a simplified version of the final semantic model, requiring the following:
     - `TD_IS_C` (Internet Sales - fact table)
     - a left outer join between `/BIC/PMD_CUS` and `/BIC/TMD_CUS` (Customers – dimension table)
     <img src="/images/2025-09-10-bw-migration-bi/navigator.png" alt="navigator.png">
     
-    After selecting these tables, we will choose `Transform Data` button to implement the joining process.
+    After selecting these tables, we will click the `Transform Data` button to implement the joining process.
 
-    We choose `DirectQuery` in the `Connection settings` window, so that the data will not be physically stored in Power BI, instead live queries will be sent to Snowflake everytime a user interacts with the report. This is the best for very large datasets or when you need real-time data.
+    We choose `DirectQuery` in the `Connection settings` window, so that the data will not be physically stored in Power BI, instead live queries will be sent to Snowflake every time a user interacts with the report. This is the best option for very large datasets or when you need real-time data.
    <img src="/images/2025-09-10-bw-migration-bi/connection-settings.png" alt="connection-settings.png" style="width: 80%;">
 
     We are redirected to Power Query Editor, where the join between `/BIC/PMD_CUS` and `/BIC/TMD_CUS` can be implemented, following the steps in the images below:
@@ -57,7 +57,7 @@ We take the account URL and the warehouse from Account Details section in Snowfl
     After that, we expand and select the `TXTLG` column in our new renamed table `Customers` and we are done
    <img src="/images/2025-09-10-bw-migration-bi/txtlg.png" alt="txtlg.png">
 
-    Before proceeding to building the semantic model, we need to deselect the `Enable Load` option for the tables `/BIC/PMD_CUS` and `/BIC/TMD_CUS`, because we will not use them anymore:
+    Before proceeding to build the semantic model, we need to deselect the `Enable Load` option for the tables `/BIC/PMD_CUS` and `/BIC/TMD_CUS`, because we will not use them anymore:
    <img src="/images/2025-09-10-bw-migration-bi/deselect-enable-load.png" alt="deselect-enable-load.png" style="width: 40%;">
    Apply the changes:
    <img src="/images/2025-09-10-bw-migration-bi/apply-changes.png" alt="apply-changes.png" style="width: 50%;">
@@ -68,7 +68,7 @@ We take the account URL and the warehouse from Account Details section in Snowfl
    The last step is to make a one-to-many relationship between `Customers` and `TD_IS_C` (Internet Sales)
    <img src="/images/2025-09-10-bw-migration-bi/new-relationship.png" alt="new-relationship.png">
 
-   And finally our demo semantic model is done, the data in both tables is in DirectQuery mode, which means it is live and it is not physically stored anywhere in Power BI – it is read only from Snowflake.
+   And finally our demo semantic model is done, the data in both tables is in DirectQuery mode, which means it is live and it is not physically stored anywhere in Power BI – it read directly from Snowflake.
 
    **Demo Semantic Model**
    <img src="/images/2025-09-10-bw-migration-bi/demo-semantic-model.png" alt="demo-semantic-model.png">
@@ -100,6 +100,6 @@ By combining [Kronos](/products/kronos) on [Snowflake](https://www.snowflake.com
 - Semantic modeling in Power BI allows for flexible and scalable analytics.
 - Reports can be extended into complex star schemas to cover multiple business areas.
 
-With just a few steps, you can transform migrated SAP BW data into interactive dashboards and actionable insights—no heavy ETL pipelines required.
+With just a few steps, you can transform migrated SAP BW data into interactive dashboards and actionable insights — without the need for heavy ETL pipelines.
 
 👉 If you have any questions, suggestions, or feedback, don’t hesitate to [contact us](/contact) — we’d love to hear from you.
