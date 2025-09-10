@@ -148,6 +148,7 @@ export default defineConfig({
         {
           text: 'Technology',
           items: [
+            { text: 'Visualizing Kronos Data on Snowflake with Power BI: A Hands-On Guide', link: '/technology/2025/09/bw-migration-bi' },
             { text: 'Migrating SAP BW to Kronos: A Hands-On Guide', link: '/technology/2025/08/kronos-bw-migration' },
             { text: 'Building a Simple ETL Workflow with Phoebe and Apache Airflow', link: '/technology/2025/06/phoebe-airflow-etl' },
             { text: 'NoSQL Database Management Simplified', link: '/technology/2025/05/16/use-hades-on-aws-docdb' },

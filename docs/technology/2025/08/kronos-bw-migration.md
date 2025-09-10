@@ -260,7 +260,7 @@ Once all data structures are defined, transformations executed, and data flows o
 
 While visualization is not covered in this post, it's an essential final step of any BI landscape. Whether you aim to replicate classic BEx Queries, build interactive dashboards, or plug into modern BI tools like Power BI, Tableau, or Apache Superset — the processed data is ready for it.
 
-📌 Stay tuned — we’ll cover this topic in an upcoming blog post focused entirely on building visual dashboards and reports using Kronos. A reference will be added here once the blog is live.
+📌 Visualization is the essential next step. We’ve covered it in detail in our follow-up blog: [Visualizing Kronos Data on Snowflake with Power BI](/technology/2025/09/bw-migration-bi), where we show how to connect Power BI directly to Snowflake and build real-time dashboards.
 
 ## Wrapping Up — From BW to Kronos, Made Simple
 This guide walked through how Kronos can power a structured, modular, and executable migration of SAP BW data models — covering everything from ABAP transformation logic to ETL pipelines and BPM process orchestration.
