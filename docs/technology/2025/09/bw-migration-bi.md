@@ -85,12 +85,8 @@ We take the account URL and the warehouse from Account Details section in Snowfl
    **Detailed Sales Transaction Report**
    <img src="/images/2025-09-10-bw-migration-bi/detailed-sales-transaction-report.png" alt="detailed-sales-transaction-report.png">
 
-
-🎥 Watch the video below to see the Customer Analysis Report in Power BI in action, highlighting how users can interact with the data in real time.
-
-**TO BE ADDED**
-
-[//]: # (<iframe width="100%" height="450" src="https://www.youtube.com/embed/TgcbTj4hGOA" frameborder="0" allowfullscreen></iframe>)
+   🎥 Watch the video below to see the Customer Analysis Report in Power BI in action, highlighting how users can interact with the data in real time.
+   <iframe width="100%" height="450" src="https://www.youtube.com/embed/2n2vYiDrQS0" frameborder="0" allowfullscreen></iframe>
 
 ## Summary
 
