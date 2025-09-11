@@ -9,7 +9,7 @@ editLink: false
 # Visualizing Kronos Data on Snowflake with Power BI: A Hands-On Guide
 
 ## Introduction
-In our earlier blog, [Migrating SAP BW to Kronos: A Hands-On Guide](/technology/2025/08/kronos-bw-migration/), we demonstrated how SAP BW logic and data flows can be migrated using [Kronos](/products/kronos), codbex's modern data integration platform. That post showcased the migration of a sample Bike Sales scenario using Kronos, highlighting how BW objects, ABAP transformations, and process chains can be re-implemented in a modular way.
+In our earlier blog, [Migrating SAP BW to Kronos: A Hands-On Guide](/technology/2025/08/kronos-bw-migration), we demonstrated how SAP BW logic and data flows can be migrated using [Kronos](/products/kronos), codbex's modern data integration platform. That post showcased the migration of a sample Bike Sales scenario using Kronos, highlighting how BW objects, ABAP transformations, and process chains can be re-implemented in a modular way.
 
 While the example was implemented on H2 for local testing, Kronos is designed to run seamlessly on modern platforms like Snowflake, SAP HANA, and PostgreSQL. For this follow-up, it is a **prerequisite** that you execute the migration scenario on **Kronos running on Snowflake**. This ensures the data we will visualize is already available in Snowflake.
 
