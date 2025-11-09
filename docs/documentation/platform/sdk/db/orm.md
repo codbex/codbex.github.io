@@ -3,6 +3,7 @@
 > Source: `db/orm.ts`
 
 Supported ORM schema:
+```
 {
 name: <string>,
 table: <string>,
@@ -26,4 +27,5 @@ joinDao: <function|DAO>,
 defaults: <Object>,
 }]
 }
+```
 
