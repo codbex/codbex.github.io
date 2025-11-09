@@ -83,7 +83,6 @@ Explore the Software Development Kit (SDK) for building custom integrations and 
 * [Platform](sdk/platform/)
 * [Security](sdk/security/)
 * [Template](sdk/template/)
-* [Test](sdk/test/)
 * [Utils](sdk/utils/)
 
 ### Widgets (UI)

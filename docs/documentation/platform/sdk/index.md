@@ -43,11 +43,6 @@
 - [translator](./db/translator.md)
 - [update](./db/update.md)
 
-## ERRORS
-
-- [ForbiddenError](./errors/ForbiddenError.md)
-- [ValidationError](./errors/ValidationError.md)
-
 ## ETCD
 
 - [client](./etcd/client.md)
@@ -156,14 +151,6 @@
 
 - [client](./redis/client.md)
 
-## RS
-
-- [resource-common](./rs/resource-common.md)
-- [resource-http-controller](./rs/resource-http-controller.md)
-- [resource-mappings](./rs/resource-mappings.md)
-- [resource-method](./rs/resource-method.md)
-- [resource](./rs/resource.md)
-
 ## SECURITY
 
 - [decorators](./security/decorators.md)
@@ -189,10 +176,4 @@
 - [uuid](./utils/uuid.md)
 - [xml](./utils/xml.md)
 
-## WRAPPERS
-
-- [onClose](./wrappers/onClose.md)
-- [onError](./wrappers/onError.md)
-- [onMessage](./wrappers/onMessage.md)
-- [onOpen](./wrappers/onOpen.md)
 
