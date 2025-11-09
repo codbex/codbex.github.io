@@ -58,7 +58,7 @@ ws.send('hello');
 
 - `createWebsocket (uri:string, handler:string):WebsocketClient`
 
-  Creates a new WebSocket client connection to a specified URI, managed by a handler script.<br/><br/>@param {string} uri The target WebSocket URI (e.g., 'ws://example.com/socket').<br/>@param {string} handler The identifier or path of the script handling the WebSocket events.<br/>@returns {WebsocketClient} A wrapper object for the new WebSocket session.
+  Creates a new WebSocket client connection to a specified URI, managed by a handler script.<br/><br/>@param uri The target WebSocket URI (e.g., 'ws://example.com/socket').<br/>@param  handler The identifier or path of the script handling the WebSocket events.<br/>@returns  A wrapper object for the new WebSocket session.
 
 <hr/>
 
@@ -74,7 +74,7 @@ ws.send('hello');
 
 - `getClient (id:string):WebsocketClient|undefined`
 
-  Retrieves a specific WebSocket client wrapper by its session ID.<br/><br/>@param {string} id The session ID of the client.<br/>@returns {WebsocketClient | undefined} The client wrapper or undefined if not found.
+  Retrieves a specific WebSocket client wrapper by its session ID.<br/><br/>@param  id The session ID of the client.<br/>@returns  The client wrapper or undefined if not found.
 
 <hr/>
 
@@ -82,7 +82,7 @@ ws.send('hello');
 
 - `getClientByHandler (handler:string):WebsocketClient|undefined`
 
-  Retrieves a specific WebSocket client wrapper by its handler identifier.<br/><br/>@param {string} handler The handler identifier associated with the client.<br/>@returns {WebsocketClient | undefined} The client wrapper or undefined if not found.
+  Retrieves a specific WebSocket client wrapper by its handler identifier.<br/><br/>@param  handler The handler identifier associated with the client.<br/>@returns  The client wrapper or undefined if not found.
 
 <hr/>
 
@@ -90,7 +90,7 @@ ws.send('hello');
 
 - `getMessage ():any`
 
-  Retrieves the message payload from the current context, typically used inside an 'onmessage' handler.<br/><br/>@returns {any} The message content.
+  Retrieves the message payload from the current context, typically used inside an 'onmessage' handler.<br/><br/>@returns  The message content.
 
 <hr/>
 
@@ -98,7 +98,7 @@ ws.send('hello');
 
 - `getError ():any`
 
-  Retrieves error details from the current context, typically used inside an 'onerror' handler.<br/><br/>@returns {any} The error object or string.
+  Retrieves error details from the current context, typically used inside an 'onerror' handler.<br/><br/>@returns  The error object or string.
 
 <hr/>
 
@@ -106,7 +106,7 @@ ws.send('hello');
 
 - `getMethod ():string`
 
-  Retrieves the event method name that triggered the current script execution (e.g., "onopen", "onmessage").<br/><br/>@returns {string} The name of the event method.
+  Retrieves the event method name that triggered the current script execution (e.g., "onopen", "onmessage").<br/><br/>@returns  The name of the event method.
 
 <hr/>
 
@@ -114,7 +114,7 @@ ws.send('hello');
 
 - `isOnOpen ():boolean`
 
-  Checks if the current event context is 'onopen'.<br/>@returns {boolean} True if the method is 'onopen'.
+  Checks if the current event context is 'onopen'.<br/>@returns  True if the method is 'onopen'.
 
 <hr/>
 
@@ -122,7 +122,7 @@ ws.send('hello');
 
 - `isOnMessage ():boolean`
 
-  Checks if the current event context is 'onmessage'.<br/>@returns {boolean} True if the method is 'onmessage'.
+  Checks if the current event context is 'onmessage'.<br/>@returns  True if the method is 'onmessage'.
 
 <hr/>
 
@@ -130,7 +130,7 @@ ws.send('hello');
 
 - `isOnError ():boolean`
 
-  Checks if the current event context is 'onerror'.<br/>@returns {boolean} True if the method is 'onerror'.
+  Checks if the current event context is 'onerror'.<br/>@returns  True if the method is 'onerror'.
 
 <hr/>
 
@@ -138,7 +138,7 @@ ws.send('hello');
 
 - `isOnClose ():boolean`
 
-  Checks if the current event context is 'onclose'.<br/>@returns {boolean} True if the method is 'onclose'.
+  Checks if the current event context is 'onclose'.<br/>@returns  True if the method is 'onclose'.
 
 ### WebsocketClient
 
@@ -152,7 +152,7 @@ ws.send('hello');
 
 - `send (text:string):void`
 
-  Sends a text message over the WebSocket connection.<br/>@param {string} text The message to send.
+  Sends a text message over the WebSocket connection.<br/>@param  text The message to send.
 
 <hr/>
 
