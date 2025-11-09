@@ -64,7 +64,7 @@ Websockets<br/>Static utility class for accessing and managing WebSocket functio
 
 #### getClients
 
-- `getClients ():string}[]`
+- `getClients ():string[]`
 
   Retrieves a list of all active WebSocket clients.<br/><br/>@returns {{ uri: string, handler: string }[]} An array of objects detailing the URI and handler of each client.
 
