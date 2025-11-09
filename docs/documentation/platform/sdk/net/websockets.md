@@ -6,12 +6,49 @@ Provides a high-level API for managing WebSocket clients and handling
 lifecycle events within the application context. It wraps the internal Java
 WebsocketsFacade.
 
+## Usage
+```javascript
+import { websockets } from "sdk/net"
+
+const uri = "ws://echo.websocket.org:80/";
+const handler = "my-project/ws-handler"
+
+function initialize() {
+    console.log("Connect to: " + uri);
+    let websocket = websockets.createWebsocket(uri, handler);
+    websocket.send("hello");
+}
+
+initialize();
+
+websockets.getClientByHandler(handler).close();
+
+
+// my-endpoint.websocket
+
+{
+  "handler": "my-project/ws-handler",
+  "endpoint":"my-endpoint",
+  "description":"My Websocket"
+}
+
+
+// ----------------
+// from web browser
+// ----------------
+
+let ws = new WebSocket("ws://localhost:8080/websockets/service/my-endpoint");
+ws.send('hello');
+
+
+```
+
 
 ## Classes
 
 ### Websockets
 
-@class Websockets<br/>@description Static utility class for accessing and managing WebSocket functionality.
+Websockets<br/>Static utility class for accessing and managing WebSocket functionality.
 
 #### Methods
 
