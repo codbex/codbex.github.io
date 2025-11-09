@@ -1,111 +1,259 @@
-# HTTP Response
+# API: response
 
-The HTTP Response object plays a crucial role in scripting services implementations, serving as the mechanism through which scripts generate the result to be sent back to the client in response to an HTTP request. This object encapsulates the details of an HTTP response, allowing scripts to construct and customize the response content, status code, and headers.
+> Source: `http/response.ts`
 
-Developers utilize the HTTP Response object to craft dynamic responses tailored to the specific requirements of client requests. By leveraging this object, scripts can generate various types of responses, including HTML content, JSON data, or binary files, to fulfill the client's needs.
+Provides a static façade (`Response` class) for managing the HTTP response.
+This class wraps a native Java HTTP response object, offering methods for setting
+status codes, headers, cookies, and writing content (text, JSON, or binary).
 
-Key features of the HTTP Response object include:
-
-* `Response Content Generation`: The HTTP Response object enables scripts to generate the content of the response dynamically. This flexibility allows for the creation of responses containing structured data, such as JSON objects, or formatted text, such as HTML pages, based on the logic and processing performed by the script.
-
-* `Status Code Setting`: Scripts can set the HTTP status code of the response using the HTTP Response object, indicating the outcome of the request processing. By specifying the appropriate status code, scripts communicate the success, failure, or other status of the request to the client, facilitating proper handling on the client side.
-
-* `Headers Manipulation`: Developers can manipulate the headers of the HTTP response using the HTTP Response object, allowing for customization of response metadata. This includes setting content type headers, caching directives, and custom headers to provide additional information to the client or intermediary servers.
-
-Error Handling: The HTTP Response object provides mechanisms for handling errors and exceptional conditions within scripts. Scripts can generate error responses with appropriate status codes and error messages to communicate issues encountered during request processing, aiding in debugging and troubleshooting.
-
-By providing robust capabilities for generating custom responses, setting status codes, and manipulating headers, the HTTP Response object empowers scripting services to deliver dynamic and tailored responses to client requests. This facilitates the development of interactive and responsive web applications within the scripting environment.
-
-### Example Usage
-
+## Usage
 ```javascript
 import { response } from "sdk/http";
 
 response.println("Hello World!");
 response.flush();
 response.close();
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**isValid()**   | Returns true if the current execution context is in a HTTP call | *boolean*
-**print(text)**   | Prints the text to the response body | -
-**println(text)**   | Prints the text to the response body with line separator at the end | -
-**write(bytes)**   | Prints the bytes array to the response body | -
-**isCommitted()**   | Whether response is already committed | *boolean*
-**setContentType()**   | Sets the content type | -
-**flush()**   | Flushes the content to the response to the client | -
-**close()**   | Closes the response stream to the client | -
-**addCookie(cookie)**   | Adds a HttpCookie to the response | -
-**containsHeader(name)**   | Checks existence of the header by name | *boolean*
-**encodeURL(url)**   | Returns the encoded *url* parameter | *string*
-**getCharacterEncoding()**   | Returns the character encoding of the response | *string*
-**encodeRedirectURL()**   | Returns the encoded redirect URL | *string*
-**getContentType()**   | Returns the content type of the response | *string*
-**sendError(code, message)**   | Sends an error instruction to the client with the given *code* and *message*. The *message* parameter is optional | -
-**setCharacterEncoding(encoding)**   | Sets the character encoding of the response | -
-**sendRedirect(location)**   | Sends a redirect instruction to the client to the given location | -
-**setContentLength(length)**   | Sets the content length of the response | -
-**setHeader(name, value)**   | Updates a header name/value pair to the response | -
-**addHeader(name, value)**   | Adds a header name/value pair to the response | -
-**setStatus(status)**   | Sets the status of the response | -
-**reset(status)**   | Resets the response | -
-**getHeader(name)**   | Returns the header value by *name* | -
-**setLocale(language, country, variant)**   | Sets the locale to the response | -
-**getHeaders(name)**   | Returns the array of header values by *name* | *array of string*
-**getHeaderNames()**   | Returns the names of all the headers | *array of string*
-**getLocale()**   | Returns the locale of the response | *string*
-**getOutputStream()**   | Returns the OutputStream of the response | *OutputStream*
+### Response
 
+The static Response class providing standardized HTTP status codes and methods<br/>for constructing the server's response.
 
-## Constants
+#### Methods
 
----
+<hr/>
 
-Constant     | Description | Type
------------- | ----------- | --------
-**ACCEPTED**   | Status code (202) indicating that a request was accepted for processing, but was not completed. | *int*
-**BAD_GATEWAY**   | Status code (502) indicating that the HTTP server received an invalid response from a server it consulted when acting as a proxy or gateway. | *int*
-**BAD_REQUEST**   | Status code (400) indicating the request sent by the client was syntactically incorrect. | *int*
-**CONFLICT**   | Status code (409) indicating that the request could not be completed due to a conflict with the current state of the resource. | *int*
-**CONTINUE**   | Status code (100) indicating the client can continue. | *int*
-**CREATED**   | Status code (201) indicating the request succeeded and created a new resource on the server. | *int*
-**EXPECTATION_FAILED**   | Status code (417) indicating that the server could not meet the expectation given in the Expect request header. | *int*
-**FORBIDDEN**   | Status code (403) indicating the server understood the request but refused to fulfill it. | *int*
-**FOUND**   | Status code (302) indicating that the resource reside temporarily under a different URI. | *int*
-**GATEWAY_TIMEOUT**   | Status code (504) indicating that the server did not receive a timely response from the upstream server while acting as a gateway or proxy. | *int*
-**GONE**   | Status code (410) indicating that the resource is no longer available at the server and no forwarding address is known. | *int*
-**HTTP_VERSION_NOT_SUPPORTED**   | Status code (505) indicating that the server does not support or refuses to support the HTTP protocol version that was used in the request message. | *int*
-**INTERNAL_SERVER_ERROR**   | Status code (500) indicating an error inside the HTTP server which prevented it from fulfilling the request. | *int*
-**LENGTH_REQUIRED**   | Status code (411) indicating that the request cannot be handled without a defined Content-Length. | *int*
-**METHOD_NOT_ALLOWED**   | Status code (405) indicating that the method specified in the Request-Line is not allowed for the resource identified by the Request-URI. | *int*
-**MOVED_PERMANENTLY**   | Status code (301) indicating that the resource has permanently moved to a new location, and that future references should use a new URI with their requests. | *int*
-**MOVED_TEMPORARILY**   | Status code (302) indicating that the resource has temporarily moved to another location, but that future references should still use the original URI to access the resource. | *int*
-**MULTIPLE_CHOICES**   | Status code (300) indicating that the requested resource corresponds to any one of a set of representations, each with its own specific location. | *int*
-**NO_CONTENT**   | Status code (204) indicating that the request succeeded but that there was no new information to return. | *int*
-**NON_AUTHORITATIVE_INFORMATION**   | Status code (203) indicating that the meta information presented by the client did not originate from the server. | *int*
-**NOT_ACCEPTABLE**   | Status code (406) indicating that the resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. | *int*
-**NOT_FOUND**   | Status code (404) indicating that the requested resource is not available. | *int*
-**NOT_IMPLEMENTED**   | Status code (501) indicating the HTTP server does not support the functionality needed to fulfill the request. | *int*
-**NOT_MODIFIED**   | Status code (304) indicating that a conditional GET operation found that the resource was available and not modified. | *int*
-**OK**   | Status code (200) indicating the request succeeded normally. | *int*
-**PARTIAL_CONTENT**   | Status code (206) indicating that the server has fulfilled the partial GET request for the resource. | *int*
-**PAYMENT_REQUIRED**   | Status code (402) reserved for future use. | *int*
-**PRECONDITION_FAILED**   | Status code (412) indicating that the precondition given in one or more of the request-header fields evaluated to false when it was tested on the server. | *int*
-**PROXY_AUTHENTICATION_REQUIRED**   | Status code (407) indicating that the client MUST first authenticate itself with the proxy. | *int*
-**REQUEST_ENTITY_TOO_LARGE**   | Status code (413) indicating that the server is refusing to process the request because the request entity is larger than the server is willing or able to process. | *int*
-**REQUEST_TIMEOUT**   | Status code (408) indicating that the client did not produce a request within the time that the server was prepared to wait. | *int*
-**REQUEST_URI_TOO_LONG**   | Status code (414) indicating that the server is refusing to service the request because the Request-URI is longer than the server is willing to interpret. | *int*
-**REQUESTED_RANGE_NOT_SATISFIABLE**   | Status code (416) indicating that the server cannot serve the requested byte range. | *int*
-**RESET_CONTENT**   | Status code (205) indicating that the agent SHOULD reset the document view which caused the request to be sent. | *int*
-**SEE_OTHER**   | Status code (303) indicating that the response to the request can be found under a different URI. | *int*
-**SERVICE_UNAVAILABLE**   | Status code (503) indicating that the HTTP server is temporarily overloaded, and unable to handle the request. | *int*
-**SERVICE_SWITCHING_PROTOCOLSUNAVAILABLE**   | Status code (101) indicating the server is switching protocols according to Upgrade header. | *int*
-**TEMPORARY_REDIRECT**   | Status code (307) indicating that the requested resource resides temporarily under a different URI. | *int*
-**UNAUTHORIZED**   | Status code (401) indicating that the request requires HTTP authentication. | *int*
-**UNSUPPORTED_MEDIA_TYPE**   | Status code (415) indicating that the server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. | *int*
-**USE_PROXY**   | Status code (305) indicating that the requested resource MUST be accessed through the proxy given by the Location field. | *int*
+#### isValid
+
+- `isValid ():boolean`
+
+  Checks if the response façade is currently valid or connected to an active request context.<br/>@returns True if valid, false otherwise.
+
+<hr/>
+
+#### json
+
+- `json (obj:any):void`
+
+  Serializes a JavaScript object to JSON, sets the `Content-Type: application/json` header,<br/>and writes the JSON string to the response output stream.<br/>@param obj The JavaScript object to be serialized and sent.
+
+<hr/>
+
+#### print
+
+- `print (text:string):void`
+
+  Writes a string of text to the response body using **UTF-8** encoding.<br/>Note: This method automatically handles flushing the output stream.<br/>@param text The string content to write.
+
+<hr/>
+
+#### println
+
+- `println (text:string):void`
+
+  Writes a string of text followed by a newline character (`\n`) to the response body<br/>using **UTF-8** encoding.<br/>@param text The string content to write.
+
+<hr/>
+
+#### write
+
+- `write (bytes:any[]):void`
+
+  Writes an array of bytes directly to the response output stream, typically used for binary data.<br/>@param bytes The array of bytes to write.
+
+<hr/>
+
+#### isCommitted
+
+- `isCommitted ():boolean`
+
+  Checks if the response headers and status have already been sent to the client.<br/>@returns True if the response is committed, false otherwise.
+
+<hr/>
+
+#### setContentType
+
+- `setContentType (contentType:string):void`
+
+  Sets the value of the `Content-Type` header.<br/>@param contentType The MIME type string (e.g., 'text/html', 'application/pdf').
+
+<hr/>
+
+#### flush
+
+- `flush ():void`
+
+  Forces any buffered output to be written to the client.
+
+<hr/>
+
+#### close
+
+- `close ():void`
+
+  Closes the response output stream.
+
+<hr/>
+
+#### addCookie
+
+- `addCookie (cookie:Cookie):void`
+
+  Adds a cookie to the response. The cookie object is serialized to JSON before being passed<br/>to the underlying Java facade.<br/>@param cookie The cookie definition object.
+
+<hr/>
+
+#### containsHeader
+
+- `containsHeader (name:string):boolean`
+
+  Checks if a response header with the specified name has already been set.<br/>@param name The name of the header.<br/>@returns True if the header exists, false otherwise.
+
+<hr/>
+
+#### encodeURL
+
+- `encodeURL (url:string):string`
+
+  Encodes a URL for use in redirects or forms, including session information if necessary.<br/>@param url The URL to encode.<br/>@returns The encoded URL string.
+
+<hr/>
+
+#### getCharacterEncoding
+
+- `getCharacterEncoding ():string`
+
+  Gets the character encoding used for the response body.<br/>@returns The character encoding string.
+
+<hr/>
+
+#### encodeRedirectURL
+
+- `encodeRedirectURL (url:string):string`
+
+  Encodes a URL for use in the `Location` header of a redirect response.<br/>@param url The redirect URL to encode.<br/>@returns The encoded redirect URL string.
+
+<hr/>
+
+#### getContentType
+
+- `getContentType ():string`
+
+  Gets the current `Content-Type` header value.<br/>@returns The content type string.
+
+<hr/>
+
+#### sendError
+
+- `sendError (status:number, message?:string):void`
+
+  Sends an HTTP error response to the client with the specified status code and optional message.<br/>This bypasses the normal response body writing process.<br/>@param status The HTTP status code (e.g., 404, 500).<br/>@param message An optional message to include in the error response.
+
+<hr/>
+
+#### setCharacterEncoding
+
+- `setCharacterEncoding (charset:string):void`
+
+  Sets the character encoding to be used for the response body (e.g., 'UTF-8').<br/>@param charset The character set string.
+
+<hr/>
+
+#### sendRedirect
+
+- `sendRedirect (location:string):void`
+
+  Sends a redirect response (status code 302 by default) to the client.<br/>@param location The new URL to redirect the client to.
+
+<hr/>
+
+#### setContentLength
+
+- `setContentLength (length:number):void`
+
+  Sets the `Content-Length` header for the response.<br/>@param length The size of the response body in bytes.
+
+<hr/>
+
+#### setHeader
+
+- `setHeader (name:string, value:string):void`
+
+  Sets a response header with the given name and value. If the header already exists, its value is overwritten.<br/>@param name The name of the header.<br/>@param value The value of the header.
+
+<hr/>
+
+#### addHeader
+
+- `addHeader (name:string, value:string):void`
+
+  Adds a response header with the given name and value. If the header already exists, a second header with the same name is added.<br/>@param name The name of the header.<br/>@param value The value of the header.
+
+<hr/>
+
+#### setStatus
+
+- `setStatus (status:number):void`
+
+  Sets the HTTP status code for the response.<br/>@param status The integer status code (e.g., 200, 404).
+
+<hr/>
+
+#### reset
+
+- `reset ():void`
+
+  Clears all buffers, status code, and headers from the response, allowing a new response to be generated.<br/>This is only possible if the response has not yet been committed.
+
+<hr/>
+
+#### getHeader
+
+- `getHeader (name:string):string`
+
+  Gets the value of a specific header. If multiple headers with the same name exist, it returns the first one.<br/>@param name The name of the header.<br/>@returns The header value string.
+
+<hr/>
+
+#### setLocale
+
+- `setLocale (language:string, country?:string, variant?:string):void`
+
+  Sets the locale for the response, which may affect language and date/time formatting.<br/>@param language The language code (e.g., 'en', 'fr').<br/>@param country The optional country code (e.g., 'US', 'GB').<br/>@param variant The optional variant code.
+
+<hr/>
+
+#### getHeaders
+
+- `getHeaders (name:string):string[]`
+
+  Gets all header values for a specific header name as an array of strings.<br/>@param name The name of the header.<br/>@returns An array of header values.
+
+<hr/>
+
+#### getHeaderNames
+
+- `getHeaderNames ():string[]`
+
+  Gets the names of all headers that have been set on the response.<br/>@returns An array of header names.
+
+<hr/>
+
+#### getLocale
+
+- `getLocale ():string`
+
+  Gets the currently set locale string for the response.<br/>@returns The locale string.
+
+<hr/>
+
+#### getOutputStream
+
+- `getOutputStream ():OutputStream`
+
+  Gets the underlying output stream object, wrapped in the SDK's `OutputStream` class.<br/>This is useful for writing raw or large amounts of data.<br/>@returns The output stream object.
+

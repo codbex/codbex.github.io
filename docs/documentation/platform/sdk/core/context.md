@@ -1,45 +1,45 @@
-# Context
+# API: context
 
-## Overview
+> Source: `core/context.ts`
 
-The `Context` class provides a simple interface to interact with the context in your application. This API allows you to retrieve and set values within the application context.
+API Context
+* Provides a static interface for accessing and manipulating key-value pairs in a global, application-wide context.
 
-## Methods
-
-### get
-
+## Usage
 ```javascript
-public static get(name: string): any | undefined
+import { context } from "sdk/core";
+import { response } from "sdk/http";
+
+context.set("attr1", "value1");
+let attr = context.get("attr1");
+
+response.println("[Attribute]: " + attr);
+response.flush();
+response.close();
 ```
 
-Retrieve the value associated with the specified context name.
 
-**Example**
+## Classes
 
-```javascript
-const value = Context.get("myContextName");
-console.log(value); // Output: The value associated with "myContextName" or undefined if not found
-```
+### Context
 
-### set
+API Context<br/>* Provides a static interface for accessing and manipulating key-value pairs in a global, application-wide context.
 
-```javascript
-public static set(name: string, value: any): void
-```
+#### Methods
 
-Set the value for the specified context name.
+<hr/>
 
-**Example**
+#### get
 
-```javascript
-Context.set("myContextName", "contextValue");
-```
+- `get (name:string):any|undefined`
 
-## Functions
+  Retrieves the value associated with the specified name from the global context.<br/>@param name The name of the context variable.<br/>@returns The context value, or `undefined` if the name is not found or the value is null.
 
----
+<hr/>
 
-Function     | Description | Returns
------------- | ----------- | --------
-**get(key)**   | Returns the value per key from the context parameters | *string*
-**set(key, value)**   | Sets the value per key to the context parameters | -
+#### set
+
+- `set (name:string, value:any):void`
+
+  Stores a value in the global context under the specified name.<br/>If the name already exists, its value is overwritten.<br/>@param name The name of the context variable.<br/>@param value The value to store.
+

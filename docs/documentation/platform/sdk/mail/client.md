@@ -1,37 +1,16 @@
-# Mail API
+# API: client
 
-The Mail API provides functionality for sending emails via various protocols, including SMTP (Simple Mail Transfer Protocol), allowing developers to integrate email sending capabilities into their applications.
+> Source: `mail/client.ts`
 
-## Overview
-
-The Mail API simplifies the process of sending emails programmatically, enabling applications to send notifications, alerts, reports, and other types of messages to users or administrators via email.
-
-## Features
-
-- **SMTP Support:** Send emails using SMTP servers, which are commonly provided by email service providers or organizations.
-- **Multiple Protocols:** Besides SMTP, the Mail API may support other email protocols for sending messages, such as IMAP (Internet Message Access Protocol) or POP3 (Post Office Protocol version 3).
-- **Configuration:** Configure SMTP server settings, including host, port, authentication credentials (username/password), encryption (SSL/TLS), and other relevant parameters.
-- **Message Composition:** Compose email messages with customizable content, including sender, recipient(s), subject, body, attachments, and headers.
-- **HTML Support:** Send emails with HTML content to enable rich formatting and styling for enhanced visual appeal.
-- **Attachment Support:** Attach files (e.g., documents, images) to email messages for sharing additional information or resources.
-- **Error Handling:** Handle errors and exceptions gracefully, providing feedback to the application about the success or failure of email delivery.
+Provides a client for sending emails, supporting both simple text/HTML
+messages and complex multipart messages with attachments or inline content.
 
 ## Usage
-
-To send an email using the Mail API, developers typically follow these steps:
-
-1. **Configure SMTP Settings:** Specify the SMTP server details, including the host, port, authentication credentials, and encryption settings.
-2. **Compose Email Message:** Create an email message object with the desired sender, recipient(s), subject, body, attachments, and any additional headers.
-3. **Send Email:** Use the Mail API functions to send the email message via the configured SMTP server.
-4. **Handle Errors:** Implement error handling mechanisms to deal with any issues that may arise during the email sending process.
-
-### Basic Usage
-
 ```javascript
 import { client } from "sdk/mail";
 import { response } from "sdk/http";
 
-const sender = "developer@codbex.com";
+const sender = "dirigible@eclipse.org";
 const to = "example@gmail.com";
 const subject = "Subject";
 const content = "<h1>Content<h1>";
@@ -40,83 +19,47 @@ const subType = "html";
 client.send(sender, to, subject, content, subType);
 
 response.println("Mail sent");
+
 ```
 
-### Advance Usage
 
-```javascript
-import { client } from "sdk/mail";
-import { response } from "sdk/http";
-
-let mailConfig = {
-    "mail.user": "<your-user>",
-    "mail.password": "<your-password>",
-    "mail.transport.protocol": "smtps",
-    "mail.smtps.host": "smtp.gmail.com",
-    "mail.smtps.port": "465",
-    "mail.smtps.auth": "true"
-};
-
-let mailClient = client.getClient(mailConfig);
-
-let sender = "developer@codbex.com";
-let recipients = {
-    to: "example@gmail.com",
-    cc: ["example1@gmail.com", "example2@sap.com"],
-    bcc: "example3@sap.com"
-};
-let subject = "Subject";
-let content = "<h1>Content</h1>";
-let subType = "html";
-
-mailClient.send(sender, recipients, subject, content, subType);
-
-response.println("Mail sent");
-```
-
-## Functions
-
----
-
-Function     | Description | Returns
------------- | ----------- | --------
-**getClient(options)**   | Get mail client with the provided *MailClientOptions*, if no options are provided, the default mail client configuration will be used | *MailClient*
-**send(from, recipients, subject, text, subType)**   | Send mail using the default mail client configuration to *MailRecipients*| *-*
-
-## Objects
-
----
+## Classes
 
 ### MailClient
 
-Property     | Description | Type
------------- | ----------- | --------
-**send(from, recipients, subject, text, subType)**   | Send mail to *MailRecipients* | *MailClient function*
+The MailClient provides methods for sending emails, handling recipient processing<br/>and interfacing with the underlying MailFacade.
 
-### MailClientOptions
+#### Methods
 
-Property     | Description | Type
------------- | ----------- | --------
-**mail.user**   | The mailbox user | *string*
-**mail.password**   | The mailbox password | *string*
-**mail.transport.protocol**   | (optional) The mail transport protocol, default is *smtps* | *string*
-**mail.smtps.host**   | The mail SMPTPS host | *string*
-**mail.smtps.port**   | The mail SMPTPS port | *number as string*
-**mail.smtps.auth**   | Enable/Disable mail SMPTPS authentication | *boolean as string*
-**mail.smtp.host**   | The mail SMPTP host | *string*
-**mail.smtp.port**   | The mail SMPTP port | *number as string*
-**mail.smtp.auth**   | Enable/Disable mail SMPTP authentication | *boolean as string*
+<hr/>
 
-Addition mail client options can be found here:
+#### sendMultipart
 
-- [SMTP/SMTPS](https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html)
-- [IMAP](https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html)
-- [POP3](https://javaee.github.io/javamail/docs/api/com/sun/mail/pop3/package-summary.html)
+- `sendMultipart (from:string, recipients:string|MailRecipients, subject:string, parts:MailMultipart[]):void`
 
-### MailRecipients
+  A static convenience method to send a multipart email without instantiating a client.<br/>This is suitable for emails that require attachments, inline images, or mixed content.<br/><br/>@param from The sender's email address.<br/>@param recipients The recipient(s) structure (string for 'to', or {@link MailRecipients} object).<br/>@param subject The subject line of the email.<br/>@param parts An array of {@link MailMultipart} objects defining the email content.
 
-Property     | Description | Type
------------- | ----------- | --------
-**to**   | The *to* recipient(s) | *string* or *Array of strings*
-**cc**   | The *cc* recipient(s) | *string* or *Array of strings*
-**bcc**   | The *bcc* recipient(s) | *string* or *Array of strings*
+<hr/>
+
+#### send
+
+- `send (from:string, recipients:string|MailRecipients, subject:string, text:string, contentType:MailContentType):void`
+
+  A static convenience method to send a simple email with only a single text or HTML body.<br/><br/>@param from The sender's email address.<br/>@param recipients The recipient(s) structure (string for 'to', or {@link MailRecipients} object).<br/>@param subject The subject line of the email.<br/>@param text The body content of the email.<br/>@param contentType Specifies the body format: 'html' or 'plain'.
+
+<hr/>
+
+#### send
+
+- `send (from:string, _recipients:string|MailRecipients, subject:string, text:string, contentType:MailContentType):void`
+
+  Sends a simple email with a single body part (text or HTML).<br/><br/>@param from The sender's email address.<br/>@param _recipients The recipient(s) structure (string for 'to', or {@link MailRecipients} object).<br/>@param subject The subject line of the email.<br/>@param text The body content of the email.<br/>@param contentType Specifies the body format: 'html' or 'plain'.<br/>@throws {Error} Throws an error if the recipient format is invalid or the native call fails.
+
+<hr/>
+
+#### sendMultipart
+
+- `sendMultipart (from:string, _recipients:string|MailRecipients, subject:string, parts:MailMultipart[]):void`
+
+  Sends a complex email composed of multiple parts (text bodies, HTML, attachments, inline content).<br/><br/>@param from The sender's email address.<br/>@param _recipients The recipient(s) structure (string for 'to', or {@link MailRecipients} object).<br/>@param subject The subject line of the email.<br/>@param parts An array of {@link MailMultipart} objects defining the email content.<br/>@throws {Error} Throws an error if the recipient format is invalid or the native call fails.
+

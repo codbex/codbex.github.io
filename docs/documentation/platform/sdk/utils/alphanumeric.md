@@ -1,27 +1,84 @@
-# Alphanumeric
+# API: alphanumeric
 
-Alphanumeric object is used to check whether a given string is alpha-numeric and to generate random strings.
+> Source: `utils/alphanumeric.ts`
 
-## Example Usage
+Transforms a string to an alphanumeric sequence, stripping non-conformant characters for it.
+@param string {String} the string to transform
 
+## Usage
 ```javascript
 import { alphanumeric } from "sdk/utils";
 import { response } from "sdk/http";
 
 response.println(alphanumeric.toAlphanumeric("@mystring123!#="));
+
+response.flush();
+response.close();
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**toAlphanumeric(input)**   | Remove non-alpha-numeric letters | *string*
-**randomString(length, charset)**   | Generates alpha-numeric string in a given charset and with given length | *string*
-**alphanumeric(length, lowercase)**   | Generates alpha-numeric string | *string*
-**alpha(length, lowercase)**   | Generates alpha string | *string*
-**numeric(length)**   | Generates alpha-numeric string | *string*
-**isNumeric(input)**   | Checks is the input is a numeric string | *string*
-**isAlphanumeric(input)**   | Checks is the input is a alpha-numeric string | *string*
+### Alphanumeric
+
+Transforms a string to an alphanumeric sequence, stripping non-conformant characters for it.<br/>@param string {String} the string to transform
+
+#### Methods
+
+<hr/>
+
+#### toAlphanumeric
+
+- `toAlphanumeric (string:string):string`
+
+  Transforms a string to an alphanumeric sequence, stripping non-conformant characters for it.<br/>@param string {String} the string to transform
+
+<hr/>
+
+#### randomString
+
+- `randomString (length:number, charset:string):string`
+
+  Generates a random alphanumeric sequence with the specified length<br/>@param length {Integer} Defaults to 4
+
+<hr/>
+
+#### alphanumeric
+
+- `alphanumeric (length:number, lowercase:boolean):string`
+
+  Generates a random alphanumeric sequence with the specified length<br/>@param length {Integer} Defaults to 4<br/>@param lowercase {Boolean} Defaults to true
+
+<hr/>
+
+#### alpha
+
+- `alpha (length:number, lowercase:boolean):string`
+
+  Generates a random ASCII sequence with the specified length<br/>@param length {Integer} Defaults to 4<br/>@param lowercase {Boolean} Defaults to true
+
+<hr/>
+
+#### numeric
+
+- `numeric (length:number):string`
+
+  Generates a random numeric value<br/>@param length {Integer} Defaults to 4
+
+<hr/>
+
+#### isNumeric
+
+- `isNumeric (str:string):boolean`
+
+  Tests is the provided `str` argument is a valid numeric sequence.<br/>@param str {String} the string to test
+
+<hr/>
+
+#### isAlphanumeric
+
+- `isAlphanumeric (str:string):boolean`
+
+  Tests is the provided `str` argument is a valid alphanumeric sequence.<br/>@param str {String} the string to test
 

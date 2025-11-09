@@ -1,9 +1,10 @@
-# Lifecycle
+# API: lifecycle
 
-The Lifecycle API provides utility functions for managing the lifecycle of the projects in the system, such as publishing and unpublishing.
+> Source: `platform/lifecycle.ts`
 
-### Basic Usage
+Provides a wrapper for managing the application lifecycle (publish/unpublish)
 
+## Usage
 ```javascript
 import { bytes } from "sdk/io";
 import { user } from "sdk/security";
@@ -22,13 +23,31 @@ myFile.setContent(bytes.textToByteArray("console.log('Hello World!');"));
 let publishResult = lifecycle.publish(currentUser, workspaceName, projectName);
 
 response.println("publishResult: " + publishResult)
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**publish(user, workspace, project)**   | Publish project from the workspace, the **project** parameter is optional | *boolean*
-**unpublish(user, workspace, project)**   | Unpublish project from the workspace, the **project** parameter is optional | *boolean*
+### Lifecycle
+
+@class Lifecycle<br/>@description Static utility class to publish and unpublish projects on the platform.
+
+#### Methods
+
+<hr/>
+
+#### publish
+
+- `publish (user:string, workspace:string, project:string="*"):boolean`
+
+  Publishes a project for a specific user and workspace.<br/><br/>@param {string} user The username of the owner of the workspace.<br/>@param {string} workspace The name of the workspace to publish from.<br/>@param {string} [project="*"] The specific project name to publish. Use "*" to publish all projects in the workspace.<br/>@returns {boolean} True if the publish operation was successful, false otherwise.
+
+<hr/>
+
+#### unpublish
+
+- `unpublish (project:string="*"):boolean`
+
+  Unpublishes a currently deployed project.<br/><br/>@param {string} [project="*"] The specific project name to unpublish. Use "*" to unpublish all currently deployed projects.<br/>@returns {boolean} True if the unpublish operation was successful, false otherwise.
+

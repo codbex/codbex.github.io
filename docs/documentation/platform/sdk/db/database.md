@@ -1,1552 +1,1007 @@
-# Database
+# API: database
 
-## Introduction
+> Source: `db/database.ts`
 
-The Database API provides a set of functions to interact with databases in the __codbex__ platform environment. This guide will walk you through the available methods and how to use them effectively.
+API Database
 
-## Methods
+## Usage
+```javascript
+import { database } from "sdk/db";
+import { response } from "sdk/http";
 
-### getDataSources()
+let connection = database.getConnection("SystemDB");
+try {
+    let statement = connection.prepareStatement("select * from DIRIGIBLE_EXTENSIONS");
+    let resultSet = statement.executeQuery();
+    while (resultSet.next()) {
+        response.println("[path]: " + resultSet.getString("ARTEFACT_LOCATION"));
+    }
+    resultSet.close();
+    statement.close();
+} catch (e) {
+    if (e instanceof Error) {
+        console.error(e);
+        response.println(e.message);
+    } else {
+        console.error("Something went wrong", e);
+    }
+} finally {
+    connection.close();
+}
 
-Retrieves the available data sources.
+response.flush();
+response.close();
 
-```javascript
-// Example
-const datasources = getDataSources();
-console.log(datasources); // Outputs an array of available data sources
 ```
 
-### getMetadata(datasourceName?)
 
-Retrieves metadata for a specified data source. If no data source is provided, it retrieves metadata for all data sources.
+## Classes
 
-```javascript
-// Example
-const metadata = getMetadata("exampleDS");
-console.log(metadata); // Outputs metadata for the specified data source
-```
+### PreparedStatement
 
-### getProductName(datasourceName?)
+Statement object
 
-Retrieves the product name for a specified data source. If no data source is provided, it retrieves the product name for all data sources.
+#### Methods
 
-```javascript
-// Example
-const productName = getProductName("exampleDS");
-console.log(productName); // Outputs the product name for the specified data source
-```
+<hr/>
 
-### getConnection(datasourceName?)
+#### close
 
-Establishes a connection to the specified data source. If no data source is provided, it establishes a connection to the default data source.
+- `close ():void`
 
-```javascript
-// Example
-const connection = getConnection("exampleDS");
-// Use the connection object for further database operations
-```
+  Statement object
 
-### isHanaDatabase(connection)
+<hr/>
 
-Checks if the provided database connection is of type SAP HANA database.
+#### getResultSet
 
-```javascript
-// Example
-const connection = ...; // obtain a database connection
-const isHana = isHanaDatabase(connection);
-```
+- `getResultSet ():ResultSet`
 
-### readBlobValue(value)
+<hr/>
 
-Reads a Blob value and returns it as a byte array.
+#### execute
 
-```javascript
-// Example
-const blobValue = ...; // obtain a Blob value
-const byteArray = readBlobValue(blobValue);
-```
+- `execute ():boolean`
 
-### createBlobValue(native, value)
+<hr/>
 
-Creates a new Blob value based on the provided byte array. The creation process depends on the database type.
+#### executeQuery
 
-```javascript
-// Example
-const nativeConnection = ...; // obtain the native connection
-const byteValue = ...; // byte array data
-const blob = createBlobValue(nativeConnection, byteValue);
-```
+- `executeQuery ():ResultSet`
 
-### readClobValue(value)
+<hr/>
 
-Reads a Clob value and returns it as a string.
+#### executeUpdate
 
-```javascript
-// Example
-const clobValue = ...; // obtain a Clob value
-const stringValue = readClobValue(clobValue);
-```
+- `executeUpdate ():number`
 
-### createClobValue(native, value)
+<hr/>
 
-Creates a new Clob value based on the provided string. The creation process depends on the database type.
+#### setNull
 
-```javascript
-// Example
-const nativeConnection = ...; // obtain the native connection
-const stringValue = ...; // string data
-const clob = createClobValue(nativeConnection, stringValue);
-```
+- `setNull (index:number, sqlType:number):void`
 
-### readNClobValue(value)
+<hr/>
 
-Reads an NClob value and returns it as a string.
+#### setBinaryStream
 
-```javascript
-// Example
-const nclobValue = ...; // obtain an NClob value
-const stringValue = readNClobValue(nclobValue);
-```
+- `setBinaryStream (parameterIndex:number, inputStream:InputStream, length?:number):void`
 
-### createNClobValue(native, value)
+<hr/>
 
-Creates a new NClob value based on the provided string. The creation process depends on the database type.
+#### setBoolean
 
-```javascript
-// Example
-const nativeConnection = ...; // obtain the native connection
-const stringValue = ...; // string data
-const nclob = createNClobValue(nativeConnection, stringValue);
-```
+- `setBoolean (index:number, value?:boolean):void`
 
-### getDateValue(value)
+<hr/>
 
-Converts the input value to a JavaScript Date object. If the input is a string, it is parsed into a Date.
+#### setByte
 
-```javascript
-// Example
-const dateString = "2024-02-25";
-const dateObject = getDateValue(dateString);
-```
+- `setByte (index:number, value?:any):void`
 
-### SQLTypes Constants
+<hr/>
 
-The `SQLTypes` constants represent various SQL data types. Each constant is associated with a specific integer value that corresponds to a particular SQL data type. Below is a description of each constant:
+#### setBlob
 
-- `BOOLEAN` (16): Represents the SQL `BOOLEAN` data type.
-- `DATE` (91): Represents the SQL `DATE` data type.
-- `TIME` (92): Represents the SQL `TIME` data type.
-- `TIMESTAMP` (93): Represents the SQL `TIMESTAMP` data type.
-- `DOUBLE` (8): Represents the SQL `DOUBLE` data type.
-- `FLOAT` (6): Represents the SQL `FLOAT` data type.
-- `REAL` (7): Represents the SQL `REAL` data type.
-- `TINYINT` (-6): Represents the SQL `TINYINT` data type.
-- `SMALLINT` (5): Represents the SQL `SMALLINT` data type.
-- `INTEGER` (4): Represents the SQL `INTEGER` data type.
-- `BIGINT` (-5): Represents the SQL `BIGINT` data type.
-- `VARCHAR` (12): Represents the SQL `VARCHAR` data type.
-- `CHAR` (1): Represents the SQL `CHAR` data type.
-- `CLOB` (2005): Represents the SQL `CLOB` data type.
-- `BLOB` (2004): Represents the SQL `BLOB` data type.
-- `VARBINARY` (-3): Represents the SQL `VARBINARY` data type.
-- `DECIMAL` (3): Represents the SQL `DECIMAL` data type.
-- `ARRAY` (2003): Represents the SQL `ARRAY` data type.
-- `NVARCHAR` (-9): Represents the SQL `NVARCHAR` data type.
-- `NCLOB` (2011): Represents the SQL `NCLOB` data type.
-- `BIT` (-7): Represents the SQL `BIT` data type.
+- `setBlob (index:number, value?:any):void`
 
+<hr/>
 
-### Connection Object Methods
+#### setClob
 
-The `Connection` object provides methods for various operations on the database connection.
+- `setClob (index:number, value?:any):void`
 
-#### prepareStatement(sql)
+<hr/>
 
-Creates a `PreparedStatement` object for the given SQL query.
+#### setNClob
 
-```javascript
-// Example
-const preparedStatement = connection.prepareStatement("SELECT * FROM example_table");
-```
+- `setNClob (index:number, value?:any):void`
 
-#### prepareCall(sql)
+<hr/>
 
-Creates a `CallableStatement` object for the given SQL query.
+#### setBytesNative
 
-```javascript
-// Example
-const callableStatement = connection.prepareCall("call example_procedure()");
-```
+- `setBytesNative (index:number, value?:any[]):void`
 
-#### close()
+<hr/>
 
-Closes the database connection.
+#### setBytes
 
-```javascript
-// Example
-connection.close();
-```
+- `setBytes (index:number, value?:any[]):void`
 
-#### commit()
+<hr/>
 
-Commits the current transaction.
+#### setDate
 
-```javascript
-// Example
-connection.commit();
-```
+- `setDate (index:number, value?:string|Date):void`
 
-#### getAutoCommit()
+<hr/>
 
-Retrieves the current auto-commit mode.
+#### setDouble
 
-```javascript
-// Example
-const autoCommitMode = connection.getAutoCommit();
-console.log(autoCommitMode); // Outputs true or false
-```
+- `setDouble (index:number, value?:number):void`
 
-#### getCatalog()
+<hr/>
 
-Retrieves the current catalog name.
+#### setFloat
 
-```javascript
-// Example
-const catalogName = connection.getCatalog();
-console.log(catalogName); // Outputs the catalog name
-```
+- `setFloat (index:number, value?:number):void`
 
-#### getSchema()
+<hr/>
 
-Retrieves the current schema name.
+#### setInt
 
-```javascript
-// Example
-const schemaName = connection.getSchema();
-console.log(schemaName); // Outputs the schema name
-```
+- `setInt (index:number, value?:number):void`
 
-#### getTransactionIsolation()
+<hr/>
 
-Retrieves the current transaction isolation level.
+#### setLong
 
-```javascript
-// Example
-const isolationLevel = connection.getTransactionIsolation();
-console.log(isolationLevel); // Outputs the transaction isolation level
-```
+- `setLong (index:number, value?:number):void`
 
-#### isClosed()
+<hr/>
 
-Checks whether the connection is closed.
+#### setShort
 
-```javascript
-// Example
-const isClosed = connection.isClosed();
-console.log(isClosed); // Outputs true or false
-```
+- `setShort (index:number, value?:number):void`
 
-#### isReadOnly()
+<hr/>
 
-Checks whether the connection is in read-only mode.
+#### setString
 
-```javascript
-// Example
-const isReadOnly = connection.isReadOnly();
-console.log(isReadOnly); // Outputs true or false
-```
+- `setString (index:number, value?:string):void`
 
-#### isValid()
+<hr/>
 
-Checks whether the connection is valid.
+#### setTime
 
-```javascript
-// Example
-const isValid = connection.isValid();
-console.log(isValid); // Outputs true or false
-```
+- `setTime (index:number, value?:string|Date):void`
 
-#### rollback()
+<hr/>
 
-Rolls back the current transaction.
+#### setTimestamp
 
-```javascript
-// Example
-connection.rollback();
-```
+- `setTimestamp (index:number, value?:string|Date):void`
 
-#### setAutoCommit(autoCommit)
+<hr/>
 
-Sets the auto-commit mode for the connection.
+#### setBigDecimal
 
-```javascript
-// Example
-connection.setAutoCommit(true); // or connection.setAutoCommit(false);
-```
+- `setBigDecimal (index:number, value?:number):void`
 
-#### setCatalog(catalog)
+<hr/>
 
-Sets the current catalog name for the connection.
+#### setNString
 
-```javascript
-// Example
-connection.setCatalog("new_catalog");
-```
+- `setNString (index:number, value?:string):void`
 
-#### setReadOnly(readOnly)
+<hr/>
 
-Sets the read-only mode for the connection.
+#### addBatch
 
-```javascript
-// Example
-connection.setReadOnly(true); // or connection.setReadOnly(false);
-```
+- `addBatch ():void`
 
-#### setSchema(schema)
+<hr/>
 
-Sets the current schema name for the connection.
+#### executeBatch
 
-```javascript
-// Example
-connection.setSchema("new_schema");
-```
+- `executeBatch ():number[]`
 
-#### setTransactionIsolation(transactionIsolation)
+<hr/>
 
-Sets the transaction isolation level for the connection.
+#### getMetaData
 
-```javascript
-// Example
-connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
-```
+- `getMetaData ():any`
 
-These methods provide essential functionalities for managing and interacting with the database connection in the platform. Depending on your use case, you may need to utilize these methods to control transactions, handle connection properties, and more.
+<hr/>
 
-### PreparedStatement Object Methods
+#### getMoreResults
 
-The `PreparedStatement` object provides methods for managing and executing precompiled SQL statements.
+- `getMoreResults ():boolean`
 
-#### close()
+<hr/>
 
-Closes the prepared statement.
+#### getParameterMetaData
 
-```javascript
-// Example
-preparedStatement.close();
-```
+- `getParameterMetaData ():any`
 
-#### getResultSet()
+<hr/>
 
-Retrieves the result set of the prepared statement.
+#### getSQLWarning
 
-```javascript
-// Example
-const resultSet = preparedStatement.getResultSet();
-```
+- `getSQLWarning ():any`
 
-#### execute()
+<hr/>
 
-Executes the SQL query.
+#### isClosed
 
-```javascript
-// Example
-const result = preparedStatement.execute();
-```
+- `isClosed ():boolean`
 
-#### executeQuery()
+### CallableStatement
 
-Executes a `SELECT` SQL query and returns a `ResultSet` object.
+#### Methods
 
-```javascript
-// Example
-const result = preparedStatement.execute();
-```
+<hr/>
 
-#### executeUpdate()
+#### getResultSet
 
-Executes an SQL `INSERT`, `UPDATE`, or `DELETE` query.
+- `getResultSet ():ResultSet`
 
-```javascript
-// Example
-const rowCount = preparedStatement.executeUpdate();
-```
+<hr/>
 
-#### setNull(index, sqlType)
+#### executeQuery
 
-Sets a parameter to `NULL`.
+- `executeQuery ():ResultSet`
 
-```javascript
-// Example
-preparedStatement.setNull(1, SQLTypes.INTEGER);
-```
+<hr/>
 
-#### setBinaryStream(parameter, inputStream, length)
+#### executeUpdate
 
-Sets a binary stream as a parameter.
+- `executeUpdate ():number`
 
-```javascript
-// Example
-preparedStatement.setBinaryStream(1, inputStream, length);
-```
+<hr/>
 
-#### setBoolean(index, value)
+#### registerOutParameter
 
-Sets a Boolean parameter.
+- `registerOutParameter (parameterIndex:number, sqlType:keyoftypeofSQLTypes|number):void`
 
-```javascript
-// Example
-preparedStatement.setBoolean(1, true);
-```
+<hr/>
 
-#### setByte(index, value)
+#### registerOutParameterByScale
 
-Sets a Byte parameter.
+- `registerOutParameterByScale (parameterIndex:number, sqlType:keyoftypeofSQLTypes|number, scale:number):void`
 
-```javascript
-// Example
-preparedStatement.setByte(1, 42);
-```
+<hr/>
 
-#### setBlob(index, value)
+#### registerOutParameterByTypeName
 
-Sets a Blob parameter.
+- `registerOutParameterByTypeName (parameterIndex:number, sqlType:keyoftypeofSQLTypes|number, typeName:string):void`
 
-```javascript
-// Example
-preparedStatement.setBlob(1, blobValue);
-```
+<hr/>
 
-#### setClob(index, value)
+#### wasNull
 
-Sets a Clob parameter.
+- `wasNull ():boolean`
 
-```javascript
-// Example
-preparedStatement.setClob(1, clobValue);
-```
+<hr/>
 
-#### setNClob(index, value)
+#### getString
 
-Sets an NClob parameter.
+- `getString (parameterIndex:number):string`
 
-```javascript
-// Example
-preparedStatement.setNClob(1, nclobValue);
-```
+<hr/>
 
-#### setBytesNative(index, value)
+#### getBoolean
 
-Sets a native byte parameter.
+- `getBoolean (parameterIndex:number):boolean`
 
-```javascript
-// Example
-preparedStatement.setBytesNative(1, byteArray);
-```
+<hr/>
 
-#### setBytes(index, value)
+#### getByte
 
-Sets a byte array as a parameter.
+- `getByte (parameterIndex:number):any`
 
-```javascript
-// Example
-preparedStatement.setBytes(1, byteArray);
-```
+<hr/>
 
-#### setDate(index, value)
+#### getShort
 
-Sets a Date parameter.
+- `getShort (parameterIndex:number):number`
 
-```javascript
-// Example
-preparedStatement.setDate(1, new Date());
-```
+  : byte
 
-#### setDouble(index, value)
+<hr/>
 
-Sets a Double parameter.
+#### getInt
 
-```javascript
-// Example
-preparedStatement.setDouble(1, 3.14);
-```
+- `getInt (parameterIndex:number):number`
 
-#### setFloat(index, value)
+<hr/>
 
-Sets a Float parameter.
+#### getLong
 
-```javascript
-// Example
-preparedStatement.setFloat(1, 2.718);
-```
+- `getLong (parameterIndex:number):number`
 
-#### setInt(index, value)
+<hr/>
 
-Sets an Integer parameter.
+#### getFloat
 
-```javascript
-// Example
-preparedStatement.setInt(1, 42);
-```
+- `getFloat (parameterIndex:number):number`
 
-#### setLong(index, value)
+<hr/>
 
-Sets a Long parameter.
+#### getDouble
 
-```javascript
-// Example
-preparedStatement.setLong(1, 123456789);
-```
+- `getDouble (parameterIndex:number):number`
 
-#### setShort(index, value)
+<hr/>
 
-Sets a Short parameter.
+#### getDate
 
-```javascript
-// Example
-preparedStatement.setShort(1, 7);
-```
+- `getDate (parameterIndex:number):Date`
 
-#### setString(index, value)
+<hr/>
 
-Sets a String parameter.
+#### getTime
 
-```javascript
-// Example
-preparedStatement.setString(1, "example");
-```
+- `getTime (parameterIndex:number):Date`
 
-#### setTime(index, value)
+<hr/>
 
-Sets a Time parameter.
+#### getTimestamp
 
-```javascript
-// Example
-preparedStatement.setTime(1, new Date());
-```
+- `getTimestamp (parameterIndex:number):Date`
 
-#### setTimestamp(index, value)
+<hr/>
 
-Sets a Timestamp parameter.
+#### getObject
 
-```javascript
-// Example
-preparedStatement.setTimestamp(1, new Date());
-```
+- `getObject (parameterIndex:number):any`
 
-#### setBigDecimal(index, value)
+<hr/>
 
-Sets a BigDecimal parameter.
+#### getBigDecimal
 
-```javascript
-// Example
-preparedStatement.setBigDecimal(1, bigDecimalValue);
-```
+- `getBigDecimal (parameterIndex:number):number`
 
-#### setNString(index, value)
+<hr/>
 
-Sets an NString parameter.
+#### getRef
 
-```javascript
-// Example
-preparedStatement.setNString(1, "example");
-```
+- `getRef (parameterIndex:number):any`
 
-#### addBatch()
+  : sql.BigDecimal
 
-Adds the current set of parameters to the batch for later execution.
+<hr/>
 
-```javascript
-// Example
-preparedStatement.addBatch();
-```
+#### getBytes
 
-#### executeBatch()
+- `getBytes (parameterIndex:number):any[]`
 
-Executes the batch of commands.
+  : sql.Ref
 
-```javascript
-// Example
-const results = preparedStatement.executeBatch();
-```
-#### getMetaData()
+<hr/>
 
-Retrieves the metadata for the prepared statement.
+#### getBytesNative
 
-```javascript
-// Example
-const metaData = preparedStatement.getMetaData();
-```
+- `getBytesNative (parameterIndex:number):any[]`
 
-#### getMoreResults()
+  : byte[]
 
-Moves to the next result set, if available.
+<hr/>
 
-```javascript
-// Example
-const hasMoreResults = preparedStatement.getMoreResults();
-```
+#### getBlob
 
-#### getParameterMetaData()
+- `getBlob (parameterIndex:number):any`
 
-Retrieves the parameter metadata for the prepared statement.
+  : byte[]
 
-```javascript
-// Example
-const parameterMetaData = preparedStatement.getParameterMetaData();
-```
+<hr/>
 
-#### getSQLWarning()
+#### getBlobNative
 
-Retrieves the first warning reported by calls on this statement.
+- `getBlobNative (parameterIndex:number):any`
 
-```javascript
-// Example
-const sqlWarning = preparedStatement.getSQLWarning();
-```
+  : sql.Blob
 
-#### isClosed()
+<hr/>
 
-Checks if the prepared statement is closed.
+#### getClob
 
-```javascript
-// Example
-const isClosed = preparedStatement.isClosed();
-```
+- `getClob (parameterIndex:number):any`
 
-These methods provide a comprehensive set of functionalities for handling prepared statements, setting parameters, executing queries, and managing result sets. Depending on your use case, you can leverage these methods to interact with your database effectively.
+  : sql.Blob
 
-### CallableStatement Object Methods
+<hr/>
 
-The `CallableStatement` object provides methods for executing SQL stored procedures.
+#### getNClob
 
-#### getResultSet()
+- `getNClob (parameterIndex:string|number):any`
 
-Retrieves the result set of the callable statement.
+  : sql.Clob
 
-```javascript
-// Example
-const resultSet = callableStatement.getResultSet();
-```
+<hr/>
 
-#### executeQuery()
+#### getNString
 
-Executes a stored procedure that returns a result set.
+- `getNString (parameterIndex:string|number):string`
 
-```javascript
-// Example
-const resultSet = callableStatement.executeQuery();
-```
+  : sql.NClob
 
-#### executeUpdate()
+<hr/>
 
-Executes a stored procedure that performs an update.
+#### getArray
 
-```javascript
-// Example
-const rowCount = callableStatement.executeUpdate();
-```
+- `getArray (parameterIndex:string|number):any[]`
 
-#### registerOutParameter(parameterIndex, sqlType)
+<hr/>
 
-Registers the output parameter with the given SQL type.
+#### getURL
 
-```javascript
-// Example
-callableStatement.registerOutParameter(1, SQLTypes.INTEGER);
-```
+- `getURL (parameterIndex:string|number):any`
 
-#### registerOutParameterByScale(parameterIndex, sqlType, scale)
+  : sql.Array
 
-Registers the output parameter with the given SQL type and scale.
+<hr/>
 
-```javascript
-// Example
-callableStatement.registerOutParameterByScale(1, SQLTypes.DECIMAL, 2);
-```
+#### getRowId
 
-#### registerOutParameterByTypeName(parameterIndex, sqlType, typeName)
+- `getRowId (parameterIndex:string|number):any`
 
-Registers the output parameter with the given SQL type and type name.
+<hr/>
 
-```javascript
-// Example
-callableStatement.registerOutParameterByTypeName(1, SQLTypes.VARCHAR, "VARCHAR");
-```
+#### getSQLXML
 
-#### wasNull()
+- `getSQLXML (parameterIndex:string|number):any`
 
-Determines if the last column read was NULL.
+  : sql.RowId
 
-```javascript
-// Example
-const isNull = callableStatement.wasNull();
-```
+<hr/>
 
-#### getString(parameter)
+#### setURL
 
-Retrieves the value of the specified parameter as a String.
+- `setURL (parameterIndex:number, value:any):void`
 
-```javascript
-// Example
-const value = callableStatement.getString(1);
-```
+  : sql.SQLXML
 
-#### getBoolean(parameter)
-Retrieves the value of the specified parameter as a Boolean.
+<hr/>
 
-```javascript
-// Example
-const value = callableStatement.getBoolean(1);
-```
+#### setNull
 
-#### getByte(parameter)
-Retrieves the value of the specified parameter as a Byte.
+- `setNull (parameterIndex:number, sqlTypeStr:keyoftypeofSQLTypes|number, typeName?:string):void`
 
-```javascript
-// Example
-const value = callableStatement.getByte(1);
-```
+<hr/>
 
-#### getShort(parameter)
+#### setBoolean
 
-Retrieves the value of the specified parameter as a Short.
+- `setBoolean (parameterIndex:number, value?:boolean):void`
 
-```javascript
-// Example
-const value = callableStatement.getShort(1);
-```
+<hr/>
 
-#### getInt(parameter)
+#### setByte
 
-Retrieves the value of the specified parameter as an Integer.
+- `setByte (parameterIndex:number, value?:any):void`
 
-```javascript
-// Example
-const value = callableStatement.getInt(1);
-```
+<hr/>
 
-#### getLong(parameter)
+#### setShort
 
-Retrieves the value of the specified parameter as a Long.
+- `setShort (parameterIndex:number, value?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getLong(1);
-```
+<hr/>
 
-#### getFloat(parameter)
+#### setInt
 
-Retrieves the value of the specified parameter as a Float.
+- `setInt (parameterIndex:number, value?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getFloat(1);
-```
+<hr/>
 
-#### getDouble(parameter)
+#### setLong
 
-Retrieves the value of the specified parameter as a Double.
+- `setLong (parameterIndex:number, value?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getDouble(1);
-```
+<hr/>
 
-#### getDate(parameter)
+#### setFloat
 
-Retrieves the value of the specified parameter as a Date.
+- `setFloat (parameterIndex:number, value?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getDate(1);
-```
+<hr/>
 
-#### getTime(parameter)
+#### setDouble
 
-Retrieves the value of the specified parameter as a Time.
+- `setDouble (parameterIndex:number, value?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getTime(1);
-```
+<hr/>
 
-#### getTimestamp(parameter)
+#### setBigDecimal
 
-Retrieves the value of the specified parameter as a Timestamp.
+- `setBigDecimal (parameterIndex:number, value?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getTimestamp(1);
-```
+<hr/>
 
-#### getObject(parameter)
+#### setString
 
-Retrieves the value of the specified parameter as an Object.
+- `setString (parameterIndex:number, value?:string):void`
 
-```javascript
-// Example
-const value = callableStatement.getObject(1);
-```
+<hr/>
 
-#### getBigDecimal(parameter)
+#### setBytes
 
-Retrieves the value of the specified parameter as a BigDecimal.
+- `setBytes (parameterIndex:number, value?:any[]):void`
 
-```javascript
-// Example
-const value = callableStatement.getBigDecimal(1);
-```
+<hr/>
 
-#### getRef(parameter)
+#### setDate
 
-Retrieves the value of the specified parameter as a Ref.
+- `setDate (parameterIndex:number, value?:string|Date):void`
 
-```javascript
-// Example
-const value = callableStatement.getRef(1);
-```
+<hr/>
 
-#### getBytes(parameter)
+#### setTime
 
-Retrieves the value of the specified parameter as a byte array.
+- `setTime (parameterIndex:number, value?:string|Date):void`
 
-```javascript
-// Example
-const value = callableStatement.getBytes(1);
-```
+<hr/>
 
-#### getBytesNative(parameter)
+#### setTimestamp
 
-Retrieves the value of the specified parameter as a byte array in native format.
+- `setTimestamp (parameterIndex:number, value?:string|Date):void`
 
-```javascript
-// Example
-const value = callableStatement.getBytesNative(1);
-```
+<hr/>
 
-#### getBlob(parameter)
+#### setAsciiStream
 
-Retrieves the value of the specified parameter as a Blob.
+- `setAsciiStream (parameterIndex:number, inputStream:InputStream, length?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getBlob(1);
-```
+<hr/>
 
-#### getBlobNative(parameter)
+#### setBinaryStream
 
-Retrieves the value of the specified parameter as a Blob in native format.
+- `setBinaryStream (parameterIndex:number, inputStream:InputStream, length?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getBlobNative(1);
-```
+<hr/>
 
-#### getClob(parameter)
+#### setObject
 
-Retrieves the value of the specified parameter as a Clob.
+- `setObject (parameterIndex:number, value:any, targetSqlType?:number, scale?:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getClob(1);
-```
+<hr/>
 
-#### getNClob(parameter)
+#### setRowId
 
-Retrieves the value of the specified parameter as an NClob.
+- `setRowId (parameterIndex:number, value:number):void`
 
-```javascript
-// Example
-const value = callableStatement.getNClob(1);
-```
+<hr/>
 
-#### getNString(parameter)
+#### setNString
 
-Retrieves the value of the specified parameter as an NString.
+- `setNString (parameterIndex:number, value:string):void`
 
-```javascript
-// Example
-const value = callableStatement.getNString(1);
-```
+  : RowId
 
-#### getArray(parameter)
+<hr/>
 
-Retrieves the value of the specified parameter as an Array.
+#### setSQLXML
 
-```javascript
-// Example
-const value = callableStatement.getArray(1);
-```
+- `setSQLXML (parameterIndex:number, value:any):void`
 
-#### getURL(parameter)
+<hr/>
 
-Retrieves the value of the specified parameter as a URL.
+#### setBlob
 
-```javascript
-// Example
-const value = callableStatement.getURL(1);
-```
+- `setBlob (parameterIndex:number, value:any):void`
 
-#### getRowId(parameter)
+<hr/>
 
-Retrieves the value of the specified parameter as a RowId.
+#### setClob
 
-```javascript
-// Example
-const value = callableStatement.getRowId(1);
-```
+- `setClob (parameterIndex:number, value:any):void`
 
-#### getSQLXML(parameter)
+<hr/>
 
-Retrieves the value of the specified parameter as an SQLXML.
+#### setNClob
 
-```javascript
-// Example
-const value = callableStatement.getSQLXML(1);
-```
+- `setNClob (parameterIndex:number, value:any):void`
 
-#### setURL(parameter, value)
+<hr/>
 
-Sets the value of the specified parameter as a URL.
+#### execute
 
-```javascript
-// Example
-callableStatement.setURL(1, "https://example.com");
-```
+- `execute ():boolean`
 
-#### setNull(parameter, sqlTypeStr, typeName)
+<hr/>
 
-Sets the value of the specified parameter to NULL.
+#### getMoreResults
 
-```javascript
-// Example
-callableStatement.setNull(1, SQLTypes.INTEGER);
-```
+- `getMoreResults ():boolean`
 
-#### setBoolean(parameter, value)
+<hr/>
 
-Sets the value of the specified parameter as a Boolean.
+#### getParameterMetaData
 
-```javascript
-// Example
-callableStatement.setBoolean(1, true);
-```
+- `getParameterMetaData ():any`
 
-#### setByte(parameter, value)
+<hr/>
 
-Sets the value of the specified parameter as a Byte.
+#### isClosed
 
-```javascript
-// Example
-callableStatement.setByte(1, 42);
-```
+- `isClosed ():boolean`
 
-#### setShort(parameter, value)
+  : ParameterMetaData
 
-Sets the value of the specified parameter as a Short.
+<hr/>
 
-```javascript
-// Example
-callableStatement.setShort(1, 7);
-```
+#### close
 
-#### setInt(parameter, value)
+- `close ():void`
 
-Sets the value of the specified parameter as an Integer.
+  : ParameterMetaData
 
-```javascript
-// Example
-callableStatement.setInt(1, 42);
-```
+### ResultSet
 
-#### setLong(parameter, value)
+ResultSet object
 
-Sets the value of the specified parameter as a Long.
+#### Methods
 
-```javascript
-// Example
-callableStatement.setLong(1, 123456789);
-```
+<hr/>
 
-#### setFloat(parameter, value)
+#### toJson
 
-Sets the value of the specified parameter as a Float.
+- `toJson (limited=false, stringify=false):any[]`
 
-```javascript
-// Example
-callableStatement.setFloat(1, 2.718);
-```
+  Converts the ResultSet into a JSON array of objects.<br/>@param limited Whether to use limited JSON conversion (optimized).<br/>@param stringify Whether to return the JSON as a string or a parsed array.<br/>@returns A JavaScript array of objects representing the result set, or a string if stringify is true.
 
-#### setDouble(parameter, value)
+<hr/>
 
-Sets the value of the specified parameter as a Double.
+#### close
 
-```javascript
-// Example
-callableStatement.setDouble(1, 3.14);
-```
+- `close ():void`
 
-#### setBigDecimal(parameter, value)
+<hr/>
 
-Sets the value of the specified parameter as a BigDecimal.
+#### getBigDecimal
 
-```javascript
-// Example
-callableStatement.setBigDecimal(1, bigDecimalValue);
-```
+- `getBigDecimal (identifier:number|string):any`
 
-#### setString(parameter, value)
+<hr/>
 
-Sets the value of the specified parameter as a String.
+#### getBoolean
 
-```javascript
-// Example
-callableStatement.setString(1, "example");
-```
+- `getBoolean (identifier:number|string):boolean`
 
-#### setBytes(parameter, value)
+  : BigDecimal
 
-Sets the value of the specified parameter as a byte array.
+<hr/>
 
-```javascript
-// Example
-callableStatement.setBytes(1, byteArray);
-```
+#### getByte
 
-#### setDate(parameter, value)
+- `getByte (identifier:number|string):any`
 
-Sets the value of the specified parameter as a Date.
+<hr/>
 
-```javascript
-// Example
-callableStatement.setDate(1, new Date());
-```
+#### getBytes
 
-#### setTime(parameter, value)
+- `getBytes (identifier:number|string):any[]`
 
-Sets the value of the specified parameter as a Time.
+  : byte
 
-```javascript
-// Example
-callableStatement.setTime(1, new Date());
-```
+<hr/>
 
-#### setTimestamp(parameter, value)
+#### getBytesNative
 
-Sets the value of the specified parameter as a Timestamp.
+- `getBytesNative (identifier:number|string):any[]`
 
-```javascript
-// Example
-callableStatement.setTimestamp(1, new Date());
-```
+  : byte[]
 
-#### setAsciiStream(parameter, inputStream, length)
+<hr/>
 
-Sets the value of the specified parameter as an ASCII stream.
+#### getBlob
 
-```javascript
-// Example
-callableStatement.setAsciiStream(1, inputStream, length);
-```
+- `getBlob (identifier:number|string):any`
 
-#### setBinaryStream(parameter, inputStream, length)
+  : byte[]
 
-Sets the value of the specified parameter as a binary stream.
+<hr/>
 
-```javascript
-// Example
-callableStatement.setBinaryStream(1, inputStream, length);
-```
+#### getBlobNative
 
-#### setObject(parameter, value, targetSqlType, scale)
+- `getBlobNative (identifier:number|string):any`
 
-Sets the value of the specified parameter as an Object.
+  : sql.Blob
 
-```javascript
-// Example
-callableStatement.setObject(1, value, SQLTypes.INTEGER, 2);
-```
+<hr/>
 
-#### setRowId(parameter, value)
+#### getClob
 
-Sets the value of the specified parameter as a RowId.
+- `getClob (identifier:number|string):any`
 
-```javascript
-// Example
-callableStatement.setRowId(1, rowIdValue);
-```
+  : sql.Blob
 
-#### setNString(parameter, value)
+<hr/>
 
-Sets the value of the specified parameter as an NString.
+#### getNClob
 
-```javascript
-// Example
-callableStatement.setNString(1, "example");
-```
+- `getNClob (identifier:number|string):any`
 
-#### setSQLXML(parameter, value)
+  : sql.Clob
 
-Sets the value of the specified parameter as an SQLXML.
+<hr/>
 
-```javascript
-// Example
-callableStatement.setSQLXML(1, sqlxmlValue);
-```
+#### getDate
 
-#### setBlob(parameter, value)
+- `getDate (identifier:number|string):Date|undefined`
 
-Sets the value of the specified parameter as a Blob.
+  : sql.NClob
 
-```javascript
-// Example
-callableStatement.setBlob(1, blobValue);
-```
+<hr/>
 
-#### setClob(parameter, value)
+#### getDouble
 
-Sets the value of the specified parameter as a Clob.
+- `getDouble (identifier:number|string):number`
 
-```javascript
-// Example
-callableStatement.setClob(1, clobValue);
-```
+<hr/>
 
-#### setNClob(parameter, value)
+#### getFloat
 
-Sets the value of the specified parameter as an NClob.
+- `getFloat (identifier:number|string):number`
 
-```javascript
-// Example
-callableStatement.setNClob(1, nclobValue);
-```
+<hr/>
 
-#### execute()
+#### getInt
 
-Executes the callable statement.
+- `getInt (identifier:number|string):number`
 
-```javascript
-// Example
-const result = callableStatement.execute();
-```
+<hr/>
 
-#### getMoreResults()
+#### getLong
 
-Moves to the next result set, if available.
+- `getLong (identifier:number|string):number`
 
-```javascript
-// Example
-const hasMoreResults = callableStatement.getMoreResults();
-```
+<hr/>
 
-#### getParameterMetaData()
+#### getShort
 
-Retrieves the parameter metadata for the callable statement.
+- `getShort (identifier:number|string):number`
 
-```javascript
-// Example
-const parameterMetaData = callableStatement.getParameterMetaData();
-```
+<hr/>
 
-#### isClosed()
+#### getString
 
-Checks if the callable statement is closed.
+- `getString (identifier:number|string):string`
 
-```javascript
-// Example
-const isClosed = callableStatement.isClosed();
-```
+<hr/>
 
-#### close()
-Closes the callable statement.
+#### getTime
 
-```javascript
-// Example
-callableStatement.close();
-```
+- `getTime (identifier:number|string):Date|undefined`
 
-These methods provide a comprehensive set of functionalities for handling callable statements, registering parameters, executing queries, and managing result sets. Depending on your use case, you can leverage these methods to interact with your database effectively.
+<hr/>
 
-### ResultSet Object Methods
+#### getTimestamp
 
-The `ResultSet` object provides methods for retrieving and processing query results.
+- `getTimestamp (identifier:number|string):Date|undefined`
 
-#### toJson(limited?)
+<hr/>
 
-Converts the result set to JSON format. If `limited`` is true, only a limited number of rows are included.
+#### isAfterLast
 
-```javascript
-// Example
-const jsonResult = resultSet.toJson(true);
-console.log(jsonResult); // Outputs JSON representation of the result set
-```
+- `isAfterLast ():boolean`
 
-#### close()
+<hr/>
 
-Closes the result set.
+#### isBeforeFirst
 
-```javascript
-// Example
-resultSet.close();
-```
+- `isBeforeFirst ():boolean`
 
-#### getBigDecimal(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a BigDecimal.
+#### isClosed
 
-```javascript
-// Example
-const value = resultSet.getBigDecimal(1);
-```
+- `isClosed ():boolean`
 
-#### getBoolean(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a Boolean.
+#### isFirst
 
-```javascript
-// Example
-const value = resultSet.getBoolean(1);
-```
+- `isFirst ():boolean`
 
-#### getByte(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a Byte.
+#### isLast
 
-```javascript
-// Example
-const value = resultSet.getByte(1);
-```
+- `isLast ():boolean`
 
-#### getBytes(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a byte array.
+#### next
 
-```javascript
-// Example
-const value = resultSet.getBytes(1);
-```
+- `next ():boolean`
 
-#### getBytesNative(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a byte array in native format.
+#### getMetaData
 
-```javascript
-// Example
-const value = resultSet.getBytesNative(1);
-```
+- `getMetaData ():any`
 
-#### getBlob(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a Blob.
+#### getNString
 
-```javascript
-// Example
-const value = resultSet.getBlob(1);
-```
+- `getNString (columnIndex:number):string`
 
-#### getBlobNative(identifier)
+  : ResultSetMetaData
 
-Retrieves the value of the specified column as a Blob in native format.
+### Connection
 
-```javascript
-// Example
-const value = resultSet.getBlobNative(1);
-```
+Connection object wrapper around a native Java `Connection`.
 
-#### getClob(identifier)
+#### Methods
 
-Retrieves the value of the specified column as a Clob.
+<hr/>
 
-```javascript
-// Example
-const value = resultSet.getClob(1);
-```
+#### isOfType
 
-#### getNClob(columnIndex)
+- `isOfType (databaseSystem:DatabaseSystem):boolean`
 
-Retrieves the value of the specified column as an NClob.
+  Checks if the connection is for a specific database system.
 
-```javascript
-// Example
-const value = resultSet.getNClob(1);
-```
+<hr/>
 
-#### getDate(identifier)
+#### getDatabaseSystem
 
-Retrieves the value of the specified column as a Date.
+- `getDatabaseSystem ():DatabaseSystem`
 
-```javascript
-// Example
-const value = resultSet.getDate(1);
-```
+  Returns the type of the underlying database system as a {@link DatabaseSystem} enum.
 
-#### getDouble(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a Double.
+#### prepareStatement
 
-```javascript
-// Example
-const value = resultSet.getDouble(1);
-```
+- `prepareStatement (sql:string):PreparedStatement`
 
-#### getFloat(identifier)
+  Creates a new {@link PreparedStatement} object for sending parameterized SQL statements to the database.
 
-Retrieves the value of the specified column as a Float.
+<hr/>
 
-```javascript
-// Example
-const value = resultSet.getFloat(1);
-```
+#### prepareCall
 
-#### getInt(identifier)
+- `prepareCall (sql:string):CallableStatement`
 
-Retrieves the value of the specified column as an Integer.
+  Creates a {@link CallableStatement} object for calling database stored procedures or functions.
 
-```javascript
-// Example
-const value = resultSet.getInt(1);
-```
+<hr/>
 
-#### getLong(identifier)
+#### close
 
-Retrieves the value of the specified column as a Long.
+- `close ():void`
 
-```javascript
-// Example
-const value = resultSet.getLong(1);
-```
+  Creates a {@link CallableStatement} object for calling database stored procedures or functions.
 
-#### getShort(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a Short.
+#### commit
 
-```javascript
-// Example
-const value = resultSet.getShort(1);
-```
+- `commit ():void`
 
-#### getString(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a String.
+#### getAutoCommit
 
-```javascript
-// Example
-const value = resultSet.getString(1);
-```
+- `getAutoCommit ():boolean`
 
-#### getTime(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a Time.
+#### getCatalog
 
-```javascript
-// Example
-const value = resultSet.getTime(1);
-```
+- `getCatalog ():string`
 
-#### getTimestamp(identifier)
+<hr/>
 
-Retrieves the value of the specified column as a Timestamp.
+#### getSchema
 
-```javascript
-// Example
-const value = resultSet.getTimestamp(1);
-```
+- `getSchema ():string`
 
-#### isAfterLast()
+<hr/>
 
-Checks if the result set cursor is positioned after the last row.
+#### getTransactionIsolation
 
-```javascript
-// Example
-const isAfterLast = resultSet.isAfterLast();
-```
+- `getTransactionIsolation ():number`
 
-#### isBeforeFirst()
+<hr/>
 
-Checks if the result set cursor is positioned before the first row.
+#### isClosed
 
-```javascript
-// Example
-const isBeforeFirst = resultSet.isBeforeFirst();
-```
+- `isClosed ():boolean`
 
-#### isClosed()
+<hr/>
 
-Checks if the result set is closed.
+#### isReadOnly
 
-```javascript
-// Example
-const isClosed = resultSet.isClosed();
-```
+- `isReadOnly ():boolean`
 
-#### isFirst()
+<hr/>
 
-Checks if the result set cursor is positioned on the first row.
+#### isValid
 
-```javascript
-// Example
-const isFirst = resultSet.isFirst();
-```
+- `isValid ():boolean`
 
-#### isLast()
+<hr/>
 
-Checks if the result set cursor is positioned on the last row.
+#### rollback
 
-```javascript
-// Example
-const isLast = resultSet.isLast();
-```
+- `rollback ():void`
 
-#### next()
+<hr/>
 
-Moves the result set cursor to the next row.
+#### setAutoCommit
 
-```javascript
-// Example
-const hasNextRow = resultSet.next();
-```
+- `setAutoCommit (autoCommit:boolean):void`
 
-#### getMetaData()
+<hr/>
 
-Retrieves the metadata for the result set.
+#### setCatalog
 
-```javascript
-// Example
-const metaData = resultSet.getMetaData();
-```
+- `setCatalog (catalog:string):void`
 
-#### getNString(columnIndex)
+<hr/>
 
-Retrieves the value of the specified column as an NString.
+#### setReadOnly
 
-```javascript
-// Example
-const value = resultSet.getNString(1);
-```
+- `setReadOnly (readOnly:boolean):void`
+
+<hr/>
+
+#### setSchema
+
+- `setSchema (schema:string):void`
+
+<hr/>
+
+#### setTransactionIsolation
+
+- `setTransactionIsolation (transactionIsolation:number):void`
+
+<hr/>
+
+#### getMetaData
+
+- `getMetaData ():any`
+
+### Database
+
+: DatabaseMetaData
+
+#### Methods
+
+<hr/>
+
+#### getDataSources
+
+- `getDataSources ():string[]`
+
+  Returns a list of available data source names.
+
+<hr/>
+
+#### getMetadata
+
+- `getMetadata (datasourceName?:string):DatabaseMetadata|undefined`
+
+  Returns database metadata for the specified data source.
+
+<hr/>
+
+#### getProductName
+
+- `getProductName (datasourceName?:string):string`
+
+  Returns the product name of the underlying database system.
+
+<hr/>
+
+#### getConnection
+
+- `getConnection (datasourceName?:string):Connection`
+
+  Gets a new database connection object.
 
-These methods offer various functionalities for accessing and manipulating data within a result set. Use them according to your requirements to interact with the retrieved data effectively.
-
-### Functions
-
----
-
-Function     | Description | Returns
------------- | ----------- | --------
-**getDatabaseTypes()**   | `deprecated` as all the datasources now are in a single list | *list of string*
-**getDataSources()**    | Returns the list of the available data-sources in this instance. The data-sources of the default database type are listed  | *list of string*
-**createDataSource(name, driver, url, username, password, properties)**   | Creates a named dynamic datasource based on the provided parameters | *-*
-**getMetadata(datasourceName)**   | Returns the metadata of the selected *datasourceName*. In case the *datasourceName* parameter is omitted, then the default data-source for the selected database is taken. | *metadata object*
-**getConnection(datasourceName)**   | Establishes a connection to the selected data-source. Both parameters are optional | *Connection* 
-
-
-### Objects
-
----
-
-#### Connection
-
-Function     | Description | Returns
------------- | ----------- | --------
-**prepareStatement(sql)**   | Creates a prepared statement by the given SQL script | *PreparedStatement*
-**prepareCall(sql)** | Creates a callable statement by the given SQL script | *CallableStatement*
-**close()**   | Closes the Connection and returns it to the pool | -
-**commit()**   | Commits the current transaction | -
-**getAutoCommit()**   | Returns the value of the auto commit setting | *boolean*
-**getCatalog()**   | Returns the Catalog name, which the Connection is related to | *string*
-**getSchema()**   | Returns the Schema name, which the Connection is related to | *string*
-**getTransactionIsolation()**   | Returns the value of the transaction isolation setting | *int*
-**isClosed()**   | Returns true if the Connection is already closed and false otherwise | *boolean*
-**isReadOnly()**   | Returns true if the Connection is opened in a read only state and false otherwise | *boolean*
-**isValid()**   | Returns true if the Connection is still valid and false otherwise | *boolean*
-**rollback()**   | Rolls the current transaction back | -
-**setAutoCommit(autoCommit)**   | Sets the value of the auto commit setting | -
-**setCatalog(catalog)**   | Sets the Catalog name, which the Connection is related to | -
-**setSchema(schema)**   | Sets the Schema name, which the Connection is related to | -
-**setReadOnly(readOnly)**   | Sets the value of the read only state | -
-**setTransactionIsolation(transactionIsolation)**   | Sets the value of the transaction isolation setting | -
-
-
-#### PreparedStatement
-
-Function     | Description | Returns
------------- | ----------- | --------
-**close()**   | Closes the Statement | -
-**execute()**   | Executes an SQL query, script, procedure, etc. | *boolean*
-**executeQuery()**   | Executes a query and returns a ResultSet | *ResultSet*
-**executeUpdate()**   | Executes an update SQL statement | -
-**setNull(index, value)**   | Sets a parameter as null | -
-**setBoolean(index, value)**   | Sets a parameter of type boolean | -
-**setDate(index, value)**   | Sets a parameter of type date | -
-**setClob(index, value)**   | Sets a parameter of type clob | -
-**setBlob(index, value)**   | Sets a parameter of type blob | -
-**setBytes(index, value)**   | Sets a parameter of type bytes | -
-**setBinaryStream(index, inputStreamValue, length?)**   | Sets a parameter of type binary stream | -
-**setDouble(index, value)**   | Sets a parameter of type double | -
-**setFloat(index, value)**   | Sets a parameter of type float | -
-**setInt(index, value)**   | Sets a parameter of type integer | -
-**setLong(index, value)**   | Sets a parameter of type long | -
-**setShort(index, value)**   | Sets a parameter of type short | -
-**setString(index, value)**   | Sets a parameter of type string | -
-**setTime(index, value)**   | Sets a parameter of type time | -
-**setTimestamp(index, value)**   | Sets a parameter of type timestamp | -
-**addBatch()** | Adds a set of parameters to this *PreparedStatement* batch of commands | -
-**executeBatch()** | Submits a batch of commands to the database for execution and if all commands execute successfully, returns an array of update counts. | *integer array*
-**getMetaData()**   | Retrieves a metadata object that contains information about the columns of the object that will be returned when this PreparedStatement is executed | *object*
-**getMoreResults()** | Returns true, if there are more *ResultSet* objects to be retrieved. | *boolean*
-**getParameterMetaData()** | Retrieves the number, types and properties of this *PreparedStatement* parameters | *object*
-**getSQLWarning()** | Retrieves the first warning reported | *object*
-**isClosed()** | Returns true, if closed | *boolean*
-
-
-#### CallableStatement
-
-Function     | Description | Returns
------------- | ----------- | --------
-**close()**   | Closes the Statement | -
-**execute()**   | Executes an SQL query, script, procedure, etc. | *boolean*
-**executeQuery()**   | Executes a query and returns a ResultSet | *ResultSet*
-**executeUpdate()**   | Executes an update SQL statement | -
-**setNull(index, value)**   | Sets a parameter as null | -
-**setBoolean(index, value)**   | Sets a parameter of type boolean | -
-**setDate(index, value)**   | Sets a parameter of type date | -
-**setClob(index, value)**   | Sets a parameter of type clob | -
-**setBlob(index, value)**   | Sets a parameter of type blob | -
-**setBytes(index, value)**   | Sets a parameter of type bytes | -
-**setDouble(index, value)**   | Sets a parameter of type double | -
-**setFloat(index, value)**   | Sets a parameter of type float | -
-**setInt(index, value)**   | Sets a parameter of type integer | -
-**setLong(index, value)**   | Sets a parameter of type long | -
-**setShort(index, value)**   | Sets a parameter of type short | -
-**setString(index, value)**   | Sets a parameter of type string | -
-**setTime(index, value)**   | Sets a parameter of type time | -
-**setTimestamp(index, value)**   | Sets a parameter of type timestamp | -
-**addBatch()** | Adds a set of parameters to this *PreparedStatement* batch of commands | -
-**executeBatch()** | Submits a batch of commands to the database for execution and if all commands execute successfully, returns an array of update counts. | *integer array*
-**getMetaData()**   | Retrieves a metadata object that contains information about the columns of the object that will be returned when this PreparedStatement is executed | *object*
-**getMoreResults()** | Returns true, if there are more *ResultSet* objects to be retrieved. | *boolean*
-**getParameterMetaData()** | Retrieves the number, types and properties of this *PreparedStatement* parameters | *object*
-**getSQLWarning()** | Retrieves the first warning reported | *object*
-**isClosed()** | Returns true, if closed | *boolean*
-
-#### ResultSet
-
-Function     | Description | Returns
------------- | ----------- | --------
-**toJson(limited)** | Returns the result set as stringfied JSON, `limited = true` will return only the first 100 records | *string*
-**close()**   | Closes the ResultSet | -
-**getBoolean(identifier)**   | Returns a value of type boolean | *boolean*
-**getDate(identifier)**   | Returns a value of type date | *Date*
-**getDouble(identifier)**   | Returns a value of type double | *double*
-**getFloat(identifier)**   | Returns a value of type float | *float*
-**getInt(identifier)**   | Returns a value of type integer | *int*
-**getLong(identifier)**   | Returns a value of type long | *long*
-**getShort(identifier)**   | Returns a value of type short | *short*
-**getString(identifier)**   | Returns a value of type string | *string*
-**getTime(identifier)**   | Returns a value of type time | *Date*
-**getTimestamp(identifier)**   | Returns a value of type timestamp | *Date*
-**isAfterLast()**   | Returns true if the ResultSet is iterated at the end and false otherwise | *boolean*
-**isBeforeFirst()**   | Returns true if the ResultSet is iterated at the beginning and false otherwise | *boolean*
-**isFirst()**   | Returns true if the ResultSet is iterated at the first row and false otherwise | *boolean*
-**isLast()**   | Returns true if the ResultSet is iterated at the last row and false otherwise | *boolean*
-**isClosed()**   | Returns true if the ResultSet is already closed and false otherwise | *boolean*
-**next()**   | Iterates the ResultSet to the next row and returns true if it is successful. Returns false if no more rows remain. | *boolean*

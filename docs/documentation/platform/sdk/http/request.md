@@ -1,21 +1,12 @@
-# HTTP Request
+# API: request
 
-The HTTP Request object serves as a pivotal component within the scripting services implementation, providing access to the headers and parameters received as input from HTTP calls. This object encapsulates the details of an incoming HTTP request, allowing scripts to access and manipulate its various attributes.
+> Source: `http/request.ts`
 
-Developers leverage the HTTP Request object to extract essential information from incoming HTTP requests, such as headers, query parameters, and request body content. This enables scripts to process incoming data and respond accordingly based on the client's request.
+The Request API under the HTTP module is responsible for
+managing standard HTTP request parameters, headers, cookies,
+and request metadata provided to server-side scripting services.
 
-Key features of the HTTP Request object include:
-
-* `Access to Headers`: The HTTP Request object provides methods for retrieving and manipulating the headers included in the incoming HTTP request. Developers can access header values to extract metadata or perform conditional logic based on specific header values.
-
-* `Query Parameters Handling`: With the HTTP Request object, scripts can easily access query parameters included in the URL of the incoming request. This allows for dynamic processing of requests based on query parameters supplied by clients.
-
-* `Request Body Access`: Scripts can access the content of the request body through the HTTP Request object, enabling the extraction of payload data sent by clients. This facilitates the processing of POST requests and other HTTP methods that include request bodies.
-
-By providing comprehensive access to incoming HTTP request details, the HTTP Request object empowers scripting services to handle client requests effectively and implement custom logic based on the received input. This facilitates the development of dynamic and responsive web applications within the scripting environment.
-
-### Example Usage
-
+## Usage
 ```javascript
 import { request, response } from "sdk/http";
 
@@ -26,81 +17,380 @@ response.flush();
 response.close();
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**isValid()**   | Returns true if the current execution context is in a HTTP call | *boolean*
-**getMethod()**   | Returns the HTTP request method - GET, POST, PUT, DELETE, HEAD, TRACE | *string*
-**getRemoteUser()**   | Returns the user name performing the request | *string*
-**getPathInfo()**   | Returns the path info section of the URL | *string*
-**getPathTranslated()**   | Returns the translated path | *string*
-**getHeader(name)**   | Returns the value of the header by name, if any | *string*
-**isUserInRole(role)**   | Returns true if the user has the given role and false otherwise | *string*
-**getAttribute(name)**   | Returns the value of the attribute by name, if any | *string*
-**getAuthType()**   | Returns the authentication type | *string*
-**getCookies()**   | Returns all the cookies from the request | *array of HttpCookie*
-**getAttributeNames()**   | Returns the names of all the attribute | *array of string*
-**getCharacterEncoding()**   | Returns the character encoding | *string*
-**getContentLength()**   | Returns the content length | *string*
-**getHeaders()**   | Returns the array of headers | *array of HttpHeader*
-**getContentType()**   | Returns the content type | *string*
-**getBytes()**   | Returns the content as byte array | *array of bytes*
-**getText()**   | Returns the content as text | *string*
-**getJSON()**   | Returns a JSON object, after parsing the content as text | *Object*
-**getParameter(name)**   | Returns the value of the parameter by name, if any | *string*
-**getHeaderNames()**   | Returns the names of all the headers | *array of string*
-**getParameterNames()**   | Returns the names of all the parameters | *array of string*
-**getParameterValues(name)**   | Returns the values of the parameter by name | *array of string*
-**getParameters()**   | Returns the all the parameters - name and value pairs | *array of pair*
-**getProtocol()**   | Returns the protocol | *string*
-**getScheme()**   | Returns the scheme | *string*
-**getContextPath()**   | Returns the context path | *string*
-**getServerName()**   | Returns the server name | *string*
-**getServerPort()**   | Returns the server port | *int*
-**getQueryString()**   | Returns the query string | *string*
-**getRemoteAddress()**   | Returns the remote address | *string*
-**getRemoteHost()**   | Returns the remote host | *string*
-**setAttribute(name,value)**   | Sets the value of the attribute by name | -
-**removeAttribute(name)**   | Sets the value of the attribute by name | -
-**getLocale()**   | Returns the locale string | *string*
-**getRequestURI()**   | Returns the request URI | *string*
-**isSecure()**   | Whether the request goes via a secured channel | *boolean*
-**getRequestURL()**   | Returns the request URL | *string*
-**getServicePath()**   | Returns the service path | *string*
-**getRemotePort()**   | Returns the remote port | *string*
-**getLocalName()**   | Returns the local name | *string*
-**getLocalAddress()**   | Returns the local address | *string*
-**getLocalPort()**   | Returns the local port | *string*
+### Request
 
+Represents the HTTP Request object available within a service execution<br/>context. It provides access to HTTP metadata, query parameters, request<br/>body content, cookies, and security information.<br/><br/>All functions in this class are static: no instance of `Request`<br/>needs to be created.
 
-## Objects
+#### Methods
 
----
+<hr/>
 
-### HttpCookie
+#### isValid
 
+- `isValid ():boolean`
 
-Property     | Description | Type
------------- | ----------- | --------
-**name**   | The HttpCookie name | *string*
-**value**   | The HttpCookie value | *string*
-**comment**   | The HttpCookie comment section | *string*
-**maxAge**   | The HttpCookie maximum age | *int*
-**path**   | The URI path to which the client should return the HttpCookie | *string*
-**domain**   | The domain name set to this HttpCookie | *string*
-**secure**   | Returns true if the client is sending HttpCookie only over a secure protocol | *string*
-**version**   | Returns the version of the protocol this cookie complies with | *0*
-**httpOnly**   | The HttpCookie will not be exposed to the client-side scripting code if true | *boolean*
+  Determines whether the current thread is handling a valid HTTP request.<br/><br/>@returns `true` if called in a valid HTTP request context, otherwise `false`.
 
+<hr/>
 
+#### getMethod
 
-### HttpHeader
+- `getMethod ():string`
 
+  Returns the HTTP method (GET, POST, PUT, DELETE, etc.).
 
-Property     | Description | Type
------------- | ----------- | --------
-**name**   | The name of the header | *string*
-**value**   | The value of the header | *string*
+<hr/>
+
+#### getRemoteUser
+
+- `getRemoteUser ():string`
+
+  Returns the authenticated remote user name if available.
+
+<hr/>
+
+#### getPathInfo
+
+- `getPathInfo ():string`
+
+  Returns the portion of the request path following the servlet path.
+
+<hr/>
+
+#### getPathTranslated
+
+- `getPathTranslated ():string`
+
+  Returns the translated file system path for the request.
+
+<hr/>
+
+#### getHeader
+
+- `getHeader (name:string):string`
+
+  Returns the value of a specific HTTP header.<br/><br/>@param name - Header name to retrieve.<br/>@returns The header value or `undefined` if not found.
+
+<hr/>
+
+#### isUserInRole
+
+- `isUserInRole (role:string):boolean`
+
+  Checks whether the remote user has the given role.<br/><br/>@param role - The role name to check.
+
+<hr/>
+
+#### getAttribute
+
+- `getAttribute (name:string):string|undefined`
+
+  Returns a request attribute value previously associated with the request.<br/><br/>@param name - The attribute name.<br/>@returns A string value or `undefined`.
+
+<hr/>
+
+#### getAuthType
+
+- `getAuthType ():string`
+
+  Returns the authentication type if known (BASIC, CLIENT_CERT, etc.).
+
+<hr/>
+
+#### getCookies
+
+- `getCookies ():Cookie[]`
+
+  Returns all cookies sent with the request.<br/><br/>@returns An array of Cookie objects.
+
+<hr/>
+
+#### getAttributeNames
+
+- `getAttributeNames ():string[]`
+
+  Returns all available request attribute names.
+
+<hr/>
+
+#### getCharacterEncoding
+
+- `getCharacterEncoding ():string`
+
+  Returns the character encoding used in the request body.
+
+<hr/>
+
+#### getContentLength
+
+- `getContentLength ():number`
+
+  Returns the size of the request body in bytes, if known.
+
+<hr/>
+
+#### getHeaders
+
+- `getHeaders (name:string):string[]`
+
+  Returns all values of a specific header.<br/><br/>@param name - Header name to retrieve.
+
+<hr/>
+
+#### getContentType
+
+- `getContentType ():string`
+
+  Returns the MIME content type of the request body.
+
+<hr/>
+
+#### getBytes
+
+- `getBytes ():any[]`
+
+  Returns the raw request body as a byte array.
+
+<hr/>
+
+#### getText
+
+- `getText ()void`
+
+  Returns the request body as text. This is computed once and cached.
+
+<hr/>
+
+#### json
+
+- `json ():any}|undefined`
+
+  Returns the request body parsed as JSON if valid.<br/><br/>@returns A JSON object or `undefined` if parsing fails.
+
+<hr/>
+
+#### getJSON
+
+- `getJSON ():any}|undefined`
+
+  Same as json(); explicit form.
+
+<hr/>
+
+#### getParameter
+
+- `getParameter (name:string):string`
+
+  Returns a request parameter value.
+
+<hr/>
+
+#### getParameters
+
+- `getParameters ():string[]}`
+
+  Returns a map of request parameters to arrays of values.
+
+<hr/>
+
+#### getResourcePath
+
+- `getResourcePath ():string`
+
+  Returns the allocated request resource path.
+
+<hr/>
+
+#### getHeaderNames
+
+- `getHeaderNames ():string[]`
+
+  Returns all header names.
+
+<hr/>
+
+#### getParameterNames
+
+- `getParameterNames ():string[]`
+
+  Returns all parameter names.
+
+<hr/>
+
+#### getParameterValues
+
+- `getParameterValues (name:string):string[]`
+
+  Returns all values for a given parameter name.
+
+<hr/>
+
+#### getProtocol
+
+- `getProtocol ():string`
+
+  Returns the HTTP protocol version.
+
+<hr/>
+
+#### getScheme
+
+- `getScheme ():string`
+
+  Returns the transport scheme (e.g., http, https).
+
+<hr/>
+
+#### getContextPath
+
+- `getContextPath ():string`
+
+  Returns the context path of the request.
+
+<hr/>
+
+#### getServerName
+
+- `getServerName ():string`
+
+  Returns the server host name.
+
+<hr/>
+
+#### getServerPort
+
+- `getServerPort ():number`
+
+  Returns the server port number.
+
+<hr/>
+
+#### getQueryString
+
+- `getQueryString ():string`
+
+  Returns the full raw query string.
+
+<hr/>
+
+#### getQueryParametersMap
+
+- `getQueryParametersMap ():string|string[]}`
+
+  Parses the query string and returns a map of parameter keys to values.<br/>If the same key appears multiple times, values are collected into arrays.
+
+<hr/>
+
+#### getRemoteAddress
+
+- `getRemoteAddress ():string`
+
+  Returns the remote client IP address.
+
+<hr/>
+
+#### getRemoteHost
+
+- `getRemoteHost ():string`
+
+  Returns the remote client host name.
+
+<hr/>
+
+#### setAttribute
+
+- `setAttribute (name:string, value:string):void`
+
+  Assigns a new attribute to the request.
+
+<hr/>
+
+#### removeAttribute
+
+- `removeAttribute (name:string):void`
+
+  Removes an attribute from the request.
+
+<hr/>
+
+#### getLocale
+
+- `getLocale ():any`
+
+  Returns the client locale preferences.
+
+<hr/>
+
+#### getRequestURI
+
+- `getRequestURI ():string`
+
+  Returns the full request URI.
+
+<hr/>
+
+#### isSecure
+
+- `isSecure ():boolean`
+
+  Returns `true` if the request was made over HTTPS.
+
+<hr/>
+
+#### getRequestURL
+
+- `getRequestURL ():string`
+
+  Returns the full request URL including protocol and host.
+
+<hr/>
+
+#### getServicePath
+
+- `getServicePath ():string`
+
+  Returns the internal service path for routing.
+
+<hr/>
+
+#### getRemotePort
+
+- `getRemotePort ():number`
+
+  Returns the remote client port number.
+
+<hr/>
+
+#### getLocalName
+
+- `getLocalName ():string`
+
+  Returns the local network host name.
+
+<hr/>
+
+#### getLocalAddress
+
+- `getLocalAddress ():string`
+
+  Returns the local IP address.
+
+<hr/>
+
+#### getLocalPort
+
+- `getLocalPort ():number`
+
+  Returns the server local port number handling the request.
+
+<hr/>
+
+#### getInputStream
+
+- `getInputStream ():InputStream`
+
+  Returns the request body as a binary input stream.<br/><br/>Useful for processing binary uploads.
+

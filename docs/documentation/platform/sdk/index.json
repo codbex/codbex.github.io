@@ -1,0 +1,461 @@
+[ {
+  "text" : "BPM",
+  "link" : "/documentation/platform/api/bpm/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Deployer",
+    "link" : "/documentation/platform/api/bpm/deployer"
+  }, {
+    "text" : "Process",
+    "link" : "/documentation/platform/api/bpm/process"
+  }, {
+    "text" : "Tasks",
+    "link" : "/documentation/platform/api/bpm/tasks"
+  }, {
+    "text" : "Values",
+    "link" : "/documentation/platform/api/bpm/values"
+  } ]
+}, {
+  "text" : "CACHE",
+  "link" : "/documentation/platform/api/cache/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Cache",
+    "link" : "/documentation/platform/api/cache/cache"
+  } ]
+}, {
+  "text" : "CMS",
+  "link" : "/documentation/platform/api/cms/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Cmis",
+    "link" : "/documentation/platform/api/cms/cmis"
+  } ]
+}, {
+  "text" : "COMPONENT",
+  "link" : "/documentation/platform/api/component/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Decorators",
+    "link" : "/documentation/platform/api/component/decorators"
+  } ]
+}, {
+  "text" : "CORE",
+  "link" : "/documentation/platform/api/core/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Configurations",
+    "link" : "/documentation/platform/api/core/configurations"
+  }, {
+    "text" : "Context",
+    "link" : "/documentation/platform/api/core/context"
+  }, {
+    "text" : "Env",
+    "link" : "/documentation/platform/api/core/env"
+  }, {
+    "text" : "Globals",
+    "link" : "/documentation/platform/api/core/globals"
+  } ]
+}, {
+  "text" : "DB",
+  "link" : "/documentation/platform/api/db/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Dao",
+    "link" : "/documentation/platform/api/db/dao"
+  }, {
+    "text" : "Database",
+    "link" : "/documentation/platform/api/db/database"
+  }, {
+    "text" : "Decorators",
+    "link" : "/documentation/platform/api/db/decorators"
+  }, {
+    "text" : "Insert",
+    "link" : "/documentation/platform/api/db/insert"
+  }, {
+    "text" : "Orm",
+    "link" : "/documentation/platform/api/db/orm"
+  }, {
+    "text" : "Ormstatements",
+    "link" : "/documentation/platform/api/db/ormstatements"
+  }, {
+    "text" : "Procedure",
+    "link" : "/documentation/platform/api/db/procedure"
+  }, {
+    "text" : "Query",
+    "link" : "/documentation/platform/api/db/query"
+  }, {
+    "text" : "Repository",
+    "link" : "/documentation/platform/api/db/repository"
+  }, {
+    "text" : "Sequence",
+    "link" : "/documentation/platform/api/db/sequence"
+  }, {
+    "text" : "Sql",
+    "link" : "/documentation/platform/api/db/sql"
+  }, {
+    "text" : "Store",
+    "link" : "/documentation/platform/api/db/store"
+  }, {
+    "text" : "Translator",
+    "link" : "/documentation/platform/api/db/translator"
+  }, {
+    "text" : "Update",
+    "link" : "/documentation/platform/api/db/update"
+  } ]
+}, {
+  "text" : "ERRORS",
+  "link" : "/documentation/platform/api/errors/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "ForbiddenError",
+    "link" : "/documentation/platform/api/errors/ForbiddenError"
+  }, {
+    "text" : "ValidationError",
+    "link" : "/documentation/platform/api/errors/ValidationError"
+  } ]
+}, {
+  "text" : "ETCD",
+  "link" : "/documentation/platform/api/etcd/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Client",
+    "link" : "/documentation/platform/api/etcd/client"
+  } ]
+}, {
+  "text" : "EXTENSIONS",
+  "link" : "/documentation/platform/api/extensions/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Extensions",
+    "link" : "/documentation/platform/api/extensions/extensions"
+  } ]
+}, {
+  "text" : "GIT",
+  "link" : "/documentation/platform/api/git/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Client",
+    "link" : "/documentation/platform/api/git/client"
+  } ]
+}, {
+  "text" : "HTTP",
+  "link" : "/documentation/platform/api/http/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Client-async",
+    "link" : "/documentation/platform/api/http/client-async"
+  }, {
+    "text" : "Client",
+    "link" : "/documentation/platform/api/http/client"
+  }, {
+    "text" : "Decorators",
+    "link" : "/documentation/platform/api/http/decorators"
+  }, {
+    "text" : "Errors",
+    "link" : "/documentation/platform/api/http/errors"
+  }, {
+    "text" : "Request",
+    "link" : "/documentation/platform/api/http/request"
+  }, {
+    "text" : "Response",
+    "link" : "/documentation/platform/api/http/response"
+  }, {
+    "text" : "Rs",
+    "link" : "/documentation/platform/api/http/rs"
+  }, {
+    "text" : "Session",
+    "link" : "/documentation/platform/api/http/session"
+  }, {
+    "text" : "Upload",
+    "link" : "/documentation/platform/api/http/upload"
+  }, {
+    "text" : "Utils",
+    "link" : "/documentation/platform/api/http/utils"
+  } ]
+}, {
+  "text" : "INDEXING",
+  "link" : "/documentation/platform/api/indexing/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Searcher",
+    "link" : "/documentation/platform/api/indexing/searcher"
+  }, {
+    "text" : "Writer",
+    "link" : "/documentation/platform/api/indexing/writer"
+  } ]
+}, {
+  "text" : "INTEGRATIONS",
+  "link" : "/documentation/platform/api/integrations/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Integrations",
+    "link" : "/documentation/platform/api/integrations/integrations"
+  } ]
+}, {
+  "text" : "IO",
+  "link" : "/documentation/platform/api/io/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Bytes",
+    "link" : "/documentation/platform/api/io/bytes"
+  }, {
+    "text" : "Files",
+    "link" : "/documentation/platform/api/io/files"
+  }, {
+    "text" : "Image",
+    "link" : "/documentation/platform/api/io/image"
+  }, {
+    "text" : "Streams",
+    "link" : "/documentation/platform/api/io/streams"
+  }, {
+    "text" : "Zip",
+    "link" : "/documentation/platform/api/io/zip"
+  } ]
+}, {
+  "text" : "JOB",
+  "link" : "/documentation/platform/api/job/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Decorators",
+    "link" : "/documentation/platform/api/job/decorators"
+  }, {
+    "text" : "Scheduler",
+    "link" : "/documentation/platform/api/job/scheduler"
+  } ]
+}, {
+  "text" : "JUNIT",
+  "link" : "/documentation/platform/api/junit/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Junit",
+    "link" : "/documentation/platform/api/junit/junit"
+  } ]
+}, {
+  "text" : "KAFKA",
+  "link" : "/documentation/platform/api/kafka/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Consumer",
+    "link" : "/documentation/platform/api/kafka/consumer"
+  }, {
+    "text" : "Producer",
+    "link" : "/documentation/platform/api/kafka/producer"
+  } ]
+}, {
+  "text" : "LOG",
+  "link" : "/documentation/platform/api/log/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Logging",
+    "link" : "/documentation/platform/api/log/logging"
+  } ]
+}, {
+  "text" : "MAIL",
+  "link" : "/documentation/platform/api/mail/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Client",
+    "link" : "/documentation/platform/api/mail/client"
+  } ]
+}, {
+  "text" : "MESSAGING",
+  "link" : "/documentation/platform/api/messaging/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Consumer",
+    "link" : "/documentation/platform/api/messaging/consumer"
+  }, {
+    "text" : "Decorators",
+    "link" : "/documentation/platform/api/messaging/decorators"
+  }, {
+    "text" : "Producer",
+    "link" : "/documentation/platform/api/messaging/producer"
+  } ]
+}, {
+  "text" : "MONGODB",
+  "link" : "/documentation/platform/api/mongodb/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Client",
+    "link" : "/documentation/platform/api/mongodb/client"
+  }, {
+    "text" : "Dao",
+    "link" : "/documentation/platform/api/mongodb/dao"
+  } ]
+}, {
+  "text" : "NET",
+  "link" : "/documentation/platform/api/net/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Soap",
+    "link" : "/documentation/platform/api/net/soap"
+  }, {
+    "text" : "Websockets",
+    "link" : "/documentation/platform/api/net/websockets"
+  } ]
+}, {
+  "text" : "PDF",
+  "link" : "/documentation/platform/api/pdf/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Pdf",
+    "link" : "/documentation/platform/api/pdf/pdf"
+  } ]
+}, {
+  "text" : "PLATFORM",
+  "link" : "/documentation/platform/api/platform/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Command",
+    "link" : "/documentation/platform/api/platform/command"
+  }, {
+    "text" : "Engines",
+    "link" : "/documentation/platform/api/platform/engines"
+  }, {
+    "text" : "Lifecycle",
+    "link" : "/documentation/platform/api/platform/lifecycle"
+  }, {
+    "text" : "Os",
+    "link" : "/documentation/platform/api/platform/os"
+  }, {
+    "text" : "Problems",
+    "link" : "/documentation/platform/api/platform/problems"
+  }, {
+    "text" : "Registry",
+    "link" : "/documentation/platform/api/platform/registry"
+  }, {
+    "text" : "Repository",
+    "link" : "/documentation/platform/api/platform/repository"
+  }, {
+    "text" : "Workspace",
+    "link" : "/documentation/platform/api/platform/workspace"
+  } ]
+}, {
+  "text" : "QLDB",
+  "link" : "/documentation/platform/api/qldb/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Qldb",
+    "link" : "/documentation/platform/api/qldb/qldb"
+  } ]
+}, {
+  "text" : "RABBITMQ",
+  "link" : "/documentation/platform/api/rabbitmq/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Consumer",
+    "link" : "/documentation/platform/api/rabbitmq/consumer"
+  }, {
+    "text" : "Producer",
+    "link" : "/documentation/platform/api/rabbitmq/producer"
+  } ]
+}, {
+  "text" : "REDIS",
+  "link" : "/documentation/platform/api/redis/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Client",
+    "link" : "/documentation/platform/api/redis/client"
+  } ]
+}, {
+  "text" : "RS",
+  "link" : "/documentation/platform/api/rs/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Resource-common",
+    "link" : "/documentation/platform/api/rs/resource-common"
+  }, {
+    "text" : "Resource-http-controller",
+    "link" : "/documentation/platform/api/rs/resource-http-controller"
+  }, {
+    "text" : "Resource-mappings",
+    "link" : "/documentation/platform/api/rs/resource-mappings"
+  }, {
+    "text" : "Resource-method",
+    "link" : "/documentation/platform/api/rs/resource-method"
+  }, {
+    "text" : "Resource",
+    "link" : "/documentation/platform/api/rs/resource"
+  } ]
+}, {
+  "text" : "SECURITY",
+  "link" : "/documentation/platform/api/security/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Decorators",
+    "link" : "/documentation/platform/api/security/decorators"
+  }, {
+    "text" : "Oauth",
+    "link" : "/documentation/platform/api/security/oauth"
+  }, {
+    "text" : "User",
+    "link" : "/documentation/platform/api/security/user"
+  } ]
+}, {
+  "text" : "TEMPLATE",
+  "link" : "/documentation/platform/api/template/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Engines",
+    "link" : "/documentation/platform/api/template/engines"
+  } ]
+}, {
+  "text" : "UTILS",
+  "link" : "/documentation/platform/api/utils/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "Alphanumeric",
+    "link" : "/documentation/platform/api/utils/alphanumeric"
+  }, {
+    "text" : "Base64",
+    "link" : "/documentation/platform/api/utils/base64"
+  }, {
+    "text" : "Converter",
+    "link" : "/documentation/platform/api/utils/converter"
+  }, {
+    "text" : "Digest",
+    "link" : "/documentation/platform/api/utils/digest"
+  }, {
+    "text" : "Escape",
+    "link" : "/documentation/platform/api/utils/escape"
+  }, {
+    "text" : "Hex",
+    "link" : "/documentation/platform/api/utils/hex"
+  }, {
+    "text" : "Jsonpath",
+    "link" : "/documentation/platform/api/utils/jsonpath"
+  }, {
+    "text" : "Qrcode",
+    "link" : "/documentation/platform/api/utils/qrcode"
+  }, {
+    "text" : "Url",
+    "link" : "/documentation/platform/api/utils/url"
+  }, {
+    "text" : "Utf8",
+    "link" : "/documentation/platform/api/utils/utf8"
+  }, {
+    "text" : "Uuid",
+    "link" : "/documentation/platform/api/utils/uuid"
+  }, {
+    "text" : "Xml",
+    "link" : "/documentation/platform/api/utils/xml"
+  } ]
+}, {
+  "text" : "WRAPPERS",
+  "link" : "/documentation/platform/api/wrappers/",
+  "collapsed" : true,
+  "items" : [ {
+    "text" : "OnClose",
+    "link" : "/documentation/platform/api/wrappers/onClose"
+  }, {
+    "text" : "OnError",
+    "link" : "/documentation/platform/api/wrappers/onError"
+  }, {
+    "text" : "OnMessage",
+    "link" : "/documentation/platform/api/wrappers/onMessage"
+  }, {
+    "text" : "OnOpen",
+    "link" : "/documentation/platform/api/wrappers/onOpen"
+  } ]
+} ]

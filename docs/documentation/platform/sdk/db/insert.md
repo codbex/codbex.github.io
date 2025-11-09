@@ -1,60 +1,36 @@
-# Insert
+# API: insert
 
-## Overview
+> Source: `db/insert.ts`
 
-The provided API defines a TypeScript module `Insert` that facilitates the execution of SQL `INSERT` statements in a database.
+Interface used to wrap complex or other specific values for database insertion.
 
-Here's an explanation of the key components:
-
-### InsertParameter Interface:
-
+## Usage
 ```javascript
-export interface InsertParameter {
-	readonly type: string;
-	readonly value: any;
-}
+
 ```
 
-This interface represents a parameter that can be used in an SQL `INSERT` statement. It includes the `type` of the parameter (string) and its `value` (any).
 
-### Insert Class:
+## Classes
 
-The Insert class provides a static method execute for executing SQL `INSERT` statements.
+### Insert
+
+Provides static methods for executing INSERT SQL statements.
+
+#### Methods
+
+<hr/>
 
 #### execute
 
-```javascript
-execute(sql: string, parameters?: (string | number | boolean | Date | InsertParameter)[], datasourceName?: string): number
-```
+- `execute (sql:string, parameters?:ParameterValue[], datasourceName?:string):Array<Record<string,any>>`
 
-**Parameters:**
+  Executes a single parameterized INSERT statement.<br/>* @param sql The SQL query to execute, with '?' placeholders for parameters.<br/>@param parameters An optional array of values to replace the '?' placeholders.<br/>@param datasourceName The name of the database connection to use (optional).<br/>@returns An array of records representing the result of the insertion (e.g., generated keys).
 
-* `sql`: The SQL INSERT statement to be executed.
-* `parameters`: (Optional) An array of parameters to be included in the INSERT statement. Parameters can be of type string, number, boolean, Date, or an object conforming to the InsertParameter interface.
-* `datasourceName`: (Optional) The name of the data source.
+<hr/>
 
-* Return Value: The method returns a number, possibly representing the result of the INSERT operation.
+#### executeMany
 
-## Example Usage:
+- `executeMany (sql:string, parameters?:ParameterValue[][], datasourceName?:string):Array<Record<string,any>>`
 
-```javascript
-import { Insert } from 'sdk/db';
+  Executes multiple parameterized INSERT statements as a batch operation.<br/>* @param sql The SQL query to execute, with '?' placeholders for parameters.<br/>@param parameters An optional array of parameter arrays, where each inner array corresponds to one execution of the SQL statement.<br/>@param datasourceName The name of the database connection to use (optional).<br/>@returns An array of records representing the results of the batched insertions.
 
-// Example SQL INSERT statement
-const sql = 'INSERT INTO your_table (column1, column2) VALUES (?, ?)';
-
-// Example parameters
-const parameters: (string | number | boolean | Date )[] = [
-  'value1',
-  42,
-  true,
-  new Date()
-];
-
-// Execute the INSERT statement
-const result = Insert.execute(sql, parameters, 'yourDataSource');
-
-console.log('INSERT result:', result);
-```
-
-Replace `your_table`, `column1`, `column2`, `value1`, `42`, `true`, `yourDataSource`, and other placeholders with your actual module path, table name, column names, values, data source, and other details.

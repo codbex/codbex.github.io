@@ -1,60 +1,54 @@
-# Globals
+# API: globals
 
-## Overview
+> Source: `core/globals.ts`
 
-The `Globals` class provides an interface for interacting with global variables from the platform. This API allows you to retrieve specific global variable values, set global variables, and list all global variables.
+API Globals
+* Provides a static interface for accessing and manipulating global application variables, typically backed by a central configuration or registry.
 
-## Methods
-
-### get
-
+## Usage
 ```javascript
-public static get(name: string): string | undefined
+import { globals } from "sdk/core";
+import { response } from "sdk/http";
+
+
+globals.set("attr1", "value1");
+let attr = globals.get("attr1");
+
+response.println("[Attribute]: " + attr);
+response.flush();
+response.close();
 ```
 
-Retrieve the value associated with the specified global variable name.
 
-**Example**
+## Classes
 
-```javascript
-const value = Globals.get("MY_GLOBAL_VARIABLE");
-console.log(value); // Output: The value associated with "MY_GLOBAL_VARIABLE" or undefined if not found
-```
+### Globals
 
-### set
+Interface representing a map of global variable names to their string values.
 
-```javascript
-public static set(name: string, value: string): void
-```
+#### Methods
 
-Set the value for the specified global variable name.
+<hr/>
 
-**Example**
+#### get
 
-```javascript
-Globals.set("MY_GLOBAL_VARIABLE", "globalValue");
-```
+- `get (name:string):string|undefined`
 
-### list
+  Retrieves the value of the global variable with the specified name.<br/>@param name The name of the global variable.<br/>@returns The variable's value as a string, or `undefined` if the variable is not set or its value is null.
 
-```javascript
-public static list(): GlobalsValues
-```
+<hr/>
 
-List all global variables as key-value pairs.
+#### set
 
-**Example**
+- `set (name:string, value:string):void`
 
-```javascript
-const globalVariables = Globals.list();
-console.log(globalVariables); // Output: { "VAR1": "value1", "VAR2": "value2", ... }
-```
+  Sets the value of a global variable.<br/>If the variable already exists, its value is overwritten.<br/>@param name The name of the global variable.<br/>@param value The value to set (must be a string).
 
-## Functions
+<hr/>
 
----
+#### list
 
-Function     | Description | Returns
------------- | ----------- | --------
-**get(key)**   | Returns the value per key from the environments variables | *string*
-**list()**   | Returns the list of the environments variables in JSON formatted string | *string*
+- `list ():GlobalsValues`
+
+  Retrieves a map of all global variables currently defined in the application.<br/>@returns A {@link GlobalsValues} object containing all global variables as key-value pairs.
+

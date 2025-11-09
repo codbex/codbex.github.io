@@ -1,64 +1,70 @@
-# Message Consumer
+# API: consumer
 
-The Message Consumer is a fundamental component provided by the system, offering the capability to receive and process text messages from Queue or Topic destinations within the integrated Message Broker. Powered by Apache ActiveMQ, the Message Consumer enables seamless integration with messaging systems for reliable message consumption.
+> Source: `messaging/consumer.ts`
 
-## Overview
-
-The Message Consumer plays a crucial role in distributed systems by facilitating the consumption of text messages sent to designated destinations. With support for both Queues and Topics, developers can build robust applications that leverage asynchronous communication and event-driven architectures.
-
-## Features
-
-- **Destination Flexibility**: Receive messages from both Queues and Topics to adapt to diverse messaging patterns.
-
-- **Text Message Handling**: Process text-based messages efficiently, providing a versatile solution for message consumption.
-
-- **Reliable Messaging**: Relies on Apache ActiveMQ to ensure reliable message delivery and consumption under various conditions.
+Provides an API for consuming messages from JMS-style destinations,
+supporting both Queues (point-to-point) and Topics (publish/subscribe).
 
 ## Usage
-
-Utilizing the Message Consumer is straightforward and involves the following steps:
-
-1. **Initialization**: Obtain an instance of the Message Consumer from the system.
-
-2. **Destination Setup**: Specify the destination (Queue or Topic) from which messages should be consumed.
-
-3. **Message Handling**: Implement message handling logic to process received messages according to application requirements.
-
-4. **Message Consumption**: Use the Message Consumer's API to start consuming messages from the specified destination.
-
-### Example Usage
-
 ```javascript
 import { consumer } from "sdk/messaging";
 
 let message = consumer.queue("queue1").receive(1000);
 
 console.log(message)
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**queue()**   | Returns an object representing a Message Queue | *Queue*
-**topic()**   | Returns an object representing a Message Topic | *Topic*
+### Consumer
 
+The entry point for creating messaging consumers.<br/>Use this class to obtain instances of Queue or Topic consumers.
 
-## Objects
+#### Methods
 
----
+<hr/>
+
+#### queue
+
+- `queue (destination:string):Queue`
+
+  Creates a Queue consumer instance for point-to-point messaging.<br/>Messages sent to this destination are consumed by only one receiver.<br/><br/>@param destination The name of the queue destination (e.g., 'orders.queue').<br/>@returns A {@link Queue} instance.
+
+<hr/>
+
+#### topic
+
+- `topic (destination:string):Topic`
+
+  Creates a Topic consumer instance for publish/subscribe messaging.<br/>Messages sent to this destination can be consumed by multiple subscribers.<br/><br/>@param destination The name of the topic destination (e.g., 'market.updates.topic').<br/>@returns A {@link Topic} instance.
 
 ### Queue
 
-Function     | Description | Returns
------------- | ----------- | --------
-**receive(timeout)**   | Receives a message from this Message Queue if any or null with the given timeout in milliseconds | *string*
+Represents a consumer for a Queue destination (point-to-point).
 
+#### Methods
+
+<hr/>
+
+#### receive
+
+- `receive (timeout:number=1000):number=1000)`
+
+  Attempts to synchronously receive a message from the queue.<br/><br/>@param timeout The maximum time (in milliseconds) to wait for a message. Defaults to 1000ms.<br/>@returns The received message content (usually a string or object), or null if the timeout is reached.
 
 ### Topic
 
-Function     | Description | Returns
------------- | ----------- | --------
-**receive(timeout)**   | Receives a message from this Message Topic if any or null with the given timeout in milliseconds | *string*
+Represents a consumer for a Topic destination (publish/subscribe).
+
+#### Methods
+
+<hr/>
+
+#### receive
+
+- `receive (timeout:number=1000):number=1000)`
+
+  Attempts to synchronously receive a message from the topic.<br/><br/>@param timeout The maximum time (in milliseconds) to wait for a message. Defaults to 1000ms.<br/>@returns The received message content (usually a string or object), or null if the timeout is reached.
+

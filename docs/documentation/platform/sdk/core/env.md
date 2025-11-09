@@ -1,46 +1,44 @@
-# Env
+# API: env
 
-## Overview
+> Source: `core/env.ts`
 
-The `Env` class provides an interface for interacting with environment variables from the platform. This API allows you to retrieve specific environment variable values and list all environment variables.
+API Env
+* Provides a static interface for accessing and listing environment variables exposed to the runtime.
 
-## Methods
-
-### get
-
+## Usage
 ```javascript
-public static get(name: string): string | undefined
+import { env } from "sdk/core";
+import { response } from "sdk/http";
+
+let os = env.get("os.name");
+response.println("[OS]: " + os);
+
+response.flush();
+response.close();
 ```
 
-Retrieve the value associated with the specified environment variable name.
 
-**Example**
+## Classes
 
-```javascript
-const value = Env.get("MY_ENV_VARIABLE");
-console.log(value); // Output: The value associated with "MY_ENV_VARIABLE" or undefined if not found
-```
+### Env
 
-### list
+Interface representing a map of environment variable names to their string values.
 
-```javascript
-public static list(): EnvValues
-```
+#### Methods
 
-List all environment variables as key-value pairs.
+<hr/>
 
-**Example**
+#### get
 
-```javascript
-const envVariables = Env.list();
-console.log(envVariables); // Output: { "VAR1": "value1", "VAR2": "value2", ... }
-```
+- `get (name:string):string|undefined`
 
-## Functions
+  Retrieves the value of the environment variable with the specified name.<br/>@param name The name of the environment variable.<br/>@returns The variable's value as a string, or `undefined` if the variable is not set.
 
----
+<hr/>
 
-Function     | Description | Returns
------------- | ----------- | --------
-**get(key)**   | Returns the value per key from the environments variables | *string*
-**list()**   | Returns the list of the environments variables in JSON formatted string | *string*
+#### list
+
+- `list ():EnvValues`
+
+  Retrieves a map of all environment variables currently exposed to the application.<br/>@returns An {@link EnvValues} object containing all environment variables as key-value pairs.
+

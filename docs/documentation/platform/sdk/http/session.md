@@ -1,25 +1,12 @@
-# HTTP Session
+# API: session
 
-The HTTP Session object provided by the scripting services implementation serves as a mechanism for maintaining session state and storing session attributes across multiple client requests within the same session context. Sessions enable web applications to associate data with a specific client's interaction with the server over a period of time, facilitating stateful communication and personalized user experiences.
+> Source: `http/session.ts`
 
-Key features of the HTTP Session object include:
+Provides a static façade (`Session` class) for accessing and manipulating
+the HTTP session associated with the current request. This module is often used
+to store user-specific data during their interaction with the application.
 
-* `Stateful Communication`: The HTTP Session object allows web applications to maintain stateful communication with clients by associating session attributes with unique session identifiers. This enables the server to recognize and track clients across multiple requests, providing continuity and context throughout the client's interaction with the application.
-
-* `Attribute Storage`: Session attributes, represented as key-value pairs, can be stored within the HTTP Session object to preserve data relevant to the current session. These attributes can include user preferences, authentication tokens, shopping cart contents, and other session-specific information that needs to persist across multiple requests.
-
-* `Scalability`: The HTTP Session object supports scalable session management, allowing web applications to handle large numbers of concurrent sessions efficiently. Session data can be stored either in-memory, in external data stores (e.g., databases, caches), or using distributed session management techniques to ensure optimal performance and resource utilization.
-
-* `Session Lifecycle`: Sessions have a well-defined lifecycle consisting of creation, access, and termination phases. Session creation occurs when a client initiates a new session by interacting with the application for the first time. Subsequent requests from the same client are associated with the existing session, allowing access to previously stored session attributes. Sessions can be terminated either explicitly by the client or automatically after a period of inactivity, releasing associated resources and freeing up server memory.
-
-* `Session Management`: The HTTP Session object provides methods for managing session attributes, including retrieval, addition, modification, and removal of attributes. This allows developers to manipulate session data dynamically based on the requirements of the application and the actions performed by the client.
-
-* `Security`: Sessions support various security measures to prevent unauthorized access and tampering of session data. These include session ID generation strategies, encryption of session attributes, and integration with authentication and access control mechanisms to ensure the confidentiality and integrity of session information.
-
-By offering a robust set of features for stateful communication, attribute storage, scalability, lifecycle management, session management, and security, the HTTP Session object facilitates the development of dynamic and interactive web applications that require session-based interactions with clients. It provides a flexible and reliable mechanism for preserving session state and delivering personalized user experiences in web-based environments.
-
-### Example Usage
-
+## Usage
 ```javascript
 import { session, response } from "sdk/http";
 
@@ -29,23 +16,111 @@ let attr = session.getAttribute("attr1");
 response.println("[Attribute]: " + attr);
 response.flush();
 response.close();
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**isValid()**   | Returns true if the current execution context is in a HTTP call | *boolean*
-**getAttribute(name)**   | Returns the HTTP session attribute by name | *string*
-**getAttributeNames()**   | Returns all the HTTP session attributes names | *array of string*
-**getCreationTime()**   | Returns the time when the HTTP session has been initialized | *Date*
-**getId()**   | Returns the HTTP session ID | *string*
-**getLastAccessedTime()**   | Returns the time when the HTTP session has been last accessed | *Date*
-**getMaxInactiveInterval()**   | Returns the maximum inactive interval of this HTTP session | *int*
-**invalidate()**   | Invalidates this HTTP session | -
-**isNew()**   | Returns true, if the HTTP session is created during this HTTP call and false otherwise | *boolean*
-**setAttribute(name, value)**   | Sets the HTTP session attribute by name and value | *string*
-**removeAttribute(name)**   | Removes the HTTP session attribute by name | *string*
-**setMaxInactiveInterval(interval)**   | Sets the maximum inactive interval of this HTTP session | -
+### Session
+
+The static Session class provides methods to interact with the current user session<br/>(e.g., storing attributes, checking status, managing lifetime).
+
+#### Methods
+
+<hr/>
+
+#### isValid
+
+- `isValid ():boolean`
+
+  Checks if a session is currently valid and active for the request context.<br/>@returns True if the session is valid, false otherwise (e.g., if it has been invalidated or timed out).
+
+<hr/>
+
+#### getAttribute
+
+- `getAttribute (name:string):string`
+
+  Retrieves the value of a named attribute stored in the session.<br/>Note: The underlying Java facade typically stores strings, but the value may represent<br/>serialized data that should be parsed if complex.<br/>@param name The name of the attribute.<br/>@returns The attribute value as a string, or null/undefined if not found.
+
+<hr/>
+
+#### getAttributeNames
+
+- `getAttributeNames ():string[]`
+
+  Retrieves an array of all attribute names currently stored in the session.<br/>The names are retrieved as a JSON string from the facade and then parsed.<br/>@returns An array of attribute names (strings), or an empty array if no attributes are present.
+
+<hr/>
+
+#### getCreationTime
+
+- `getCreationTime ():Date`
+
+  Returns the time at which this session was created, converted to a JavaScript Date object.<br/>@returns A Date object representing the session's creation time.
+
+<hr/>
+
+#### getId
+
+- `getId ():string`
+
+  Returns the unique identifier assigned to this session.<br/>@returns The session ID string.
+
+<hr/>
+
+#### getLastAccessedTime
+
+- `getLastAccessedTime ():Date`
+
+  Returns the last time the client accessed this session, converted to a JavaScript Date object.<br/>Access includes requests that retrieve or set session attributes.<br/>@returns A Date object representing the last access time.
+
+<hr/>
+
+#### getMaxInactiveInterval
+
+- `getMaxInactiveInterval ():number`
+
+  Returns the maximum time interval, in seconds, that the server should keep this session open<br/>between client requests. After this interval, the session will be invalidated.<br/>@returns The maximum inactive interval in seconds.
+
+<hr/>
+
+#### invalidate
+
+- `invalidate ():void`
+
+  Invalidates this session, unbinding any objects bound to it.<br/>After this call, the session is no longer valid.
+
+<hr/>
+
+#### isNew
+
+- `isNew ():boolean`
+
+  Checks if the client does not yet know about the session, typically meaning<br/>the server has not yet returned the session ID via a cookie or encoded URL.<br/>@returns True if the session is new (not yet used in a response), false otherwise.
+
+<hr/>
+
+#### setAttribute
+
+- `setAttribute (name:string, value:any):void`
+
+  Binds an object to this session, using the specified name.<br/>This is the primary way to store data in the user's session.<br/>@param name The name to bind the object under.<br/>@param value The value/object to store in the session.
+
+<hr/>
+
+#### removeAttribute
+
+- `removeAttribute (name:string):void`
+
+  Removes the attribute with the given name from the session.<br/>@param name The name of the attribute to remove.
+
+<hr/>
+
+#### setMaxInactiveInterval
+
+- `setMaxInactiveInterval (interval:number):void`
+
+  Specifies the maximum time interval, in seconds, that the server should keep this session open<br/>between client requests before automatically invalidating it.<br/>@param interval The new interval in seconds.
+

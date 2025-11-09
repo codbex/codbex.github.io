@@ -1,139 +1,205 @@
-# Store
+# API: store
 
-## Overview
+> Source: `db/store.ts`
 
-The `Store` API provides simple methods to interact with a data store. It allows you to save, retrieve, list, and remove entries from the data store.
+Defines the available comparison operators for query conditions.
 
-## Methods
-
-### save
-
+## Usage
 ```javascript
-save(name: string, entry: any): void
+// ---------
+// Entity.ts
+// ---------
+
+@Entity("Customer")
+@Table("CUSTOMER")
+export class Customer {
+
+    @Id()
+    @Generated("sequence")
+    @Column({ name: "CUSTOMER_ID", type: "long" })
+    public id: number;
+
+    @Column({ name: "CUSTOMER_NAME", type: "string" })
+    public name: string;
+
+    @Column({ name: "CUSTOMER_ADDRESS", type: "string" })
+    public address: string;
+}
+
+// ---------
+// Service.ts
+// ---------
+
+import { store } from "sdk/db";
+import { response } from "sdk/http";
+
+// Basic
+
+let entry = { 'name': 'John', 'address': 'Sofia, Bulgaria' };
+
+store.save('Customer', entry);
+
+let list = store.list('Customer');
+
+response.println(JSON.stringify(list));
+
+// Advanced
+
+let entry1 = { 'name': 'John', 'address': 'Sofia, Bulgaria' };
+let entry2 = { 'name': 'Jane', 'address': 'Varna, Bulgaria' };
+let entry3 = { 'name': 'Matthias', 'address': 'Berlin, Germany' };
+
+store.save('Customer', entry1);
+store.save('Customer', entry2);
+store.save('Customer', entry3);
+
+let list = store.list('Customer');
+response.println("List all customers:");
+response.println(JSON.stringify(list, null, 2));
+
+response.println("");
+response.println("Select customers with first name John:");
+let select = store.query("from Customer c where c.name = 'John'");
+response.println(JSON.stringify(select, null, 2));
+
+response.println("");
+response.println("Select native customers with first name John:");
+let selectNative = store.queryNative("select * from Customer c where c.name = 'John'");
+response.println(JSON.stringify(selectNative, null, 2));
+
+response.println("");
+response.println("Find customers by Example:");
+let findByExample = store.find('Customer', {"name":"John"});
+response.println(JSON.stringify(findByExample, null, 2));
+
+response.println("");
+response.println("List customers with filter options:");
+let listWithOptions = store.list('Customer', {"conditions":[{"propertyName":"name","operator":"LIKE","value":"J%"}],"sorts":[{"propertyName":"name","direction":"ASC"}],"limit":"100"});
+response.println(JSON.stringify(listWithOptions, null, 2));
+
+response.flush();
+response.close();
+
 ```
 
-Saves the provided entry to the data store.
 
-**Parameters:**
+## Classes
 
-* `name` (string): The name of the data store.
-* `entry` (any): The entry to be saved. Should be a JavaScript object.
+### Store
 
-Example:
+Facade class for interacting with the underlying Dirigible Data Store.<br/>All methods serialize/deserialize JavaScript objects to/from JSON strings<br/>before interacting with the native Java facade.
 
-```javascript
-Store.save("myDataStore", { id: 1, name: "John Doe", age: 30 });
-```
+#### Methods
 
-### list
+<hr/>
 
-```javascript
-list(name: string): any[]
-```
+#### save
 
-Retrieves a list of entries from the data store.
+- `save (name:string, entry:any):string|number`
 
-**Parameters:**
+  Saves a new entry to the data store.<br/>@param name The entity/table name.<br/>@param entry The JavaScript object to save.<br/>@returns The ID of the newly created entry (string or number).
 
-* `name` (string): The name of the data store.
-* Returns: An array containing the entries from the data store.
+<hr/>
 
-Example:
+#### upsert
 
-```javascript
-const entries = Store.list("myDataStore");
-console.log(entries);
-```
+- `upsert (name:string, entry:any):void`
 
-### get
+  Inserts a new entry or updates an existing one if the ID is present.<br/>@param name The entity/table name.<br/>@param entry The JavaScript object to insert/update.
 
-```javascript
-get(name: string, id: string): any | undefined
-```
+<hr/>
 
-Retrieves a specific entry from the data store based on its ID.
+#### update
 
-**Parameters:**
+- `update (name:string, entry:any):void`
 
-* `name` (string): The name of the data store.
-* `id` (string): The ID of the entry to retrieve.
-* Returns: The retrieved entry as a JavaScript object. If the entry is not found, undefined is returned.
+  Updates an existing entry.<br/>@param name The entity/table name.<br/>@param entry The JavaScript object with the ID and updated data.
 
-Example:
+<hr/>
 
-```javascript
-const entry = Store.get("myDataStore", "1");
-console.log(entry);
-```
+#### list
 
-### remove
+- `list (name:string, options?:Options):any[]`
 
-```javascript
-remove(name: string, id: string): void
-```
+  Lists entries based on optional filtering, sorting, and pagination options.<br/>@param name The entity/table name.<br/>@param options Optional {@link Options} for query execution.<br/>@returns An array of JavaScript objects.
 
-Removes an entry from the data store based on its ID.
+<hr/>
 
-**Parameters:**
+#### count
 
-* `name` (string): The name of the data store.
-* `id` (string): The ID of the entry to remove.
+- `count (name:string, options?:Options):number`
 
-Example:
+  Counts the number of entries based on optional filtering options.<br/>@param name The entity/table name.<br/>@param options Optional {@link Options} for query execution.<br/>@returns The count of matching entries.
 
-```javascript
-Store.remove("myDataStore", "1");
-```
+<hr/>
 
-### Example Usage
+#### get
 
-```javascript
-import { Store } from "sdk/db";
-import { Response } from "sdk/http";
+- `get (name:string, id:any):any|undefined`
 
-let entry = { 'name': 'Peter', 'address': 'Sofia, Bulgaria' };
+  Retrieves a single entry by its ID.<br/>@param name The entity/table name.<br/>@param id The ID of the entry.<br/>@returns The entry object, or undefined if not found.
 
-Store.save('Customer', entry);
+<hr/>
 
-let list = Store.list('Customer');
+#### remove
 
-Response.println(JSON.stringify(list));
-Response.flush();
-Response.close();
-```
+- `remove (name:string, id:any):void`
 
-The `Entity` description in the Hibernate `xml` format (e.g. Customer.hbm.xml as XML)
+  Deletes an entry by its ID.<br/>@param name The entity/table name.<br/>@param id The ID of the entry to remove.
 
+<hr/>
 
-```xml
-<hibernate-mapping>
+#### find
 
-    <class entity-name="Customer">
+- `find (name:string, example:any, limit:number=100, offset:number=0):any[]`
 
-        <id name="id" type="long" column="ID">
-            <generator class="sequence" />
-        </id>
+  Finds entries matching an example object (query-by-example).<br/>@param name The entity/table name.<br/>@param example An object containing properties to match.<br/>@param limit Maximum number of results to return.<br/>@param offset Number of results to skip.<br/>@returns An array of matching JavaScript objects.
 
-        <property name="name" column="NAME" type="string" />
+<hr/>
 
-        <property name="address" column="ADDRESS" type="string" />
+#### query
 
-    </class>
+- `query (name:string, limit:number=100, offset:number=0):any[]`
 
-</hibernate-mapping>
-```
+  Queries all entries for a given entity name with pagination.<br/>@param name The entity/table name.<br/>@param limit Maximum number of results to return.<br/>@param offset Number of results to skip.<br/>@returns An array of JavaScript objects.
 
-    
+<hr/>
 
+#### queryNative
 
+- `queryNative (name:string):any[]`
 
-### Functions
+  Queries all entries for a given entity name without pagination.<br/>@param name The entity/table name.<br/>@returns An array of all JavaScript objects.
 
----
+<hr/>
 
-Function     | Description | Returns
------------- | ----------- | --------
-**save(name, entry)**   | Save the `entry` in the collection with `name` | *-*
-**list(name)**   | List all the entris in the collection with `name` | *Array of Objects*
-**get(name, id)**   | Get the entry from the collection with `name` by its `id` | *Object*
-**deleteEntry(name, id)**   | Delete the entry from the collection with `name` by its `id` | *-*
+#### getEntityName
+
+- `getEntityName (name:string):string`
+
+  Gets the name of the entity associated with the store name.
+
+<hr/>
+
+#### getTableName
+
+- `getTableName (name:string):string`
+
+  Gets the underlying database table name for the entity.
+
+<hr/>
+
+#### getIdName
+
+- `getIdName (name:string):string`
+
+  Gets the property name used as the ID field in the entity object.
+
+<hr/>
+
+#### getIdColumn
+
+- `getIdColumn (name:string):string`
+
+  Gets the underlying database column name used for the ID field.
+

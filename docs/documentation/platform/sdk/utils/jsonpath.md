@@ -1,9 +1,14 @@
-# JSONPath
+# API: jsonpath
 
-JSONPath utility.
+> Source: `utils/jsonpath.ts`
 
-### Example Usage
+Forked from source published at https://github.com/s3u with MIT
+license as of 5/30/2019 and adapted for Dirigible
+Contributors:
+s3u (https://github.com/s3u) - initial API and implementation
+SAP - adapted for Dirigible
 
+## Usage
 ```javascript
 import { jsonpath } from "sdk/utils";
 
@@ -51,12 +56,7 @@ const actual = jsonpath({
 });
 
 console.log(actual)
+
 ```
 
-## Functions
 
----
-
-Function     | Description | Returns
------------- | ----------- | --------
-**jsonpath(object)**   | Evaluate JSONPath from given expression and json object | *string*

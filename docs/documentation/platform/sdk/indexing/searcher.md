@@ -1,13 +1,11 @@
-# Indexing Searcher
+# API: searcher
 
-The Indexing Searcher, a core component of the Indexing Module, serves as a powerful tool for conducting free-text or exact phrase searches over documents indexed by the Indexing Writer. Built on top of the robust Apache Lucene framework, the Indexing Searcher offers efficient and accurate retrieval of indexed content.
+> Source: `indexing/searcher.ts`
 
-With the Indexing Searcher, users can perform comprehensive searches across indexed documents, leveraging advanced text analysis and search algorithms provided by Apache Lucene. Whether searching for specific keywords, phrases, or exact terms, the Indexing Searcher delivers fast and relevant results, making it ideal for applications requiring sophisticated search functionality.
+Provides a static façade (`Searcher` class) for performing
+term-based and time-based queries against a native indexing service.
 
-By utilizing the Indexing Searcher, developers can empower their applications with high-performance search capabilities, enabling users to quickly locate relevant information within large datasets. Whether used in document management systems, knowledge bases, or search engines, the Indexing Searcher provides a reliable solution for retrieving indexed content with precision and speed.
-
-### Example Usage
-
+## Usage
 ```javascript
 import { writer, searcher } from "sdk/indexing";
 
@@ -18,15 +16,47 @@ writer.add("index2", "file3", "search engine", new Date(345), { "name2": "value2
 let found = searcher.between("index2", new Date(124), new Date(344));
 
 console.log(JSON.stringify(found))
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**search(index, term)**   | Returns an array of document descriptors matching the *term* | *list of descriptors*
-**before(index, date)**   | Returns an array of document descriptors where *lastModified* is before the *date* | *list of descriptors*
-**after(index, date)**   | Returns an array of document descriptors where *lastModified* is after the *date* | *list of descriptors*
-**between(index, lower, upper)**   | Returns an array of document descriptors where *lastModified* is between the *lower* and *upper* | *list of descriptors*
+### Searcher
+
+The Searcher class provides methods for querying a specific index<br/>using keywords or date ranges.
+
+#### Methods
+
+<hr/>
+
+#### search
+
+- `search (index:string, term:string):string}[]`
+
+  Executes a keyword search against a specified index.<br/>@param index The name or identifier of the index to search (e.g., 'documents', 'products').<br/>@param term The keyword or search phrase to look for.<br/>@returns An array of result objects, parsed from the native JSON string output.
+
+<hr/>
+
+#### before
+
+- `before (index:string, date:Date):string}[]`
+
+  Finds all entries in the index that were indexed before the specified date.<br/>@param index The name or identifier of the index.<br/>@param date The Date object representing the upper bound (exclusive) of the time range.<br/>@returns An array of result objects, parsed from the native JSON string output.
+
+<hr/>
+
+#### after
+
+- `after (index:string, date:Date):string}[]`
+
+  Finds all entries in the index that were indexed after the specified date.<br/>@param index The name or identifier of the index.<br/>@param date The Date object representing the lower bound (exclusive) of the time range.<br/>@returns An array of result objects, parsed from the native JSON string output.
+
+<hr/>
+
+#### between
+
+- `between (index:string, lower:Date, upper:Date):string}[]`
+
+  Finds all entries in the index that were indexed within the specified date range.<br/>@param index The name or identifier of the index.<br/>@param lower The Date object for the lower bound (exclusive).<br/>@param upper The Date object for the upper bound (exclusive).<br/>@returns An array of result objects, parsed from the native JSON string output.
+

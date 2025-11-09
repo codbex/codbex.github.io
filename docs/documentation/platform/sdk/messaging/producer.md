@@ -1,62 +1,68 @@
-# Message Producer
+# API: producer
 
-The Message Producer is an object provided by the system, designed to facilitate the sending of text messages to a Queue or Topic destination within the built-in Message Broker. This component is backed by the robust messaging broker Apache ActiveMQ, offering reliable and scalable message delivery.
+> Source: `messaging/producer.ts`
 
-## Overview
-
-The Message Producer serves as a bridge between applications and the messaging infrastructure, allowing developers to seamlessly send text messages to designated destinations. Whether it's for asynchronous communication, event-driven architectures, or distributed systems, the Message Producer offers a convenient interface for sending messages with ease.
-
-## Features
-
-- **Destination Flexibility**: Send messages to both Queues and Topics based on your application's requirements.
-  
-- **Text Message Support**: Send text-based messages, providing a versatile solution for various use cases.
-
-- **Reliable Messaging**: Utilizes Apache ActiveMQ under the hood, ensuring reliable and efficient message delivery.
+Provides an API for producing (sending) messages to JMS-style destinations,
+supporting both Queues (point-to-point) and Topics (publish/subscribe).
 
 ## Usage
-
-To use the Message Producer, developers can follow these simple steps:
-
-1. **Initialization**: Obtain an instance of the Message Producer from the system.
-
-2. **Destination Setup**: Specify the destination (Queue or Topic) to which the message should be sent.
-
-3. **Message Composition**: Compose the text message that needs to be sent.
-
-4. **Message Sending**: Use the Message Producer's API to send the message to the specified destination.
-
-### Example Usage
-
 ```javascript
 import { producer } from "sdk/messaging"
 
 producer.queue("queue1").send("Text Message");
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**queue()**   | Returns an object representing a Message Queue | *Queue*
-**topic()**   | Returns an object representing a Message Topic | *Topic*
+### Producer
 
+The entry point for creating messaging producers.<br/>Use this class to obtain instances of Queue or Topic producers for sending messages.
 
-## Objects
+#### Methods
 
----
+<hr/>
+
+#### queue
+
+- `queue (destination:string):Queue`
+
+  Creates a Queue producer instance for point-to-point messaging.<br/>Messages sent to this destination are intended to be consumed by a single receiver.<br/><br/>@param destination The name of the queue destination (e.g., 'task.queue').<br/>@returns A {@link Queue} instance.
+
+<hr/>
+
+#### topic
+
+- `topic (destination:string):Topic`
+
+  Creates a Topic producer instance for publish/subscribe messaging.<br/>Messages sent to this destination can be consumed by multiple subscribers simultaneously.<br/><br/>@param destination The name of the topic destination (e.g., 'sensor.data.topic').<br/>@returns A {@link Topic} instance.
 
 ### Queue
 
-Function     | Description | Returns
------------- | ----------- | --------
-**send(message)**   | Send a message to this Message Queue | -
+Represents a producer for a Queue destination (point-to-point).
 
+#### Methods
+
+<hr/>
+
+#### send
+
+- `send (message:string):void`
+
+  Sends a message to the configured queue destination.<br/><br/>@param message The content of the message to send (typically a string or serialized object).
 
 ### Topic
 
-Function     | Description | Returns
------------- | ----------- | --------
-**send(message)**   | Send a message to this Message Topic | -
+Represents a producer for a Topic destination (publish/subscribe).
+
+#### Methods
+
+<hr/>
+
+#### send
+
+- `send (message:string):void`
+
+  Sends a message to the configured topic destination. All active subscribers will receive the message.<br/><br/>@param message The content of the message to publish (typically a string or serialized object).
+

@@ -1,81 +1,139 @@
-# Logging
+# API: logging
 
-The Logging API serves as a fundamental tool for developers to track and record the execution of their applications. Logging involves capturing various events, messages, and errors that occur during the execution of the software. These logs are invaluable for debugging, monitoring, and auditing purposes, providing insights into the application's behavior and performance.
+> Source: `log/logging.ts`
 
-### Importance of Logging
+Provides a wrapper for the underlying logging facility, allowing
+for categorized and leveled logging messages with support for variable arguments,
+including error objects.
 
-Logging plays a crucial role in software development for several reasons:
-
-1. **Debugging**: Logs help developers identify and diagnose issues within their code. By logging relevant information at strategic points in the application, developers can trace the flow of execution and pinpoint the root causes of bugs or unexpected behavior.
-
-2. **Monitoring and Alerting**: Logs are essential for monitoring the health and performance of applications in real-time. Monitoring systems can analyze log data to detect anomalies, errors, or performance bottlenecks, triggering alerts or notifications for immediate attention.
-
-3. **Auditing and Compliance**: Logging facilitates compliance with regulatory requirements and industry standards by maintaining a record of critical events and transactions. Detailed logs provide an audit trail for tracking user actions, system changes, and security incidents.
-
-4. **Performance Analysis**: Logs capture valuable metrics and statistics related to the application's performance, such as response times, resource utilization, and throughput. Analyzing these metrics over time helps identify areas for optimization and improvement.
-
-### Logging Levels
-
-The Logging API supports different log levels to categorize messages based on their severity or importance. Each log level serves a specific purpose and provides valuable insights into the application's behavior:
-
-- **INFO**: Informational messages that highlight the normal operation of the application.
-- **WARN**: Warning messages indicating potential issues or unexpected conditions that do not necessarily cause immediate problems.
-- **ERROR**: Error messages indicating critical issues or failures that require attention.
-- **DEBUG**: Debugging messages providing detailed information for troubleshooting and diagnosing problems during development.
-- **TRACE**: Trace messages offering the most detailed level of logging, typically used for tracing the execution flow or capturing fine-grained details.
-
-### Logging Best Practices
-
-To leverage the Logging API effectively, developers should adhere to the following best practices:
-
-- **Use Descriptive Messages**: Ensure that log messages are clear, concise, and descriptive, providing sufficient context to understand the event or condition being logged.
-- **Choose Appropriate Log Levels**: Select the appropriate log level for each message based on its significance and impact on the application's behavior.
-- **Log Relevant Information**: Include relevant details in log messages, such as timestamps, error codes, stack traces, and contextual data, to facilitate troubleshooting and analysis.
-- **Avoid Excessive Logging**: Be mindful of logging too much information, as it can overwhelm log files and obscure critical messages. Focus on logging essential events and errors.
-- **Configure Log Levels Dynamically**: Implement mechanisms to adjust log levels dynamically based on deployment environments or runtime conditions, allowing for flexible logging configurations.
-- **Secure Log Data**: Protect sensitive information in log messages, such as user credentials or personal data, to prevent unauthorized access or disclosure.
-
-By following these best practices and leveraging the capabilities of the Logging API, developers can effectively manage and analyze log data to improve the reliability, performance, and security of their applications.
-
-### Example Usage
-
+## Usage
 ```javascript
 import { logging } from "sdk/log";
 
-let logger = logging.getLogger("com.codbex.mylogger");
+let logger = logging.getLogger("org.eclipse.dirigible.mylogger");
 
-logger.debug("Hello from {} {}!", "MyLogger");
+logger.debug("Hello from {}!", "MyLogger");
 logger.error("Oops", new Error("Something wrong happened"));
+logger.error("Oops! Param 1: {}, param 2: {}", "param1Value", "param2Value", new Error("Something wrong happened"));
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**getLogger(name)**   | Returns the Logger object by this name | *Logger*
+### Logging
 
+The main entry point for the logging API. Use this class to obtain a named<br/>logger instance.
 
-## Objects
+#### Methods
 
----
+<hr/>
 
+#### getLogger
+
+- `getLogger (loggerName:string):Logger`
+
+  Retrieves or creates a Logger instance associated with a specific name.<br/>The logger name is typically used to categorize log messages (e.g., 'com.app.service').<br/><br/>@param loggerName The name of the logger.<br/>@returns A {@link Logger} instance.
 
 ### Logger
 
+Represents a named logger instance used for emitting log messages at various levels.
 
-Function     | Description | Returns
------------- | ----------- | --------
-**info(message, args?)**   | Logs the *message* with the INFO log level | -
-**warn(message, args?)**   | Logs the *message* with the WARN log level | -
-**error(message, args?)**   | Logs the *message* with the ERROR log level | -
-**debug(message, args?)**   | Logs the *message* with the DEBUG log level | -
-**trace(message, args?)**   | Logs the *message* with the TRACE log level | -
-**log(message, level, args?)**   | Logs the *message* with the provided log *level* and optional message parameters | -
-**infoError(message, error)**   | Logs the *error* with the stack trace with the INFO log level | -
-**warnError(message, error)**   | Logs the *error* with the stack trace with the WARN log level | -
-**errorError(message, error)**   | Logs the *error* with the stack trace with the ERROR log level | -
-**debugError(message, error)**   | Logs the *error* with the stack trace with the DEBUG log level | -
-**traceError(message, error)**   | Logs the *error* with the stack trace with the TRACE log level | -
-**setLevel(level)**   | Sets the log level ('INFO', 'WARN', 'ERROR', 'DEBUG', 'TRACE') | -
+#### Methods
+
+<hr/>
+
+#### setLevel
+
+- `setLevel (level:string):Logger`
+
+  Sets the logging level for this specific logger instance.<br/>Messages below this threshold will be ignored.<br/><br/>@param level The desired logging level (e.g., 'TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR').<br/>@returns The Logger instance for method chaining.
+
+<hr/>
+
+#### isDebugEnabled
+
+- `isDebugEnabled ():boolean`
+
+  Checks if the DEBUG level is currently enabled for this logger.<br/>@returns True if DEBUG logging is enabled, false otherwise.
+
+<hr/>
+
+#### isErrorEnabled
+
+- `isErrorEnabled ():boolean`
+
+  Checks if the ERROR level is currently enabled for this logger.<br/>@returns True if ERROR logging is enabled, false otherwise.
+
+<hr/>
+
+#### isWarnEnabled
+
+- `isWarnEnabled ():boolean`
+
+  Checks if the WARN level is currently enabled for this logger.<br/>@returns True if WARN logging is enabled, false otherwise.
+
+<hr/>
+
+#### isInfoEnabled
+
+- `isInfoEnabled ():boolean`
+
+  Checks if the INFO level is currently enabled for this logger.<br/>@returns True if INFO logging is enabled, false otherwise.
+
+<hr/>
+
+#### isTraceEnabled
+
+- `isTraceEnabled ():boolean`
+
+  Checks if the TRACE level is currently enabled for this logger.<br/>@returns True if TRACE logging is enabled, false otherwise.
+
+<hr/>
+
+#### log
+
+- `log (msg:string, level:string):void`
+
+  The core logging method. Logs a message at the specified level, optionally<br/>supporting parameters for message formatting and a final Error object for stack trace logging.<br/><br/>@param msg The log message template (e.g., "User {0} failed to connect: {1}").<br/>@param level The logging level (e.g., 'DEBUG', 'ERROR').<br/>@param [args] Optional arguments for message formatting. The last argument can be an Error object.
+
+<hr/>
+
+#### debug
+
+- `debug (msg:string, ..._:any[]):void`
+
+  Logs a message at the DEBUG level.<br/><br/>@param msg The log message template.<br/>@param [args] Optional arguments for message formatting. The last argument can be an Error object.
+
+<hr/>
+
+#### info
+
+- `info (msg:string, ..._:any[]):void`
+
+  Logs a message at the INFO level.<br/><br/>@param msg The log message template.<br/>@param [args] Optional arguments for message formatting. The last argument can be an Error object.
+
+<hr/>
+
+#### trace
+
+- `trace (msg:string, ..._:any[]):void`
+
+  Logs a message at the TRACE level.<br/><br/>@param msg The log message template.<br/>@param [args] Optional arguments for message formatting. The last argument can be an Error object.
+
+<hr/>
+
+#### warn
+
+- `warn (msg:string, ..._:any[]):void`
+
+  Logs a message at the WARN level.<br/><br/>@param msg The log message template.<br/>@param [args] Optional arguments for message formatting. The last argument can be an Error object.
+
+<hr/>
+
+#### error
+
+- `error (msg:string, ..._:any[]):void`
+
+  Logs a message at the ERROR level.<br/><br/>@param msg The log message template.<br/>@param [args] Optional arguments for message formatting. The last argument can be an Error object.
+

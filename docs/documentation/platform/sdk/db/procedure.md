@@ -1,70 +1,13 @@
-# Procedure
+# API: procedure
 
-## Overview
+> Source: `db/procedure.ts`
 
-The provided TypeScript module `Procedure` facilitates the execution of stored procedures in a database. It includes methods for creating and executing stored procedures.
+API Procedure
 
-Here's an explanation of the key components:
-
-## ProcedureParameter Interface:
-
+## Usage
 ```javascript
-export interface ProcedureParameter {
-	readonly type: string;
-	readonly value: any;
-}
-```
+// Create Procedure
 
-This interface represents a parameter that can be used in a stored procedure call. It includes the `type` of the parameter (string) and its `value` (any).
-
-## Procedure Class:
-
-The `Procedure`` class provides static methods for creating and executing stored procedures.
-
-
-### Methods:
-
-#### create
-
-```javascript
-create(sql: string, datasourceName?: string): void
-```
-
-Creates a stored procedure using an Update operation. (Assumed to be part of the Update class, as Update.execute is used.)
-
-**Parameters:**
-
-* `sql`: The SQL statement for creating the stored procedure.
-* `datasourceName`: (Optional) The name of the data source.
-
-#### execute
-
-```javascript
-execute(sql: string, parameters: (string | number | ProcedureParameter)[] = [], datasourceName?: string): any[]
-```
-
-Executes a stored procedure and returns the result sets.
-
-**Parameters:**
-
-* `sql`: The SQL statement for executing the stored procedure.
-* `parameters`: (Optional) An array of parameters to be included in the stored procedure call. Parameters can be of type string, number, or an object conforming to the ProcedureParameter interface.
-* `datasourceName`: (Optional) The name of the data source.
-* Return Value: An array containing the result sets of the stored procedure execution.
-
-## Example Usage:
-
-::: info
-To use procedures you need to add database that supports them (default DB is H2 that does not support procedures):
-
-1. Open `Database` perspective and click on `Databases` at the bottom.
-2. Click `New` and add your database information.
-3. Use you newly added database in most methods as `databaseType`.
-:::
-
-### Create Procedure:
-
-```javascript
 import { procedure } from "sdk/db";
 import { response } from "sdk/http";
 
@@ -81,11 +24,10 @@ procedure.create(sql, "psql");
 response.println("Procedure created");
 response.flush();
 response.close();
-```
 
-Call Procedure:
 
-```javascript
+// Call Procedure
+
 import { query, procedure } from "sdk/db";
 import { response } from "sdk/http";
 
@@ -100,35 +42,31 @@ try {
     response.flush();
     response.close();
 }
+
 ```
 
-### Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**create(sql, datasourceName?)**   | Creates a SQL Stored Procedure in the selected *datasourceName*, throws Error, if issue occur | *-*
-**execute(sql, parameters?, datasourceName?)**   | Execute SQL Stored Procedure in the selected *datasourceName* with the provided parameters and returns the result, if any | *array of arrays*
+### Procedure
 
-Sample Parameters Array:
+@interface ProcedureParameter<br/>@description Defines a structured parameter for procedure calls, allowing the type<br/>to be explicitly defined when the natural JavaScript type mapping is insufficient.
 
-```javascript
-let parameters = [1, 'John', 34.56];
-```
+#### Methods
 
-or
-```javascript
-let parameters = [
-  {
-    value: 1,
-    type: "int"
-  }, {
-    value: 'John',
-    type: "string"
-  }, {
-    value: 34.56
-    type: "double"
-  }
-];
-```
+<hr/>
+
+#### create
+
+- `create (sql:string, datasourceName?:string):void`
+
+  Executes a DDL/DML statement to create or modify a stored procedure without results.<br/>* @param {string} sql The SQL statement (e.g., CREATE PROCEDURE).<br/>@param {string} [datasourceName] Optional name of the data source to use.
+
+<hr/>
+
+#### execute
+
+- `execute (sql:string, parameters:(string|number|ProcedureParameter):any[]`
+
+  Executes a stored procedure call and returns the result set(s).<br/>* @param {string} sql The callable statement (e.g., {CALL my_procedure(?, ?)}).<br/>@param {(string | number | ProcedureParameter)[]} [parameters=[]] An array of parameters. Primitives (string/number) are automatically typed. Use ProcedureParameter for explicit types.<br/>@param {string} [datasourceName] Optional name of the data source to use.<br/>@returns {any[]} An array of JSON objects representing the result set(s).
+

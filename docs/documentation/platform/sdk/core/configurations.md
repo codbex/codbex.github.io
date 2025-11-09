@@ -1,180 +1,121 @@
-# Configurations
+# API: configurations
 
-## Overview
+> Source: `core/configurations.ts`
 
-The `Configurations` class provides a set of methods to interact with the configuration settings using the platform. This API allows you to retrieve, modify, and manage configuration parameters for your application.
+API Configurations
+* Provides a static interface for accessing and manipulating configuration properties,
+and checking the operating system type.
 
-## Methods
-
-### get
-
+## Usage
 ```javascript
-public static get(key: string, defaultValue?: string): string | undefined
+import { response } from "sdk/http";
+import { configurations } from "sdk/core";
+
+configurations.set("ENV_VAR_1", "ENV_VAR_1");
+configurations.set("ENV_VAR_2", "ENV_VAR_2");
+
+let credentials = {
+    envVar1: configurations.get("ENV_VAR_1"),
+    envVar2: configurations.get("ENV_VAR_2")
+};
+
+response.println(JSON.stringify(credentials));
 ```
 
-Retrieve the value associated with the specified configuration key. If the key is not found, it returns the specified default value, or undefined if not provided.
 
-**Example**
+## Classes
 
-```javascript
-const value = Configurations.get("myConfigKey", "defaultValue");
-console.log(value); // Output: "configuredValue" or "defaultValue" if not found
-```
+### Configurations
 
-### set
+API Configurations<br/>* Provides a static interface for accessing and manipulating configuration properties,<br/>and checking the operating system type.
 
-```javascript
-public static set(key: string, value: string): void
-```
+#### Methods
 
-Set the value for the specified configuration key.
+<hr/>
 
-**Example**
+#### get
 
-```javascript
-Configurations.set("myConfigKey", "configuredValue");
-```
+- `get (key:string, defaultValue?:string):string|undefined`
 
-### remove
+  Retrieves the configuration value associated with the given key.<br/>@param key The configuration key.<br/>@param defaultValue The optional default value to return if the key is not found.<br/>@returns The configuration value as a string, or `undefined` if the key is not found and no default is provided.
 
-```javascript
-public static remove(key: string): void
-```
+<hr/>
 
-Remove the configuration entry associated with the specified key.
+#### set
 
-**Example**
+- `set (key:string, value:string):void`
 
-```javascript
-Configurations.remove("myConfigKey");
-```
+  Sets the configuration value for the given key.<br/>If the key already exists, its value is overwritten.<br/>@param key The configuration key.<br/>@param value The configuration value to set.
 
-### getKeys
+<hr/>
 
-```javascript
-public static getKeys(): string[]
-```
+#### remove
 
-Retrieve an array of all configuration keys.
+- `remove (key:string):void`
 
-**Example**
+  Removes the configuration property associated with the given key.<br/>@param key The configuration key to remove.
 
-```javascript
-const keys = Configurations.getKeys();
-console.log(keys); // Output: ["key1", "key2", ...]
-```
+<hr/>
 
-### load
+#### getKeys
 
-```javascript
-public static load(path: string): void
-```
+- `getKeys ():string[]`
 
-Load configuration settings from the specified path.
+  Retrieves a list of all current configuration keys.<br/>@returns An array of configuration keys (strings).
 
-**Example**
+<hr/>
 
-```javascript
-Configurations.load("/path/to/config/file.properties");
-```
+#### load
 
-### update
+- `load (path:string):void`
 
-```javascript
-public static update(): void
-```
+  Loads configuration properties from a file at the specified path, overriding existing ones.<br/>@param path The file path to load configurations from.
 
-Update the configuration settings.
+<hr/>
 
-**Example**
+#### update
 
-```javascript
-Configurations.update();
-```
+- `update ():void`
 
-### getOS
+  Reloads or updates the current configuration settings from their source (e.g., persistence layer).
 
-```javascript
-public static getOS(): string
-```
+<hr/>
 
-Retrieve the operating system name.
+#### getOS
 
-**Example**
+- `getOS ():string`
 
-```javascript
-const osName = Configurations.getOS();
-console.log(osName); // Output: "Windows", "Mac OS X", "Linux", "Solaris", etc.
-```
+  Retrieves the name of the current Operating System.<br/>@returns The OS name as a string (e.g., "Windows", "Linux", "Mac OS X").
 
-### isOSWindows
+<hr/>
 
-```javascript
-public static isOSWindows(): boolean
-```
+#### isOSWindows
 
-Check if the operating system is Windows.
+- `isOSWindows ():boolean`
 
-**Example**
+  Checks if the current Operating System is Windows.<br/>@returns True if the OS is Windows, false otherwise.
 
-```javascript
-const isWindows = Configurations.isOSWindows();
-console.log(isWindows); // Output: true or false
-```
+<hr/>
 
-### isOSMac
+#### isOSMac
 
-```javascript
-public static isOSMac(): boolean
-```
+- `isOSMac ():boolean`
 
-Check if the operating system is Mac OS.
+  Checks if the current Operating System is Mac OS (or Mac OS X).<br/>@returns True if the OS is Mac, false otherwise.
 
-**Example**
+<hr/>
 
-```javascript
-const isMac = Configurations.isOSMac();
-console.log(isMac); // Output: true or false
-```
+#### isOSUNIX
 
-### isOSUNIX
+- `isOSUNIX ():boolean`
 
-```javascript
-public static isOSUNIX(): boolean
-```
+  Checks if the current Operating System is a UNIX-like system (e.g., Linux, macOS, or others).<br/>@returns True if the OS is a UNIX variant, false otherwise.
 
-Check if the operating system is UNIX-based.
+<hr/>
 
-**Example**
+#### isOSSolaris
 
-```javascript
-const isUNIX = Configurations.isOSUNIX();
-console.log(isUNIX); // Output: true or false
-```
+- `isOSSolaris ():boolean`
 
-### isOSSolaris
+  Checks if the current Operating System is Solaris.<br/>@returns True if the OS is Solaris, false otherwise.
 
-```javascript
-public static isOSSolaris(): boolean
-```
-
-Check if the operating system is Solaris.
-
-**Example**
-
-```javascript
-const isSolaris = Configurations.isOSSolaris();
-console.log(isSolaris); // Output: true or false
-```
-
-## Functions
-
----
-
-Function     | Description | Returns
------------- | ----------- | --------
-**get(key, defaultValue)()** | Returns the value for the specified key, or the default value | *string*
-**set(key, value)** | Sets a value, for the specified key | *-*
-**getKeys()** | Returns an arrays of keys | *array of string*
-**load(path)** | Loads a configuration from a properties file at *path* | *-* 
-**update()** | Updates the loaded configurations | *-*

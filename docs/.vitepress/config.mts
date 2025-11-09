@@ -299,191 +299,467 @@ export default defineConfig({
               text: 'SDK',
               link: '/documentation/platform/sdk/',
               collapsed: true,
-              items: [
-                {
-                  text: "BPM",
-                  link: "/documentation/platform/sdk/bpm/",
-                  collapsed: true,
-                  items: [
-                    { text: "Process", link: "/documentation/platform/sdk/bpm/process" }
-                  ],
-                },
-                {
-                  text: "CMS",
-                  link: "/documentation/platform/sdk/cms/",
-                  collapsed: true,
-                  items: [
-                    { text: "CMIS", link: "/documentation/platform/sdk/cms/cmis" }
-                  ],
-                },
-                {
-                  text: "Core",
-                  link: "/documentation/platform/sdk/core/",
-                  collapsed: true,
-                  items: [
-                    { text: "Configurations", link: "/documentation/platform/sdk/core/configurations" },
-                    { text: "Context", link: "/documentation/platform/sdk/core/context" },
-                    { text: "Env", link: "/documentation/platform/sdk/core/env" },
-                    { text: "Globals", link: "/documentation/platform/sdk/core/globals" }
-                  ],
-                },
-                {
-                  text: "Database",
-                  link: "/documentation/platform/sdk/db/",
-                  collapsed: true,
-                  items: [
-                    { text: "Data Access Object (DAO)", link: "/documentation/platform/sdk/db/dao" },
-                    { text: "Database", link: "/documentation/platform/sdk/db/database" },
-                    { text: "Insert", link: "/documentation/platform/sdk/db/insert" },
-                    { text: "Procedure", link: "/documentation/platform/sdk/db/procedure" },
-                    { text: "Query", link: "/documentation/platform/sdk/db/query" },
-                    { text: "Sequence", link: "/documentation/platform/sdk/db/sequence" },
-                    { text: "Store", link: "/documentation/platform/sdk/db/store" },
-                    { text: "Update", link: "/documentation/platform/sdk/db/update" }
-                  ],
-                },
-                {
-                  text: "Git",
-                  link: "/documentation/platform/sdk/git/",
-                  collapsed: true,
-                  items: [
-                    { text: "Git Client", link: "/documentation/platform/sdk/git/client" }
-                  ],
-                },
-                {
-                  text: "Http",
-                  link: "/documentation/platform/sdk/http/",
-                  collapsed: true,
-                  items: [
-                    { text: "Client Async", link: "/documentation/platform/sdk/http/client-async" },
-                    { text: "Client", link: "/documentation/platform/sdk/http/client" },
-                    { text: "HTTP Request", link: "/documentation/platform/sdk/http/request" },
-                    { text: "HTTP Response", link: "/documentation/platform/sdk/http/response" },
-                    { text: "HTTP RESTful Services Framework", link: "/documentation/platform/sdk/http/rs" },
-                    { text: "HTTP Session", link: "/documentation/platform/sdk/http/session" },
-                    { text: "HTTP Upload", link: "/documentation/platform/sdk/http/upload" }
-                  ],
-                },
-                {
-                  text: "Indexing",
-                  link: "/documentation/platform/sdk/indexing/",
-                  collapsed: true,
-                  items: [
-                    { text: "Indexing Searcher", link: "/documentation/platform/sdk/indexing/searcher" },
-                    { text: "Indexing Writer", link: "/documentation/platform/sdk/indexing/writer" }
-                  ],
-                },
-                {
-                  text: "I/O",
-                  link: "/documentation/platform/sdk/io/",
-                  collapsed: true,
-                  items: [
-                    { text: "Bytes", link: "/documentation/platform/sdk/io/bytes" },
-                    { text: "Files", link: "/documentation/platform/sdk/io/files" },
-                    { text: "FTP Client", link: "/documentation/platform/sdk/io/ftp" },
-                    { text: "Streams", link: "/documentation/platform/sdk/io/streams" },
-                    { text: "ZIP", link: "/documentation/platform/sdk/io/zip" }
-                  ],
-                },
-                {
-                  text: "Job",
-                  link: "/documentation/platform/sdk/job/",
-                  collapsed: true,
-                  items: [
-                    { text: "Job Scheduler", link: "/documentation/platform/sdk/job/scheduler" }
-                  ],
-                },
-                {
-                  text: "Log",
-                  link: "/documentation/platform/sdk/log/",
-                  collapsed: true,
-                  items: [
-                    { text: "Logging", link: "/documentation/platform/sdk/log/logging" }
-                  ],
-                },
-                {
-                  text: "Mail",
-                  link: "/documentation/platform/sdk/mail/",
-                  collapsed: true,
-                  items: [
-                    { text: "Mail API", link: "/documentation/platform/sdk/mail/client" }
-                  ],
-                },
-                {
-                  text: "Messaging",
-                  link: "/documentation/platform/sdk/messaging/",
-                  collapsed: true,
-                  items: [
-                    { text: "Message Consumer", link: "/documentation/platform/sdk/messaging/consumer" },
-                    { text: "Message Producer", link: "/documentation/platform/sdk/messaging/producer" }
-                  ],
-                },
-                {
-                  text: "Net",
-                  link: "/documentation/platform/sdk/net/",
-                  collapsed: true,
-                  items: [
-                    { text: "SOAP", link: "/documentation/platform/sdk/net/soap" },
-                    { text: "WebSocket", link: "/documentation/platform/sdk/net/websocket" }
-                  ],
-                },
-                {
-                  text: "Platform",
-                  link: "/documentation/platform/sdk/platform/",
-                  collapsed: true,
-                  items: [
-                    { text: "Command", link: "/documentation/platform/sdk/platform/command" },
-                    { text: "Lifecycle", link: "/documentation/platform/sdk/platform/lifecycle" },
-                    { text: "Registry", link: "/documentation/platform/sdk/platform/registry" },
-                    { text: "Repository", link: "/documentation/platform/sdk/platform/repository" },
-                    { text: "Workspace", link: "/documentation/platform/sdk/platform/workspace" }
-                  ],
-                },
-                {
-                  text: "Security",
-                  link: "/documentation/platform/sdk/security/",
-                  collapsed: true,
-                  items: [
-                    { text: "User", link: "/documentation/platform/sdk/security/user" }
-                  ],
-                },
-                {
-                  text: "Template",
-                  link: "/documentation/platform/sdk/template/",
-                  collapsed: true,
-                  items: [
-                    { text: "Template Engines", link: "/documentation/platform/sdk/template/engines" }
-                  ],
-                },
-                {
-                  text: "Test",
-                  link: "/documentation/platform/sdk/test/",
-                  collapsed: true,
-                  items: [
-                    { text: "Assert", link: "/documentation/platform/sdk/test/assert" },
-                    { text: "QUnit API", link: "/documentation/platform/sdk/test/qunit" },
-                    { text: "Test Runner", link: "/documentation/platform/sdk/test/runner" }
-                  ],
-                },
-                {
-                  text: "Utils",
-                  link: "/documentation/platform/sdk/utils/",
-                  collapsed: true,
-                  items: [
-                    { text: "Alphanumeric", link: "/documentation/platform/sdk/utils/alphanumeric" },
-                    { text: "Base64", link: "/documentation/platform/sdk/utils/base64" },
-                    { text: "Digest", link: "/documentation/platform/sdk/utils/digest" },
-                    { text: "Escape", link: "/documentation/platform/sdk/utils/escape" },
-                    { text: "Hex", link: "/documentation/platform/sdk/utils/hex" },
-                    { text: "JSONPath", link: "/documentation/platform/sdk/utils/jsonpath" },
-                    { text: "QRCode", link: "/documentation/platform/sdk/utils/qrcode" },
-                    { text: "Url", link: "/documentation/platform/sdk/utils/url" },
-                    { text: "UTF8", link: "/documentation/platform/sdk/utils/utf8" },
-                    { text: "UUID", link: "/documentation/platform/sdk/utils/uuid" },
-                    { text: "XML", link: "/documentation/platform/sdk/utils/xml" }
-                  ],
-                }
-              ]
+              items: [{
+                "text": "BPM",
+                "link": "/documentation/platform/sdk/bpm/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Deployer",
+                  "link": "/documentation/platform/sdk/bpm/deployer"
+                }, {
+                  "text": "Process",
+                  "link": "/documentation/platform/sdk/bpm/process"
+                }, {
+                  "text": "Tasks",
+                  "link": "/documentation/platform/sdk/bpm/tasks"
+                }, {
+                  "text": "Values",
+                  "link": "/documentation/platform/sdk/bpm/values"
+                }]
+              }, {
+                "text": "CACHE",
+                "link": "/documentation/platform/sdk/cache/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Cache",
+                  "link": "/documentation/platform/sdk/cache/cache"
+                }]
+              }, {
+                "text": "CMS",
+                "link": "/documentation/platform/sdk/cms/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Cmis",
+                  "link": "/documentation/platform/sdk/cms/cmis"
+                }]
+              }, {
+                "text": "COMPONENT",
+                "link": "/documentation/platform/sdk/component/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Decorators",
+                  "link": "/documentation/platform/sdk/component/decorators"
+                }]
+              }, {
+                "text": "CORE",
+                "link": "/documentation/platform/sdk/core/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Configurations",
+                  "link": "/documentation/platform/sdk/core/configurations"
+                }, {
+                  "text": "Context",
+                  "link": "/documentation/platform/sdk/core/context"
+                }, {
+                  "text": "Env",
+                  "link": "/documentation/platform/sdk/core/env"
+                }, {
+                  "text": "Globals",
+                  "link": "/documentation/platform/sdk/core/globals"
+                }]
+              }, {
+                "text": "DB",
+                "link": "/documentation/platform/sdk/db/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Dao",
+                  "link": "/documentation/platform/sdk/db/dao"
+                }, {
+                  "text": "Database",
+                  "link": "/documentation/platform/sdk/db/database"
+                }, {
+                  "text": "Decorators",
+                  "link": "/documentation/platform/sdk/db/decorators"
+                }, {
+                  "text": "Insert",
+                  "link": "/documentation/platform/sdk/db/insert"
+                }, {
+                  "text": "Orm",
+                  "link": "/documentation/platform/sdk/db/orm"
+                }, {
+                  "text": "Ormstatements",
+                  "link": "/documentation/platform/sdk/db/ormstatements"
+                }, {
+                  "text": "Procedure",
+                  "link": "/documentation/platform/sdk/db/procedure"
+                }, {
+                  "text": "Query",
+                  "link": "/documentation/platform/sdk/db/query"
+                }, {
+                  "text": "Repository",
+                  "link": "/documentation/platform/sdk/db/repository"
+                }, {
+                  "text": "Sequence",
+                  "link": "/documentation/platform/sdk/db/sequence"
+                }, {
+                  "text": "Sql",
+                  "link": "/documentation/platform/sdk/db/sql"
+                }, {
+                  "text": "Store",
+                  "link": "/documentation/platform/sdk/db/store"
+                }, {
+                  "text": "Translator",
+                  "link": "/documentation/platform/sdk/db/translator"
+                }, {
+                  "text": "Update",
+                  "link": "/documentation/platform/sdk/db/update"
+                }]
+              }, {
+                "text": "ERRORS",
+                "link": "/documentation/platform/sdk/errors/",
+                "collapsed": true,
+                "items": [{
+                  "text": "ForbiddenError",
+                  "link": "/documentation/platform/sdk/errors/ForbiddenError"
+                }, {
+                  "text": "ValidationError",
+                  "link": "/documentation/platform/sdk/errors/ValidationError"
+                }]
+              }, {
+                "text": "ETCD",
+                "link": "/documentation/platform/sdk/etcd/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Client",
+                  "link": "/documentation/platform/sdk/etcd/client"
+                }]
+              }, {
+                "text": "EXTENSIONS",
+                "link": "/documentation/platform/sdk/extensions/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Extensions",
+                  "link": "/documentation/platform/sdk/extensions/extensions"
+                }]
+              }, {
+                "text": "GIT",
+                "link": "/documentation/platform/sdk/git/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Client",
+                  "link": "/documentation/platform/sdk/git/client"
+                }]
+              }, {
+                "text": "HTTP",
+                "link": "/documentation/platform/sdk/http/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Client-async",
+                  "link": "/documentation/platform/sdk/http/client-async"
+                }, {
+                  "text": "Client",
+                  "link": "/documentation/platform/sdk/http/client"
+                }, {
+                  "text": "Decorators",
+                  "link": "/documentation/platform/sdk/http/decorators"
+                }, {
+                  "text": "Errors",
+                  "link": "/documentation/platform/sdk/http/errors"
+                }, {
+                  "text": "Request",
+                  "link": "/documentation/platform/sdk/http/request"
+                }, {
+                  "text": "Response",
+                  "link": "/documentation/platform/sdk/http/response"
+                }, {
+                  "text": "Rs",
+                  "link": "/documentation/platform/sdk/http/rs"
+                }, {
+                  "text": "Session",
+                  "link": "/documentation/platform/sdk/http/session"
+                }, {
+                  "text": "Upload",
+                  "link": "/documentation/platform/sdk/http/upload"
+                }, {
+                  "text": "Utils",
+                  "link": "/documentation/platform/sdk/http/utils"
+                }]
+              }, {
+                "text": "INDEXING",
+                "link": "/documentation/platform/sdk/indexing/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Searcher",
+                  "link": "/documentation/platform/sdk/indexing/searcher"
+                }, {
+                  "text": "Writer",
+                  "link": "/documentation/platform/sdk/indexing/writer"
+                }]
+              }, {
+                "text": "INTEGRATIONS",
+                "link": "/documentation/platform/sdk/integrations/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Integrations",
+                  "link": "/documentation/platform/sdk/integrations/integrations"
+                }]
+              }, {
+                "text": "IO",
+                "link": "/documentation/platform/sdk/io/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Bytes",
+                  "link": "/documentation/platform/sdk/io/bytes"
+                }, {
+                  "text": "Files",
+                  "link": "/documentation/platform/sdk/io/files"
+                }, {
+                  "text": "Image",
+                  "link": "/documentation/platform/sdk/io/image"
+                }, {
+                  "text": "Streams",
+                  "link": "/documentation/platform/sdk/io/streams"
+                }, {
+                  "text": "Zip",
+                  "link": "/documentation/platform/sdk/io/zip"
+                }]
+              }, {
+                "text": "JOB",
+                "link": "/documentation/platform/sdk/job/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Decorators",
+                  "link": "/documentation/platform/sdk/job/decorators"
+                }, {
+                  "text": "Scheduler",
+                  "link": "/documentation/platform/sdk/job/scheduler"
+                }]
+              }, {
+                "text": "JUNIT",
+                "link": "/documentation/platform/sdk/junit/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Junit",
+                  "link": "/documentation/platform/sdk/junit/junit"
+                }]
+              }, {
+                "text": "KAFKA",
+                "link": "/documentation/platform/sdk/kafka/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Consumer",
+                  "link": "/documentation/platform/sdk/kafka/consumer"
+                }, {
+                  "text": "Producer",
+                  "link": "/documentation/platform/sdk/kafka/producer"
+                }]
+              }, {
+                "text": "LOG",
+                "link": "/documentation/platform/sdk/log/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Logging",
+                  "link": "/documentation/platform/sdk/log/logging"
+                }]
+              }, {
+                "text": "MAIL",
+                "link": "/documentation/platform/sdk/mail/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Client",
+                  "link": "/documentation/platform/sdk/mail/client"
+                }]
+              }, {
+                "text": "MESSAGING",
+                "link": "/documentation/platform/sdk/messaging/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Consumer",
+                  "link": "/documentation/platform/sdk/messaging/consumer"
+                }, {
+                  "text": "Decorators",
+                  "link": "/documentation/platform/sdk/messaging/decorators"
+                }, {
+                  "text": "Producer",
+                  "link": "/documentation/platform/sdk/messaging/producer"
+                }]
+              }, {
+                "text": "MONGODB",
+                "link": "/documentation/platform/sdk/mongodb/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Client",
+                  "link": "/documentation/platform/sdk/mongodb/client"
+                }, {
+                  "text": "Dao",
+                  "link": "/documentation/platform/sdk/mongodb/dao"
+                }]
+              }, {
+                "text": "NET",
+                "link": "/documentation/platform/sdk/net/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Soap",
+                  "link": "/documentation/platform/sdk/net/soap"
+                }, {
+                  "text": "Websockets",
+                  "link": "/documentation/platform/sdk/net/websockets"
+                }]
+              }, {
+                "text": "PDF",
+                "link": "/documentation/platform/sdk/pdf/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Pdf",
+                  "link": "/documentation/platform/sdk/pdf/pdf"
+                }]
+              }, {
+                "text": "PLATFORM",
+                "link": "/documentation/platform/sdk/platform/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Command",
+                  "link": "/documentation/platform/sdk/platform/command"
+                }, {
+                  "text": "Engines",
+                  "link": "/documentation/platform/sdk/platform/engines"
+                }, {
+                  "text": "Lifecycle",
+                  "link": "/documentation/platform/sdk/platform/lifecycle"
+                }, {
+                  "text": "Os",
+                  "link": "/documentation/platform/sdk/platform/os"
+                }, {
+                  "text": "Problems",
+                  "link": "/documentation/platform/sdk/platform/problems"
+                }, {
+                  "text": "Registry",
+                  "link": "/documentation/platform/sdk/platform/registry"
+                }, {
+                  "text": "Repository",
+                  "link": "/documentation/platform/sdk/platform/repository"
+                }, {
+                  "text": "Workspace",
+                  "link": "/documentation/platform/sdk/platform/workspace"
+                }]
+              }, {
+                "text": "QLDB",
+                "link": "/documentation/platform/sdk/qldb/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Qldb",
+                  "link": "/documentation/platform/sdk/qldb/qldb"
+                }]
+              }, {
+                "text": "RABBITMQ",
+                "link": "/documentation/platform/sdk/rabbitmq/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Consumer",
+                  "link": "/documentation/platform/sdk/rabbitmq/consumer"
+                }, {
+                  "text": "Producer",
+                  "link": "/documentation/platform/sdk/rabbitmq/producer"
+                }]
+              }, {
+                "text": "REDIS",
+                "link": "/documentation/platform/sdk/redis/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Client",
+                  "link": "/documentation/platform/sdk/redis/client"
+                }]
+              }, {
+                "text": "RS",
+                "link": "/documentation/platform/sdk/rs/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Resource-common",
+                  "link": "/documentation/platform/sdk/rs/resource-common"
+                }, {
+                  "text": "Resource-http-controller",
+                  "link": "/documentation/platform/sdk/rs/resource-http-controller"
+                }, {
+                  "text": "Resource-mappings",
+                  "link": "/documentation/platform/sdk/rs/resource-mappings"
+                }, {
+                  "text": "Resource-method",
+                  "link": "/documentation/platform/sdk/rs/resource-method"
+                }, {
+                  "text": "Resource",
+                  "link": "/documentation/platform/sdk/rs/resource"
+                }]
+              }, {
+                "text": "SECURITY",
+                "link": "/documentation/platform/sdk/security/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Decorators",
+                  "link": "/documentation/platform/sdk/security/decorators"
+                }, {
+                  "text": "Oauth",
+                  "link": "/documentation/platform/sdk/security/oauth"
+                }, {
+                  "text": "User",
+                  "link": "/documentation/platform/sdk/security/user"
+                }]
+              }, {
+                "text": "TEMPLATE",
+                "link": "/documentation/platform/sdk/template/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Engines",
+                  "link": "/documentation/platform/sdk/template/engines"
+                }]
+              }, {
+                "text": "UTILS",
+                "link": "/documentation/platform/sdk/utils/",
+                "collapsed": true,
+                "items": [{
+                  "text": "Alphanumeric",
+                  "link": "/documentation/platform/sdk/utils/alphanumeric"
+                }, {
+                  "text": "Base64",
+                  "link": "/documentation/platform/sdk/utils/base64"
+                }, {
+                  "text": "Converter",
+                  "link": "/documentation/platform/sdk/utils/converter"
+                }, {
+                  "text": "Digest",
+                  "link": "/documentation/platform/sdk/utils/digest"
+                }, {
+                  "text": "Escape",
+                  "link": "/documentation/platform/sdk/utils/escape"
+                }, {
+                  "text": "Hex",
+                  "link": "/documentation/platform/sdk/utils/hex"
+                }, {
+                  "text": "Jsonpath",
+                  "link": "/documentation/platform/sdk/utils/jsonpath"
+                }, {
+                  "text": "Qrcode",
+                  "link": "/documentation/platform/sdk/utils/qrcode"
+                }, {
+                  "text": "Url",
+                  "link": "/documentation/platform/sdk/utils/url"
+                }, {
+                  "text": "Utf8",
+                  "link": "/documentation/platform/sdk/utils/utf8"
+                }, {
+                  "text": "Uuid",
+                  "link": "/documentation/platform/sdk/utils/uuid"
+                }, {
+                  "text": "Xml",
+                  "link": "/documentation/platform/sdk/utils/xml"
+                }]
+              }, {
+                "text": "WRAPPERS",
+                "link": "/documentation/platform/sdk/wrappers/",
+                "collapsed": true,
+                "items": [{
+                  "text": "OnClose",
+                  "link": "/documentation/platform/sdk/wrappers/onClose"
+                }, {
+                  "text": "OnError",
+                  "link": "/documentation/platform/sdk/wrappers/onError"
+                }, {
+                  "text": "OnMessage",
+                  "link": "/documentation/platform/sdk/wrappers/onMessage"
+                }, {
+                  "text": "OnOpen",
+                  "link": "/documentation/platform/sdk/wrappers/onOpen"
+                }]
+              }]
             },
             // { text: 'Widgets', link: '/documentation/platform/widgets', target: '_blank' },
             // { text: 'Services', link: '/documentation/platform/services', target: '_blank' }

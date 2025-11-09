@@ -1,29 +1,198 @@
-# SDK API Guide
+# API Documentation
 
-Welcome to the API Index for the SDK utility classes. Here, you'll find information on how to use various APIs from the different modules of the SDK.
+## BPM
 
-## SDK API Documentation Index
+- [deployer](./bpm/deployer.md)
+- [process](./bpm/process.md)
+- [tasks](./bpm/tasks.md)
+- [values](./bpm/values.md)
 
-Explore detailed documentation for various SDK APIs available in the __codbex__ platform:
+## CACHE
 
-* [BPM](bpm/index.md)
-* [CMS](cms/index.md)
-* [Core](core/index.md)
-* [Database](db/index.md)
-* [Extensions](extensions/index.md)
-* [Git](git/index.md)
-* [HTTP](http/index.md)
-* [Indexing](indexing/index.md)
-* [IO](io/index.md)
-* [Job](job/index.md)
-* [Log](log/index.md)
-* [Mail](mail/index.md)
-* [Messaging](messaging/index.md)
-* [Net](net/index.md)
-* [Platform](platform/index.md)
-* [Security](security/index.md)
-* [Template](template/index.md)
-* [Test](test/index.md)
-* [Utils](utils/index.md)
+- [cache](./cache/cache.md)
 
-Feel free to click on each API to access its detailed documentation and learn more about its functions, use cases, and examples. The SDK documentation provides comprehensive information to assist developers in leveraging the platform's capabilities through these APIs.
+## CMS
+
+- [cmis](./cms/cmis.md)
+
+## COMPONENT
+
+- [decorators](./component/decorators.md)
+
+## CORE
+
+- [configurations](./core/configurations.md)
+- [context](./core/context.md)
+- [env](./core/env.md)
+- [globals](./core/globals.md)
+
+## DB
+
+- [dao](./db/dao.md)
+- [database](./db/database.md)
+- [decorators](./db/decorators.md)
+- [insert](./db/insert.md)
+- [orm](./db/orm.md)
+- [ormstatements](./db/ormstatements.md)
+- [procedure](./db/procedure.md)
+- [query](./db/query.md)
+- [repository](./db/repository.md)
+- [sequence](./db/sequence.md)
+- [sql](./db/sql.md)
+- [store](./db/store.md)
+- [translator](./db/translator.md)
+- [update](./db/update.md)
+
+## ERRORS
+
+- [ForbiddenError](./errors/ForbiddenError.md)
+- [ValidationError](./errors/ValidationError.md)
+
+## ETCD
+
+- [client](./etcd/client.md)
+
+## EXTENSIONS
+
+- [extensions](./extensions/extensions.md)
+
+## GIT
+
+- [client](./git/client.md)
+
+## HTTP
+
+- [client-async](./http/client-async.md)
+- [client](./http/client.md)
+- [decorators](./http/decorators.md)
+- [errors](./http/errors.md)
+- [request](./http/request.md)
+- [response](./http/response.md)
+- [rs](./http/rs.md)
+- [session](./http/session.md)
+- [upload](./http/upload.md)
+- [utils](./http/utils.md)
+
+## INDEXING
+
+- [searcher](./indexing/searcher.md)
+- [writer](./indexing/writer.md)
+
+## INTEGRATIONS
+
+- [integrations](./integrations/integrations.md)
+
+## IO
+
+- [bytes](./io/bytes.md)
+- [files](./io/files.md)
+- [image](./io/image.md)
+- [streams](./io/streams.md)
+- [zip](./io/zip.md)
+
+## JOB
+
+- [decorators](./job/decorators.md)
+- [scheduler](./job/scheduler.md)
+
+## JUNIT
+
+- [junit](./junit/junit.md)
+
+## KAFKA
+
+- [consumer](./kafka/consumer.md)
+- [producer](./kafka/producer.md)
+
+## LOG
+
+- [logging](./log/logging.md)
+
+## MAIL
+
+- [client](./mail/client.md)
+
+## MESSAGING
+
+- [consumer](./messaging/consumer.md)
+- [decorators](./messaging/decorators.md)
+- [producer](./messaging/producer.md)
+
+## MONGODB
+
+- [client](./mongodb/client.md)
+- [dao](./mongodb/dao.md)
+
+## NET
+
+- [soap](./net/soap.md)
+- [websockets](./net/websockets.md)
+
+## PDF
+
+- [pdf](./pdf/pdf.md)
+
+## PLATFORM
+
+- [command](./platform/command.md)
+- [engines](./platform/engines.md)
+- [lifecycle](./platform/lifecycle.md)
+- [os](./platform/os.md)
+- [problems](./platform/problems.md)
+- [registry](./platform/registry.md)
+- [repository](./platform/repository.md)
+- [workspace](./platform/workspace.md)
+
+## QLDB
+
+- [qldb](./qldb/qldb.md)
+
+## RABBITMQ
+
+- [consumer](./rabbitmq/consumer.md)
+- [producer](./rabbitmq/producer.md)
+
+## REDIS
+
+- [client](./redis/client.md)
+
+## RS
+
+- [resource-common](./rs/resource-common.md)
+- [resource-http-controller](./rs/resource-http-controller.md)
+- [resource-mappings](./rs/resource-mappings.md)
+- [resource-method](./rs/resource-method.md)
+- [resource](./rs/resource.md)
+
+## SECURITY
+
+- [decorators](./security/decorators.md)
+- [oauth](./security/oauth.md)
+- [user](./security/user.md)
+
+## TEMPLATE
+
+- [engines](./template/engines.md)
+
+## UTILS
+
+- [alphanumeric](./utils/alphanumeric.md)
+- [base64](./utils/base64.md)
+- [converter](./utils/converter.md)
+- [digest](./utils/digest.md)
+- [escape](./utils/escape.md)
+- [hex](./utils/hex.md)
+- [jsonpath](./utils/jsonpath.md)
+- [qrcode](./utils/qrcode.md)
+- [url](./utils/url.md)
+- [utf8](./utils/utf8.md)
+- [uuid](./utils/uuid.md)
+- [xml](./utils/xml.md)
+
+## WRAPPERS
+
+- [onClose](./wrappers/onClose.md)
+- [onError](./wrappers/onError.md)
+- [onMessage](./wrappers/onMessage.md)
+- [onOpen](./wrappers/onOpen.md)
+

@@ -1,11 +1,11 @@
-# Indexing Writer
+# API: writer
 
-The Indexing Writer is an object, designed to store text content along with additional parameters for efficient free-text search operations. Powered by the Apache Lucene framework, the Indexing Writer offers a robust solution for indexing and searching textual data. 
+> Source: `indexing/writer.ts`
 
-With the Indexing Writer, users can store text content along with metadata attributes, enabling fast and accurate retrieval of information based on search queries. This functionality is particularly useful in applications where efficient search capabilities are essential, such as document management systems, content repositories, or data analytics platforms.
+Provides a static façade (`Writer` class) for adding new documents
+or content to the native indexing service.
 
-### Example Usage
-
+## Usage
 ```javascript
 import { writer, searcher } from "sdk/indexing";
 
@@ -15,12 +15,23 @@ writer.add("index1", "file2", "lucene - the search engine", new Date(), { "name2
 let found = searcher.search("index1", "lucene");
 
 console.log(JSON.stringify(found))
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**add(index, location, contents, lastModified, parameters)**   | Adds a document *contents* with the given *location* and *parameters* to an *index* | -
+### Writer
+
+The Writer class provides a static method for indexing documents, allowing<br/>for full-text content, a last modification timestamp, and optional metadata.
+
+#### Methods
+
+<hr/>
+
+#### add
+
+- `add (index:string, location:string, contents:string, lastModified:Date=newDate():string})`
+
+  Adds a new document entry to the specified index.<br/><br/>@param index The name or identifier of the index (e.g., 'documents', 'users').<br/>@param location A unique identifier or path for the indexed document (e.g., a file path or URL).<br/>@param contents The full-text content of the document to be indexed and made searchable.<br/>@param lastModified The Date object representing the last modification time of the document. Defaults to the current date/time if omitted.<br/>@param parameters Optional key-value map of additional metadata to associate with the document.
+

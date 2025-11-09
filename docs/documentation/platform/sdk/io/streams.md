@@ -1,82 +1,203 @@
-# Streams
+# API: streams
 
-The Streams API offers a set of classes and utilities tailored for working with streams in scripting environments. Streams are essential for handling data flow, enabling efficient reading from and writing to various sources and destinations. With the Streams API, developers gain access to functionality for managing input and output streams, performing operations such as reading, writing, buffering, and transforming data. This API facilitates seamless integration of stream-based operations into scripting workflows, enhancing data processing capabilities and enabling flexible handling of data streams.
+> Source: `io/streams.ts`
 
-### Basic Usage
+Provides core functionality for input/output stream management,
+including stream creation, data transfer, and byte array handling.
 
-```javascript
-import { streams } from "sdk/io";
-import { response } from "sdk/http";
+## Classes
 
-let outputStream = streams.createByteArrayOutputStream();
+### Streams
 
-outputStream.writeText("Some text content");
+The Streams class provides static utility methods for stream creation,<br/>manipulation, and data copying.
 
-let bytes = outputStream.getBytes();
-response.println("[Stream Content as Bytes]: " + bytes);
+#### Methods
 
-let text = String.fromCharCode.apply(String, bytes);
-response.println("[Stream Content as Text]: " + text);
+<hr/>
 
-let inputStream = streams.createByteArrayInputStream(bytes);
-let outputStreamCopy = streams.createByteArrayOutputStream();
-streams.copy(inputStream, outputStreamCopy);
-let copiedBytes = outputStreamCopy.getBytes();
-let copiedText = String.fromCharCode.apply(String, copiedBytes);
-response.println("[Stream Copied Content as Text]: " + copiedText);
+#### copy
 
-response.flush();
-response.close();
-```
+- `copy (input:InputStream, output:OutputStream):void`
 
-## Functions
+  Copies all bytes from the input stream to the output stream.<br/>This method is generally used for smaller streams.<br/><br/>@param input The source {@link InputStream}.<br/>@param output The destination {@link OutputStream}.
 
----
+<hr/>
 
-Function     | Description | Returns
------------- | ----------- | --------
-**copy(inputStream, outputStream)**   | Copies an InputStream to an OutputStream | -
-**createByteArrayInputStream(bytes)**   | Creates an ByteArrayInputStream from the array of bytes | *ByteArrayInputStream*
-**createByteArrayOutputStream()**   | Creates an ByteArrayOutputStream | *ByteArrayOutputStream*
+#### copyLarge
 
+- `copyLarge (input:InputStream, output:OutputStream):void`
 
-## Objects
+  Copies all bytes from the input stream to the output stream using a large buffer,<br/>suitable for large file transfers.<br/><br/>@param input The source {@link InputStream}.<br/>@param output The destination {@link OutputStream}.
 
----
+<hr/>
+
+#### getResourceAsByteArrayInputStream
+
+- `getResourceAsByteArrayInputStream (path:string):InputStream`
+
+  Creates a new {@link InputStream} from a resource accessible via the class loader.<br/>This is typically used to read bundled resources within the application runtime.<br/><br/>@param path The path to the resource.<br/>@returns A new {@link InputStream} instance for the resource.
+
+<hr/>
+
+#### createByteArrayInputStream
+
+- `createByteArrayInputStream (data:any[]):InputStream`
+
+  Creates a new {@link InputStream} from a JavaScript byte array (`any[]`).<br/><br/>@param data The JavaScript array of byte values (`number[]`).<br/>@returns A new {@link InputStream} instance initialized with the byte data.
+
+<hr/>
+
+#### createByteArrayOutputStream
+
+- `createByteArrayOutputStream ():OutputStream`
+
+  Creates a new {@link OutputStream} that writes data into an in-memory byte array.<br/>This is typically used as a buffer to capture output before processing it.<br/><br/>@returns A new {@link OutputStream} instance backed by a byte array.
+
+<hr/>
+
+#### createInputStream
+
+- `createInputStream (native:any):InputStream`
+
+  Wraps a native (Java) InputStream object into a new JavaScript {@link InputStream} instance.<br/><br/>@param native The underlying native InputStream object.<br/>@returns A new {@link InputStream} wrapper.
+
+<hr/>
+
+#### createOutputStream
+
+- `createOutputStream (native:any):OutputStream`
+
+  Wraps a native (Java) OutputStream object into a new JavaScript {@link OutputStream} instance.<br/><br/>Note: This method is not static in the original definition, but is placed here for completeness<br/>and consistency with other factory methods.<br/><br/>@param native The underlying native OutputStream object.<br/>@returns A new {@link OutputStream} wrapper.
 
 ### InputStream
 
-Function     | Description | Returns
------------- | ----------- | --------
-**readByte()**   | Reads a single byte from this InputStream | *byte*
-**readBytes()**   | Returns the array of bytes contained in this InputStream | *array of byte*
-**readText()**   | Returns a string representation of the array of bytes contained in this InputStream | *string*
-**close()**   | Closes this InputStream to release the resources | -
+Represents an input stream for reading bytes.<br/>This class wraps a native stream object and provides methods for reading data.
 
+#### Methods
+
+<hr/>
+
+#### read
+
+- `read ():number`
+
+  Reads the next byte of data from this input stream.<br/>@returns The next byte of data, or -1 if the end of the stream is reached.
+
+<hr/>
+
+#### readBytes
+
+- `readBytes ():any[]`
+
+  Reads all remaining bytes from the stream and returns them as a JavaScript array.<br/><br/>@returns A JavaScript array (`number[]`) of the byte values.
+
+<hr/>
+
+#### readBytesNative
+
+- `readBytesNative ():any[]`
+
+  Reads all remaining bytes from the stream and returns the native Java byte array.<br/><br/>@returns The native Java byte array object.
+
+<hr/>
+
+#### readText
+
+- `readText ():string`
+
+  Reads all remaining bytes from the stream and converts them to a string<br/>using the platform's default character encoding.<br/><br/>@returns The content of the stream as a string.
+
+<hr/>
+
+#### close
+
+- `close ():void`
+
+  Closes this input stream and releases any system resources associated with it.
+
+<hr/>
+
+#### isValid
+
+- `isValid ():boolean`
+
+  Checks if the underlying native stream object is defined and non-null.<br/>@returns True if the stream is valid, false otherwise.
 
 ### OutputStream
 
-Function     | Description | Returns
------------- | ----------- | --------
-**writeByte(byte)**   | Writes a single byte to this OutputStream | -
-**writeBytes(bytes)**   | Writes the array of bytes to this OutputStream | *array of byte*
-**readText()**   | Returns a string representation of the array of bytes contained in this InputStream | *string*
-**close()**   | Closes this OutputStream to release the resources | -
+Represents an output stream for writing bytes.<br/>This class wraps a native stream object and provides methods for writing data.
 
+#### Methods
 
-### ByteArrayInputStream
+<hr/>
 
-::: info
-Inherited from InputStream
-:::
+#### write
 
-### ByteArrayOutputStream
+- `write (byte:number):void`
 
-::: info
-Inherited from OutputStream and
-:::
+  Writes the specified byte to this output stream.<br/>@param byte The byte (as a number 0-255) to write.
 
-Function     | Description | Returns
------------- | ----------- | --------
-**getBytes()**   | Returns the array of bytes contained in this ByteArrayOutputStream | *array of byte*
-**getText()**   | Returns a string representation of the array of bytes contained in this ByteArrayOutputStream | *string*
+<hr/>
+
+#### writeBytes
+
+- `writeBytes (data:any[]):void`
+
+  Writes the entire content of a JavaScript byte array to this output stream.<br/><br/>@param data The JavaScript array (`number[]`) of byte values to write.
+
+<hr/>
+
+#### writeBytesNative
+
+- `writeBytesNative (data:any[]):void`
+
+  Writes the entire content of a native Java byte array to this output stream.<br/><br/>@param data The native Java byte array object to write.
+
+<hr/>
+
+#### writeText
+
+- `writeText (text:string):void`
+
+  Converts the string to bytes using the platform's default character encoding<br/>and writes them to this output stream.<br/><br/>@param text The string content to write.
+
+<hr/>
+
+#### close
+
+- `close ():void`
+
+  Closes this output stream and releases any system resources associated with it.
+
+<hr/>
+
+#### getBytes
+
+- `getBytes ():any[]`
+
+  Retrieves the content written to this stream as a JavaScript byte array.<br/>This is typically used with a ByteArrayOutputStream.<br/><br/>@returns A JavaScript array (`number[]`) of the byte values written to the stream.
+
+<hr/>
+
+#### getBytesNative
+
+- `getBytesNative ():any[]`
+
+  Retrieves the content written to this stream as the native Java byte array.<br/>This is typically used with a ByteArrayOutputStream.<br/><br/>@returns The native Java byte array object.
+
+<hr/>
+
+#### getText
+
+- `getText ():string`
+
+  Retrieves the content written to this stream as a string using the platform's<br/>default character encoding. This is typically used with a ByteArrayOutputStream.<br/><br/>@returns The content of the stream as a string.
+
+<hr/>
+
+#### isValid
+
+- `isValid ():boolean`
+
+  Checks if the underlying native stream object is defined and non-null.<br/>@returns True if the stream is valid, false otherwise.
+

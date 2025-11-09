@@ -1,20 +1,11 @@
-# SOAP
+# API: soap
 
-The SOAP (Simple Object Access Protocol) API provides a comprehensive web services framework for manipulating SOAP messages, making calls to external end-points, and creating web services. SOAP is a protocol for exchanging structured information in the implementation of web services. It relies on XML as its message format and typically operates over HTTP.
+> Source: `net/soap.ts`
 
-## Overview
+Utility class for creating, parsing, and calling SOAP messages.
+It wraps the underlying Java javax.xml.soap API.
 
-SOAP is a widely adopted protocol for communication between distributed applications. It allows programs running on different operating systems and platforms to communicate by exchanging XML-based messages. The SOAP API enables developers to interact with SOAP-based web services seamlessly.
-
-## Key Features
-
-- **SOAP Message Handling**: The API offers functionalities for creating, parsing, and manipulating SOAP messages, including headers, bodies, and attachments.
-- **Service Invocation**: Developers can make calls to external SOAP-based services, invoking remote methods and exchanging data using SOAP messages.
-- **Web Service Creation**: The SOAP API facilitates the creation of SOAP-based web services, allowing developers to expose their functionalities as SOAP endpoints.
-- **Protocol Support**: The API supports various protocols for message transport, including HTTP, HTTPS, SMTP, and more, providing flexibility in communication.
-
-### Example Usage
-
+## Usage
 ```javascript
 import { soap } from "sdk/net";
 import { response } from "sdk/http";
@@ -41,93 +32,284 @@ response.println("Request: " + requestMessage.getText());
 let responseMessage = soap.call(requestMessage, "http://ws.cdyne.com/ip2geo/ip2geo.asmx");
 
 response.println("Response: " + responseMessage.getText());
+
+response.flush();
+response.close();
+
 ```
 
-## Functions
 
----
+## Classes
 
-Function     | Description | Returns
------------- | ----------- | --------
-**createMessage()**   | Creates an empty SOAP Message | *Message*
-**parseMessage(mimeHeaders, inputStream)**    | Creates a message by a given MIME Headers and by parsing of the provided input stream | *Message*
-**parseRequest()**  | Creates a message by parsing the standard Request input and empty headers | *Message*
-**createMimeHeaders()**  | Creates an empty MimeHeaders | *MimeHeaders*
-**call(request, url)**  | Calls an end-point of a SOAP Web Service with a request Message and returns the response Message | *Message*
+### SOAP
 
+Utility class for creating, parsing, and calling SOAP messages.<br/>It wraps the underlying Java javax.xml.soap API.
 
-## Objects
+#### Methods
 
----
+<hr/>
+
+#### call
+
+- `call (message:Message, url:string):string)`
+
+  Call a given SOAP endpoint with a given request message<br/>@param message The SOAP Message wrapper object.<br/>@param url The target SOAP endpoint URL.
+
+<hr/>
+
+#### trustAll
+
+- `trustAll ()void`
+
+<hr/>
+
+#### createMessage
+
+- `createMessage ():Message`
+
+  Creates a new, empty SOAP message.
+
+<hr/>
+
+#### parseMessage
+
+- `parseMessage (mimeHeaders:MimeHeaders, inputStream:InputStream):Message`
+
+  Parses a SOAP message from an InputStream and MimeHeaders.<br/>@param mimeHeaders The MimeHeaders wrapper object.<br/>@param inputStream The InputStream wrapper object.
+
+<hr/>
+
+#### parseRequest
+
+- `parseRequest ():Message`
+
+  Parses a SOAP message from the current HTTP request input stream.
+
+<hr/>
+
+#### createMimeHeaders
+
+- `createMimeHeaders ():MimeHeaders`
+
+  Creates a new, empty MimeHeaders object.
 
 ### Message
 
+SOAP Message Wrapper
 
-Function     | Description | Returns
------------- | ----------- | --------
-**getMimeHeaders()**   | Returns the MimeHeaders object of this Message | *MimeHeaders*
-**getPart()**   | Returns the Part object of this Message | *Part*
-**save()**   | Save the changes made on the Message and its components | -
-**getText()**  | Returns a text representation of the Message | *string*
+#### Methods
 
+<hr/>
 
-### MimeHeaders
+#### getPart
 
-Function     | Description | Returns
------------- | ----------- | --------
-**addHeader(name, value)**   | Creates and add a new MIME header | *-*
+- `getPart ():Part`
 
+  SOAP Message Wrapper
+
+<hr/>
+
+#### getMimeHeaders
+
+- `getMimeHeaders ():MimeHeaders`
+
+<hr/>
+
+#### save
+
+- `save ():void`
+
+<hr/>
+
+#### getText
+
+- `getText ():string`
 
 ### Part
 
-Function     | Description | Returns
------------- | ----------- | --------
-**getEnvelope()**   | Returns the Envelope object of this Part | *Envelope*
+SOAP Part Wrapper
 
+#### Methods
+
+<hr/>
+
+#### getEnvelope
+
+- `getEnvelope ():Envelope`
+
+  SOAP Part Wrapper
+
+### MimeHeaders
+
+SOAP Mime Headers Wrapper
+
+#### Methods
+
+<hr/>
+
+#### addHeader
+
+- `addHeader (name:string, value:string):void`
+
+  SOAP Mime Headers Wrapper
+
+<hr/>
+
+#### addBasicAuthenticationHeader
+
+- `addBasicAuthenticationHeader (username:string, password:string):void`
 
 ### Envelope
 
-Function     | Description | Returns
------------- | ----------- | --------
-**getBody()**   | Returns the Body object of this Envelope | *Body*
-**getHeader()**   | Returns the Header object of this Envelope | *Header*
-**addNamespaceDeclaration(prefix, uri)**   | Creates and add a namespace attribute | -
-**createName(localName, prefix, uri)**   | Creates a Name object to be used further | *Name*
+SOAP Envelope Wrapper
 
+#### Methods
+
+<hr/>
+
+#### addNamespaceDeclaration
+
+- `addNamespaceDeclaration (prefix:string, uri:string):void`
+
+  SOAP Envelope Wrapper
+
+<hr/>
+
+#### getBody
+
+- `getBody ():Body`
+
+<hr/>
+
+#### getHeader
+
+- `getHeader ():Header`
+
+<hr/>
+
+#### createName
+
+- `createName (localName:string, prefix:string, uri:string):Name`
 
 ### Body
 
-Function     | Description | Returns
------------- | ----------- | --------
-**getChildElements()**   | Returns an array of the child Elements | *[Element]*
-**addChildElement(localName, prefix)**   | Creates and add a child Element | *Element*
+SOAP Body Wrapper
 
+#### Methods
+
+<hr/>
+
+#### addChildElement
+
+- `addChildElement (localName:string, prefix:string):Element`
+
+  SOAP Body Wrapper
+
+<hr/>
+
+#### getChildElements
+
+- `getChildElements ():Element[]`
 
 ### Header
 
-Function     | Description | Returns
------------- | ----------- | --------
-**addHeaderElement(name)**   | Creates and add a Header Element with a Name | *Element*
+SOAP Header Wrapper
 
+#### Methods
+
+<hr/>
+
+#### addHeaderElement
+
+- `addHeaderElement (element:Element):void`
+
+  SOAP Header Wrapper
 
 ### Name
 
-Function     | Description | Returns
------------- | ----------- | --------
-**getLocalName()**   | Returns the Local Name of the Name object | *string*
-**getPrefix()**   | Returns the Prefix of the Name object | *string*
-**getQualifiedName()**   | Returns the Qualified Name of the Name object | *string*
-**getURI()**   | Returns the URI of the Name object | *string*
+SOAP Name Wrapper
 
+#### Methods
+
+<hr/>
+
+#### getNative
+
+- `getNative ():string`
+
+  SOAP Name Wrapper
+
+<hr/>
+
+#### getLocalName
+
+- `getLocalName ():string`
+
+<hr/>
+
+#### getPrefix
+
+- `getPrefix ():string`
+
+<hr/>
+
+#### getQualifiedName
+
+- `getQualifiedName ():string`
+
+<hr/>
+
+#### getURI
+
+- `getURI ():string`
 
 ### Element
 
-Function     | Description | Returns
------------- | ----------- | --------
-**getChildElements()**   | Returns an array of the child Elements | *[Element]*
-**getElementName()**   | Returns the name of the Element | *Name*
-**getValue()**   | Returns the value of the Element if any | *string*
-**addChildElement(localName, prefix)**   | Creates and add a child Element | *Element*
-**addTextNode(text)**   | Creates and add a text node | *Element*
-**addAttribute(name, value)**   | Creates and add an attribute | *Element*
-**isSOAPElement()**   | Returns true if the Element is SOAP Element and false otherwise (e.g. CDATA, PDATA, etc.) | *string*
+SOAP Element Wrapper
+
+#### Methods
+
+<hr/>
+
+#### addChildElement
+
+- `addChildElement (localName:string, prefix:string):string)`
+
+  SOAP Element Wrapper
+
+<hr/>
+
+#### addTextNode
+
+- `addTextNode (text:string):Element`
+
+<hr/>
+
+#### addAttribute
+
+- `addAttribute (name:Name, value:any):Element`
+
+<hr/>
+
+#### getChildElements
+
+- `getChildElements ():Element[]`
+
+<hr/>
+
+#### getElementName
+
+- `getElementName ():Name|undefined`
+
+<hr/>
+
+#### getValue
+
+- `getValue ():any`
+
+<hr/>
+
+#### isSOAPElement
+
+- `isSOAPElement ():boolean`
+

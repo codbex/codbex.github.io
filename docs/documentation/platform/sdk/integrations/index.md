@@ -1,0 +1,3 @@
+# integrations
+
+- [integrations](integrations.md)

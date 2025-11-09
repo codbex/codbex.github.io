@@ -1,86 +1,54 @@
-# Sequence
+# API: sequence
 
-## Overview
+> Source: `db/sequence.ts`
 
-The provided TypeScript module `Sequence` provides methods for interacting with sequences in a database. Here's an explanation of the key components:
+API Sequence
 
-### Sequence Class:
+Provides static methods for managing and accessing database sequences.
 
-The `Sequence`` class provides static methods for working with database sequences.
+## Usage
+```javascript
+import { sequence } from "sdk/db";
+import { response } from "sdk/http";
 
-### Methods
+let value = sequence.nextval("MYSEQUENCE");
+
+response.println(value.toString());
+response.flush();
+response.close();
+
+```
+
+
+## Classes
+
+### Sequence
+
+Utility class for interacting with database sequence objects.
+
+#### Methods
+
+<hr/>
 
 #### nextval
 
-```javascript
-nextval(sequence: string, tableName?: string, datasourceName?: string): number
-```
+- `nextval (sequence:string, tableName?:string, datasourceName?:string):number`
 
-Retrieves the next value from the specified sequence.
+  Retrieves the next available value from a specified sequence.<br/><br/>@param sequence The name of the database sequence.<br/>@param tableName Optional: The name of the table associated with the sequence (depends on database dialect/facade implementation).<br/>@param datasourceName Optional: The name of the database connection to use.<br/>@returns The next sequence value as a number.
 
-**Parameters:**
-
-* `sequence`: The name of the sequence.
-* `tableName`: (Optional) The name of the table associated with the sequence.
-* `datasourceName`: (Optional) The name of the data source.
-* Return Value: The next value from the specified sequence.
+<hr/>
 
 #### create
 
-```javascript
-create(sequence: string, start?: number, datasourceName?: string): void
-```
+- `create (sequence:string, start?:number, datasourceName?:string):void`
 
-Creates a new sequence with the specified name and optional starting value.
+  Creates a new database sequence.<br/><br/>@param sequence The name of the sequence to create.<br/>@param start Optional: The starting value for the sequence (defaults to 1 if not provided).<br/>@param datasourceName Optional: The name of the database connection to use.
 
-**Parameters:**
-
-* `sequence`: The name of the sequence to be created.
-* `start`: (Optional) The starting value of the sequence. Defaults to 1 if not provided.
-* `datasourceName`: (Optional) The name of the data source.
-* Return Value: None.
+<hr/>
 
 #### drop
 
-```javascript
-drop(sequence: string, datasourceName?: string): void
-```
+- `drop (sequence:string, datasourceName?:string):void`
 
-Drops (deletes) the specified sequence.
+  Drops (deletes) an existing database sequence.<br/><br/>@param sequence The name of the sequence to drop.<br/>@param datasourceName Optional: The name of the database connection to use.
 
-**Parameters:**
-
-* `sequence`: The name of the sequence to be dropped.
-* `datasourceName`: (Optional) The name of the data source.
-* Return Value: None.
-
-## Example Usage:
-
-```javascript
-import { Sequence } from 'sdk/db/sequence';
-
-// Example sequence name
-const sequenceName = 'your_sequence';
-
-// Retrieve the next value from the sequence
-const nextValue = Sequence.nextval(sequenceName);
-console.log('Next Value:', nextValue);
-
-// Create a new sequence with the specified name and starting value
-Sequence.create(sequenceName, 100, datasourceName);
-
-// Drop (delete) the specified sequence
-Sequence.drop(sequenceName, datasourceName);
-```
-
-Replace `your_sequence`, and other placeholders with your actual module path, sequence name, table name, data source, and sequence details.
-
-### Functions
-
----
-
-Function     | Description | Returns
------------- | ----------- | --------
-**nextval(name, databaseType?, datasourceName?)**   | Increment the sequence with the given *name* and returns the value. Creates the sequence implicitly if it deos not exist. | *integer*
-**create(name, databaseType?, datasourceName?)**   | Creates the sequence by the given *name*. | -
-**drop(name, databaseType?, datasourceName?)**   | Remove the sequence by the given *name*. | -

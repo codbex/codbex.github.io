@@ -1,90 +1,44 @@
-# Update
+# API: update
 
-## Overview
+> Source: `db/update.ts`
 
-The provided TypeScript module `Update` contains a class with a static method for executing database update operations. Here's an explanation of the key components:
+Interface used for complex parameter types if needed, otherwise primitive types are used directly.
 
-## QueryParameter Interface:
-
+## Usage
 ```javascript
-export interface UpdateParameter {
-	readonly type: string;
-	readonly value: any;
-}
+import { query, update } from "sdk/db";
+import { response } from "sdk/http";
+
+update.execute("CREATE TABLE MY_TABLE (COLUMN_A INT)", [], "DefaultDB");
+
+update.execute("INSERT INTO MY_TABLE VALUES (1)", [], "DefaultDB");
+
+let resultSetBefore = query.execute("SELECT COLUMN_A FROM MY_TABLE", [], "DefaultDB");
+response.println("Value before update: " + JSON.stringify(resultSetBefore));
+
+update.execute("UPDATE MY_TABLE SET COLUMN_A = 2", [], "DefaultDB");
+
+let resultSetAfter = query.execute("SELECT COLUMN_A FROM MY_TABLE", [], "DefaultDB");
+response.println("Value after update: " + JSON.stringify(resultSetAfter));
+
+update.execute("DROP TABLE MY_TABLE", [], "DefaultDB");
+
 ```
 
-This interface represents a parameter that can be used in an SQL update. It includes the `type` of the parameter (string) and its `value` (any).
 
+## Classes
 
-## Update Class:
+### Update
 
-The `Update` class provides a static method for executing SQL update statements.
+Facade class for executing SQL UPDATE, INSERT, and DELETE statements.
 
-### Methods
+#### Methods
+
+<hr/>
 
 #### execute
 
-```javascript
-execute(sql: string, parameters?: (string | number | boolean | Date | UpdateParameter)[], datasourceName?: string): number
-```
+- `execute (sql:string, parameters?:(string|number|boolean|Date|UpdateParameter):number`
 
-Executes the SQL update statement with optional parameters.
+  Executes a parameterized SQL update statement (INSERT, UPDATE, or DELETE).<br/><br/>@param sql The SQL statement to execute.<br/>@param parameters Optional array of parameters to bind to the SQL statement (replaces '?').<br/>These are serialized to JSON before being passed to the native API.<br/>@param datasourceName Optional name of the data source to use. Defaults to the primary data source.<br/>@returns The number of rows affected by the statement.
 
-**Parameters:**
-
-* `sql`: The SQL update statement to be executed.
-* `parameters`: (Optional) An array of update parameters, including type and value.
-* `datasourceName`: (Optional) The name of the data source.
-* Return Value: The number of rows affected by the update operation.
-
-## Example Usage:
-
-```javascript
-import { Update, UpdateParameter } from 'sdk/db/update';
-
-// Example SQL update statement
-const sqlStatement = 'UPDATE your_table SET column1 = ?, column2 = ? WHERE id = ?';
-
-// Example update parameters
-const updateParameters: UpdateParameter[] = [
-  { type: 'string', value: 'new_value1' },
-  { type: 'number', value: 42 },
-  { type: 'number', value: 123 },
-];
-
-// Example data source name
-const datasourceName = 'yourDataSource';
-
-// Execute the SQL update statement
-const affectedRows = Update.execute(sqlStatement, updateParameters, datasourceName);
-console.log('Affected Rows:', affectedRows);
-```
-
-Replace `your_table`, `new_value1`, `42`, `123`, `yourDataSource`, and other placeholders with your actual module path, SQL update statement, update parameters, data source, and details.
-
-### Functions
-
----
-
-Function     | Description | Returns
------------- | ----------- | --------
-**execute(sql, parameters?, datasourceName?)**   | Executes a SQL update against the selected *datasourceName* with the provided parameters and returns the number of affected rows | *int*
-
-::: info
-Parameters array supports primitives:
-
-```javascript
-[1, 'John', 34.56]
-```
-
-and objects in format:
-```javascript
-{'type':'[DATA_TYPE]', 'value':[VALUE]}
-```
-
-Example using both primitives and objects:
-
-```javascript
-[1, 'John', { type: 'CHAR', value: 'ISBN19202323322' }]
-```
-:::
