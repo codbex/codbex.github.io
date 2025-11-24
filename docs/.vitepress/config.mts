@@ -126,6 +126,7 @@ export default defineConfig({
         {
           text: 'Marketing',
           items: [
+            { text: 'The Unified Platform for the Next Decade', link: '/marketing/2025/11/24/the-unified-platform-for-the-next-decade' },
             { text: 'Why Modern Architectures Need Orchestration', link: '/marketing/2025/07/04/why-modern-architectures-need-orchestration' },
             { text: 'Migrating SAP BW with Kronos - From Legacy to Flexibility', link: '/marketing/2025/06/10/kronos-bw-migration' },
             { text: 'Hades Now Available on AWS Marketplace', link: '/marketing/2025/01/10/hades-on-aws' },
@@ -140,7 +141,7 @@ export default defineConfig({
             { text: 'Ultimate Cloud IDE for JavaScript and TypeScript', link: '/marketing/2023/09/26/helios-ultimate-cloud-ide-for-javascript-and-typescript' },
             { text: 'The Titans of Low Code', link: '/marketing/2023/06/07/the-titans-of-low-code' },
             { text: 'What is Low Code Platform', link: '/marketing/2022/04/01/what-is-low-code' },
-            { text: `How the 'White-Label' Business Model Works?`, link: '/marketing/2022/07/14/how-white-label-works' },
+            { text: `How the 'White-Label' Business Model Works?`, link: '/marketing/2022/07/14/how-white-label-works' }
           ]
         }
       ],
