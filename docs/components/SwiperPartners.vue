@@ -18,6 +18,7 @@
     <swiper-slide><div class="slide-box"><a href="https://anthill.one/" target="_blank">Anthill</a></div></swiper-slide>
     <swiper-slide><div class="slide-box"><a href="https://apollogic.com/" target="_blank">Apollogic</a></div></swiper-slide>
     <swiper-slide><div class="slide-box"><a href="https://arcware.io" target="_blank">Arcware</a></div></swiper-slide>
+    <swiper-slide><div class="slide-box"><a href="https://asebo.bg/" target="_blank">Asebo</a></div></swiper-slide>
     <swiper-slide><div class="slide-box"><a href="https://atos.net/" target="_blank">Atos</a></div></swiper-slide>
     <swiper-slide><div class="slide-box"><a href="https://bix-consulting.com/" target="_blank">biX</a></div></swiper-slide>
     <swiper-slide><div class="slide-box"><a href="https://boomdata.com.au/" target="_blank">BOOMDATA</a></div></swiper-slide>
