@@ -9,7 +9,7 @@ editLink: false
 # Building European Sovereign Private PaaS with codbex
 
 <div style="text-align: center;">
-   <img src="/images/2026-01-24-building-european-soveregn-paas-with-codbex/all-built-in.jpg" style="height: 20rem; !important; float: left !important; padding: 2em; padding-right: 4em;"/>
+   <img src="/images/2026-01-24-building-european-soveregn-paas-with-codbex/private-paas.jpg" style="height: 20rem; !important; float: left !important; padding: 2em; padding-right: 4em;"/>
 </div>
 
 As Europe accelerates its push for digital sovereignty, enterprises are rethinking their dependence on hyperscalers and non-European platforms. The goal is clear: regain control over data, infrastructure, and innovation - without sacrificing developer productivity or enterprise-grade capabilities. This is where **codbex** steps in.
@@ -41,6 +41,10 @@ By leveraging Codbex, organizations can:
 ## What You Get Out of the Box
 
 The product suite by codbex delivers modular, enterprise-ready building blocks that accelerate development, integration, and operations - all with a sovereign, customizable foundation.
+
+<div style="text-align: center;">
+   <img src="/images/2026-01-24-building-european-soveregn-paas-with-codbex/all-built-in.jpg" style="height: 20rem; !important; float: right !important; padding: 2em; padding-right: 4em;"/>
+</div>
 
 - Enterprise JavaScript development
 - User interfaces and debugger
@@ -114,6 +118,10 @@ Beyond OTC and SAP, **codbex** is built around open standards and widely adopted
 This partner-first approach allows enterprises to compose their own sovereign platform stack - aligned with internal policies, industry regulations, and strategic goals.
 
 ## Make Europe Great Again - Digitally
+
+<div style="text-align: center;">
+   <img src="/images/2026-01-24-building-european-soveregn-paas-with-codbex/make-europe-great-again.jpg" style="height: 20rem; !important; float: left !important; padding: 2em; padding-right: 4em;"/>
+</div>
 
 Europe’s competitiveness depends on its ability to innovate on its own terms. With **codbex**, organizations can build modern, scalable, and secure platforms - made in Europe, running in Europe, and governed by European values.
 
