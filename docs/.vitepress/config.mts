@@ -126,6 +126,7 @@ export default defineConfig({
         {
           text: 'Marketing',
           items: [
+            { text: 'Building European Sovereign Private PaaS with codbex', link: '/marketing/2026/01/24/building-european-soveregn-paas-with-codbex'},
             { text: 'The Unified Platform for the Next Decade', link: '/marketing/2025/11/24/the-unified-platform-for-the-next-decade' },
             { text: 'Why Modern Architectures Need Orchestration', link: '/marketing/2025/07/04/why-modern-architectures-need-orchestration' },
             { text: 'Migrating SAP BW with Kronos - From Legacy to Flexibility', link: '/marketing/2025/06/10/kronos-bw-migration' },
