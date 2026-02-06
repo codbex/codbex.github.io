@@ -150,6 +150,7 @@ export default defineConfig({
         {
           text: 'Technology',
           items: [
+            { text: 'Building and Extending a Loan Payoff Workflow', link: '/technology/2026/02/06/loan-payoff-request-demo.md' },
             { text: 'Visualizing Kronos Data on Snowflake with Power BI: A Hands-On Guide', link: '/technology/2025/09/bw-migration-bi' },
             { text: 'Migrating SAP BW to Kronos: A Hands-On Guide', link: '/technology/2025/08/kronos-bw-migration' },
             { text: 'Building a Simple ETL Workflow with Phoebe and Apache Airflow', link: '/technology/2025/06/phoebe-airflow-etl' },
