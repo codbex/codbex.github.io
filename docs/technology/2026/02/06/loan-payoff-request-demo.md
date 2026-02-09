@@ -29,6 +29,12 @@ The process we model is based on a realistic bank workflow for early or full loa
    - Closes the request or returns it for correction
 5. The client is notified about the completion.
 
+<br/>
+
+   <img src="/images/2026-02-06-loan-payoff-request-demo/process-pics.jpg" alt="process-pics.jpg"  style="width: 80%;">
+
+<br/>
+
 This is a classic **cross-departmental** process with human tasks, system checks, approvals, notifications, and strict audit requirements — a perfect fit for BPM.
 
 ## Why BPM Matters Here
@@ -90,19 +96,34 @@ This demo is intentionally designed to highlight **platform capabilities**, not 
    - The entire process is traceable and inspectable
    - You can see all process instances, their states, and history
    - Every decision is explicit and auditable
+
+   <img src="/images/2026-02-06-loan-payoff-request-demo/bpmn-process.png" alt="bpmn-process.png"  style="width: 80%;">
+
 2. **Forms Without Boilerplate**
    - User tasks are connected to forms built visually
    - Forms evolve together with the process
    - No manual wiring of UI, backend, and persistence
+
+   <img src="/images/2026-02-06-loan-payoff-request-demo/form-designer.png" alt="form-designer.png"  style="width: 80%;">
+
 3. **Entity-Driven Architecture**
    - Database schema is generated automatically
+
+   <img src="/images/2026-02-06-loan-payoff-request-demo/entity-modeller.png" alt="entity-modeller.png"  style="width: 80%;">
+
    - REST APIs are exposed automatically
    - Administration UI is available out of the box
+
+   <img src="/images/2026-02-06-loan-payoff-request-demo/gen-ui.png" alt="gen-ui.png"  style="width: 80%;">
+
 4. **AI as a First-Class Citizen**
    - AI tasks are just service tasks in BPM
    - Used here to:
      - Calculate taxes
      - Generate customer-friendly emails
+
+   <img src="/images/2026-02-06-loan-payoff-request-demo/loan-payoff-email.png" alt="loan-payoff-email.png"  style="width: 80%;">
+
    - AI is integrated without complicating the process model
 
 ## Extending the Workflow: A Key Demo Moment
