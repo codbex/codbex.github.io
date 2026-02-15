@@ -30,7 +30,7 @@ All of this runs on sovereign European IaaS - such as EU-based cloud providers a
 
 ## Enterprise - Ready Benefits
 
-By leveraging Codbex, organizations can:
+By leveraging **codbex**, organizations can:
 
 - **Model**, **generate**, and **iterate** applications rapidly with visual design tooling.
 - **Automate processes** intelligently and integrate them with domain models.
