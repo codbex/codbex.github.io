@@ -766,7 +766,7 @@ export default defineConfig({
             },
             // { text: 'Widgets', link: '/documentation/platform/widgets', target: '_blank' },
             // { text: 'Services', link: '/documentation/platform/services', target: '_blank' }
-            { text: 'Widgets', link: '/widgets/blimp.html', target: '_blank' },
+            { text: 'Widgets (BlimpKit)', link: 'https://blimpkit.dev', target: '_blank' },
             { text: 'Services', link: '/swagger/swagger.html', target: '_blank' }
             // { text: 'Templates', link: '/documentation/platform/templates' }
           ]
