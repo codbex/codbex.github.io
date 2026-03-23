@@ -37,7 +37,7 @@ features:
     🔹 Full platform access<br>
     🔹 Unlimited instances, developers and flows<br>
     🔹 Integration & data flow reviews<br><br>
-    🛠️ 5 hours/month support (email + Slack)<br>
+    🛠️ 6 hours/month support (email + Slack)<br>
     ⏱️ 1 business day SLA<br><br>"
     link: /pricing/professional
     linkText: Learn more
