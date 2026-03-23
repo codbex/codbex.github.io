@@ -12,9 +12,55 @@ The Professional Plan offered by <b>codbex</b> is an all-encompassing solution, 
 
 The Professional Plan is designed to cater to the needs of small and mid-size businesses, providing them with a robust platform for rapid application development of cloud applications. This plan is tailored to offer a comprehensive suite of features coupled with basic Service Level Agreements (SLAs), ensuring a seamless and efficient experience for businesses looking to enhance their digital presence.
 
+## Service Level Agreement (Professional Plan)
+
+The Professional Plan includes a structured Service Level Agreement (SLA) designed for growing teams requiring reliable support and predictable response times.
+
 <div style="text-align: center;">
    <img src="/images/styled/god-with-sword.svg" style="height: 20rem; !important; float: left !important; padding: 2em"/>
 </div>
+
+
+### Definitions
+
+- **Incident** – Any unplanned event that disrupts or may disrupt the normal operation of the services.  
+- **Support** – Activities performed by codbex including monitoring, troubleshooting, diagnostics, bug fixing, and guidance for recovery or reinstallation.  
+- **Response Time** – Time from incident registration to the start of investigation.  
+- **Resolution Time** – Maximum time to resolve the incident or provide a workaround.
+
+---
+
+### Incident Classification & SLA Targets
+
+| Priority | Severity Description | Response Time | Resolution Time |
+|----------|---------------------|--------------|-----------------|
+| **P1 – Critical** | Major service disruption; core functionality unavailable | 6 hours | 24 hours |
+| **P2 – High** | Significant feature unavailable; operational impact | 8 hours | 2 days |
+| **P3 – Medium** | Non-critical issue; workaround available | 24 hours | 4 days |
+| **P4 – Low** | Minor issue; minimal impact | 2 days | 5 days |
+
+**Notes:**
+- SLA applies during business hours.
+- Resolution time may be extended if additional information is required.
+
+---
+
+## What is included
+
+- 🔹 **Shared Support Team** – Access to codbex support engineers  
+- 🔹 **Standard Security Best Practices Guidance**  
+- 🔹 **Basic Architecture Advisory**  
+- 🔹 **Priority over Starter Plan requests**  
+- 🔹 **Email-based Support**
+
+<br>
+
+- 🛠️ **6 hours/month Support** – Included engineering time  
+- ⏱️ **8h SLA (Business Hours)** – Standard response time  
+- 📊 **Quarterly Service Review**  
+- 🔄 **Escalation to senior engineers when needed**
+
+---
 
 ### Key Features:
 

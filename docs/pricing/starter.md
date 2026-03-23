@@ -12,9 +12,53 @@ The Starter Plan by <b>codbex</b> is the ideal entry point for organizations beg
 
 While it doesn't include advanced DevOps features or dedicated infrastructure automation, the Starter Plan empowers developers and IT teams to test and validate their use cases with minimal upfront cost. With self-hosting flexibility and community-guided documentation, this plan allows teams to become familiar with key codbex capabilities at their own pace.
 
+
+## Service Level Agreement (Starter Plan)
+
+The Starter Plan provides essential support coverage suitable for small teams and non-critical workloads.
+
 <div style="text-align: center;">
    <img src="/images/styled/goddess-with-torch.svg" style="height: 20rem; !important; float: left !important; padding: 2em"/>
 </div>
+
+### Definitions
+
+- **Incident** – Any unplanned event that affects service operation.  
+- **Support** – Basic troubleshooting and guidance provided by codbex.  
+- **Response Time** – Time from request submission to initial response.  
+- **Resolution Time** – Best-effort timeframe to resolve or mitigate the issue.
+
+---
+
+### Incident Classification & SLA Targets
+
+| Priority | Severity Description | Response Time | Resolution Time |
+|----------|---------------------|--------------|-----------------|
+| **P1 – Critical** | Severe issue impacting basic usage | 8 hours | 2 days |
+| **P2 – High** | Important functionality impacted | 1 day | 3 days |
+| **P3 – Medium** | Minor functionality issue | 2 days | 5 days |
+| **P4 – Low** | Cosmetic or low-impact issue | 3 days | 7 days |
+
+**Notes:**
+- Support is provided during business hours only.
+- Resolution times are best-effort and not guaranteed.
+
+---
+
+### What is included
+
+- 🔹 **Community & Shared Support**  
+- 🔹 **Basic Guidance & Documentation Access**  
+- 🔹 **Email Support**
+
+<br>
+
+- 🛠️ **2 hours/month Support**  
+- ⏱️ **24h SLA (Business Hours)**  
+- 📊 **No formal service reviews**  
+- 🔄 **Escalation on best-effort basis**
+
+---
 
 ### Key Features:
 
