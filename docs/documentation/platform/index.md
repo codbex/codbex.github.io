@@ -89,7 +89,7 @@ Explore the Software Development Kit (SDK) for building custom integrations and 
 
 Discover the collection of User Interface (UI) widgets available for creating interactive and visually appealing applications, including:
 
-* [UI Widgets](widgets/)
+* [UI Widgets (BlimpKit)](https://blimpkit.dev/)
 
 ### Services (REST)
 
