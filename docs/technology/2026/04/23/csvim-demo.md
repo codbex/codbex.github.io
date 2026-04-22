@@ -60,7 +60,7 @@ Configuration for **`Country`** field
 
 ![dropdownConfig](../../../../images/2026-04-23-csvim-demo/dropdownConfig.png)
 
-## **Final EDM**
+### **Final EDM**
 
 ![final-EDM](../../../../images/2026-04-23-csvim-demo/finalEDM.png)
 
@@ -233,7 +233,7 @@ GUID,Id,Name,Language
 
 ![add-file-to-csvim](../../../../images/2026-04-23-csvim-demo/csvimTables.png)
 
-Save all and publish
+- Save all and publish
 
 - Go to database perspective and check if there is data seeded in the database
 
@@ -241,6 +241,6 @@ Save all and publish
 
 ## Conclusion
 
-In this guide, we’ve shown how [Rhea](https://www.codbex.com/products/rhea) by codbex data seeding. With just a few configuration files and zero lines of custom boilerplate code, we have built a fully functional, multi-language data structure. Rhea by codbex doesn't just import rows; it allows you to maintain a clean, model-driven architecture while keeping your development process agile.
+In this guide, we’ve shown how [Rhea](https://www.codbex.com/products/rhea) by codbex revolutionizes data seeding. With just a few configuration files and zero lines of custom boilerplate code, we have built a fully functional, multi-language data structure. Rhea doesn't just import rows; it allows you to maintain a clean, model-driven architecture while keeping your development process agile.
 
 Ready to build your own? [Click here](https://github.com/codbex/codbex-sample-csvim) to learn more or access the Sample App code.
