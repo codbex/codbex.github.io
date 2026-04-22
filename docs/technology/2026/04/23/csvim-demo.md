@@ -72,45 +72,46 @@ Configuration for **`Country`** field
 
 <img src="../../../../images/2026-04-23-csvim-demo/generateApp.png" width="200" height="400">
 
-## CSV and CSVIM files
+### CSV and CSVIM files
 
 #### Cities
 
-- Create folder calles **`cities`**
+- Create folder and name it **`cities`**
     - Create file **`cities.csv`** and add the following content in it
-  ```
-    CITY_ID,CITY_NAME,CITY_COUNTRY
-    1,Sofia,1
-    2,Plovdiv,1
-    3,Varna,1
-    4,Burgas,1
-    5,Ruse,1
-    6,Rome,2
-    7,Milan,2
-    8,Naples,2
-    9,Florence,2
-    10,Venice,2
-    11,Paris,3
-    12,Lyon,3
-    13,Marseille,3
-    14,Toulouse,3
-    15,Nice,3
-    16,Madrid,4
-    17,Barcelona,4
-    18,Valencia,4
-    19,Seville,4
-    20,Zaragoza,4
-    21,Vienna,5
-    22,Salzburg,5
-    23,Innsbruck,5
-    24,Graz,5
-    25,Linz,5
-  ```
-    - Create file **`cities-lang.table`** and configure the table this way
+  
+```
+CITY_ID,CITY_NAME,CITY_COUNTRY 
+1,Sofia,1
+2,Plovdiv,1
+3,Varna,1
+4,Burgas,1
+5,Ruse,1
+6,Rome,2
+7,Milan,2
+8,Naples,2
+9,Florence,2
+10,Venice,2
+11,Paris,3
+12,Lyon,3
+13,Marseille,3
+14,Toulouse,3
+15,Nice,3
+16,Madrid,4
+17,Barcelona,4 
+18,Valencia,4
+19,Seville,4
+20,Zaragoza,4
+21,Vienna,5
+22,Salzburg,5
+23,Innsbruck,5
+24,Graz,5
+25,Linz,5
+```
+   - Create file **`cities-lang.table`** and configure the table this way
 
   ![configure-cities-lang-table](../../../../images/2026-04-23-csvim-demo/cityLangTableConfig.png)
 
-    - Create file **`cities-lang.csv`** and add the following content in it
+   - Create file **`cities-lang.csv`** and add the following content in it
 
 ```
 GUID,Id,Name,Language
@@ -193,22 +194,23 @@ GUID,Id,Name,Language
 
 #### Countries
 
-- Create folder calles **`countries`**
+- Create folder and name it **`countries`**
     - Create file **`countries.csv`** and add the following content in it
-  ```
-   COUNTRY_ID,COUNTRY_NAME
-   1,Bulgaria
-   2,Italy
-   3,France
-   4,Spain
-   5,Austria
-  ```
+  
+```
+COUNTRY_ID,COUNTRY_NAME
+1,Bulgaria
+2,Italy
+3,France
+4,Spain
+5,Austria
+ ```
 
-    - Create file **`countries-lang.table`** and configure the table this way
+   - Create file **`countries-lang.table`** and configure the table this way
 
   ![configure-countries-lang-table](../../../../images/2026-04-23-csvim-demo/countryLangTableConfig.png)
 
-    - Create file **`countries-lang.csv`** and add the following content in it
+   - Create file **`countries-lang.csv`** and add the following content in it
 
 ```
 GUID,Id,Name,Language
@@ -229,7 +231,7 @@ GUID,Id,Name,Language
 15,5,Autriche,fr
 ```
 
-- Create sample-csvim.csvim and add each of the **`.csv`** files this way
+- Create **`sample-csvim.csvim`** and add each of the **`.csv`** files this way
 
 ![add-file-to-csvim](../../../../images/2026-04-23-csvim-demo/csvimTables.png)
 
