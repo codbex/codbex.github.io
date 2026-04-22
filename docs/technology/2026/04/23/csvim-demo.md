@@ -9,7 +9,7 @@ editLink: false
 
 ## Introduction
 
-In the fast-paced world of cloud-native development, the most expensive resource isn't your server—it's your time. Why spend hours writing custom boilerplate scripts to parse and upload data when you could do it in seconds? Eclipse Dirigible is redefining the 'Low-Code' experience by turning tedious database seeding into a simple, declarative process. By leveraging the power of CSVIM (CSV Import), you can transform flat files into fully functional database records with zero manual coding. In this post, we’ll show you how to move away from 'Pro-Code' bottlenecks and embrace a streamlined, configuration-first approach that gets your data-driven apps live in record time.
+In the fast-paced world of cloud-native development, the most expensive resource isn't your server—it's your time. Why spend hours writing custom boilerplate scripts to parse and upload data when you could do it in seconds? Rhea by codbex is redefining the Low-Code experience by turning tedious database seeding into a simple, declarative process. By leveraging the power of CSVIM (CSV Import Model), you can transform flat files into fully functional database records with zero manual coding. In this post, we’ll show you how to move away from 'Pro-Code' bottlenecks and embrace a streamlined, configuration-first approach that gets your data-driven apps live in record time.
 
 ## Sample project
 
