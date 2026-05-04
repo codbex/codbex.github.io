@@ -55,7 +55,7 @@ The Professional Plan includes a structured Service Level Agreement (SLA) design
 
 <br>
 
-- 🛠️ **6 hours/month Support** – Included engineering time  
+- 🛠️ **20 hours/month Support** – Included engineering time  
 - ⏱️ **8h SLA (Business Hours)** – Standard response time  
 - 📊 **Quarterly Service Review**  
 - 🔄 **Escalation to senior engineers when needed**

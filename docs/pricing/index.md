@@ -27,7 +27,7 @@ features:
     🔹 Access to all modules<br>
     🔹 Unlimited instances, users, flows<br><br>
     🛠️ 2 hours/month support (email only)<br>
-    ⏱️ 2 business day SLA<br>"
+    ⏱️ 5 business day SLA<br>"
     link: /pricing/starter
     linkText: Learn more
   - title: Professional
@@ -37,7 +37,7 @@ features:
     🔹 Full platform access<br>
     🔹 Unlimited instances, developers and flows<br>
     🔹 Integration & data flow reviews<br><br>
-    🛠️ 6 hours/month support (email + Slack)<br>
+    🛠️ 20 hours/month support (email + Slack)<br>
     ⏱️ 1 business day SLA<br><br>"
     link: /pricing/professional
     linkText: Learn more
@@ -49,7 +49,7 @@ features:
     🔹 Multiple Snowflake accounts supported<br>
     🔹 Named support engineer<br>
     🔹 Security & compliance review<br><br>
-    🛠️ 12 hours/month premium support (email + Slack)<br>
+    🛠️ 40 hours/month premium support (email + Slack)<br>
     ⏱️ 4h SLA (business hours)"
     link: /pricing/enterprise
     linkText: Learn more

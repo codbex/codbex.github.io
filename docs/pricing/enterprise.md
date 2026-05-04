@@ -76,7 +76,7 @@ The Enterprise Plan provides an extended support and service package designed fo
 
 <br>
 
-- 🛠️ **12 hours/month Premium Support** – Included engineering time for issue resolution, advisory, and operational support (email + Slack)
+- 🛠️ **40 hours/month Premium Support** – Included engineering time for issue resolution, advisory, and operational support (email + Slack)
 - ⏱️ **4h SLA (Business Hours)** – Guaranteed response time for standard support requests during business hours
 - 📊 **Monthly Service Review** – Summary of incidents, performance, and recommendations for improvement
 - 🔄 **Escalation Management** – Direct access to higher support tiers when required

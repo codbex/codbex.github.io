@@ -34,10 +34,10 @@ The Starter Plan provides essential support coverage suitable for small teams an
 
 | Priority | Severity Description | Response Time | Resolution Time |
 |----------|---------------------|--------------|-----------------|
-| **P1 – Critical** | Severe issue impacting basic usage | 8 hours | 2 days |
-| **P2 – High** | Important functionality impacted | 1 day | 3 days |
-| **P3 – Medium** | Minor functionality issue | 2 days | 5 days |
-| **P4 – Low** | Cosmetic or low-impact issue | 3 days | 7 days |
+| **P1 – Critical** | Severe issue impacting basic usage | 2 days | 5 days |
+| **P2 – High** | Important functionality impacted | 5 day | 10 days |
+| **P3 – Medium** | Minor functionality issue | 8 days | 15 days |
+| **P4 – Low** | Cosmetic or low-impact issue | 10 days | 20 days |
 
 **Notes:**
 - Support is provided during business hours only.
