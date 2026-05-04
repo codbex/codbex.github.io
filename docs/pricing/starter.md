@@ -6,9 +6,9 @@ editLink: false
 # Starter Plan
 <br/>
 
-<div class="price-tag">€249/month</div>
+<div class="price-tag">€240/month</div>
 
-The Starter Plan by <b>codbex</b> is the ideal entry point for organizations beginning their journey toward modernization and cloud-native application development. Designed for evaluation, pilot programs, and small internal teams, the Starter Plan includes access to the full product suite, enabling organizations to explore low-code development, business process automation, and data integration — all within their own environment.
+The Starter Plan by <b>codbex</b> is the ideal entry point for organizations beginning their journey toward modernization and cloud-native application development. Designed for evaluation, pilot programs, and small internal teams, the Starter Plan includes access to the full product suite, enabling organizations to explore low-code development, business process automation, and data integration  -  all within their own environment.
 
 While it doesn't include advanced DevOps features or dedicated infrastructure automation, the Starter Plan empowers developers and IT teams to test and validate their use cases with minimal upfront cost. With self-hosting flexibility and community-guided documentation, this plan allows teams to become familiar with key codbex capabilities at their own pace.
 
@@ -117,7 +117,7 @@ The Starter Plan provides essential support coverage suitable for small teams an
 The Starter Plan is perfect for teams exploring modernization, evaluating low-code tools, or building proof-of-concept projects. It’s well-suited for technical leads, architects, and small internal development teams who want to assess codbex capabilities without committing to a full-scale deployment. Whether you're modernizing legacy code or testing integration flows, this plan provides the essentials to get started.
 
 <br>
-The Starter Plan offered by <b>codbex</b> is a streamlined solution for organizations looking to experiment with modern application architecture and validate early-stage use cases. It includes core platform access for low-code modeling, BPMN process definition, data flow orchestration, and JavaScript execution — all within your own infrastructure. With flexible deployment, self-guided documentation, and community-level support, this plan empowers teams to begin their digital transformation journey efficiently and cost-effectively. Take the first step toward legacy system modernization with the Starter Plan from codbex.
+The Starter Plan offered by <b>codbex</b> is a streamlined solution for organizations looking to experiment with modern application architecture and validate early-stage use cases. It includes core platform access for low-code modeling, BPMN process definition, data flow orchestration, and JavaScript execution  -  all within your own infrastructure. With flexible deployment, self-guided documentation, and community-level support, this plan empowers teams to begin their digital transformation journey efficiently and cost-effectively. Take the first step toward legacy system modernization with the Starter Plan from codbex.
 
 <br>
 
