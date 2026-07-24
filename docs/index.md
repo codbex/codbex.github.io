@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: codbex
-  text: Enterprise Intent-Driven Development Platform
+  text: Intent-Driven Development Platform
   tagline: Transform business intent into production-ready enterprise applications using AI, executable business knowledge and open technologies.
   image:
       src: /images/styled/god-with-torch.svg

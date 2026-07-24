@@ -109,6 +109,7 @@ export default defineConfig({
         {
           text: 'News',
           items: [
+            { text: 'Intent-Driven Development Finds Its Home at intentfile.org', link: '/news/2026/07/24/intent-driven-development-home-at-intentfile' },
             { text: 'Codbex Turns 4 - Building Momentum Where It Matters', link: '/news/2026/04/01/4-years-in-orange' },
             { text: 'Introducing the New Pricing Model', link: '/news/2025/07/01/new-flat-pricing-model' },
             { text: 'We Turn Three - A Journey of Stability, Growth, and Innovation', link: '/news/2025/04/01/codbex-three-years' },
