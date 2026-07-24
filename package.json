@@ -8,8 +8,8 @@
   },
   "scripts": {
     "docs:build": "vitepress build docs",
-    "docs:dev": "vitepress dev docs --port 8080",
-    "docs:preview": "vitepress preview docs --port 8080"
+    "docs:dev": "vitepress dev docs --port 8090",
+    "docs:preview": "vitepress preview docs --port 8090"
   },
   "dependencies": {
     "swiper": "^11.2.8"

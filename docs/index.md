@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: codbex
-  text: High-Productivity Application Platform
-  tagline: for Developers, Software Vendors and Enterprises to design, develop and deliver their industry solutions
+  text: Enterprise Intent-Driven Development Platform
+  tagline: Transform business intent into production-ready enterprise applications using AI, executable business knowledge and open technologies.
   image:
       src: /images/styled/god-with-torch.svg
   actions:
@@ -16,16 +16,20 @@ hero:
       link: https://platform.eu1.codbex.com/
 
 features:
-  - title: Instant App Modeling
-    details: Design, generate, and publish applications in minutes with our visual model-driven development tools
+  - title: Intent-Driven Development
+    details: Leading the evolution from Model-Driven Development to Intent-Driven Development. Compose complete enterprise applications from executable business knowledge powered by AI.
     link: /documentation
     linkText: Learn more
-  - title: Tailored Process Automation
-    details: Publish and test workflows, seamlessly integrating with your domain models for dynamic automation
+  - title: Model-Driven Engineering
+    details: Design your domain once and automatically generate data models, APIs, services and applications from a single source of truth.
     link: /documentation
     linkText: Learn more
-  - title: Seamless UI Creation
-    details: Build forms, integrate seamlessly with your microservice, and publish for immediate use
+  - title: Enterprise Automation
+    details: Orchestrate business processes, integrations and events using BPMN workflows tightly connected to your application models.
+    link: /documentation
+    linkText: Learn more
+  - title: Open Enterprise Platform
+    details: Deploy cloud-native enterprise applications with integrated workflows, APIs, databases and extensibility.
     link: /documentation
     linkText: Learn more
 ---

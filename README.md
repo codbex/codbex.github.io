@@ -20,7 +20,7 @@ npm install
 npm run docs:dev
 ```
 
-Access the site at: [http://localhost:8080/](http://localhost:8080/)
+Access the site at: [http://localhost:8090/](http://localhost:8090/)
 
 ## Build and Test Locally
 
@@ -30,4 +30,4 @@ npm run docs:build
 npm run docs:preview
 ```
 
-Access the site at: [http://localhost:8080/](http://localhost:8080/)
+Access the site at: [http://localhost:8090/](http://localhost:8090/)
