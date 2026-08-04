@@ -59,7 +59,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             hence it is possible to run it for scale on any Kubernetes or Containers as a Service offering - SAP or non-SAP.</p>
         </div>
         <div class="image">
-            <img src="/images/kronos-migration-landscape.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/kronos-migration-landscape.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -72,7 +72,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             is the main driving force behind the product.</p>
         </div>
         <div class="image">
-            <img src="/images/features/kronos-artefacts.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/kronos-artefacts.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -84,7 +84,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             <p>Supporting further development experience brings limitless benefits for future applications enhancements.</p>
         </div>
         <div class="image">
-            <img src="/images/features/xsjs-engine.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/xsjs-engine.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -99,7 +99,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/abap-code.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/abap-code.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -112,7 +112,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/python-code.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/python-code.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -128,7 +128,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             The <a href="/documentation/platform/sdk/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
         </div>
         <div class="image">
-            <img src="/images/features/js-editor.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/js-editor.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -141,7 +141,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             restart it or set breakpoints, and change values in memory.</p>
         </div>
         <div class="image">
-            <img src="/images/features/debugger-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/debugger-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -154,7 +154,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             It also provides Diff Tool for reviewing the changes.</p>
         </div>
         <div class="image">
-            <img src="/images/features/git-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/git-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -168,7 +168,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             The different major frameworks can be combined due to the syndication layout chosen.</p>
         </div>
         <div class="image">
-            <img src="/images/features/ui-widgets.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/ui-widgets.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -183,7 +183,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             the database port itself.</p>
         </div>
         <div class="image">
-            <img src="/images/features/database-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -198,7 +198,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-import.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-import.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -211,7 +211,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-transfer.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-transfer.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -224,7 +224,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-snowflake.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-snowflake.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -237,7 +237,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-mongodb.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-mongodb.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -250,7 +250,7 @@ The Kronos Edition is designed for organizations and development teams leveragin
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-anonymization.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-anonymization.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>

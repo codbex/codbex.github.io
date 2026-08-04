@@ -50,7 +50,7 @@ The Iapetus Edition is designed for organizations and development teams seeking 
             <p>It provides capabilities for - Integrations Modeler, Integrations Flows.</p>
         </div>
         <div class="image">
-            <img src="/images/features/integrations-routes.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/integrations-routes.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -62,7 +62,7 @@ The Iapetus Edition is designed for organizations and development teams seeking 
             <p>Hundreds of <a href="https://camel.apache.org/components/4.0.x/index.html" target="_blank">adapters</a> can be used in the integration flows out of the box.</p>
         </div>
         <div class="image">
-            <img src="/images/features/integrations-rest.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/integrations-rest.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -78,7 +78,7 @@ The Iapetus Edition is designed for organizations and development teams seeking 
             The <a href="/documentation/platform/sdk/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
         </div>
         <div class="image">
-            <img src="/images/features/js-editor.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/js-editor.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -91,7 +91,7 @@ The Iapetus Edition is designed for organizations and development teams seeking 
             restart it or set breakpoints, and change values in memory.</p>
         </div>
         <div class="image">
-            <img src="/images/features/debugger-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/debugger-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -104,7 +104,7 @@ The Iapetus Edition is designed for organizations and development teams seeking 
             It also provides Diff Tool for reviewing the changes.</p>
         </div>
         <div class="image">
-            <img src="/images/features/git-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/git-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -118,7 +118,7 @@ The Iapetus Edition is designed for organizations and development teams seeking 
             The different major frameworks can be combined due to the syndication layout chosen.</p>
         </div>
         <div class="image">
-            <img src="/images/features/ui-widgets.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/ui-widgets.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -133,7 +133,7 @@ The Iapetus Edition is designed for organizations and development teams seeking 
             the database port itself.</p>
         </div>
         <div class="image">
-            <img src="/images/features/database-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>

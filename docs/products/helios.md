@@ -48,7 +48,7 @@ The Helios Edition is designed for enterprises and development teams focused on 
             The <a href="/documentation/platform/sdk/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
         </div>
         <div class="image">
-            <img src="/images/features/js-editor.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/js-editor.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -61,7 +61,7 @@ The Helios Edition is designed for enterprises and development teams focused on 
             restart it or set breakpoints, and change values in memory.</p>
         </div>
         <div class="image">
-            <img src="/images/features/debugger-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/debugger-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -74,7 +74,7 @@ The Helios Edition is designed for enterprises and development teams focused on 
             It also provides Diff Tool for reviewing the changes.</p>
         </div>
         <div class="image">
-            <img src="/images/features/git-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/git-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -88,7 +88,7 @@ The Helios Edition is designed for enterprises and development teams focused on 
             The different major frameworks can be combined due to the syndication layout chosen.</p>
         </div>
         <div class="image">
-            <img src="/images/features/ui-widgets.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/ui-widgets.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -103,7 +103,7 @@ The Helios Edition is designed for enterprises and development teams focused on 
             the database port itself.</p>
         </div>
         <div class="image">
-            <img src="/images/features/database-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>

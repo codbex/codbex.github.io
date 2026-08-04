@@ -16,7 +16,7 @@ Rhea goes beyond conventional tools by offering a comprehensive suite of feature
 
 ## Key Features Tailored for Your Success
 
-<img src="/images/2024-12-19-rhea-low-code-solution-for-digital-transformation/rhea-marketecture-diagram.png" />
+<img src="/images/2024-12-19-rhea-low-code-solution-for-digital-transformation/rhea-marketecture-diagram.png" class="img-preview" />
 
 1. **Model-Driven Architecture**
    Rhea's visual designer empowers business developers to model application domain logic. By selecting from a variety of templates, you can generate and publish applications instantly, iterate with ease, and maintain consistency across deployments. The iterative nature of Rhea’s tools ensures that even as requirements evolve, your applications can keep pace without extensive rework.
@@ -40,79 +40,97 @@ Rhea goes beyond conventional tools by offering a comprehensive suite of feature
 
 **Rhea Edition** embraces the principles of **Model-Driven Architecture (MDA)**, a revolutionary approach to application development. By using visual tools like the **Entity Data Modeler** and **Form Designer**, Rhea allows you to:
 
-<img src="/images/ide-mda.png" />
+<img src="/images/ide-mda.png" class="img-preview" />
 
 ### Design with Ease
-Create sophisticated domain models and custom forms through intuitive drag-and-drop interfaces. 
+
+Create sophisticated domain models and custom forms through intuitive drag-and-drop interfaces.
 
 ::: info Example
+
 - **Scenario**: Quickly design an employee database with attributes such as roles, departments, and contact information. This ensures your HR department has a centralized, efficient way to manage employee details.
 - **Benefits**: Simplifies the initial setup, reduces manual errors, and ensures consistent data structure.
-:::
+  :::
 
 ### Accelerate Development
+
 Automatically generate and deploy applications, reducing manual coding efforts and minimizing errors.
 
 ::: info Example
+
 - **Scenario**: Deploy a customer service portal with integrated feedback forms in a matter of hours, enhancing customer engagement and support efficiency.
 - **Benefits**: Speeds up project delivery, aligns IT efforts with business goals, and reduces time to market.
-:::
+  :::
 
 ### Iterate Rapidly
+
 Test and refine your models and applications in real time, ensuring continuous improvement and alignment with business needs.
 
 ::: info Example
+
 - **Scenario**: Dynamically update a retail app’s promotional offers page to reflect real-time sales and inventory changes.
 - **Benefits**: Ensures agility in response to market needs and supports better decision-making through immediate feedback.
-:::
+  :::
 
 ### Empower Collaboration
+
 Enable teams to work together seamlessly, breaking down silos between technical and business units.
 
 ::: info Example
+
 - **Scenario**: Marketing teams can co-create campaign management tools with developers, ensuring alignment and reducing iterations.
 - **Benefits**: Fosters a collaborative culture and enhances the relevance of applications to business objectives.
-:::
+  :::
 
 ### Defining Primary and Dependent Entities
+
 Enable clear structuring of relationships between core and auxiliary data models, ensuring logical data organization and integrity.
 
 ::: info Example
+
 - **Scenario**: A CRM system can define customer entities as primary and their orders as dependent, providing a unified view of customer activity.
 - **Benefits**: Improves data clarity and supports complex application logic.
-:::
+  :::
 
 ### Configuring Layout Types
+
 Choose between layouts like Manage, Details, and Master-Detail to match application needs.
 
 ::: info Example
+
 - **Scenario**: Use a "Master-Detail" view to streamline inventory management by linking products to their transaction histories.
 - **Benefits**: Enhances user interface flexibility and functionality.
-:::
+  :::
 
 ### Custom Actions and Triggers
+
 Execute custom scripts to implement workflows like approval processes or data synchronization with external APIs.
 
 ::: info Example
+
 - **Scenario**: Automate an order approval process where large orders require managerial sign-off.
 - **Benefits**: Increases automation and reduces manual intervention.
-:::
+  :::
 
 ### Calculation Fields
+
 Define simple expressions, such as calculating discounts or aggregate values.
 
 ::: info Example
+
 - **Scenario**: Automatically compute total sales in an order management application by summing individual order values.
 - **Benefits**: Reduces manual calculations and ensures data accuracy.
-:::
+  :::
 
 ### Entity Importing
+
 Leverage existing models by importing entities, saving time during project kick-off.
 
 ::: info Example
+
 - **Scenario**: Import a pre-defined customer data model into a new CRM system to accelerate implementation.
 - **Benefits**: Promotes reusability and consistency across applications.
-:::
+  :::
 
 ## Transform Your Business with Rhea
 
@@ -123,4 +141,3 @@ As businesses strive for digital transformation, Rhea stands out as a platform t
 Are you ready to transform your modeling techniques and JavaScript development? Discover how Rhea can drive your digital transformation today.
 
 Visit [Rhea by codbex](/products/rhea) to learn more.
-

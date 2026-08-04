@@ -21,7 +21,7 @@ Oceanus is more than just a software product; it's a game-changer for businesses
 One of the key features of the Oceanus Edition is that it simplifies document management by offering a centralized repository for all your files. Easily organize, categorize, and store documents, ensuring quick access for your team.
 
 <div class="image">
-    <img src="/images/features/documents-perspective.png" alt="Screenshot" class="screenshot editable" />
+    <img src="/images/features/documents-perspective.png" alt="Screenshot" class="img-preview" />
 </div><br>
 
 #### Version Control

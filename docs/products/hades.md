@@ -46,7 +46,7 @@ The Hades Edition is tailored for database administrators and data professionals
             the database port itself.</p>
         </div>
         <div class="image">
-            <img src="/images/features/database-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -61,7 +61,7 @@ The Hades Edition is tailored for database administrators and data professionals
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-import.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-import.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -74,7 +74,7 @@ The Hades Edition is tailored for database administrators and data professionals
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-transfer.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-transfer.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -87,7 +87,7 @@ The Hades Edition is tailored for database administrators and data professionals
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-snowflake.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-snowflake.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -100,7 +100,7 @@ The Hades Edition is tailored for database administrators and data professionals
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-mongodb.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-mongodb.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -113,7 +113,7 @@ The Hades Edition is tailored for database administrators and data professionals
             </p>
         </div>
         <div class="image">
-            <img src="/images/features/database-anonymization.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-anonymization.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>

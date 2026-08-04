@@ -10,7 +10,7 @@ editLink: false
 
 Introducing [Atlas Edition](/products/atlas) - the all-in-one platform – comprehensive solution designed to empower developers in building and operating cloud applications with unparalleled efficiency and agility. Atlas Edition brings together a rich set of features and tools tailored to streamline the end-to-end development process, from model driven application, processes and integration flows.
 
-<img src="/images/2024-03-07-application-development-with-atlas/architecture-monument-statue-landmark-atlas-austria.jpg" width="800em">
+<img src="/images/2024-03-07-application-development-with-atlas/architecture-monument-statue-landmark-atlas-austria.jpg" style="width: 100%">
 
 ## Unveiling Atlas
 
@@ -21,47 +21,49 @@ For more key features you can visit the [Atlas Edition](/products/atlas) page.
 ## Model Driven Applications
 
 One of the key features that defines Atlas is the ability, with minimal effort, to model and build whole full-stack applications ready to be used. This is possible with Atlas' `Entity Data Modeling`, a powerful custom editor for entities, properties and many more, some of the features are:
+
 - Addition of entities
 - Definition of properties
 - Addition of custom logic to each entity/property via calculation fields and extension points
 - Generating and previewing the pages/code and the ability to change your logic on the go
 
-<img src="/images/2024-03-07-application-development-with-atlas/atlas-edm-editor.png" />
-
+<img src="/images/2024-03-07-application-development-with-atlas/atlas-edm-editor.png" class="img-preview" />
 
 ## Process-Driven Workflows
 
 Atlas excels in enabling process-driven application development, allowing users to visually define workflows, decision points, and conditions. Leveraging a robust BPMN 2.0-compliant engine powered by [Flowable](https://www.flowable.com/), developers can build standardized and scalable business processes with ease. These process steps can be implemented in JavaScript or TypeScript, empowering developers with a powerful and dynamic In-System Development experience directly within Atlas.
 
-<img src="/images/features/bpm-perspective.png" />
+<img src="/images/features/bpm-perspective.png" class="img-preview" />
 
 ::: info Workflow Scenarios
+
 - Automated employee onboarding.
 - Order processing with conditional approvals.
 - Inventory management with restocking triggers.
 - Expense claim approvals with multiple decision points.
 - User task workflows where a person must review and approve a document before the process continues.
 - Customer support ticket escalation based on SLA breaches.
-- Scheduling and notifications for appointment reminders. 
-:::
+- Scheduling and notifications for appointment reminders.
+  :::
 
 ## Seamless System Integrations
 
 Atlas provides powerful tools to handle complex integration scenarios with a wide range of out-of-the-box connectors, leveraging the robust capabilities of the [Apache Camel](https://camel.apache.org/) engine. By utilizing Atlas, developers can seamlessly integrate services, systems, and applications to create unified solutions. Integration handlers can be implemented directly in JavaScript or TypeScript, offering developers the flexibility to create tailored solutions efficiently. This dynamic capability unlocks an unparalleled in-system development experience, enabling rapid iteration and customization.
 
-<img src="/documentation/images/camel-sample-flow.png" />
+<img src="/documentation/images/camel-sample-flow.png" class="img-preview" />
 
 ::: info Integration Scenarios
+
 - Syncing data between ERP and CRM systems.
 - Real-time processing of IoT sensor data into analytics platforms.
 - Automating order fulfillment with third-party logistics providers.
 - Enabling single sign-on (SSO) across multiple applications.
 - Connecting payment gateways to e-commerce platforms.
-:::
+  :::
 
 ## Deploying Atlas on Snowpark
 
-As mentioned in the intro, recently we have added the ability to connect to Snowflake database using the Atlas' `Database` perspective. This gives us the ability to write full-stack applications and use all the features of Atlas directly into Snowflake, an invaluable tool paired with Snowflake's real-time data processing and analytics. 
+As mentioned in the intro, recently we have added the ability to connect to Snowflake database using the Atlas' `Database` perspective. This gives us the ability to write full-stack applications and use all the features of Atlas directly into Snowflake, an invaluable tool paired with Snowflake's real-time data processing and analytics.
 
 ::: info
 Check the [Deploy codbex products on Snowflake](/technology/2024/09/11/deploy-codbex-products-on-snowflake) guide for detailed steps of how to deploy codbex products to Snowflake.
