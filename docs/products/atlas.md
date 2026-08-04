@@ -47,7 +47,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             The <a href="/documentation/platform/sdk/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
         </div>
         <div class="image">
-            <img src="/images/features/js-editor.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/js-editor.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -62,7 +62,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             restart it or set breakpoints, and change values in memory.</p>
         </div>
         <div class="image">
-            <img src="/images/features/debugger-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/debugger-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -75,7 +75,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             It also provides Diff Tool for reviewing the changes.</p>
         </div>
         <div class="image">
-            <img src="/images/features/git-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/git-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -89,7 +89,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             The different major frameworks can be combined due to the syndication layout chosen.</p>
         </div>
         <div class="image">
-            <img src="/images/features/ui-widgets.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/ui-widgets.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -104,7 +104,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             the database port itself.</p>
         </div>
         <div class="image">
-            <img src="/images/features/database-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -119,7 +119,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             which can be fulfiled on manual execution via a form interface.</p>
         </div>
         <div class="image">
-            <img src="/images/features/jobs-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/jobs-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -131,7 +131,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             <p>It provides capabilities for BPM - BPMN Modeler, Business Process Definitions, Instances, Variables, Inbox.</p>
         </div>
         <div class="image">
-            <img src="/images/features/bpm-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/bpm-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -143,7 +143,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             <p>It provides capabilities for - Integrations Modeler, Integrations Flows.</p>
         </div>
         <div class="image">
-            <img src="/images/features/integrations-routes.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/integrations-routes.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -155,7 +155,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             <p>Hundreds of <a href="https://camel.apache.org/components/4.0.x/index.html" target="_blank">adapters</a> can be used in the integration flows out of the box.</p>
         </div>
         <div class="image">
-            <img src="/images/features/integrations-rest.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/integrations-rest.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -167,7 +167,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             <p>It provides capabilities for Document Browser, Document Viewer, Import and Export of files, ZIP compressing and decompressing</p>
         </div>
         <div class="image">
-            <img src="/images/features/documents-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/documents-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -181,7 +181,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             does not require an SSH port to be opened.</p>
         </div>
         <div class="image">
-            <img src="/images/features/terminal-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/terminal-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>

@@ -18,7 +18,7 @@ At its core, Hyperion leverages the best-of-breed BPMN engine to empower organiz
 
 Hyperion puts the power of process design and configuration directly into the hands of business users and process experts with its intuitive BPMN Modeller. With drag-and-drop simplicity and a rich library of process elements, designing and configuring business processes has never been easier.
 
-<img src="/images/2024-03-20-hyperion-unlocking-enterprise-efficiency/process-modeller.png" width="800em" class="screenshot">
+<img src="/images/2024-03-20-hyperion-unlocking-enterprise-efficiency/process-modeller.png" class="img-preview">
 
 From defining process flows to specifying decision points and integration with external systems, the BPMN Modeller in Hyperion provides the flexibility and versatility needed to adapt to the unique requirements of any enterprise.
 
@@ -31,7 +31,7 @@ Hyperion goes beyond process design by offering comprehensive monitoring and adm
 - **Management of User Tasks:** Efficiently manage user tasks, incidents, and current process steps, ensuring timely completion and adherence to SLAs.
 - **Flexibility in Process Management:** Take control of processes with the ability to re-trigger, skip steps, or claim and complete user tasks as needed, empowering organizations to adapt and respond to changing business dynamics swiftly.
 
-<img src="/images/2024-03-20-hyperion-unlocking-enterprise-efficiency/process-administration.png" width="800em" class="screenshot">
+<img src="/images/2024-03-20-hyperion-unlocking-enterprise-efficiency/process-administration.png" class="img-preview">
 
 ## Elevate Your Enterprise Efficiency with Hyperion
 

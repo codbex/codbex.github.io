@@ -42,7 +42,7 @@ The Oceanus Edition is ideal for organizations and teams looking to streamline t
             <p>Documents Browser can be used to structure the content to follow an organizationl or projects structure. Document Viewer is a quick preview of the selected document.</p>
         </div>
         <div class="image">
-            <img src="/images/features/documents-perspective.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/documents-perspective.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -53,7 +53,7 @@ The Oceanus Edition is ideal for organizations and teams looking to streamline t
             <p>Import and Export of files via drag & drop or simple selection from/to your local file system is also supported. ZIP compressed files can be uploded either as they are or with option to be decompressed and populated with theirs folder structure.</p>
         </div>
         <div class="image">
-            <img src="/images/features/documents-zip.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/documents-zip.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -66,7 +66,7 @@ The Oceanus Edition is ideal for organizations and teams looking to streamline t
         tool such as FileZilla.</p>
         </div>
         <div class="image">
-            <img src="/images/features/documents-sftp.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/documents-sftp.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>

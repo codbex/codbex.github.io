@@ -18,7 +18,7 @@ Image source: <a href="https://mythopedia.com/topics/hades" target="_blank">myth
 The Hades Edition introduces the concept of Data Sources, which allows users to define connections to various databases. With Hades, users can easily configure and manage these Data Sources, providing a seamless experience for database administrators and developers.
 
 <div class="image">
-    <img src="/images/features/database-snowflake.png" alt="Screenshot" class="screenshot editable" />
+    <img src="/images/features/database-snowflake.png" alt="Screenshot" class="img-preview" />
 </div><br>
 
 ## Connection Configurations
@@ -38,7 +38,7 @@ The SQL View feature enables users to write and execute SQL queries directly fro
 Once a query is executed, the Results View displays the retrieved data in a tabular format. Users can easily analyze and manipulate the results, making it convenient for data analysis and reporting purposes.
 
 <div class="image">
-    <img src="/images/features/database-perspective.png" alt="Screenshot" class="screenshot editable" />
+    <img src="/images/features/database-perspective.png" alt="Screenshot" class="img-preview" />
 </div><br>
 
 ## Data Transfer
@@ -46,7 +46,7 @@ Once a query is executed, the Results View displays the retrieved data in a tabu
 The Hades Edition also offers a Data Transfer feature, allowing users to transfer data between different databases. With Hades, users can easily configure the source and target databases, specify the schema to transfer, and execute the data transfer process.
 
 <div class="image">
-    <img src="/images/features/database-transfer.png" alt="Screenshot" class="screenshot editable" />
+    <img src="/images/features/database-transfer.png" alt="Screenshot" class="img-preview" />
 </div><br>
 
 ## Data Import and Export
@@ -54,7 +54,7 @@ The Hades Edition also offers a Data Transfer feature, allowing users to transfe
 Importing and exporting data is a common task in database management. Hades simplifies this process by providing intuitive import and export functionalities. Users can easily import data from CSV or JSON file formats or export data to the corresponding formats depending on the database types, making it convenient for data migration and integration purposes.
 
 <div class="image">
-    <img src="/images/features/database-import.png" alt="Screenshot" class="screenshot editable" />
+    <img src="/images/features/database-import.png" alt="Screenshot" class="img-preview" />
 </div><br>
 
 ## Anonymization
@@ -62,7 +62,7 @@ Importing and exporting data is a common task in database management. Hades simp
 Data privacy and security are crucial considerations in today's digital landscape. The Hades Edition includes an Anonymization feature, which allows users to anonymize sensitive data within the database. Hades provides a user-friendly interface to define anonymization rules and apply them to the desired data, ensuring compliance with privacy regulations.
 
 <div class="image">
-    <img src="/images/features/database-anonymization.png" alt="Screenshot" class="screenshot editable" />
+    <img src="/images/features/database-anonymization.png" alt="Screenshot" class="img-preview" />
 </div><br>
 
 ## Deployment

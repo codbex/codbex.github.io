@@ -48,7 +48,7 @@ features:
 					Modeling an application with 20-30 entities usually takes less than 45 min</p>
 			</div>
 			<div class="image">
-				<img src="/images/ide-mda.png" alt="Screenshot" class="screenshot editable" />
+				<img src="/images/ide-mda.png" alt="Screenshot" class="img-preview" />
 			</div>
 		</div>
 	</section>
@@ -65,7 +65,7 @@ features:
 					Implementing the task’s custom script require additional time.</p>
 			</div>
 			<div class="image">
-				<img src="/images/ide-bpm.png" alt="Screenshot" class="screenshot editable" />
+				<img src="/images/ide-bpm.png" alt="Screenshot" class="img-preview" />
 			</div>
 		</div>
 	</section>
@@ -82,7 +82,7 @@ features:
 					Modeling form with 5-10 controls takes less than 5 min.</p>
 			</div>
 			<div class="image">
-				<img src="/images/ide-form.png" alt="Screenshot" class="screenshot editable" />
+				<img src="/images/ide-form.png" alt="Screenshot" class="img-preview" />
 			</div>
 		</div>
 	</section>
@@ -93,7 +93,7 @@ features:
 				<p>Our Integration Services provide a seamless way to connect your existing tools, platforms, and data sources into a unified, efficient ecosystem. Whether you're integrating on-premise applications, cloud services, or third-party APIs, our customizable, scalable solutions ensure smooth data flow and system interoperability. With automated workflows and real-time data processing, Codbex helps you reduce manual intervention, improve data accuracy, and enhance collaboration across teams. Our integration framework is built to grow with your business, empowering you to optimize operations and unlock new opportunities without disruption.</p>
 			</div>
 			<div class="image">
-				<img src="/images/ide-integrations.png" alt="Screenshot" class="screenshot editable" />
+				<img src="/images/ide-integrations.png" alt="Screenshot" class="img-preview" />
 			</div>
 		</div>
 	</section>
@@ -104,7 +104,7 @@ features:
 				<p>While codbex empowers teams with low-code architecture for rapid development, we also provide powerful pro-code tooling that allows developers to create tailored extensions and integrations. This unique combination ensures that businesses can accelerate innovation without sacrificing the ability to implement complex, custom solutions. With our pro-code capabilities, developers can enhance the platform’s functionality by writing custom scripts, creating advanced workflows, and integrating third-party systems with full control. These tools provide the flexibility to implement sophisticated business logic, integrate with unique data sources, and ensure that your custom features are fully optimized for your needs.</p>
 			</div>
 			<div class="image">
-				<img src="/images/ide-coding.png" alt="Screenshot" class="screenshot editable" />
+				<img src="/images/ide-coding.png" alt="Screenshot" class="img-preview" />
 			</div>
 		</div>
 	</section>

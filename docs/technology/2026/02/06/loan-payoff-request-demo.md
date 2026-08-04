@@ -1,6 +1,6 @@
 ---
-title: 'Building and Extending a Loan Payoff Workflow'
-description: 'A practical walkthrough of implementing and extending a real-world loan payoff workflow using codbex Atlas, showcasing BPM, forms, entity modeling, and AI integration in action.'
+title: "Building and Extending a Loan Payoff Workflow"
+description: "A practical walkthrough of implementing and extending a real-world loan payoff workflow using codbex Atlas, showcasing BPM, forms, entity modeling, and AI integration in action."
 date: 2026-02-06
 author: iliyan
 editLink: false
@@ -13,10 +13,13 @@ Modern banking processes are complex, highly regulated, and require full traceab
 In this article, we demonstrate how a typical bank loan payoff request workflow can be implemented and easily extended using the [codbex platform](https://www.codbex.com/) [(Atlas)](https://www.codbex.com/products/atlas). The demo project shows how BPM, forms, entity modeling, integrations, and AI services come together into a single, coherent solution.
 
 👉 A full walkthrough of the implemented workflow and its extensibility is available in the accompanying video below.
+
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/x9RIyJ4jzYw" frameborder="0" allowfullscreen></iframe>
 
 ## The Business Scenario: Loan Payoff Request
+
 The process we model is based on a realistic bank workflow for early or full loan repayment:
+
 1. A client visits a Financial Center and fills out a loan payoff request.
 2. A front desk employee:
    - Accepts and validates the request
@@ -31,14 +34,16 @@ The process we model is based on a realistic bank workflow for early or full loa
 
 <br/>
 
-   <img src="/images/2026-02-06-loan-payoff-request-demo/process-pics.jpg" alt="process-pics.jpg"  style="width: 80%;">
+   <img src="/images/2026-02-06-loan-payoff-request-demo/process-pics.jpg" alt="process-pics.jpg"  style="width: 80%;" >
 
 <br/>
 
 This is a classic **cross-departmental** process with human tasks, system checks, approvals, notifications, and strict audit requirements — a perfect fit for BPM.
 
 ## Why BPM Matters Here
+
 Using BPM (Business Process Management) is not just about automation. In this scenario, BPM provides:
+
 - **End-to-end traceability** of every loan payoff request
 - **Auditability** – who did what and when
 - **Clear ownership** across roles (Front Desk, Credit Administration, System)
@@ -48,11 +53,15 @@ Using BPM (Business Process Management) is not just about automation. In this sc
 All of this is available out of the box in [codbex Atlas](https://www.codbex.com/products/atlas).
 
 ## The Implemented Workflow at a Glance
+
 In the demo, we implemented the workflow as a **Flowable BPMN process**, orchestrated by codbex. The process is triggered automatically when a new loan payoff request entity is created.
 
 ### High-Level Flow
+
 1. **Start Event**
-  - Triggered when a new loan payoff request is saved
+
+- Triggered when a new loan payoff request is saved
+
 2. **Account Balance Verification (User Task)**
    - Executed by a front desk employee
    - Uses a form built with the codbex Form Builder
@@ -66,17 +75,23 @@ In the demo, we implemented the workflow as a **Flowable BPMN process**, orchest
 5. **AI Service Task: Generate Confirmation Email**
    - AI generates a customer-friendly email explaining the taxes
 6. **Mail Task: Send Confirmation Email**
-  - Automatically sends the generated email to the customer
+
+- Automatically sends the generated email to the customer
+
 7. **Customer Confirmation**
-  - The process waits for customer confirmation
-  - Implemented via an event-based gateway with:
-    - Message event (customer accepts)
-    - Timer event (timeout)
+
+- The process waits for customer confirmation
+- Implemented via an event-based gateway with:
+  - Message event (customer accepts)
+  - Timer event (timeout)
+
 8. **Create External Loan Payoff Ticket (User Task)**
    - Front desk employee creates a ticket in an external system
    - Ticket number is captured via a form
 9. **Service Task: Save Ticket**
-  - Persists the external ticket reference
+
+- Persists the external ticket reference
+
 10. **Credit Administration Review (User Task)**
     - Contract clauses are checked
     - Decision is made to proceed or reject
@@ -90,6 +105,7 @@ In the demo, we implemented the workflow as a **Flowable BPMN process**, orchest
 14. **End Event**
 
 ## What This Demo Shows
+
 This demo is intentionally designed to highlight **platform capabilities**, not just BPMN modeling:
 
 1. **BPM as the Backbone**
@@ -97,24 +113,23 @@ This demo is intentionally designed to highlight **platform capabilities**, not 
    - You can see all process instances, their states, and history
    - Every decision is explicit and auditable
 
-   <img src="/images/2026-02-06-loan-payoff-request-demo/bpmn-process.png" alt="bpmn-process.png"  style="width: 80%;">
+   <img src="/images/2026-02-06-loan-payoff-request-demo/bpmn-process.png" alt="bpmn-process.png"  class="img-preview margin-y-sm ">
 
 2. **Forms Without Boilerplate**
    - User tasks are connected to forms built visually
    - Forms evolve together with the process
    - No manual wiring of UI, backend, and persistence
 
-   <img src="/images/2026-02-06-loan-payoff-request-demo/form-designer.png" alt="form-designer.png"  style="width: 80%;">
+   <img src="/images/2026-02-06-loan-payoff-request-demo/form-designer.png" alt="form-designer.png"  class="img-preview margin-y-sm ">
 
 3. **Entity-Driven Architecture**
    - Database schema is generated automatically
 
-   <img src="/images/2026-02-06-loan-payoff-request-demo/entity-modeller.png" alt="entity-modeller.png"  style="width: 80%;">
-
+   <img src="/images/2026-02-06-loan-payoff-request-demo/entity-modeller.png" alt="entity-modeller.png"  class="img-preview margin-y-sm ">
    - REST APIs are exposed automatically
    - Administration UI is available out of the box
 
-   <img src="/images/2026-02-06-loan-payoff-request-demo/gen-ui.png" alt="gen-ui.png"  style="width: 80%;">
+   <img src="/images/2026-02-06-loan-payoff-request-demo/gen-ui.png" alt="gen-ui.png"  class="img-preview margin-y-sm ">
 
 4. **AI as a First-Class Citizen**
    - AI tasks are just service tasks in BPM
@@ -122,14 +137,15 @@ This demo is intentionally designed to highlight **platform capabilities**, not 
      - Calculate taxes
      - Generate customer-friendly emails
 
-   <img src="/images/2026-02-06-loan-payoff-request-demo/loan-payoff-email.png" alt="loan-payoff-email.png"  style="width: 80%;">
-
+   <img src="/images/2026-02-06-loan-payoff-request-demo/loan-payoff-email.png" alt="loan-payoff-email.png"  class="img-preview margin-y-sm ">
    - AI is integrated without complicating the process model
 
 ## Extending the Workflow: A Key Demo Moment
+
 A major goal of this demo is to show **how easy it is to extend an existing process**.
 
 As a final step in the demo, we extend the workflow by:
+
 1. **Adding a new Mail Task at the start of the process**
    - Sends an initial notification when the request is received
    - No impact on the rest of the workflow
@@ -141,7 +157,9 @@ As a final step in the demo, we extend the workflow by:
 This demonstrates one of the biggest advantages of BPM-driven systems: **change is localized, safe, and transparent.**
 
 ## Watch It in Action
+
 In the video, we walk through:
+
 - The live workflow execution
 - User tasks and forms
 - AI-generated emails
@@ -151,7 +169,9 @@ In the video, we walk through:
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/x9RIyJ4jzYw" frameborder="0" allowfullscreen></iframe>
 
 ## Final Thoughts
+
 This Loan Payoff Request demo shows how codbex platform enables teams to:
+
 - Model real-world business processes
 - Combine human tasks, system logic, AI, and integrations
 - Maintain full transparency and auditability

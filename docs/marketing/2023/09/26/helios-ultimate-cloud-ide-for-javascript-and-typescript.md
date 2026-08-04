@@ -28,12 +28,12 @@ Helios is more than just a code editor; it's a platform for creativity and innov
 ### Rapid Prototyping
 Helios allows you to swiftly prototype your ideas without the hassle of setting up a local development environment. With just a few clicks, you can start coding, testing, and refining your concepts, accelerating your development timeline.
 
-<img src="/images/features/js-editor.png" alt="Screenshot" class="screenshot editable" />
+<img src="/images/features/js-editor.png" alt="Screenshot" class="img-preview" />
 
 ### Seamless Debugging
 Debugging is a breeze with Helios. Its integrated debugger and real-time error highlighting make identifying and fixing issues a snap, allowing you to maintain code quality and reduce development headaches.
 
-<img src="/images/features/debugger-perspective.png" alt="Screenshot" class="screenshot editable" />
+<img src="/images/features/debugger-perspective.png" alt="Screenshot" class="img-preview" />
 
 ### Effortless Testing
 Helios supports popular testing frameworks like QUnit and Jasmine. This simplifies the process of creating and executing tests to guarantee the reliability and functionality of your code.
@@ -41,7 +41,7 @@ Helios supports popular testing frameworks like QUnit and Jasmine. This simplifi
 ### Streamlined Collaboration: Git Support
 Additionally, Helios boasts seamless Git integration, enabling efficient version control and collaboration among team members. This empowers developers to maintain code quality and integrity while working collaboratively, enhancing the entire development lifecycle.
 
-<img src="/images/features/git-perspective.png" alt="Screenshot" class="screenshot editable" />
+<img src="/images/features/git-perspective.png" alt="Screenshot" class="img-preview" />
 
 ## Secure and Accessible
 Helios prioritizes the security of your code. With robust access controls in place, you can rest assured that your work remains safe and confidential. Additionally, Helios is accessible from any device with an internet connection, ensuring that you can code from anywhere, at any time.

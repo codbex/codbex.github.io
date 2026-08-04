@@ -4,6 +4,8 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import SwiperPartners from '../../components/SwiperPartners.vue'
+import FrameShowcase from '../../components/FrameShowcase.vue'
+import ImageLightbox from '../../components/ImageLightbox.vue'
 import './utils/cookie-banner.js'
 
 export default {
@@ -11,9 +13,11 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'layout-bottom': () => h(ImageLightbox)
     })
   },
   enhanceApp({ app, router, siteData }) {
     app.component('SwiperPartners', SwiperPartners)
+    app.component('FrameShowcase', FrameShowcase)
   }
 } satisfies Theme

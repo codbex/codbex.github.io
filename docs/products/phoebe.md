@@ -47,7 +47,7 @@ Phoebe provides rich scheduling options, dynamic task execution, logging, error 
             <p>The Web IDE provides capabilities for Data Engineers to build, schedule, and monitor data pipelines in production. Data Scientists & Analysts can automate and orchestrate data workflows for analytics and machine learning. DevOps & IT Teams manage infrastructure automation, cloud provisioning, and system tasks. Organizations of all sizes can streamline data processes.</p>
         </div>
         <div class="image">
-            <img src="/images/features/workbench-for-etl.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/workbench-for-etl.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -59,7 +59,7 @@ Phoebe provides rich scheduling options, dynamic task execution, logging, error 
             <p>The embedded UI provides a user-friendly interface to visualize, monitor, and manage workflows (DAGs). Users can view DAGs, trigger runs, inspect task dependencies, and monitor execution statuses using the Graph, Tree, and Gantt views. It also allows debugging with logs, managing variables and connections, and controlling task execution (e.g., retrying or marking as successful/failed). Admins can configure system settings, manage users, and monitor Airflow's health. Overall, the Web UI simplifies workflow orchestration, troubleshooting, and optimization for data engineers and DevOps teams.</p>
         </div>
         <div class="image">
-            <img src="/images/features/airflow-ui.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/airflow-ui.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -72,7 +72,7 @@ Phoebe provides rich scheduling options, dynamic task execution, logging, error 
             It also provides Diff Tool for reviewing the changes.</p>
         </div>
         <div class="image">
-            <img src="/images/features/git-perspective-for-etl.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/git-perspective-for-etl.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -87,7 +87,7 @@ Phoebe provides rich scheduling options, dynamic task execution, logging, error 
             the database port itself.</p>
         </div>
         <div class="image">
-            <img src="/images/features/database-perspective-for-etl.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/database-perspective-for-etl.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>
@@ -101,7 +101,7 @@ Phoebe provides rich scheduling options, dynamic task execution, logging, error 
             does not require an SSH port to be opened.</p>
         </div>
         <div class="image">
-            <img src="/images/features/terminal-for-etl.png" alt="Screenshot" class="screenshot editable" />
+            <img src="/images/features/terminal-for-etl.png" alt="Screenshot" class="img-preview" />
         </div>
     </div>
 </section>

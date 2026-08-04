@@ -20,17 +20,17 @@ At the heart of Iapetus lies Apache Camel, the industry-standard engine renowned
 
 Iapetus simplifies the integration journey with its intuitive Routes Modeller, allowing users to define source and target service endpoints effortlessly. With drag-and-drop simplicity and a rich library of connectors, configuring complex integration scenarios becomes a breeze.
 
-<img src="/images/2024-03-26-iapetus-unleash-service-integration/integration-routes.png" width="800em" class="screenshot">
+<img src="/images/2024-03-26-iapetus-unleash-service-integration/integration-routes.png" class="img-preview">
 
 - **Source and Target Endpoints:** Define endpoints for both source and target services, enabling seamless communication between systems.
 
-<img src="/images/2024-03-26-iapetus-unleash-service-integration/integration-rest.png" width="500em">
+<img src="/images/2024-03-26-iapetus-unleash-service-integration/integration-rest.png" class="img-preview">
 
 - **Interceptors and Configurations:** Enhance integration flows with interceptors to handle cross-cutting concerns such as logging, monitoring, and security. Iapetus provides standard interceptors out-of-the-box, eliminating the need for custom coding. Additionally, it offers the flexibility to integrate Enterprise JavaScript SDK APIs from the platform, enabling advanced customization and extensibility.
 
-<img src="/images/2024-03-26-iapetus-unleash-service-integration/integration-routings.png" width="500em">
+<img src="/images/2024-03-26-iapetus-unleash-service-integration/integration-routings.png" class="img-preview">
 
-<img src="/images/2024-03-26-iapetus-unleash-service-integration/integration-components.png" width="500em">
+<img src="/images/2024-03-26-iapetus-unleash-service-integration/integration-components.png" class="img-preview">
 
 ## Elevate Your Integration Experience with Iapetus
 
