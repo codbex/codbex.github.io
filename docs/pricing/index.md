@@ -21,7 +21,7 @@ features:
     link: /pricing/community
     linkText: Learn more
   - title: Starter
-    details: "<b>€240/month</b><br><br>
+    details: "<b>€250/month</b><br><br>
     <i>Perfect for starting your cloud modernization journey</i><br><br>
     ✅ Ideal for small teams or proof-of-concept<br><br>
     🔹 Access to all modules<br>
@@ -31,7 +31,7 @@ features:
     link: /pricing/starter
     linkText: Learn more
   - title: Professional
-    details: "<b>€2 400/month</b><br><br>
+    details: "<b>€2 000/month</b><br><br>
     <i>Designed for active teams automating business processes</i><br><br>
     ✅ For mid-sized organizations in transition<br><br>
     🔹 Full platform access<br>
@@ -42,7 +42,7 @@ features:
     link: /pricing/professional
     linkText: Learn more
   - title: Enterprise
-    details: "<b>€4 800/month</b><br><br>
+    details: "<b>€8 000/month</b><br><br>
     <i>For mission-critical transformations and regulated environments</i><br><br>
     ✅ For global companies modernizing their workloads<br><br>
     🔹 All modules, all features<br>

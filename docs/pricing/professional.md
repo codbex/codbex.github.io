@@ -6,7 +6,7 @@ editLink: false
 # Professional Plan
 <br/>
 
-<div class="price-tag">€2 400/month</div>
+<div class="price-tag">€2 000/month</div>
 
 The Professional Plan offered by <b>codbex</b> is an all-encompassing solution, building upon the features of the Starter Plan while adding further enhancements to streamline the development process. This plan not only provides the collaborative tools and capabilities for end-to-end development but also offers additional benefits such as source code repository setup on GitHub, CI/CD pipelines for automatic updates, deployment on Google Cloud Platform, and dedicated support via email with a response time of two business days.
 

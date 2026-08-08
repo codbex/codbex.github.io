@@ -6,7 +6,7 @@ editLink: false
 # Starter Plan
 <br/>
 
-<div class="price-tag">€240/month</div>
+<div class="price-tag">€250/month</div>
 
 The Starter Plan by <b>codbex</b> is the ideal entry point for organizations beginning their journey toward modernization and cloud-native application development. Designed for evaluation, pilot programs, and small internal teams, the Starter Plan includes access to the full product suite, enabling organizations to explore low-code development, business process automation, and data integration  -  all within their own environment.
 

@@ -6,7 +6,7 @@ editLink: false
 # Enterprise Plan
 <br/>
 
-<div class="price-tag">€4 800/month</div>
+<div class="price-tag">€8 000/month</div>
 
 The Enterprise Plan offered by <b>codbex</b> is a premium solution tailored specifically for large enterprises, delivering advanced features and unparalleled support to meet the demands of complex development environments. Building upon the comprehensive offerings of the Professional Plan, the Enterprise Plan provides additional enhancements such as source code repository setup on any Git provider, private source code repositories, CI/CD pipelines for automatic updates on private servers, deployment on public cloud providers including GCP, AWS, and Azure, dedicated managed Kubernetes cluster, and dedicated support via email and Slack with a response time of four business hours.
 
