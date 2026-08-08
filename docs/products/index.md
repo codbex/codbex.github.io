@@ -16,7 +16,7 @@ features:
     icon:
       src: /images/products/atlas.svg
   - title: Helios
-    details: "JavaScript development for Enterprise API: Enterprise JavaScript API, User Interfaces, Debugger, Git, Themes, Databases, Jobs, Message Listeners, Websockets, Security, Extensions"
+    details: "Java and JavaScript/TypeScript development for Enterprise API: Enterprise Java and JavaScript APIs, User Interfaces, Debugger, Git, Themes, Databases, Jobs, Message Listeners, Websockets, Security, Extensions"
     link: /products/helios
     linkText: Learn more
     icon:

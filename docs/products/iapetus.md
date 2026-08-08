@@ -22,7 +22,7 @@ hero:
 
 </div>
 
-The Iapetus Edition provides all the necessary features to streamline your integration processes. Additionally, Iapetus Edition includes robust JavaScript development features from the Helios Edition, offering a unified platform for building and managing integrations and applications.
+The Iapetus Edition provides all the necessary features to streamline your integration processes. Additionally, Iapetus Edition includes robust Java and JavaScript/TypeScript development features from the Helios Edition, offering a unified platform for building and managing integrations and applications.
 
 ### Integration Management Features:
 

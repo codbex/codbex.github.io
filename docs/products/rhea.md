@@ -22,7 +22,7 @@ hero:
 
 </div>
 
-With a focus on Entity Data Modelling and Form Design, Rhea Edition empowers users to design domain models and custom forms with ease. Additionally, Rhea Edition includes robust JavaScript development features from the Helios Edition, providing a unified platform for modelling and application development.
+With a focus on Entity Data Modelling and Form Design, Rhea Edition empowers users to design domain models and custom forms with ease. Additionally, Rhea Edition includes robust Java and JavaScript/TypeScript development features from the Helios Edition, providing a unified platform for modelling and application development.
 
 **Model-Driven Architecture (MDA)**:
    Rhea Edition supports Model-Driven Architecture (MDA) principles, enabling users to design application models and generate code with templates, streamlining the development process and ensuring consistency.
@@ -33,8 +33,8 @@ With a focus on Entity Data Modelling and Form Design, Rhea Edition empowers use
 **Form Designer**:
    Develop custom forms for your applications with the Form Designer, enabling users to create intuitive user interfaces that integrate seamlessly with generated applications as extensions or User Tasks for BPMN processes.
 
-**JavaScript Development**:
-   Building on the JavaScript development features of the Helios Edition, Rhea Edition offers a seamless experience for developing frontend and backend applications with JavaScript, ensuring flexibility and scalability in application development.
+**Java and JavaScript Development**:
+   Building on the Java and JavaScript/TypeScript development features of the Helios Edition, Rhea Edition offers a seamless experience for developing frontend and backend applications, ensuring flexibility and scalability in application development.
 
 ### Who Is It For?
 

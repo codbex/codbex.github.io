@@ -7,7 +7,7 @@ layout: home
 hero:
   name: Helios Edition
   text: Coding
-  tagline: The Helios Edition is tailored specifically for enterprise JavaScript/TypeScript development, providing a powerful set of features to accelerate your development workflow
+  tagline: The Helios Edition is tailored for enterprise Java and JavaScript/TypeScript development, providing a powerful set of features to accelerate your development workflow
   image:
       src: /images/products/helios.svg
 ---
@@ -24,15 +24,15 @@ hero:
 
 With a focus on server-side RESTful services authoring, pattern-based user interface generation, role-based security, and comprehensive testing and monitoring capabilities, Helios Edition equips developers with the tools they need to build robust and scalable applications with ease.
 
-The Helios Edition includes all necessary features for developing with <a href="/documentation/platform/sdk/" target="_blank">Enterprise JavaScript/TypeScript API</a>.
+The Helios Edition includes all necessary features for developing with the <a href="/documentation/platform/sdk/" target="_blank">Enterprise Java and JavaScript/TypeScript APIs</a>.
 
-### End-to-End JavaScript Development:
+### End-to-End Java and JavaScript Development:
 
-The Helios Edition provides a comprehensive suite of tools for end-to-end JavaScript development, empowering developers to build, test, deploy, and monitor enterprise-grade applications entirely in JavaScript. Whether you're developing server-side APIs, user interfaces, or complex business logic, Helios Edition offers the flexibility and scalability you need to succeed.
+The Helios Edition provides a comprehensive suite of tools for end-to-end development in Java, JavaScript, or TypeScript, empowering developers to build, test, deploy, and monitor enterprise-grade applications in the language of their choice. Whether you're developing server-side APIs, user interfaces, or complex business logic, Helios Edition offers the flexibility and scalability you need to succeed.
 
 ### Who Is It For?
 
-The Helios Edition is designed for enterprises and development teams focused on JavaScript development. Whether you're building modern web applications, microservices, or API-driven solutions, Helios Edition provides the capabilities and tools to support your development efforts and drive business success.
+The Helios Edition is designed for enterprises and development teams focused on Java and JavaScript/TypeScript development. Whether you're building modern web applications, microservices, or API-driven solutions, Helios Edition provides the capabilities and tools to support your development efforts and drive business success.
 
 ### Key Features:
 
@@ -40,12 +40,15 @@ The Helios Edition is designed for enterprises and development teams focused on 
 <section>
     <div class="container flex">
         <div class="text">
-            <h2>Enterprise JavaScript/TypeScript Development</h2>
-            <p>JavaScript Engine included is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> 
+            <h2>Enterprise Java and JavaScript/TypeScript Development</h2>
+            <p>Java development is a first-class citizen: write Spring-style components, REST controllers, 
+            job and message handlers in plain Java, compiled and wired live by the in-system Java engine — 
+            no external build or redeploy cycle. The JavaScript Engine included is based on the 
+            <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> 
             implementation. It supports also the synchronous programming model in contracts to 
             Node.js which makes it very easy to learn and use. The latest ECMA specification 
             is supported as well as the Common.js one for compatibility reasons. 
-            The <a href="/documentation/platform/sdk/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
+            The <a href="/documentation/platform/sdk/" target="_blank">Enterprise API</a> is fully supported in this package for both Java and JavaScript/TypeScript.</p>
         </div>
         <div class="image">
             <img src="/images/features/js-editor.png" alt="Screenshot" class="img-preview" />
@@ -126,7 +129,7 @@ The Helios Edition is designed for enterprises and development teams focused on 
 
 <br>
 
-With the Helios Edition of the <b>codbex</b> platform, you can elevate your enterprise JavaScript development to new heights. From server-side RESTful services authoring to role-based security and comprehensive testing and monitoring, Helios Edition equips developers with the tools they need to build robust, scalable, and secure applications. Empower your teams, accelerate development cycles, and drive innovation with Helios Edition from <b>codbex</b>.
+With the Helios Edition of the <b>codbex</b> platform, you can elevate your enterprise Java and JavaScript development to new heights. From server-side RESTful services authoring to role-based security and comprehensive testing and monitoring, Helios Edition equips developers with the tools they need to build robust, scalable, and secure applications. Empower your teams, accelerate development cycles, and drive innovation with Helios Edition from <b>codbex</b>.
 
 Support depends on the plan you selected from [pricing](/pricing/).
 
