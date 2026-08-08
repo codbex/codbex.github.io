@@ -106,7 +106,7 @@ features:
 | Tooling Debugger for JavaScript   | ✔     | ✔      |       |         | ✔        | ✔       | ✔    | ✔      |       |
 | Tooling Documents Management      | ✔     |        |       | ✔       |          |         |      |        |       |
 | Tooling Entities Modeling         | ✔     | ✔      |       | ✔       | ✔        | ✔       | ✔    | ✔      |       |
-| Tooling Intent Modeling           | ✔     |        |       |         | ✔        |         | ✔    |        |       |
+| Tooling Intent Modeling           | ✔     |        |       |         |          |         | ✔    |        |       |
 | Tooling Extensions                | ✔     | ✔      | ✔     |         | ✔        | ✔       | ✔    | ✔      | ✔     |
 | Tooling Form Builder              | ✔     | ✔      | ✔     |         | ✔        | ✔       | ✔    | ✔      |       |
 | Tooling Generation from Templates | ✔     | ✔      | ✔     |         | ✔        | ✔       | ✔    | ✔      |       |
