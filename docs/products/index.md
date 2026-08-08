@@ -79,7 +79,7 @@ features:
 | Engine Command                    | ✔     | ✔      |       |         | ✔        | ✔       | ✔    |        | ✔     |
 | Engine Jobs                       | ✔     | ✔      |       |         | ✔        | ✔       | ✔    | ➕     | ✔     |
 | Engine Listeners                  | ✔     | ✔      |       |         | ✔        | ✔       | ✔    |        | ✔     |
-| Engine OData                      | ✔     |        |       |         |          |         | ✔    | ➕      | ✔     |
+| Engine OData                      |       |        |       |         |          |         |      | ➕      |       |
 | Engine Open API                   | ✔     | ✔      |       |         |          |         | ✔    |        | ✔     |
 | Engine Security                   | ✔     | ✔      |       |         | ✔        | ✔       | ✔    | ➕      | ✔     |
 | Engine Template                   | ✔     | ✔      |       |         | ✔        | ✔       | ✔    |        |       |
@@ -89,6 +89,7 @@ features:
 | Engine Websockets                 | ✔     | ✔      |       |         | ✔        | ✔       | ✔    |        | ✔     |
 | Engine Markdown                   | ✔     | ✔      |       |         |          |         | ✔    |        | ✔     |
 | Engine Confluence                 | ✔     | ✔      |       |         |          |         | ✔    |        | ✔     |
+| Engine Intent                     | ✔     |        |       |         | ✔        |         | ✔    |        |       |
 | Engine BPM                        | ✔     |        |       |         | ✔        |         |      |        |       |
 | Engine BPM Flowable               | ✔     |        |       |         | ✔        |         |      |        |       |
 | Engine CMS                        | ✔     |        |       | ✔       |          |         |      |        |       |
@@ -105,6 +106,7 @@ features:
 | Tooling Debugger for JavaScript   | ✔     | ✔      |       |         | ✔        | ✔       | ✔    | ✔      |       |
 | Tooling Documents Management      | ✔     |        |       | ✔       |          |         |      |        |       |
 | Tooling Entities Modeling         | ✔     | ✔      |       | ✔       | ✔        | ✔       | ✔    | ✔      |       |
+| Tooling Intent Modeling           | ✔     |        |       |         | ✔        |         | ✔    |        |       |
 | Tooling Extensions                | ✔     | ✔      | ✔     |         | ✔        | ✔       | ✔    | ✔      | ✔     |
 | Tooling Form Builder              | ✔     | ✔      | ✔     |         | ✔        | ✔       | ✔    | ✔      |       |
 | Tooling Generation from Templates | ✔     | ✔      | ✔     |         | ✔        | ✔       | ✔    | ✔      |       |
