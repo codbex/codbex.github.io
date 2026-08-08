@@ -10,7 +10,7 @@ hero:
 
 features:
   - title: Atlas
-    details: "All in one platform containing all the standard components: Enterprise JavaScript Development, User Interfaces, Debugger, Git, Databases, Jobs, Message Listeners, Security, Extensions, Database Management, BPM, CMS, and more..."
+    details: "All in one platform containing all the standard components: Enterprise Java and JavaScript Development, User Interfaces, Debugger, Git, Databases, Jobs, Message Listeners, Security, Extensions, Database Management, BPM, CMS, and more..."
     link: /products/atlas
     linkText: Learn more
     icon:

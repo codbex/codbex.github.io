@@ -39,12 +39,15 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
 <section>
     <div class="container flex">
         <div class="text">
-            <h2>Enterprise JavaScript Development</h2>
-            <p>JavaScript Engine included is based on the <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> 
+            <h2>Enterprise Java and JavaScript Development</h2>
+            <p>Java development is a first-class citizen: write Spring-style components, REST controllers, 
+            job and message handlers in plain Java, compiled and wired live by the in-system Java engine — 
+            no external build or redeploy cycle. The JavaScript Engine included is based on the 
+            <a href="https://www.graalvm.org/latest/reference-manual/js/" target="_blank">GraalVM JavaScript</a> 
             implementation. It supports also the synchronous programming model in contrast to 
             Node.js which makes it very easy to learn and use. The latest ECMA specification 
             is supported as well as the Common.js one for compatibility reasons. 
-            The <a href="/documentation/platform/sdk/" target="_blank">JavaScript Enterprise API</a> is fully supported in this package.</p>
+            The <a href="/documentation/platform/sdk/" target="_blank">Enterprise API</a> is fully supported in this package for both Java and JavaScript/TypeScript.</p>
         </div>
         <div class="image">
             <img src="/images/features/js-editor.png" alt="Screenshot" class="img-preview" />
@@ -115,7 +118,7 @@ The Atlas Edition is ideal for organizations and development teams seeking a com
             <h2>Jobs</h2>
             <p>Support of scheduled jobs as triggers for backend services invocation. This asynchronous execution of tasks 
             is supported via jobs entities. The regular time of execution can be specified in CRON format 
-            and the handler which will be called is written in JavaScript. Jobs can have input parameters, 
+            and the handler which will be called is written in Java or JavaScript. Jobs can have input parameters, 
             which can be fulfiled on manual execution via a form interface.</p>
         </div>
         <div class="image">
