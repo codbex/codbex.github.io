@@ -234,7 +234,7 @@
      "name":"Tomislav Ivanov",
      "title":"Developer",
      "avatar":"/images/staff/tomi.jpg",
-     "internal": true,
+     "internal": false,
      "links":[
         {
            "icon":"github",
@@ -251,7 +251,7 @@
      "name":"Valentin Asenov",
      "title":"Developer",
      "avatar":"/images/staff/valio.png",
-     "internal": true,
+     "internal": false,
      "links":[
         {
            "icon":"github",
