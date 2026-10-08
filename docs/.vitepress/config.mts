@@ -864,62 +864,6 @@ export default defineConfig({
             { text: 'Compatibility', link: '/documentation/tooling/compatibility' },
             { text: 'Multitenancy', link: '/documentation/tooling/multitenancy' }
           ]
-        },
-        {
-          text: 'Modules',
-          items: [
-            { text: 'Modules', link: '/documentation/modules/' },
-            {
-              text: 'Sales',
-              link: '/documentation/modules/sales/',
-              collapsed: true,
-              items: [
-                { text: 'Lead', link: '/documentation/modules/sales/lead' },
-                { text: 'Opportunity', link: '/documentation/modules/sales/opportunity' },
-                { text: 'Quotation', link: '/documentation/modules/sales/quotation' },
-                { text: 'Sales Order', link: '/documentation/modules/sales/sales-order' },
-                { text: 'Sales Invoice', link: '/documentation/modules/sales/sales-invoice' },
-                { text: 'Customer Payment', link: '/documentation/modules/sales/customer-payment' }
-              ]
-            },
-            {
-              text: 'Purchasing',
-              link: '/documentation/modules/purchasing/',
-              collapsed: true,
-              items: [
-                { text: 'Purchase Requisition', link: '/documentation/modules/purchasing/purchase-requisition' },
-                { text: 'Purchase Order', link: '/documentation/modules/purchasing/purchase-order' },
-                { text: 'Request for Quotation', link: '/documentation/modules/purchasing/request-for-quotation' },
-                { text: 'Quotation Comparison', link: '/documentation/modules/purchasing/quotation-comparison' },
-                { text: 'Supplier Agreement', link: '/documentation/modules/purchasing/supplier-agreement' },
-                { text: 'Debit Note', link: '/documentation/modules/purchasing/debit-note' },
-                { text: 'Purchase Invoice', link: '/documentation/modules/purchasing/purchase-invoice' },
-                { text: 'Supplier Payment', link: '/documentation/modules/purchasing/supplier-payment' }
-              ]
-            },
-            {
-              text: 'Inventory',
-              link: '/documentation/modules/inventory/',
-              collapsed: true,
-              items: [
-                { text: 'Goods Receipt', link: '/documentation/modules/inventory/goods-receipt' },
-                { text: 'Goods Issue', link: '/documentation/modules/inventory/goods-issue' },
-                { text: 'Stock Transfer', link: '/documentation/modules/inventory/stock-transfer' },
-                { text: 'Stock Return', link: '/documentation/modules/inventory/stock-return' },
-                { text: 'Stock Record', link: '/documentation/modules/inventory/stock-record' },
-                { text: 'Stock Adjustment', link: '/documentation/modules/inventory/stock-adjustment' },
-                { text: 'SKU Listing', link: '/documentation/modules/inventory/sku-listing' },
-                { text: 'Store', link: '/documentation/modules/inventory/store' }
-              ]
-            },
-            {
-              text: 'Reference Data', link: '/documentation/modules/reference-data/',
-              collapsed: true,
-              items: [
-                { text: 'Units of Measures', link: '/documentation/modules/reference-data/uom' }
-              ]
-            }
-          ]
         }
       ],
     },

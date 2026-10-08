@@ -17,9 +17,7 @@ Model-Driven Architecture (MDA) is a software design and development approach th
 
 * **Generation and Application Templates**: __codbex__ offers built-in generation capabilities and a library of application templates to accelerate development. Users can generate application code, including database schema, backend logic, and frontend components, based on predefined templates and configurations. This reduces the time and effort required to build new applications, ensuring consistency and quality across projects.
 
-* **[Predefined Reference and Master Data Modules](../../modules/reference-data/)**: The __codbex__ platform includes a repository of predefined reference and master data modules that cover common business domains and industries. These modules contain standard data structures, rules, and workflows that can be easily integrated into applications. By leveraging these predefined modules, developers can expedite development and ensure compliance with industry standards and best practices.
-
-* **[Application Building Blocks Modules](../../modules/)**: __codbex__ provides a library of reusable application building blocks, such as authentication, authorization, user management, and reporting modules. These building blocks encapsulate common functionality and business logic, allowing developers to quickly assemble custom applications from pre-existing components. This modular approach promotes code reuse, simplifies maintenance, and accelerates time-to-market for new applications.
+* **Application Building Blocks Modules**: __codbex__ provides a library of reusable application building blocks, such as authentication, authorization, user management, and reporting modules. These building blocks encapsulate common functionality and business logic, allowing developers to quickly assemble custom applications from pre-existing components. This modular approach promotes code reuse, simplifies maintenance, and accelerates time-to-market for new applications.
 
 ### Key Concepts
 
