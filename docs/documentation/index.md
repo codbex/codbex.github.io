@@ -20,14 +20,27 @@ Feel free to click on each area to access specific documentation sections. Wheth
 
 ## Libraries and Standards
 
-Applications on the __codbex__ platform are described as intent, run on a TypeScript SDK, and render with a component library. Each of these layers is open, has its own documentation site, and can be used on its own.
+Applications on the __codbex__ platform are described as intent, run on the open-source Eclipse Dirigible runtime through a TypeScript SDK, and render with a component library. Each of these layers is open, has its own documentation site, and can be used on its own.
 
 | | What it is | Use it for | License |
 |---|---|---|---|
+| [Eclipse Dirigible](#eclipse-dirigible) | Open-source Intent-Driven Development platform, the upstream of every __codbex__ edition | The runtime, engines, generators and Workbench everything else runs on | EPL-2.0 |
 | [Intent File](#intent-file) | Open specification for describing a whole application as intent | Authoring the source of truth an application is generated from | Open standard |
 | [AeroKit](#aerokit) | Server-side TypeScript SDK (`@aerokit/sdk`) | Services, entities, jobs, integrations and extensions | MIT |
 | [Harmonia](#harmonia) | UI component library for Alpine.js (`@codbex/harmonia`) | The user interface of generated and hand-written applications | MIT |
 | [BlimpKit](#blimpkit) | UI component library for AngularJS | Workbench perspectives, views and IDE extensions | EPL-2.0 |
+
+### Eclipse Dirigible
+
+Eclipse Dirigible is the open-source application platform at the base of the stack, hosted by the Eclipse Foundation and developed in the open by codbex and the community. It is the reference implementation of the Intent File Specification: it turns intent into models, workflows, integrations and a running cloud-native application. The platform bundles a full-stack runtime with JavaScript, TypeScript and Java execution engines, BPMN processes, Apache Camel integrations, OData, messaging, jobs and multitenancy, together with the browser Workbench for in-system programming, where every saved change is live immediately without a build or a restart.
+
+Every __codbex__ edition, from [Atlas](/products/atlas) and [Rhea](/products/rhea) to the [Gaia](/products/gaia) runtime base image, is Eclipse Dirigible packaged and extended for a purpose. The [Platform](platform/index.md) and [Tooling](tooling/index.md) sections of this portal document that shared foundation. Improvements made while building __codbex__ products and BusinessIntents are contributed upstream, so the open platform and the commercial editions stay one codebase.
+
+Eclipse Dirigible is open source under the Eclipse Public License 2.0.
+
+* [dirigible.io](https://www.dirigible.io/), documentation, SDK reference and releases
+* [Source code on GitHub](https://github.com/eclipse-dirigible/dirigible)
+* [Eclipse Foundation project page](https://projects.eclipse.org/projects/ecd.dirigible)
 
 ### Intent File
 
