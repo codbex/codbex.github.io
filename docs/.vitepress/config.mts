@@ -128,6 +128,7 @@ export default defineConfig({
         {
           text: 'Marketing',
           items: [
+            { text: 'Introducing BusinessIntents: Business Software Written as Intent', link: '/marketing/2026/10/08/introducing-businessintents-business-software-written-as-intent'},
             { text: 'Introducing Harmonia: Instant UIs, Zero Build Step', link: '/marketing/2026/08/04/introducing-harmonia-instant-uis-zero-build-step'},
             { text: 'Building European Sovereign Private PaaS with codbex', link: '/marketing/2026/01/24/building-european-soveregn-paas-with-codbex'},
             { text: 'The Unified Platform for the Next Decade', link: '/marketing/2025/11/24/the-unified-platform-for-the-next-decade' },
